@@ -27,7 +27,32 @@ public class access extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		String access= request.getParameter("access");
+		switch (access) {
+		case "login":
+			
+			
+			
+			
+			
+			break;
+		
+		 case "register":
+			
+			
+			
+			
+			
+			
+			
+			
+		break;
+		}
+		
+		
+		
+		
 	}
 
 	/**
