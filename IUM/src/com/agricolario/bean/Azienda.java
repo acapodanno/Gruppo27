@@ -13,6 +13,14 @@ public class Azienda {
 	private String città;
 	private String cap;
 	private Date dataFondazione;
+	public Azienda(String nomeAzienda, String indirizzo, String città, String cap, Date dataFondazione) {
+		super();
+		this.nomeAzienda = nomeAzienda;
+		this.indirizzo = indirizzo;
+		this.città = città;
+		this.cap = cap;
+		this.dataFondazione = dataFondazione;
+	}
 	public Azienda(int id, String nomeAzienda, String azienda, String indirizzo, String città, String cap,
 			Date dataFondazione) {
 		super();
@@ -60,5 +68,7 @@ public class Azienda {
 	public void setDataFondazione(Date dataFondazione) {
 		this.dataFondazione = dataFondazione;
 	}
-
+	
+    
+    
 }

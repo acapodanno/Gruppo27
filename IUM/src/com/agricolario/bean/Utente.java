@@ -15,6 +15,18 @@ public class Utente {
 	private String ruolo;
 	private Date dataNascita;
 	private Azienda azienda;
+	
+	public Utente(String nome, String cognome, String email, String password, String ruolo, Date dataNascita,
+			Azienda azienda) {
+		super();
+		this.nome = nome;
+		this.cognome = cognome;
+		this.email = email;
+		this.password = password;
+		this.ruolo = ruolo;
+		this.dataNascita = dataNascita;
+		this.azienda = azienda;
+	}
 	public Utente(int id, String nome, String cognome, String email, String password, String ruolo, Date dataNascita,
 			Azienda azienda) {
 		super();
