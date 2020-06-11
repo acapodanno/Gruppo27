@@ -36,7 +36,7 @@ public class operazioniMagazzino extends HttpServlet {
 	case "showProdottoFitosanitario":
 		
 		break;
-	case "removeProdottoFitosanitario":
+	case "removeProdotto":
 		
 		break;
 
