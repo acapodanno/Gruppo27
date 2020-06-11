@@ -1,6 +1,10 @@
 package com.agricolario.servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.HashMap;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -51,7 +55,28 @@ public class access extends HttpServlet {
 			break;
 		
 		 case "register":
+			 String ruolo= request.getParameter("ruolo");
+		 if(ruolo=="titolare"){
+			 String nome;
+			 String cognome;
+			 
 			
+			 
+			 
+			 
+		 }else if(ruolo=="delegato") {
+			 
+			 
+			 
+			 
+			 
+		 }	else {
+			 
+			 
+			 //pagina di errore
+			 
+			 
+		 }
 			
 			
 			

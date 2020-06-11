@@ -29,6 +29,20 @@ public boolean validatorPassword(String pwd) {
 		return	matcher.find();
 		
 	}
+public boolean validatorName(String name) {
+	pattern=Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$");
+	matcher = pattern.matcher(name);
+	System.out.println(matcher.find());
+	return	matcher.find();
+	
+}
+public boolean validatorDate(String date) {
+	pattern=Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$");
+	matcher = pattern.matcher(date);
+	System.out.println(matcher.find());
+	return	matcher.find();
+	
+}
 	
 	
 	
