@@ -13,3 +13,8 @@ const navSlide = () => {
 }
 
 navSlide();
+
+
+function clickButton() {
+	  document.getElementById("myDropdown").style.display="block";
+}

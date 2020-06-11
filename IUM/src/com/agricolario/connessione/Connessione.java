@@ -1,4 +1,4 @@
-package servlet;
+package com.agricolario.connessione;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
