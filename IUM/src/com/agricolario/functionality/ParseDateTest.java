@@ -2,6 +2,8 @@ package com.agricolario.functionality;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Date;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,17 +20,20 @@ class ParseDateTest {
 
 	@Test
 	final void testParseDateUtil() {
-		fail("Not yet implemented"); // TODO
+		String data = "30/08/1995";
+		Date d	=	ParseDate.parseDateUtil(data);
+	    assertNotNull(d);
+	    System.out.println(d.toString());
+		
+		
 	}
-
-	@Test
-	final void testParseDateSql() {
-		fail("Not yet implemented"); // TODO
-	}
-
 	@Test
 	final void testParseDatetoString() {
-		fail("Not yet implemented"); // TODO
+		String data = "30/08/1995";
+		Date d	=	ParseDate.parseDateUtil(data);
+	    String dataString = ParseDate.parseDatetoString(d);
+		assertNotNull(dataString);
+		System.out.println(dataString);	
 	}
 
 }
