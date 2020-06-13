@@ -13,16 +13,24 @@ public class Azienda {
 	private String città;
 	private String cap;
 	private Date dataFondazione;
-	public Azienda(String nomeAzienda, String indirizzo, String città, String cap, Date dataFondazione) {
+	private int idUtente;
+	public int getIdUtente() {
+		return idUtente;
+	}
+	public void setIdUtente(int idUtente) {
+		this.idUtente = idUtente;
+	}
+	public Azienda(String nomeAzienda, String indirizzo, String città, String cap, Date dataFondazione,int idUtente) {
 		super();
 		this.nomeAzienda = nomeAzienda;
 		this.indirizzo = indirizzo;
 		this.città = città;
 		this.cap = cap;
 		this.dataFondazione = dataFondazione;
+		this.idUtente=idUtente;
 	}
 	public Azienda(int id, String nomeAzienda, String azienda, String indirizzo, String città, String cap,
-			Date dataFondazione) {
+			Date dataFondazione,int idUtente) {
 		super();
 		this.id = id;
 		this.nomeAzienda = nomeAzienda;
@@ -30,6 +38,7 @@ public class Azienda {
 		this.città = città;
 		this.cap = cap;
 		this.dataFondazione = dataFondazione;
+		this.idUtente=idUtente;
 	}
 	public int getId() {
 		return id;

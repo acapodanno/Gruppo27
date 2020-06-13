@@ -19,10 +19,10 @@
  </div>
  
  	<ul class="nav-links">
-					<li><a href="#">COME FUNZIONA</a></li>
+					<li><a href="#cm">COME FUNZIONA</a></li>
 					<li><a href="#">VANTAGGI</a></li>
-					<li><a href="#">CHI SIAMO</a></li>
-					<li><a href="#">ASSISTENZA</a></li>
+					<li><a href="#cs">CHI SIAMO</a></li>
+					<li><a href="#ass">ASSISTENZA</a></li>
 	</ul>
 	<div class="accedi">
  	<button onclick=" clickButton() ">ACCEDI</button>

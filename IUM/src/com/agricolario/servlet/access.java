@@ -75,13 +75,18 @@ public class access extends HttpServlet {
 			  città	=request.getParameter("città");
 			  indirizzo	 =	request.getParameter("indirizzo");
 			  dataFondazione = request.getParameter("dataFondazione");
-			  Azienda azienda= new Azienda(nomeAzienda, indirizzo, città, cap, ParseDate.parseDateUtil(dataFondazione));
-			  user = new Utente(nome, cognome, email, password, ruolo, ParseDate.parseDateUtil(dataNascita), azienda);
-			  insertAzienda=new AziendaDAO().insert(azienda);  
+			  user = new Utente(nome, cognome, email, password, ruolo, ParseDate.parseDateUtil(dataNascita));
 			  insertuser = userDao.insert(user);
+			  user.setId(userDao.selectUser(email).getId());  
+			  
+			  
+			  Azienda azienda= new Azienda(nomeAzienda, indirizzo, città, cap, ParseDate.parseDateUtil(dataFondazione),user.getId());
+
+			  insertAzienda=new AziendaDAO().insert(azienda);  
+
 		 }else if(ruolo=="delegato") {
 			  Azienda azienda = new Azienda();
-			  user = new Utente(nome, cognome, email, password, ruolo, ParseDate.parseDateUtil(dataNascita), azienda);
+			  user = new Utente(nome, cognome, email, password, ruolo, ParseDate.parseDateUtil(dataNascita));
 			  userDao.insert(user);
 		 }	else {
 			 

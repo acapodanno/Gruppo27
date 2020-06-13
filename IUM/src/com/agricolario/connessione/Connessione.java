@@ -42,8 +42,8 @@ public class Connessione {
 
 		System.out.println("Driver  Trovato");
 		try {
-
-			connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/agricolariodb?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","root","root");
+			
+			connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/agricolario?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","root","root");
 	
 		} catch (SQLException e) {
 			e.printStackTrace();

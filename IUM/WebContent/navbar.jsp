@@ -13,27 +13,11 @@
 	<title>Document</title>
 </head>
 <body>
-		<nav>
-			<div class="nav-logo">
-			<img alt="LOGO" src="LOGO.png">
-			</div>
-					<ul class="nav-links">
-					<li><a href="#">COME FUNZIONA</a></li>
-					<li><a href="#">VANTAGGI</a></li>
-					<li><a href="#">CHI SIAMO</a></li>
-					<li><a href="#">ASSISTENZA</a></li>
-					</ul>
-		<button>ACCEDI</button>
-			
-				<div class="burger">
-				<div class=""></div>
-				<div class=""></div>
-				<div class=""></div>
-				</div>
-			
-		</nav>
-		
-		
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="LOGO.png" width="100" height="100" class="d-inline-block align-top" alt="">
+  </a>
+</nav>
 
 	
 		

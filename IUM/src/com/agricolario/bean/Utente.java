@@ -14,10 +14,9 @@ public class Utente {
 	private String password;
 	private String ruolo;
 	private Date dataNascita;
-	private Azienda azienda;
 	
-	public Utente(String nome, String cognome, String email, String password, String ruolo, Date dataNascita,
-			Azienda azienda) {
+	
+	public Utente(String nome, String cognome, String email, String password, String ruolo, Date dataNascita) {
 		super();
 		this.nome = nome;
 		this.cognome = cognome;
@@ -25,7 +24,7 @@ public class Utente {
 		this.password = password;
 		this.ruolo = ruolo;
 		this.dataNascita = dataNascita;
-		this.azienda = azienda;
+		
 	}
 	public Utente(int id, String nome, String cognome, String email, String password, String ruolo, Date dataNascita,
 			Azienda azienda) {
@@ -37,7 +36,7 @@ public class Utente {
 		this.password = password;
 		this.ruolo = ruolo;
 		this.dataNascita = dataNascita;
-		this.azienda = azienda;
+	
 	}
 	public int getId() {
 		return id;
@@ -81,12 +80,7 @@ public class Utente {
 	public void setDataNascita(Date dataNascita) {
 		this.dataNascita = dataNascita;
 	}
-	public Azienda getAzienda() {
-		return azienda;
-	}
-	public void setAzienda(Azienda azienda) {
-		this.azienda = azienda;
-	}
+	
 	
 
 }
