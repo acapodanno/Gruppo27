@@ -7,6 +7,10 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -14,7 +18,7 @@
 <body>
 <%@ include file="navbar.jsp"%>
 
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-5 ">
 	<div class="row justify-content-center">
 		<div class="col col-lg-6 ">
 			<h1>Registrazione</h1>
@@ -23,7 +27,7 @@
 <br>
 
 	<div class="row justify-content-center " >
-		<div class="col col-lg-6 shadow " id="utente" ">
+		<div class="col col-lg-6 shadow " id="utente" >
 			<br>
 				<form id="form-registrazione" action="access" method="post">
 				<input type="hidden" name="access" value="register">
@@ -89,7 +93,7 @@
 		</div>
 	<!-- 2 form azienda -->
 	
-		<div class="col col-lg-6 shadow " id="azienda"  style="display: none;">
+		<div class="col col-lg-6 shadow registration" id="azienda"  style="display: none; ">
 			<br>
 				<form>
   					<div class="row justify-content-center">
@@ -193,8 +197,14 @@ $( "#ruolo").on('change', function () {
 	  }
 	  });
 $("#form-registrazione").on("click","#bottone-registrazione",function(){
-   $("#utente").hide();
-   $("#azienda").show();
+	$("#utente").css("animation","fadeOutLeft");
+	$("#utente").css("animation-duration","1s");
+
+setTimeout(function(){  $("#utente").hide();
+ }, 200);
+
+$("#azienda").show();		
+	
 	
 } );
 

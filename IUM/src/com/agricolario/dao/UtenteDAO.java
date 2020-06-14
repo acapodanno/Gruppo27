@@ -68,7 +68,7 @@ public class UtenteDAO {
 	 	ResultSet result;
 		
 		
-	    	insertSql="select * from utente where nome=?";
+	    	insertSql="select * from utente where email=?";
 	    	try {
 				PreparedStatement ps = con.prepareStatement(insertSql);
 				ps.setString(1, email);
