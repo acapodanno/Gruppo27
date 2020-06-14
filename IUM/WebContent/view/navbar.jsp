@@ -110,14 +110,6 @@
     	$(this).attr('data-content',login.innerHTML);
 		});
 		$(function() {
-			 $(".navbar li.dropdown").hover(function(e) {
-					console.log("okokok")
-				    $(this).addClass("open");
-				  });
-
-				  $(".navbar li.dropdown").mouseleave(function() {
-				    $(this).removeClass("open");
-				  });
 			
 			
 			

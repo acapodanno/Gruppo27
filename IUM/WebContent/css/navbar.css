@@ -121,3 +121,9 @@ border-bottom: 1px solid;
 .dropdown:hover>.dropdown-menu {
   display: block;
 }
+.carousel-item{
+    height: 500px;
+} 
+.carousel-item img{
+    height: 500px;
+}
