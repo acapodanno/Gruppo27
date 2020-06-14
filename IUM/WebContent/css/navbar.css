@@ -118,3 +118,6 @@ list-style: none;
 border-bottom: 1px solid;	
 	
 }
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
