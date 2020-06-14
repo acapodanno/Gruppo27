@@ -8,7 +8,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="../css/navbar.css">
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
@@ -21,7 +21,9 @@
 </nav>
  -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
-  <a class="navbar-brand ml-5" href="#">Navbar</a>
+  <a class="navbar-brand ml-5" href="HomePage.jsp">
+  	<img alt="" src="../image/LOGO.png" width="75" height="75" class="d-inline-block align-top">
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -42,7 +44,7 @@
     </ul>
     
   </div>
-  <button type="button" class="btn btn-secondary mr-5"  data-toggle="popover"  data-html="true" data-placement="bottom" data-content="<strong>ok </strong>" id="tasto-accedi">
+  <button type="button" class="btn btn-secondary mr-6 popup-loggin"  data-toggle="popover"  data-html="true" data-placement="bottom" data-content="<strong>ok </strong>" id="tasto-accedi">
 	ACCEDI
 	</button>
   
@@ -57,20 +59,20 @@
     	        <h3 class="text-center text-white ">Login form</h3>
     	        <div class="container-fluid">
     	            <div id="login-row" class="row justify-content-center align-items-center">
-    	                <div id="login-column" class="col-md-12">
-    	                    <div id="login-box" class="col-md-4">
+    	                <div id="login-column" class="col-lg-12">
+    	                    <div id="login-box" class="col-lg-4">
     	                        <form id="login-form" class="form" action="" method="post">
-    	                            <h3 class="text-center text-info">Login</h3>
-    	                            <div class="form-group">
-    	                                <label for="username" class="text-info">Username:</label><br>
-    	                                <input type="text" name="username" id="username" class="form-control">
+    	                            <h3 class="text-center text-info">Accedi</h3>
+    	                            <div class="form-group row">
+    	                                <label for="username" class="text-info col-5">Email:</label><br>
+    	                                <input type="text" name="username" id="username" class="form-control col-6">
     	                            </div>
-    	                            <div class="form-group">
-    	                                <label for="password" class="text-info">Password:</label><br>
-    	                                <input type="text" name="password" id="password" class="form-control">
+    	                            <div class="form-group row">
+    	                                <label for="password" class="text-info col-5">Password:</label><br>
+    	                                <input type="text" name="password" id="password" class="form-control col-6">
     	                            </div>
     	                            <div id="register-link" class="text-right">
-    	                                <a href="#" class="text-info">Register here</a>
+    	                                <a href="registration.jsp" class="text-info">Register here</a>
     	                            </div>
     	                        </form>
     	                    </div>

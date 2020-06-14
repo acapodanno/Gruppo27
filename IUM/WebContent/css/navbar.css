@@ -74,12 +74,47 @@ nav > .accedi > button{
 #login .container #login-row #login-column #login-box #login-form {
 }
 .popover-body{
-	width: 800px;
-	height: 400px;
+	width: 800px !important;
+	height: 400px !important;
 }
-.nav-item{
+.nav-item > a{
+
+	color: #009e0f !important;
+	font-weight: bold;
+	font-size: 1.2rem !important;
+	
+}
+.mr-6{
+	
+	margin-right: 7rem !important;
+}
+.popup-loggin{
+	
+	background-color: #009e0f !important;
+	font-weight: bold !important;
+
+	
+}
+.navbar{
+	
+	  background: white !important;
+}
+.footer{
+padding-top: 3%;	
+color:white;
+}
+.row > .col > ul {
+margin-left: 0px;	
+padding-left: 0px;
 	
 	
-	color: #009e0f;
-	font-weight: bold
+}
+.row > .col > ul >li{
+list-style: none;	
+	
+	
+}
+.row > .col > h5{
+border-bottom: 1px solid;	
+	
 }

@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body >
-<div class="footer"  style="width: 100%; background-color: #009e0f">
+<div class="footer mt-5"  style="width: 100%; background-color: #009e0f">
 <div class="row" style="margin-top:50; ">
  	<div class=" col col-md-2 offset-md-2"  >
     <h5 class="border-bottom">CHI SIAMO</h5>

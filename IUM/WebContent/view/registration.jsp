@@ -13,16 +13,8 @@
 </head>
 <body>
 <%@ include file="navbar.jsp"%>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="container-fluid">
+
+<div class="container-fluid mt-5">
 	<div class="row justify-content-center">
 		<div class="col col-lg-6 ">
 			<h1>Registrazione</h1>
@@ -36,51 +28,52 @@
 				<form id="form-registrazione" action="access" method="post">
 				<input type="hidden" name="access" value="register">
   					<div class="row justify-content-center">
-    					<div class="col-4">
+    					<div class="col-4 form-group">
+    						<label>Nome</label>
       						<input type="text" class="form-control border-bottom" placeholder="Nome" name="nome">
     					</div>
-    					<div class="col-4">
+    					<div class="col-4 form-group">
+    					<label>Cognome</label>
       					<input type="text" class="form-control" placeholder="Cognome" name="cognome">
     					</div>
   					</div>
-  <br>
+ 
   					<div class="row justify-content-center">
-  					   <div class="col-8">
+  					   <div class="col-8 form-grupo">
+  					   		<label>Email:</label>
       						<input type="text" class="form-control" placeholder="email" name="email">
    					   </div>
   					</div>
-  <br>
- 					 <div class="row justify-content-center">
-    					<div class="col-4">
+ 					 <div class="row justify-content-center mt-3">
+    					<div class="col-4 form-goup">
+    						<label>Password</label>
       						<input type="text" class="form-control" placeholder="Password" name="password">
     					</div>
-    				 	<div class="col-4">
+    				 	<div class="col-4 form-group">
+    				 		<label>Conferma Password</label>
       				 		<input type="text" class="form-control" placeholder="Conferma Password">
    					 	</div>
   					</div>	
-  <br>
+
    					<div class="row justify-content-center">
 					    <div class="col-4">
+					   	 <label>Data di nascita</label>
     						<input type="date" class="form-control" placeholder="dd mm yyyy" name="dataNascita"    data-date-format="DD MMMM YYYY">
     					</div>
-    				<div class="col-4">
-     					<div class="input-group mb-3">
- 							 <div class="input-group-prepend">
-								    <label class="input-group-text" for="selectRuolo" id="#selectRuolo">Ruolo</label>
- 							 </div>
+    				<div class="col-4 form-group">
+     					<label  >Ruolo</label>	
  							 <select class="custom-select" id="ruolo" name="ruolo">
-  								 <option selected>Ruolo...</option>
+  								 <option selected>---</option>
     						     <option value="titolare">Titolare</option>
    							     <option value="delegato">Delegato</option>
  							 </select>
-						</div>
     				</div>
  				   </div>
-   					<div class="row ">
-   				    <div class="col">
+   					<div class="row  justify-content-center">
+   				    <div class="col-8">
  							<div class="form-group form-check">
     								<input type="checkbox" class="form-check-input" id="exampleCheck1">
-    								<label class="form-check-label" for="exampleCheck1">Accetta</label>
+    								<label class="form-check-label">Acconsento al trattamento dei miei dati, accetto i Termini di Servizio e la Politica della Privacy</label>
  							</div>    
   					</div>
   					</div>
@@ -96,40 +89,41 @@
 		</div>
 	<!-- 2 form azienda -->
 	
-		<div class="col col-lg-6 shadow " id="azienda" >
+		<div class="col col-lg-6 shadow " id="azienda"  style="display: none;">
 			<br>
 				<form>
   					<div class="row justify-content-center">
-    					<div class="col-5">
+    					<div class="col-6">
       						<input type="text" class="form-control border-bottom" placeholder="Nome Azienda" name="azienda">
     					</div>
     					
   					</div>
   <br>
   					<div class="row justify-content-center">
-  					   <div class="col-5">
+  					   <div class="col-6">
       						<input type="text" class="form-control" placeholder="Email Azienda" name="email">
    					   </div>
   					</div>
   <br>
  					 <div class="row justify-content-center">
-    					<div class="col-2">
+    					<div class="col-3">
       						<input type="text" class="form-control" placeholder="Indirizzo" name="indirizzo">
     					</div>
-    					<div class="col-1">
+    					<div class="col-2">
       						<input type="text" class="form-control" placeholder="n°" name="numeroCivico">
     					</div>
     				 	
-    				 	<div class="col-2">
+    				 	<div class="col-3">
       				 		<input type="text" class="form-control" placeholder="Città" name="citta">
    					 	</div>
-   					 	<div class="col-1">
+   					 	<div class="col-2">
       				 		<input type="text" class="form-control" placeholder="Cap" name cap>
    					 	</div>
   					</div>	
   <br>
    					<div class="row justify-content-center">
-					    <div class="col-4">
+					    <div class="col-5 form-group">
+					    	<label>Data Fondazione:</label>
     						<input type="date" class="form-control" placeholder="Data Fondazione" name="dataFondazione" >
     					</div>
     				
@@ -179,12 +173,7 @@
 	
 	
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <script >
 $( "#ruolo").on('change', function () {
 	  //ways to retrieve selected option and text outside handler
