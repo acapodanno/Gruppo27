@@ -77,7 +77,7 @@ nav > .accedi > button{
 	width: 800px !important;
 	height: 400px !important;
 }
-.nav-item > a{
+.nav-item > .navbar-element{
 
 	color: #009e0f !important;
 	font-weight: bold;
@@ -138,3 +138,67 @@ border-bottom: 1px solid;
 	animation: fadeInRight;
 	animation-duration: 2s;
 }
+.dropdown-menu-animation{
+	
+	animation:slideInUp;
+	animation-duration:1s!important;
+	
+	
+}
+.navbar-sx{
+	width:8rem;
+	height:25rem;
+	margin-top:10%;
+	margin-bottom: 10%;
+	background-color: aqua;
+	animation: fadeInLeft;
+	animation-duration: 2s;
+	
+}
+.nav-item >.icon{
+color: white;
+    background-size: 100% 100%;
+
+}
+.nav-item >.icon:hover{
+	background-color: white;
+	color: aqua;
+    background-size: 100% 100%;
+
+}
+.nav-item >.icon >i{
+width: 100px!important;
+height: 100px!important;
+    background-size: 100% 100%;
+    font-size: 6em;
+
+}
+	
+
+
+.nav-item >.icon >.tooltiptext {
+margin-top:15px;
+margin-left:25px;
+  visibility: hidden;
+  width: 150px;
+  background-color: aqua;
+  color: white;
+  font-weight:bold;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.nav-item >.icon:hover .tooltiptext {
+  visibility: visible;
+  animation: fadeInLeft;
+	animation-duration: 2s;
+}
+
+
+
+

@@ -9,6 +9,10 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="stylesheet" href="../css/navbar.css">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
@@ -29,10 +33,10 @@
   </button>
   <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
     <ul class="navbar-nav justify-content-center ">
-      <li class="nav-item active mr-5  dropdown">
+      <li class="nav-item active mr-5  dropdown ">
      
-        <a class=" nav-link" href="#" role="button" data-toggle="dropdown"  data-hover="dropdown">COME FUNZIONA</a>
-        <div class="dropdown-menu" >
+        <a class=" nav-link navbar-element" href="#" role="button" data-toggle="dropdown"  data-hover="dropdown">COME FUNZIONA</a>
+        <div class="dropdown-menu dropdown-menu-animation" >
    			 	 <a class="dropdown-item" href="#">Registro Fitosanitario</a>
    				 <a class="dropdown-item" href="#">Prodotti Fitosanitario</a>
     			 <a class="dropdown-item" href="#">Scadenze</a>
@@ -40,14 +44,14 @@
  	
  		</div>
       </li>
-      <li class="nav-item active mr-5">
-        <a class="nav-link" href="#">VANTAGGI</a>
+      <li class="nav-item active mr-5 navbar-element">
+        <a class="nav-link navbar-element" href="#">VANTAGGI</a>
+      </li>
+      <li class="nav-item active mr-5 ">
+        <a class="nav-link active navbar-element" href="#">CHI SIAMO</a>
       </li>
       <li class="nav-item active mr-5">
-        <a class="nav-link active" href="#">CHI SIAMO</a>
-      </li>
-      <li class="nav-item active mr-5">
-        <a class="nav-link" href="#">ASSISTENZA</a>
+        <a class="nav-link navbar-element" href="#">ASSISTENZA</a>
       </li>
     </ul>
     

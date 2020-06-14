@@ -19,7 +19,7 @@
 <%@ include file="navbar.jsp"%>
 
 <div class="container-fluid mt-5 ">
-	<div class="row justify-content-center">
+	<div class="row justify-content-center registration">
 		<div class="col col-lg-6 ">
 			<h1>Registrazione</h1>
 		</div>
