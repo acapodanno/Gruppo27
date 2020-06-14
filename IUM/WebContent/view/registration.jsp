@@ -198,12 +198,16 @@ $( "#ruolo").on('change', function () {
 	  });
 $("#form-registrazione").on("click","#bottone-registrazione",function(){
 	$("#utente").css("animation","fadeOutLeft");
-	$("#utente").css("animation-duration","1s");
+	$("#utente").css("animation-duration","2s");
 
-setTimeout(function(){  $("#utente").hide();
- }, 200);
+setTimeout(function(){ 
+	$("#utente").hide();
+ }, 1000);
+setTimeout(function(){ 
+	$("#azienda").show();
+ }, 1000);
 
-$("#azienda").show();		
+		
 	
 	
 } );
