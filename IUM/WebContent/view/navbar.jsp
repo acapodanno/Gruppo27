@@ -28,9 +28,17 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-    <ul class="navbar-nav justify-content-center">
-      <li class="nav-item active mr-5">
-        <a class="nav-link active" href="#">COME FUNZIONA <span class="sr-only">(current)</span></a>
+    <ul class="navbar-nav justify-content-center ">
+      <li class="nav-item active mr-5  dropdown">
+     
+        <a class=" nav-link" href="#" role="button" data-toggle="dropdown"  data-hover="dropdown">COME FUNZIONA</a>
+        <div class="dropdown-menu" >
+   			 	 <a class="dropdown-item" href="#">Registro Fitosanitario</a>
+   				 <a class="dropdown-item" href="#">Prodotti Fitosanitario</a>
+    			 <a class="dropdown-item" href="#">Scadenze</a>
+ 				 <a class="dropdown-item" href="#">Tracciabilità</a>
+ 	
+ 		</div>
       </li>
       <li class="nav-item active mr-5">
         <a class="nav-link" href="#">VANTAGGI</a>
@@ -44,7 +52,8 @@
     </ul>
     
   </div>
-  <button type="button" class="btn btn-secondary mr-6 popup-loggin"  data-toggle="popover"  data-html="true" data-placement="bottom" data-content="<strong>ok </strong>" id="tasto-accedi">
+  
+  <button type="button" class="btn  mr-6 popup-loggin"  data-toggle="popover"  data-html="true" data-placement="bottom" data-content="<strong>ok </strong>" id="tasto-accedi">
 	ACCEDI
 	</button>
   
@@ -101,6 +110,17 @@
     	$(this).attr('data-content',login.innerHTML);
 		});
 		$(function() {
+			 $(".navbar li.dropdown").hover(function(e) {
+					console.log("okokok")
+				    $(this).addClass("open");
+				  });
+
+				  $(".navbar li.dropdown").mouseleave(function() {
+				    $(this).removeClass("open");
+				  });
+			
+			
+			
 			  $('[data-toggle="popover"]').popover({
 			    html: true,
 			sanitize: false,
