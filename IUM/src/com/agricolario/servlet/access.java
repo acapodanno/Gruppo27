@@ -65,6 +65,7 @@ public class access extends HttpServlet {
 			  nome	=	request.getParameter("nome");
 			  cognome	=	request.getParameter("cognome");
 			  dataNascita	=	request.getParameter("dataNascita");
+			  System.out.println(dataNascita);
 			  email	=	request.getParameter("email");
 			  password	=	request.getParameter("password");
 			  boolean insertAzienda =  false;
@@ -84,24 +85,16 @@ public class access extends HttpServlet {
 
 			  insertAzienda=new AziendaDAO().insert(azienda);  
 
-		 }else if(ruolo=="delegato") {
+		 }else if(ruolo.equals("delegato")) {
 			  Azienda azienda = new Azienda();
 			  user = new Utente(nome, cognome, email, password, ruolo, ParseDate.parseDateUtil(dataNascita));
 			  userDao.insert(user);
+			  System.out.println("ok inserito");
 		 }	else {
 			 
-			 //pagina di errore
-		 }
+			 System.out.println("Errore");		 }
 			
-			if( insertAzienda && insertuser) {
-				
-				 request.getRequestDispatcher("/HomePage.jsp").forward(request, response);
-
-			}else {
-				 request.getRequestDispatcher("/ErrorPageRegistration.jsp").forward(request, response);
-
-			}
-			
+		
 		break;
 		}
 		

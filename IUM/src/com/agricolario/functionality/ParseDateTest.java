@@ -20,20 +20,24 @@ class ParseDateTest {
 
 	@Test
 	final void testParseDateUtil() {
-		String data = "30/08/1995";
+		String data = "1995-08-30";
+    
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
 		Date d	=	ParseDate.parseDateUtil(data);
 	    assertNotNull(d);
 	    System.out.println(d.toString());
 		
 		
 	}
-	@Test
-	final void testParseDatetoString() {
-		String data = "30/08/1995";
-		Date d	=	ParseDate.parseDateUtil(data);
-	    String dataString = ParseDate.parseDatetoString(d);
-		assertNotNull(dataString);
-		System.out.println(dataString);	
-	}
+
 
 }

@@ -11,13 +11,16 @@ public class ParseDate {
 	}
 	//parse to string to Date java util
     public static Date parseDateUtil(String date) {
-    	  SimpleDateFormat formatter=new SimpleDateFormat("dd/MM/yyyy"); 
+        	//date.replace("-","/");
+        	System.out.println(date);
+    	  SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd"); 
 			Date dateUtil = null;
 			try {
+				
 				dateUtil = formatter.parse(date);
 			} catch (ParseException e1) {
 				// TODO Auto-generated catch block
-				e1.printStackTrace();
+			System.out.println("ok lo stesso");
 			}
 			return dateUtil;
     }
@@ -28,9 +31,5 @@ public class ParseDate {
     	return sqlDate;
     } 
     
-    public static String parseDatetoString(Date date) {
-    	 SimpleDateFormat formatter=new SimpleDateFormat("dd/MM/yyyy"); 
-         String strDate = formatter.format(date);  
-    	 return strDate;
-    }
+
 }

@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file="navbar2.jsp"%>
+<%@ include file="navbar.jsp"%>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:5px;">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -17,13 +17,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="slide1.jpg" alt="First slide">
+      <img class="d-block w-100" src="image/slide1.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="slide2.jpg" alt="Second slide">
+      <img class="d-block w-100" src="image/slide2.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="slide3.jpg" alt="Third slide">
+      <img class="d-block w-100" src="image/slide3.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -35,52 +35,55 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<div class="container" id="presentazione">
+ <br>
+ <br>
+<div class="container-fluid" id="presentazione">
 
-  <div class="row  row-cols-2">
-   <div class="col col-md-4 offset-md-1  ">
+  <div class="row justify-content-center ">
+   <div class="col col-lg-11">
     <h1 style="color:#009e0f; font-weight: bold;" id="cf">COME FUNZIONA</h1>
     </div>
-	
  </div>
-     <br>
- 
-  <div class="row  row-cols-2" >
-    <div style="background-color: #cccccc" class="col col-md-5 offset-md-1  ">
+ <br>
+
+  <div class="row justify-content-center" >
+    <div class="col col-lg-5  divPresentazione shadow">
     <h4 >REGISTRO FITOSANITARIO</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
-    <div style="background-color: #cccccc" class="col col-md-5 offset-md-1 ">
+    <div class="col col-lg-5  offset-md-1 divPresentazione shadow">
      <h4>PRODOTTI FITOSANITARIO</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
-    </div>
+   </div>
     <br>
-     <div class="row  row-cols-2">
-    <div style="background-color: #cccccc" class="col col-md-5 offset-md-1  ">
+    <br>
+     <div class="row justify-content-center">
+    <div class="col col-lg-5 divPresentazione shadow">
     <h4 >TRACCIABILITA</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
-    <div style="background-color: #cccccc" class="col col-md-5 offset-md-1 ">
+    <div class="col col-lg-5 offset-md-1 divPresentazione shadow">
      <h4>SCADENZE</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
     </div>
     
     </div>
-  <div class="container" id="presentazione">
+     <br>
+ <br>
+ <br>
+  <div class="container-fluid" id="presentazione">
 
-  <div class="row  row-cols-2">
-   <div class="col col-md-4 offset-md-1  ">
+  <div class="row justify-content-center">
+   <div class="col col-lg-11  ">
     <h1 style="color:#009e0f; font-weight: bold;" id="vant">VANTAGGI</h1>
     </div>
 	
  </div>
-     <br>
- 
-  <div class="row  " >
-    <div style="background-color: #cccccc" class="col col-md-11 offset-md-1  ">
-    <h4 >REGISTRO FITOSANITARIO</h1>
+<br>
+  <div class="row  justify-content-center" >
+    <div  class="col col-lg-11  divPresentazione shadow rounded">
     <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
    
@@ -88,45 +91,49 @@
     
     </div>
     </div>
-    <div class="container" id="presentazione">
-
-  <div class="row  row-cols-2">
-   <div class="col col-md-4 offset-md-1  ">
-    <h1 style="color:#009e0f; font-weight: bold;" id="cs">CHI SIAMO</h1>
-    </div>
-	
- </div>
-     <br>
- 
-  <div class="row" >
- 	<div class="card col col-md-3 offset-md-1" style="width: 15rem; background-color: #cccccc">
-  <img src="profile3.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
-  <div class="card-body">
-    <h5 class="card-title" style="text-align: center">Alessandro Capodanno</h5>
-   </div>
-    </div>
- <div class="card col col-md-3 offset-md-1" style="width: 15rem; background-color: #cccccc">
-  <img src="profile2.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
-  <div class="card-body">
-    <h5 class="card-title" style="text-align: center">Alessia  Crispo</h5>
    
-  </div>
-	</div>
-	<div class="card col col-md-3 offset-md-1" style="width: 15rem; background-color: #cccccc">
-  <img src="profile.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
-  <div class="card-body">
-    <h5 class="card-title" style="text-align: center">SARA PATIERNO</h5>
-   
-  </div>
-	</div>
-   
-    
-   
-    </div>
-    
-    </div>
     
     <br>
+    <div class="container-fluid" id="presentazione">
+	<div class="row justify-content-center">
+   		<div class="col col-lg-11 ">
+    		<h1 style="color:#009e0f; font-weight: bold;" id="cs">CHI SIAMO</h1>
+    	</div>
+	</div>
+    <br>
+	<div class="row justify-content-center " >
+ 		<div class=" col col-lg-3 " >
+ 			<div class="card divPresentazione shadow">
+  				<img src="image/profile3.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
+  				<div class="card-body">
+    			<h5 class="card-title" style="text-align: center">Alessandro Capodanno</h5>
+   				</div>
+   			</div>	
+    	</div>
+ 		<div class=" col col-lg-3 " >
+ 			<div class="card divPresentazione shadow">
+  				<img src="image/profile2.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
+  				<div class="card-body">
+    			<h5 class="card-title" style="text-align: center">Alessia Crispo</h5>
+   				</div>
+   			</div>	
+    	</div>
+ 		<div class=" col col-lg-3 " >
+ 			<div class="card divPresentazione shadow">
+  				<img src="image/profile.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
+  				<div class="card-body">
+    			<h5 class="card-title" style="text-align: center">Sara Patierno</h5>
+   				</div>
+   			</div>	
+    	</div>
+ 		
+ 	
+ 	
+ 	</div>
+    
+</div>
+<br>
+<br>
     
 <%@ include file="footer.jsp"%>
 
