@@ -94,49 +94,58 @@
 				<form>
   					<div class="row justify-content-center">
     					<div class="col-6">
+    						<label>Nome azienda</label>
       						<input type="text" class="form-control border-bottom" placeholder="Nome Azienda" name="azienda">
     					</div>
     					
   					</div>
-  <br>
   					<div class="row justify-content-center">
   					   <div class="col-6">
+  					   		<label>Email azienda</label>
       						<input type="text" class="form-control" placeholder="Email Azienda" name="email">
    					   </div>
   					</div>
-  <br>
  					 <div class="row justify-content-center">
-    					<div class="col-3">
+    					<div class="col-4">
+    						<label>Indirizzo</label>
       						<input type="text" class="form-control" placeholder="Indirizzo" name="indirizzo">
     					</div>
     					<div class="col-2">
+    						<label>N°Civico</label>
       						<input type="text" class="form-control" placeholder="n°" name="numeroCivico">
     					</div>
     				 	
-    				 	<div class="col-3">
+    				 
+  					</div>	
+  					<div class="row justify-content-center ">
+  						<div class="col-4">
+  							<label>Città</label>
       				 		<input type="text" class="form-control" placeholder="Città" name="citta">
    					 	</div>
    					 	<div class="col-2">
+   					 		<label>CAP</label>
       				 		<input type="text" class="form-control" placeholder="Cap" name cap>
    					 	</div>
-  					</div>	
-  <br>
+  					
+  					
+  					
+  					</div>
    					<div class="row justify-content-center">
-					    <div class="col-5 form-group">
+					    <div class="col-6 form-group">
 					    	<label>Data Fondazione:</label>
     						<input type="date" class="form-control" placeholder="Data Fondazione" name="dataFondazione" >
     					</div>
     				
  				   </div>
    					<div class="row justify-content-center">
-   				    <div class="col">
+   				    <div class="col-6">
  							<div class="form-group form-check">
     								<input type="checkbox" class="form-check-input" id="exampleCheck1">
     								<label class="form-check-label" for="exampleCheck1">Acconsento al trattamento dei miei dati, accetto i Termini di Servizio e la Politica della Privacy</label>
  							</div>    
   					</div>
   					</div>
-  					<div class="row justify-content-end">
+  					<div class="row justify-content-end mb-4">
   						  <div class="col-2" id="registrazione">
  								<button type="submit" class="btn btn-primary"  >Registrati</button>   
  						 </div>
@@ -144,7 +153,6 @@
  	
  
 			</form>
-<br>
 		</div>
 	
 	</div>
