@@ -147,7 +147,7 @@ border-bottom: 1px solid;
 }
 .navbar-sx{
 	width:8rem;
-	height:25rem;
+	height:25.5rem;
 	margin-top:10%;
 	margin-bottom: 10%;
 	background-color: aqua;
@@ -167,36 +167,36 @@ color: white;
 
 }
 .nav-item >.icon >i{
-width: 100px!important;
-height: 100px!important;
+
     background-size: 100% 100%;
-    font-size: 6em;
+    font-size: 6.2em;
 
 }
 	
 
 
-.nav-item >.icon >.tooltiptext {
-margin-top:15px;
-margin-left:25px;
+.tooltiptext {
+   
   visibility: hidden;
   width: 150px;
+  height:100px;
   background-color: aqua;
+  font-weight: bold;
   color: white;
-  font-weight:bold;
   text-align: center;
-  border-radius: 6px;
   padding: 5px 0;
+  margin-left:40px;
 
   /* Position the tooltip */
   position: absolute;
-  z-index: 1;
+  
 }
 
-.nav-item >.icon:hover .tooltiptext {
+.icon:hover> .tooltiptext {
   visibility: visible;
   animation: fadeInLeft;
 	animation-duration: 2s;
+   margin-bottom: 30px;
 }
 
 
