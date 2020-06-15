@@ -48,24 +48,31 @@
 
   <div class="row justify-content-center" >
     <div class="col col-lg-5  divPresentazione shadow">
-    <h4 >REGISTRO FITOSANITARIO</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h4>REGISTRO FITOSANITARIO</h4>
+    <p>Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari! <br>
+    Tramite pochi pratici click potrai aggiungere un trattamento al tuo registro fitosanitario, apportare modifiche, visualizzare e stampare i registri degli anni precedenti.
+    </p>
     </div>
     <div class="col col-lg-5  offset-md-1 divPresentazione shadow">
-     <h4>PRODOTTI FITOSANITARIO</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+     <h4>PRODOTTI FITOSANITARIO</h4>
+    <p>Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti, consulta tutte le informazioni importanti, le etichette e le avvertenze di ogni singolo prodotto fitosanitario! <br>
+    Potrai visualizzare anche solo i tuoi prodotti fitosanitari presenti nel tuo magazzino e aggiungerne nuovi. </p>
     </div>
    </div>
     <br>
     <br>
      <div class="row justify-content-center">
     <div class="col col-lg-5 divPresentazione shadow">
-    <h4 >TRACCIABILITA</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h4 >TRACCIABILITÀ</h4>
+    <p>Crea qui l'etichetta virtuale per ogni prodotto agroalimentare da te coltivato! <br> 
+	Con una semplice generazione di un codice QR potrai visualizzare tutte le informazioni legate ai tuoi prodotti. 
+    </p>
     </div>
     <div class="col col-lg-5 offset-md-1 divPresentazione shadow">
-     <h4>SCADENZE</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+     <h4>SCADENZE</h4>
+    <p>Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati!<br>
+	Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi tempi. 
+    </p>
     </div>
     </div>
     
