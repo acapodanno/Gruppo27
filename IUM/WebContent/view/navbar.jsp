@@ -63,7 +63,7 @@
  
   	
 </nav>
-
+<!-- login da sistemare urgente  -->
 <div style="display:none">
 		 <div id="login">
     	        <h3 class="text-center text-white ">Login form</h3>
@@ -81,8 +81,11 @@
     	                                <label for="password" class="text-info col-5">Password:</label><br>
     	                                <input type="text" name="password" id="password" class="form-control col-6">
     	                            </div>
-    	                            <div id="register-link" class="text-right">
-    	                                <a href="registration.jsp" class="text-info">Register here</a>
+    	                            <div class="form-group row align-items-center justify-content-center">
+    	                                <input type="submit" class="form-control col-4" placeholder="Login" value="Accedi">
+    	                            </div>
+    	                            <div id="register-link" class="text-center">
+    	                               <span>Non sei registrato? <a href="registration.jsp" class="text-info">Registrati</a></span>
     	                            </div>
     	                        </form>
     	                    </div>
