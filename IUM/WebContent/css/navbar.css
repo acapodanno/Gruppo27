@@ -147,27 +147,26 @@ border-bottom: 1px solid;
 }
 
 .icon-bar {
-  width: 90px; 
+  width: 100px; 
   background-color: aqua; 
   z-index:1;
   	animation: fadeInLeft;
 	animation-duration: 2s;
-  
+  text-align: center;
   }
 
 .icon-bar a {
   display: block; 
   text-align: center; 
-  padding: 16px; 
+ /* padding: 16px;*/ 
   transition: all 0.3s ease; 
   color: white; 
-  font-size: 36px; 
+  font-size: 40px; 
 }
 
-.icon-bar a:hover {
+.icon-bar a:hover ,.icon-bar a:active{
   background-color: white; 
    color:aqua;
-   width: 250px; 
   text-align: left;
 
 }

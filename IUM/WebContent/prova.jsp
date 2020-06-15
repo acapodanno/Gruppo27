@@ -14,11 +14,14 @@
 
 <script src="https://kit.fontawesome.com/yourcode.js"></script>
 
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
   />
+  
+  
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <meta charset="ISO-8859-1">
@@ -140,11 +143,11 @@
 
 
 
-<div class="icon-bar">
-  <a href="#"><i class="fa fa-book"></i><span class="icon-bar-text">Registro Fitosanitario</span></a>
-  <a href="#"><i class="fa fa-calendar"></i><span class="icon-bar-text">Scadenze</span></a>
-  <a href="#"><i class="fa fa-box"></i><span class="icon-bar-text">Prodotti Fitosanitario</span></a>
-  <a href="#"><i class="fa fa-qrcode"></i><span class="icon-bar-text">Tracciabilità</span></a>
+<div class="icon-bar shadow">
+  <a href="#registro"><i class="fa fa-book"></i><span class="icon-bar-text shadow">Registro Fitosanitario</span></a>
+  <a href="#Scadenze"><i class="fa fa-calendar-o"></i><span class="icon-bar-text shadow">Scadenze</span></a>
+  <a href="#prodotti"><i class="fa fa-archive"></i><span class="icon-bar-text shadow">Prodotti Fitosanitario</span></a>
+  <a href="#tracciabilità"><i class="fa fa-qrcode"></i><span class="icon-bar-text shadow">Tracciabilità</span></a>
 </div>
 
 
