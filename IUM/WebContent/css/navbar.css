@@ -92,6 +92,14 @@ nav > .accedi > button{
 	
 	margin-right: 7rem !important;
 }
+.ml-6{
+	margin-left: 7rem;
+	
+}
+.ml-7{
+	margin-left: 8rem;
+	
+}
 /* popoup altro codice*/
 .popup-loggin{
 	
@@ -103,6 +111,10 @@ nav > .accedi > button{
 .navbar{
 	
 	  background: white !important;
+}
+.navbar-toggler{
+	
+	margin-left: 50%;
 }
 .footer{
 padding-top: 3%;	
@@ -228,4 +240,20 @@ float: left;
  	height: 30px;
  	border-radius: 6px;
  	
+}
+.icon-bar-vertical > a{
+	font-size: 2rem;
+	
+	
+	
+	
+}
+@media screen and (max-width: 1200px) {
+	
+	.ml-7{
+	margin-left: 2rem;
+	
+}
+	
+	
 }

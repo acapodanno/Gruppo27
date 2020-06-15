@@ -132,7 +132,60 @@
 -->
 
 
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
+  <a class="navbar-brand ml-5" href="HomePage.jsp">
+  	<img alt="" src="image/LOGO.png" width="75" height="75" class="d-inline-block align-top">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav justify-content-center ">
+      <li class="nav-item active ml-5  dropdown ">
+     
+        <a class=" nav-link navbar-element" href="#" role="button" data-toggle="dropdown"  data-hover="dropdown">COME FUNZIONA</a>
+        <div class="dropdown-menu dropdown-menu-animation" >
+   			 	 <a class="dropdown-item" href="#">Registro Fitosanitario</a>
+   				 <a class="dropdown-item" href="#">Prodotti Fitosanitario</a>
+    			 <a class="dropdown-item" href="#">Scadenze</a>
+ 				 <a class="dropdown-item" href="#">Tracciabilità</a>
+ 	
+ 		</div>
+      </li>
+      <li class="nav-item active ml-5 navbar-element">
+        <a class="nav-link navbar-element" href="#">VANTAGGI</a>
+      </li>
+      <li class="nav-item active ml-5 ">
+        <a class="nav-link active navbar-element" href="#">CHI SIAMO</a>
+      </li>
+      <li class="nav-item active ml-5">
+        <a class="nav-link navbar-element" href="#">ASSISTENZA</a>
+      </li>
+    </ul>
+   
+   <div class="align-baseline ml-6 icon-bar-vertical">
+  	<a class="" href="HomePage.jsp"><i class="fa fa-home"></i></a>
+  	<a href="#" class=" ml-3" ><i class="fa fa-user-circle"></i></a>
+  	<a href="#" class=" ml-3"><i class="fa fa-bell"></i></a>
+  	
+	</div>
+    
+  </div>
+  
+   
+  </div>
+  <div>
+  <!-- 
+  <button type="button" class="btn  mr-6 popup-loggin"  data-toggle="popover"  data-html="true" data-placement="bottom" data-content="<strong>ok </strong>" id="tasto-accedi">
+	ACCEDI
+	</button>
+   -->
+   
+   
+  
+ 
+  	
+</nav>
 
 
 

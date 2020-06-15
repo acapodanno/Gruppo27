@@ -22,7 +22,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
-  <a class="navbar-brand ml-5" href="HomePage.jsp">
+  <a class="navbar-brand ml-7" href="HomePage.jsp">
   	<img alt="" src="../image/LOGO.png" width="75" height="75" class="d-inline-block align-top">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,12 +51,12 @@
         <a class="nav-link navbar-element" href="#">ASSISTENZA</a>
       </li>
     </ul>
-    
-  </div>
-  
-  <button type="button" class="btn  mr-6 popup-loggin"  data-toggle="popover"  data-html="true" data-placement="bottom" data-content="<strong>ok </strong>" id="tasto-accedi">
+    <button type="button" class="btn  ml-6 mr-3 popup-loggin"  data-toggle="popover"  data-html="true" data-placement="bottom" data-content="<strong>ok </strong>" id="tasto-accedi">
 	ACCEDI
 	</button>
+  </div>
+  
+  
   
   
   
