@@ -65,6 +65,7 @@ nav > .accedi > button{
 	background-color: #f6f6f6;
 	
 }
+ 										/*Popup form*/
 #login .container #login-row #login-column #login-box {
   
 
@@ -77,6 +78,9 @@ nav > .accedi > button{
 	width: 800px !important;
 	height: 400px !important;
 }
+
+
+										/*Navbar*/
 .nav-item > .navbar-element{
 
 	color: #009e0f !important;
@@ -88,6 +92,7 @@ nav > .accedi > button{
 	
 	margin-right: 7rem !important;
 }
+/* popoup altro codice*/
 .popup-loggin{
 	
 	background-color: #009e0f !important;
