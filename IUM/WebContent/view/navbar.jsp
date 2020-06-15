@@ -20,13 +20,7 @@
 	<title>Document</title>
 </head>
 <body>
-<!-- 
-<nav class="navbar navbar-light bg-light shadow fixed-top">
-  <a class="navbar-brand" href="#">
-    <img src="LOGO.png" width="100" height="100" class="d-inline-block align-top" alt="">
-  </a>
-</nav>
- -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
   <a class="navbar-brand ml-5" href="HomePage.jsp">
   	<img alt="" src="../image/LOGO.png" width="75" height="75" class="d-inline-block align-top">
