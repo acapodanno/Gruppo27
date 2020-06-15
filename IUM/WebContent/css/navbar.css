@@ -178,14 +178,15 @@ color: white;
 .tooltiptext {
    
   visibility: hidden;
-  width: 150px;
-  height:100px;
+  width: 100px;
+  height:auto;
   background-color: aqua;
   font-weight: bold;
   color: white;
-  text-align: center;
-  padding: 5px 0;
-  margin-left:40px;
+  text-align:center;
+
+display: inline;
+  margin-left:29px;
 
   /* Position the tooltip */
   position: absolute;
@@ -194,7 +195,7 @@ color: white;
 
 .icon:hover> .tooltiptext {
   visibility: visible;
-  animation: fadeInLeft;
+  animation: fadeIn;
 	animation-duration: 2s;
    margin-bottom: 30px;
 }

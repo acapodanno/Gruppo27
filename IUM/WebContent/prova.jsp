@@ -57,7 +57,7 @@
   </li>
   <li class="nav-item">
     <a class="nav-link icon ml-1 " href="#" data-toggle="tooltip" data-placement="right" title=" Traccibilità"><i class="fa fa-qrcode " aria-hidden="true" ></i>
-  <!--   <span class="tooltiptext ">Tracciabilità</span> --> 
+   <span class="tooltiptext ">Tracciabilità</span>  
    
   </li>
 </ul>
