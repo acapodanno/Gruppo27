@@ -1,197 +1,195 @@
 @charset "ISO-8859-1";
 
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
 
-/* ------------------------------------------------------PROVE ALESSIA ---------------------------------------------------------*/
-/*
+/* Caselle di input */
 input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+	width: 100%;
+	padding: 10px 15px;
+	margin: 8px 0;
+	display: inline-block;
+	border: none;
+	box-sizing: border-box;
+	background: transparent;
+	border-bottom: 2px solid white;
 }
 
-input[type=checkbox]{
-	  width: 50%;
-  padding: 12px 20px;
-
-	margin-left: -100px;
-}
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 20%;
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 5%;
-  position: relative;
-  
+/* Checkbox di ricordami quando cliccata */
+input[type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
 }
 
-.accedi{
-	top: 15%;
-	left: 80%; 
+/* Checkbox disposizione */
+.checkbox{
+position: absolute;
+display: inline-block;
+left: 5%;
+}
+
+/* Cambia forma il puntato quando passi sulla checkbox*/
+.form-check-input:hover{
+	cursor: pointer;
+}
+
+/*Grandezza di ricordami*/
+.white-text{
+	font-size: 16px;
+}
+
+/* Primo pulsante accedi "esterno"*/    /* ---------------------> nel nostro caso sarebbe quello nella nav bar*/
+.primo{
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 20%;
+}
+
+/* Secondo pulsante accedi per confermare email e pasw */
+.secondo {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 20%;
+	position: relative;
+	left: 80%;
+}
+
+/* Ogni bottone diventa opaco quando ci passi sopra  */
+button:hover {
+	opacity: 0.8;
+}
+
+/* Caratteristiche di tutte le label(etichette degli input) nel form  */
+label{
+	font-size: 20px;
+	color: white;
+}
+
+/* Caratteristiche del titolo 'Accedi'  */
+h1{
+	font-size: 30px;
+	color: white;
+	margin: auto;
+ 	width: 20%;
+}
+
+/* Bordi arrotondati per l'immagine sfondo */
+img{
+	border-radius: 5px;
+}
+
+/* Caratteristiche contenitore in cui si trova il form e tutto il resto*/
+.container {
+	position: absolute;
+	top: 10%;
+	background-color: transparent;
+	padding: 16px;
 	
 }
 
-
-
-button:hover {
-  opacity: 0.8;
+/* Caratteristiche secondo contenitore in cui si trova il "registrati qui" (prima c'era anche un tasto annulla ma l'ho tolto) */
+.container2{
+	background-color: transparent;
+	position: absolute;
+	left: 70%;
+	bottom: 0;
 }
 
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
+/* Caratteristiche della parola "registrati qui" */
+span.reg {
+	color: white; 
+	font-style: italic;
+	padding-top: 16px;
 }
 
-.container {
-  padding: 16px;
-  
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-
+/* The Modal (background) */ /* Cose che non ho toccato */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	padding-top: 60px;
 }
 
-/*
+
+
+/* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  height: 70%;
-  width: 40%; /* Could be more or less, depending on screen size */
-}*/
+	position: relative;
+	background-color: transparent;
+	margin: 5% auto 15% auto;
+	border: none !important;
+	width: 70%; /* Could be more or less, depending on screen size */
+}
 
-/*
+/* Bottone chiusura (x) */
 .close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: white;
+	font-size: 35px;
+	font-weight: bold;
+	opacity: 1;
+	
 }
 
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
+/* Se ci passi sopra diventa rosso e il puntatore cambia */
+.close:hover, .close:focus {
+	color: red;
+	cursor: pointer;
 }
 
-
+/* Add Zoom Animation */
 .animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}*/
-/*
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
 }
 
+@
+-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)
+}
+
+to {
+	-webkit-transform: scale(1)
+}
+
+}
+@
+keyframes animatezoom {
+	from {transform: scale(0)
+}
+
+to {
+	transform: scale(1)
+}
+
+}
+
+/* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-  
-}
-*/
-
-
-.form-dark .font-small {
-  font-size: 0.8rem; }
-
-.form-dark [type="radio"] + label,
-.form-dark [type="checkbox"] + label {
-  font-size: 0.8rem; }
-
-.form-dark [type="checkbox"] + label:before {
-  top: 2px;
-  width: 15px;
-  height: 15px;
-   }
-
-.form-dark .md-form label {
-  color: #fff; }
-
-.form-dark input[type=email]:focus:not([readonly]) {
-  border-bottom: 1px solid #00C851;
-  -webkit-box-shadow: 0 1px 0 0 #00C851;
-  box-shadow: 0 1px 0 0 #00C851; }
-
-.form-dark input[type=email]:focus:not([readonly]) + label {
-  color: #fff; }
-
-.form-dark input[type=password]:focus:not([readonly]) {
-  border-bottom: 1px solid #00C851;
-  -webkit-box-shadow: 0 1px 0 0 #00C851;
-  box-shadow: 0 1px 0 0 #00C851; }
-
-.form-dark input[type=password]:focus:not([readonly]) + label {
-  color: #fff; }
-
-.form-dark input[type="checkbox"] + label:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 17px;
-  height: 17px;
-  z-index: 0;
-  border: 1.5px solid #fff;
-  border-radius: 1px;
-  margin-top: 2px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s; }
-
-.form-dark input[type="checkbox"]:checked + label:before {
-  top: -4px;
-  left: -3px;
-  width: 12px;
-  height: 22px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: transparent #00c851 #00c851 transparent;
-  -webkit-transform: rotate(40deg);
-  -ms-transform: rotate(40deg);
-  transform: rotate(40deg);
-  -webkit-backface-visibility: hidden;
-  -webkit-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  transform-origin: 100% 100%; }
-
-.form-dark .modal-header {
-    border-bottom: none;
+	span.reg {
+		display: block;
+		float: none;
+	}
+	
+	h1 {
+		width: 100%;
+	}
 }
