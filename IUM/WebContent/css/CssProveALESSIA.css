@@ -16,7 +16,7 @@ input[type=text], input[type=password] {
 	border-bottom: 2px solid white;
 }
 
-/* Checkbox di ricordami quando cliccata */
+/* Checkbox di 'Ricordami' quando cliccata */
 input[type="checkbox"] {
 	box-sizing: border-box;
 	padding: 0;
@@ -29,7 +29,7 @@ display: inline-block;
 left: 5%;
 }
 
-/* Cambia forma il puntato quando passi sulla checkbox*/
+/* Cambia forma il puntatore quando passi sulla checkbox*/
 .form-check-input:hover{
 	cursor: pointer;
 }
@@ -102,7 +102,7 @@ img{
 	position: absolute;
 	left: 70%;
 	bottom: 0;
-}
+} /* si deve aggiustare*/
 
 /* Caratteristiche della parola "registrati qui" */
 span.reg {
@@ -149,13 +149,13 @@ span.reg {
 	
 }
 
-/* Se ci passi sopra diventa rosso e il puntatore cambia */
+/* Se ci passi sopra diventa rosso e il puntatore cambia (x) */
 .close:hover, .close:focus {
 	color: red;
 	cursor: pointer;
 }
 
-/* Add Zoom Animation */
+/* Add Zoom Animation */   /* purtroppo non funziona PER IL MOMENTO*/
 .animate {
 	-webkit-animation: animatezoom 0.6s;
 	animation: animatezoom 0.6s
