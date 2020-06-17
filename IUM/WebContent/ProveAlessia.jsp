@@ -50,7 +50,7 @@
   <form class="modal-content animate" action="/action_page.php"
 			method="post">
    <div class="modal-content">
-			
+			 
    <img src="https://images.vanityfair.it/wp-content/uploads/2019/04/19133507/P29.jpg"  style="opacity:0.4" width=auto height="700px">
    <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'"
