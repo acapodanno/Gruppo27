@@ -7,8 +7,8 @@ body {
 /* Caselle di input */
 input[type=text], input[type=password] {
 	width: 100%;
-	padding: 10px 15px;
-	margin: 8px 0;
+	padding: 20px 25px;
+	margin: 18px 0;
 	display: inline-block;
 	border: none;
 	box-sizing: border-box;
@@ -20,7 +20,7 @@ input[type=text], input[type=password] {
 input[type=text]:focus, input[type=password]:focus{
 	-webkit-transition: 0.2s;
  	 transition: 0.2s;
-  border-bottom: 3px solid white;
+ 	 border-bottom: 3px solid #009e0f;
 }
 
 /* Checkbox di 'Ricordami' quando cliccata */
@@ -48,7 +48,8 @@ left: 5%;
 
 /* Primo pulsante accedi "esterno"*/    /* ---------------------> nel nostro caso sarebbe quello nella nav bar*/
 .primo{
-	background-color: #4CAF50;
+	background-color: #009e0f;
+	opacity: 0.9;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
@@ -59,15 +60,17 @@ left: 5%;
 
 /* Secondo pulsante accedi per confermare email e pasw */
 .secondo {
-	background-color: #4CAF50;
+	background-color: #009e0f;
+	opacity: 0.9;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
-	width: 20%;
-	position: relative;
-	left: 80%;
+	width: 95%;
+	position: absolute;
+	bottom: -25%;
+	border-radius: 10px;
 }
 
 /* Ogni bottone diventa opaco quando ci passi sopra  */
@@ -85,14 +88,14 @@ label{
 h1{
 	font-size: 30px;
 	color: white;
-	margin: auto;
- 	width: 20%;
 }
 
 /* Bordi arrotondati per l'immagine sfondo */
 img{
 	border-radius: 5px;
+	
 }
+
 
 /* Caratteristiche contenitore in cui si trova il form e tutto il resto*/
 .container {
@@ -107,7 +110,6 @@ img{
 .container2{
 	background-color: transparent;
 	position: absolute;
-	left: 70%;
 	bottom: 0;
 } /* si deve aggiustare*/
 
@@ -115,7 +117,7 @@ img{
 span.reg {
 	color: white; 
 	font-style: italic;
-	padding-top: 16px;
+	font-size: 25px;
 }
 
 /* The Modal (background) */ /* Cose che non ho toccato */
@@ -180,9 +182,9 @@ span.reg {
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
+	
 	span.reg {
-		display: block;
-		float: none;
+
 	}
 	
 	h1 {

@@ -51,14 +51,14 @@
 			method="post">
    <div class="modal-content">
 			
-   <img src="https://www.ciatoscana.eu/home/wp-content/uploads/2020/04/ciatoscana_orto-hobbisti-amatoriale-1200x800.jpg"  style="opacity:0.5" width="100%" height="100%">
+   <img src="https://images.vanityfair.it/wp-content/uploads/2019/04/19133507/P29.jpg"  style="opacity:0.4" width=auto height="700px">
    <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'"
 						class="close" title="Close Modal">&times;</span>
     </div>
 
     <div class="container">
-    	<h1><b> Accedi</b></h1><br>
+    	<h1 class="text-center"><b> Accedi</b></h1><br>
       <label for="uname"><b>Inserisci qui la tua e-mail</b></label>
       <input style="color: white;" type="text" placeholder="Email" name="uname" required>
 
