@@ -42,8 +42,93 @@
 </head>
 <body>
 
-<font color="#009e0f"><button class="primo" onclick="document.getElementById('id01').style.display='block'"
+<!-- ----------------------------------------NAV BAR----------------------------------------------- -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
+  <a class="navbar-brand ml-7" href="#HomePage.jsp">
+  	<img src="image/LOGO.png" width="75" height="75" class="d-inline-block align-top">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav justify-content-center ">
+      <li class="nav-item active mr-5  dropdown ">
+     
+        <a class=" nav-link navbar-element" href="#" role="button" data-toggle="dropdown"  data-hover="dropdown">COME FUNZIONA</a>
+        <div class="dropdown-menu dropdown-menu-animation" >
+   			 	 <a class="dropdown-item" href="#">Registro Fitosanitario</a>
+   				 <a class="dropdown-item" href="#">Prodotti Fitosanitario</a>
+    			 <a class="dropdown-item" href="#">Scadenze</a>
+ 				 <a class="dropdown-item" href="#">Tracciabilità</a>
+ 	
+ 		</div>
+      </li>
+      <li class="nav-item active mr-5 navbar-element">
+        <a class="nav-link navbar-element" href="#">VANTAGGI</a>
+      </li>
+      <li class="nav-item active mr-5 ">
+        <a class="nav-link active navbar-element" href="#">CHI SIAMO</a>
+      </li>
+      <li class="nav-item active mr-5">
+        <a class="nav-link navbar-element" href="#">ASSISTENZA</a>
+      </li>
+    </ul>
+   <font color="#009e0f"><button class="primo" onclick="document.getElementById('id01').style.display='block'"
 		style="width:auto;">ACCEDI</button></font>
+   
+	</nav>
+  </div>
+  
+  
+  <!-- ---------------------FINE NAV BAR---------------------------------------------------------------- -->
+
+
+
+<!-- --------------------------SLIDE SHOW--------------------------------------------------------------- -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:5px;">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="image/PROVA4.jpg" alt="First slide" width=auto height="525px">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="image/PROVA8.jpg" alt="Second slide" width=auto height="525px">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="image/PROVA7.jpg" alt="Third slide" width=auto height="525px">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- -------------------------FINE SLIDE SHOW----------------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div id="id01" class="modal">
   

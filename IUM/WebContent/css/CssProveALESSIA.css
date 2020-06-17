@@ -4,6 +4,44 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
+
+										/*Navbar*/
+.nav-item > .navbar-element{
+
+	color: #009e0f !important;
+	font-weight: bold;
+	font-size: 1.2rem !important;
+	
+}
+
+
+/* fine nav bar*/
+
+/*slide foto*/
+/*.carousel-item{
+    height: 500px;
+} 
+.carousel-item img{
+    height: 500px;
+}*/
+/*fine */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Caselle di input */
 input[type=text], input[type=password] {
 	width: 100%;
