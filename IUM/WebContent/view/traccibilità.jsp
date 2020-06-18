@@ -60,10 +60,21 @@
     				<option value="3">Arancie</option>
   			 </select>
 
-				</div>  			 
+				</div>  
+				<div class="col col-lg-12  text-center mt-5">
+ 					
+ 					<div class="" style="border:solid 1px red;height:200px; width: 200px; display: inline-block;" >
+ 					
+ 					
+ 					</div>
+ 					
+ 								
+
+				</div>  
+							 
 		</div>
 		
-		<div class=" col col-lg-6 " style=" height: 500px;">
+		<div class=" col col-lg-6 " >
 		<div class="col col-lg-12 text-center ">
 			<h5>Informazioni</h5>
 			</div>
