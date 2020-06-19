@@ -45,6 +45,7 @@ public class access extends HttpServlet {
 		String email,password,nome,cognome,dataNascita,ruolo,nomeAzienda,indirizzo,città,cap,dataFondazione;
 		UtenteDAO userDao = new UtenteDAO();
 		Utente user;
+		if(access!=null) {
 		switch (access) {
 		case "login":
 			 email= request.getParameter("email");
@@ -98,7 +99,13 @@ public class access extends HttpServlet {
 		break;
 		}
 		
-		
+		}else {
+
+			
+			getServletContext().getRequestDispatcher("/view/HomePage.jsp").forward(request, response);
+
+			
+		}
 		
 		
 	}

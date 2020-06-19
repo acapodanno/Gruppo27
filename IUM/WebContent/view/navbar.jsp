@@ -8,7 +8,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link rel="stylesheet" href="../css/navbar.css">
+<link rel="stylesheet" href="css/navbar.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link
@@ -23,7 +23,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
   <a class="navbar-brand ml-7" href="HomePage.jsp">
-  	<img alt="" src="../image/LOGO.png" width="75" height="75" class="d-inline-block align-top">
+  	<img alt="" src="image/LOGO.png" width="75" height="75" class="d-inline-block align-top">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -65,11 +65,11 @@
 	</div>
     
     <%}else{ %>
-    <button type="button" class="btn  ml-6 mr-3 popup-loggin"  data-toggle="popover"  data-html="true" data-placement="bottom" data-content="<strong>ok </strong>" id="tasto-accedi">
+    <button type="button" class="btn  ml-6 mr-3 " data-toggle="modal" id="tasto-accedi" data-target="#login">
 	ACCEDI
 	</button>
 	
-	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
@@ -82,7 +82,7 @@
         <h5 class="modal-title  " id="exampleModalCenterTitle ">
         ACCEDI
         </h5>
- 		<form>
+ 		<form action="access" method="post">
  		
 	  <div class="form-group">
    			<label for="exampleInputEmail1">Email address</label>

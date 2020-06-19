@@ -17,13 +17,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="../image/PROVA4.jpg" alt="First slide" width=auto height="525px">
+      <img class="d-block w-100" src="image/PROVA4.jpg" alt="First slide" width=auto height="525px">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="../image/PROVA7.jpg" alt="Second slide" width=auto height="525px">
+      <img class="d-block w-100" src="image/PROVA7.jpg" alt="Second slide" width=auto height="525px">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="../image/PROVA8.jpg" alt="Third slide" width=auto height="525px">
+      <img class="d-block w-100" src="image/PROVA8.jpg" alt="Third slide" width=auto height="525px">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -111,7 +111,7 @@
 	<div class="row justify-content-center " >
  		<div class=" col col-lg-3 " >
  			<div class="card divPresentazione shadow">
-  				<img src="../image/profile3.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
+  				<img src="image/profile3.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
   				<div class="card-body">
     			<h5 class="card-title" style="text-align: center">Alessandro Capodanno</h5>
    				</div>
@@ -119,7 +119,7 @@
     	</div>
  		<div class=" col col-lg-3 " >
  			<div class="card divPresentazione shadow">
-  				<img src="../image/profile2.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
+  				<img src="image/profile2.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
   				<div class="card-body">
     			<h5 class="card-title" style="text-align: center">Alessia Crispo</h5>
    				</div>
@@ -127,7 +127,7 @@
     	</div>
  		<div class=" col col-lg-3 " >
  			<div class="card divPresentazione shadow">
-  				<img src="../image/profile.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
+  				<img src="image/profile.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
   				<div class="card-body">
     			<h5 class="card-title" style="text-align: center">Sara Patierno</h5>
    				</div>

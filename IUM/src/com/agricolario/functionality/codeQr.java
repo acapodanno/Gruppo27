@@ -1,5 +1,7 @@
 package com.agricolario.functionality;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
@@ -10,19 +12,19 @@ import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
-public class GeneratoreQR {
-	public GeneratoreQR() {
+public class codeQr {
+
+	public codeQr() {
 		// TODO Auto-generated constructor stub
 	}
-	private static final String QR_CODE_IMAGE_PATH = "QRCode.png";
+	private static final String QR_CODE_IMAGE_PATH = "./MyQRCode.png";
 
-	 private static void generateQRCodeImage(String text, int width, int height, String filePath)
+	 public  void generateQRCodeImage(String text, int width, int height,String context)
 	            throws WriterException, IOException {
-	        QRCodeWriter qrCodeWriter = new QRCodeWriter();
+	     
+		   QRCodeWriter qrCodeWriter = new QRCodeWriter();
 	        BitMatrix bitMatrix = qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, width, height);
-	        Path path = FileSystems.getDefault().getPath(filePath);
-	        MatrixToImageWriter.writeToPath(bitMatrix, "PNG", path);
-	    }
-	
-	
+
+		    	   
+	 }
 }
