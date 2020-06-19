@@ -1,8 +1,14 @@
 package com.agricolario.dao;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.agricolario.bean.RegistroFitosanitario;
+import com.agricolario.bean.Trattamento;
+import com.agricolario.bean.Utente;
 import com.agricolario.connessione.Connessione;
 import com.agricolario.functionality.ParseDate;
 
@@ -19,6 +25,60 @@ public class RegistroFitosanitarioDAO {
 	// 	PreparedStatement ps = con.prepareStatement(insertSql);
 	
 	    return true;
+		
+		
+		
+	//	return false;
+	}
+	public RegistroFitosanitario getRegistro(int id) {
+		
+		String insertSql= "\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"SELECT * FROM registrofitosanitario JOIN trattamento  ON registrofitosanitario.idregistrofitosanitario = trattamento.idregistro where registrofitosanitario.idregistrofitosanitario=1;";
+	// 	PreparedStatement ps = con.prepareStatement(insertSql);
+	
+		Connection con= connessione.getConn();
+	 	ResultSet result;
+		
+		
+	    	try {
+				PreparedStatement ps = con.prepareStatement(insertSql);
+				
+				result=ps.executeQuery();
+				RegistroFitosanitario registro=new RegistroFitosanitario();
+				ArrayList<Trattamento> trattamenti = new ArrayList<Trattamento>();
+				while(result.next()) {
+					Trattamento t= new Trattamento();
+					t.setColtura(result.getString("coltura"));
+					
+					
+					trattamenti.add(t);
+				
+				
+				
+				}
+				registro.setTrattamenti(trattamenti);
+				
+			
+				return registro; 
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return null;
+			}
+			
+    
+		
 		
 		
 		

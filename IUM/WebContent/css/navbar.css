@@ -258,3 +258,7 @@ float: left;
 	
 	
 }
+/*Registro */
+thread >tr{
+	background-color: green !important;
+}
