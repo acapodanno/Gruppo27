@@ -291,13 +291,15 @@ table{
 		display: grid;
   	grid-template-columns: 10% 70% 10%;
 	  justify-items: center;
+	  height: 500px;
 	
 }
-.tab-registro{
+#tab-registro{
   float: left;
   width: 30%;
 }
-.#tab-registro button {
+
+#tab-registro button {
 	display: block;
   background-color: inherit;
   color: black;
@@ -309,19 +311,15 @@ table{
   cursor: pointer;
   transition: 0.3s;
 }
-.tab-registro button.active {
+#tab-registro button.active {
   background-color: #ccc;
 }
 
 
-.tab-registro button:hover {
+#tab-registro button:hover {
   background-color: #ddd;
 }
-.contenuto-registro {
-  float: left;
-  padding: 0px 12px;
-  border: 1px solid #ccc;
-  width: 70%;
-  border-left: none;
-  height: 300px;
+.tabcontent{
+  width: 100%;
+  height: auto;
 }

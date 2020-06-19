@@ -153,6 +153,9 @@ $("#bottone-generaQR").click(function(){
 </script>
 
 
+
+
+
 <%@ include file="footer.jsp"%>
 
 </body>

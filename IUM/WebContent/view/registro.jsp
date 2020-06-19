@@ -38,33 +38,31 @@
 		</div>
 		
 	</div>
-<div class="grid-registro">
+<div id="grid-registro" class="mt-5">
 <div style="width:100% ;height:auto; " id="tab-registro">
 
-<button class="tablinks" onclick="apriContenuto()">Anno</button>
+<button class="tablinks" onclick="apriContenuto(event,2019)" id="defaultOpen">2019</button>
+<button class="tablinks" onclick="apriContenuto(event,2018)">2018</button>
+<button class="tablinks" onclick="apriContenuto(event,2017)">2017</button>
 
 
 </div>
     
-<div class="contenuto-registro">
+<div id="contenuto-registro" >
+<div id="2019" class="tabcontent"><h1>2019</h1></div>
 
+<div id="2018" class="tabcontent">2018</div>
 
+<div id="2017" class="tabcontent">
 
-
-
-
-
-
-
- <div id="anno" class="tabcontent">
 <table class="  table-striped">
 
 <colgroup>
-    <col style="width:8%">
-    <col  style="width:8%">
-    <col  style="width:8%">
-    <col style="width:8%">
-    <col  style="width:8%">
+    <col style="width:10%">
+    <col  style="width:10%">
+    <col  style="width:10%">
+    <col style="width:10%">
+    <col  style="width:10%">
     <col  style="width:15%">
   </colgroup>
   <thead class="thead" style="background-color: green; color: white; font-weight: bold; font-size: 15px;">
@@ -86,44 +84,27 @@
       <td  ><%= u.getNomeProdotto() %></td>
       <td><%=u.getColtura() %></td>
       <td><%= u.getDatInzio() %></td>
-       <td ><%= u.getQuantita() %></th>
-      <td><%= u.getAvversita() %></th>
-     <td ><%=u.getNote() %></th>
+       <td ><%= u.getQuantita()%></td>
+      <td><%= u.getAvversita() %></td>
+     <td ><%=u.getNote() %></td>
     </tr>
     <%} %>
   </tbody>
 </table>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 <div style="width:100% ;height: 250px;" >
        
-        <button class=" ml-5 mt-5 buttone-registro" style=" height: 30px; width:100px" >Crea  </button>
-        <button class="ml-5 mt-5 buttone-registro" >Delega</button>
-        <button class=" ml-5 mt-5 buttone-registro">Modifica</button>
-        <button class="ml-5 mt-5 buttone-registro">Elimina</button>
+        <button class=" ml-3 mt-5 buttone-registro" style=" height: 30px; width:100px" >Crea  </button>
+        <button class="ml-3 mt-5 buttone-registro" >Delega</button>
+        <button class=" ml-3 mt-5 buttone-registro">Modifica</button>
+        <button class="ml-3 mt-5 buttone-registro">Elimina</button>
         
 </div>
                 
+</div>
+
+
         <!-- 
         <div class="col-1"  ">
        
@@ -135,6 +116,34 @@
         </div>
          -->
       </div> 
+      
+      <script type="text/javascript">
+      function apriContenuto(evt,anno) {
+    	  // Declare all variables
+    	  var i, tabcontent, tablinks;
+
+    	  // Get all elements with class="tabcontent" and hide them
+    	  tabcontent = document.getElementsByClassName("tabcontent");
+    	  for (i = 0; i < tabcontent.length; i++) {
+    	    tabcontent[i].style.display = "none";
+    	  }
+
+    	  // Get all elements with class="tablinks" and remove the class "active"
+    	  tablinks = document.getElementsByClassName("tablinks");
+    	  for (i = 0; i < tablinks.length; i++) {
+    	    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    	  }
+
+    	  // Show the current tab, and add an "active" class to the link that opened the tab
+    	 document.getElementById(anno).style.display = "block";
+    	  evt.currentTarget.className += " active";
+    	}
+      document.getElementById("defaultOpen").click();
+
+      
+      </script>
+      
+      
 <%@ include file="footer.jsp"%>
 
 </body>
