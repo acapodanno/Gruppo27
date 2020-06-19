@@ -259,6 +259,69 @@ float: left;
 	
 }
 /*Registro */
-thread >tr{
-	background-color: green !important;
+table{
+ height: 500px;
+  overflow-y: scroll;
+  display: block;
+  
+  
+  }
+/*
+.table-fixed tbody {
+  height: 230px;
+  overflow-y: scroll;
+  width: 100%;
+
+}
+*/
+.buttone-registro{
+	
+	height: 30px;
+	width: 100px;
+	background-color: green;
+	color:white;
+	font-weight: bold;
+	
+	
+	
+}
+#grid-registro{
+	margin-left:10%;
+	display: grid;
+		display: grid;
+  	grid-template-columns: 10% 70% 10%;
+	  justify-items: center;
+	
+}
+.tab-registro{
+  float: left;
+  width: 30%;
+}
+.#tab-registro button {
+	display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tab-registro button.active {
+  background-color: #ccc;
+}
+
+
+.tab-registro button:hover {
+  background-color: #ddd;
+}
+.contenuto-registro {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
 }

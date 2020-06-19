@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.agricolario.bean.RegistroFitosanitario;
+import com.agricolario.dao.RegistroFitosanitarioDAO;
+
 /**
  * Servlet implementation class showRegistro
  */
@@ -27,6 +30,12 @@ public class showRegistro extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		RegistroFitosanitario reg =  new RegistroFitosanitarioDAO().getRegistro(1);
+		
+		request.setAttribute("registro", reg);
+		
+		
 		getServletContext().getRequestDispatcher("/view/registro.jsp").forward(request, response);	
 	}
 

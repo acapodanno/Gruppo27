@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.agricolario.bean.RegistroFitosanitario;
+import com.agricolario.bean.Trattamento;
 
 class RegistroFitosanitarioDAOTest {
 
@@ -25,9 +26,11 @@ class RegistroFitosanitarioDAOTest {
 	
 	RegistroFitosanitarioDAO dao= new RegistroFitosanitarioDAO();
 	RegistroFitosanitario reg = dao.getRegistro(1);
-	System.out.println(reg.getTrattamenti().get(1).getColtura());
 	
+	for(Trattamento u : reg.getTrattamenti()) {
+	System.out.println(u.getNomeProdotto()+" "+ u.getQuantita()+" "+u.getDatInzio());
 	
+	}
 	}
 	
 

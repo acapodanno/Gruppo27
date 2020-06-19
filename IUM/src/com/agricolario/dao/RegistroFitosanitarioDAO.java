@@ -44,7 +44,7 @@ public class RegistroFitosanitarioDAO {
 				"\r\n" + 
 				"\r\n" + 
 				"\r\n" + 
-				"SELECT * FROM registrofitosanitario JOIN trattamento  ON registrofitosanitario.idregistrofitosanitario = trattamento.idregistro where registrofitosanitario.idregistrofitosanitario=1;";
+				"SELECT * FROM registrofitosanitario JOIN trattamento  ON registrofitosanitario.idregistrofitosanitario = trattamento.idregistro where registrofitosanitario.idregistrofitosanitario=?;";
 	// 	PreparedStatement ps = con.prepareStatement(insertSql);
 	
 		Connection con= connessione.getConn();
@@ -53,14 +53,20 @@ public class RegistroFitosanitarioDAO {
 		
 	    	try {
 				PreparedStatement ps = con.prepareStatement(insertSql);
-				
+			    ps.setInt(1, id);
 				result=ps.executeQuery();
 				RegistroFitosanitario registro=new RegistroFitosanitario();
 				ArrayList<Trattamento> trattamenti = new ArrayList<Trattamento>();
 				while(result.next()) {
 					Trattamento t= new Trattamento();
 					t.setColtura(result.getString("coltura"));
-					
+					t.setNomeProdotto(result.getString("nomeprodotto"));
+					t.setAvversita(result.getString("avversita"));
+					t.setUnita("unitaDiMisuraProdotto");
+					t.setNote(result.getString("note"));
+					t.setQuantita(result.getFloat("quantitaProdotto"));
+					t.setSuperficie(result.getDouble("superficieInEttari"));
+					t.setDatInzio(result.getDate("dataInizio"));
 					
 					trattamenti.add(t);
 				

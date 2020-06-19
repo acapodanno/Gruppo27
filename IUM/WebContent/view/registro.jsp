@@ -1,3 +1,5 @@
+<%@page import="com.agricolario.bean.Trattamento"%>
+<%@page import="com.agricolario.bean.RegistroFitosanitario"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -21,154 +23,119 @@
 </head>
 <body>
 <%@ include file="navbar.jsp"%>
+ 
+<div class="icon-bar shadow">
+  <a href="#registro"><i class="fa fa-book"></i><span class="icon-bar-text shadow">Registro Fitosanitario</span></a>
+  <a href="#Scadenze"><i class="fa fa-calendar-o"></i><span class="icon-bar-text shadow">Scadenze</span></a>
+  <a href="#prodotti"><i class="fa fa-archive"></i><span class="icon-bar-text shadow">Prodotti Fitosanitario</span></a>
+  <a href="#tracciabilità"><i class="fa fa-qrcode"></i><span class="icon-bar-text shadow">Tracciabilità</span></a>
+</div>
+
 <div class="container-fluid mt-5 ">
-<div class="row justify-content-center" >
-    <div class="col-1"  style="border :solid 1px black; height: 500px; width:100%"> 
-    	<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">2019</a>
-                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">2018</a>
-                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">2017</a>
-       </div> 
-    </div>
-    <div class="col-6"  style="border :solid 1px black; height: 500px; width:100%"> 
-  <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-<table class="table">
-  <thead class="thead" style="background-color: green; color: white; font-weight: bold;">
-    <tr>
-      <th scope="col">1</th>
-      <th scope="col">2</th>
-      <th scope="col">3</th>
-       <th scope="col">4</th>
-      <th scope="col">5</th>
-      <th scope="col">6</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-       <th >First</th>
-      <th >Last</th>
-      <th >Handle</th>
-    </tr>
-    <tr>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-       <th >First</th>
-      <th >Last</th>
-      <th >Handle</th>
-    </tr>
-    <tr>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-       <th >First</th>
-      <th >Last</th>
-      <th >Handle</th>
-    </tr>
-  </tbody>
-</table>
+	<div class="row justify-content-center ">
+	<div class="col col-lg-12 text-center ">
+			<h1>Registro Fitosanitario</h1>
+		</div>
+		
+	</div>
+<div class="grid-registro">
+<div style="width:100% ;height:auto; " id="tab-registro">
 
-                  
-                </div>
-                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                <table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-       <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-       <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-       <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-       <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-  </tbody>
-</table>
+<button class="tablinks" onclick="apriContenuto()">Anno</button>
 
-<table class="table">
-  <thead class="thead-light">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+
+</div>
+    
+<div class="contenuto-registro">
+
+
+
+
+
+
+
+
+
+ <div id="anno" class="tabcontent">
+<table class="  table-striped">
+
+<colgroup>
+    <col style="width:8%">
+    <col  style="width:8%">
+    <col  style="width:8%">
+    <col style="width:8%">
+    <col  style="width:8%">
+    <col  style="width:15%">
+  </colgroup>
+  <thead class="thead" style="background-color: green; color: white; font-weight: bold; font-size: 15px;">
+    <tr class="text-center">
+      <th scope="col"  > Prodotto</th>
+      <th scope="col" >Coltura</th>
+      <th scope="col" >Data inizio</th>
+       <th scope="col">Quantita utilizzata</th>
+      <th scope="col" >Avversita</th>
+      <th scope="col" >Note</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+  <tbody >
+  <%  RegistroFitosanitario reg = (RegistroFitosanitario)request.getAttribute("registro");
+  
+      for(Trattamento u : reg.getTrattamenti()){
+  %>
+    <tr scope="row" class="text-center">
+      <td  ><%= u.getNomeProdotto() %></td>
+      <td><%=u.getColtura() %></td>
+      <td><%= u.getDatInzio() %></td>
+       <td ><%= u.getQuantita() %></th>
+      <td><%= u.getAvversita() %></th>
+     <td ><%=u.getNote() %></th>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    <%} %>
   </tbody>
 </table>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                </div>
-                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
-            </div>
-        </div>
-        
-        <div class="col-1"  style="border :solid 1px black; height: 500px; width:100%">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div style="width:100% ;height: 250px;" >
        
-        <button class=" mt-5">Crea Registro </button>
-        <button class="mt-5">Delega</button>
-        <button class="mt-5">Modifica</button>
-        <button class=" mt-5">Elimina</button>
+        <button class=" ml-5 mt-5 buttone-registro" style=" height: 30px; width:100px" >Crea  </button>
+        <button class="ml-5 mt-5 buttone-registro" >Delega</button>
+        <button class=" ml-5 mt-5 buttone-registro">Modifica</button>
+        <button class="ml-5 mt-5 buttone-registro">Elimina</button>
+        
+</div>
+                
+        <!-- 
+        <div class="col-1"  ">
+       
+        <button class=" mt-5 buttone-registro" style=" height: 30px; width:100px" >Crea  </button>
+        <button class="mt-5 buttone-registro" >Delega</button>
+        <button class="mt-5 buttone-registro">Modifica</button>
+        <button class=" mt-5 buttone-registro">Elimina</button>
         
         </div>
-        </div>
-     </div>
+         -->
+      </div> 
+<%@ include file="footer.jsp"%>
 
 </body>
 </html>
