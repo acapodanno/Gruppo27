@@ -136,7 +136,7 @@
 			method="post">
    <div class="modal-content">
 			 
-   <img src="https://images.vanityfair.it/wp-content/uploads/2019/04/19133507/P29.jpg"  style="opacity:0.4" width=auto height="700px">
+   <!-- <img id="sfondo" src="https://images.vanityfair.it/wp-content/uploads/2019/04/19133507/P29.jpg"  width=auto height="700px"> -->
    <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'"
 						class="close" title="Close Modal">&times;</span>
@@ -144,23 +144,27 @@
 
     <div class="container">
     	<h1 class="text-center"><b> Accedi</b></h1><br>
-      <label for="uname"><b>Inserisci qui la tua e-mail</b></label>
+      <label id="uname"><b>Inserisci qui la tua e-mail</b></label>
       <input style="color: white;" type="text" placeholder="Email" name="uname" required>
 
-      <label for="psw"><b>Inserisci qui la tua password</b></label>
+      <label id="psw"><b>Inserisci qui la tua password</b></label>
       <input style="color: white;" type="password" placeholder="Password" name="psw "required> 
         
-      <font color="#009e0f"> <button class="secondo" type="submit">ACCEDI</button></font>
-      <div class="checkbox">
-     	<input class="form-check-input" type="checkbox" id="checkbox624">
-        <label for="checkbox624" class="white-text form-check-label">Ricordami </label>
-        </div>
+     
+      <div class="group">
+					<input id="check" type="checkbox" class="check" checked>
+					<label for="check"><span style="font-size:16px" "class="icon"> Ricordami</label></span>
+	</div>
+	
+	 <font color="#009e0f"> <button class="secondo" type="submit">ACCEDI</button></font>
+       <div class="hr"></div>
+			<div class="foot-lnk">
+					<a style="color:#1161ee">Non sei ancora registrato?</a> <a href="#" style="color: white; font-style: italic; font-weight: bold">Registrati qui!</a>
+			</div>
     </div>
     
 
-    <div class="container2">
-      <span class="reg">Non sei ancora registrato? <a href="#" style="color: white; font-style: italic; font-weight: bold">Registrati qui!</a></span>
-    </div>
+    
   </div>
 		</form>
 </div>

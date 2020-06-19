@@ -4,9 +4,6 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-
 										/*Navbar*/
 .nav-item > .navbar-element{
 
@@ -19,25 +16,17 @@ body {
 
 /* fine nav bar*/
 
-/*slide foto*/
-/*.carousel-item{
-    height: 500px;
-} 
-.carousel-item img{
-    height: 500px;
-}*/
-/*fine */
+/******************************************LOGIN******************************************************************/
 
+.hr {
+    height: 2px;
+    margin: 80px 0 50px 0;
+    background: rgba(255,255,255,.2);
+}
 
-
-
-
-
-
-
-
-
-
+.foot-lnk {
+    text-align: center;
+}
 
 
 
@@ -45,20 +34,23 @@ body {
 /* Caselle di input */
 input[type=text], input[type=password] {
 	width: 100%;
-	padding: 20px 25px;
-	margin: 18px 0;
+	margin: 0px 0 0px 0;
 	display: inline-block;
 	border: none;
 	box-sizing: border-box;
 	background: transparent;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid rgba(255,255,255,.2);
   	
 }
+
+#text, #psw{
+	margin-top: 36px;
+}	
 
 input[type=text]:focus, input[type=password]:focus{
 	-webkit-transition: 0.2s;
  	 transition: 0.2s;
- 	 border-bottom: 3px solid #009e0f;
+ 	 border-bottom: 3px solid white;
 }
 
 /* Checkbox di 'Ricordami' quando cliccata */
@@ -69,10 +61,13 @@ input[type="checkbox"] {
 
 /* Checkbox disposizione */
 .checkbox{
-position: absolute;
+
 display: inline-block;
-left: 5%;
+
 }
+
+
+
 
 /* Cambia forma il puntatore quando passi sulla checkbox*/
 .form-check-input:hover{
@@ -81,13 +76,12 @@ left: 5%;
 
 /*Grandezza di ricordami*/
 .white-text{
-	font-size: 16px;
+	font-size: 20px;
 }
 
 /* Primo pulsante accedi "esterno"*/    /* ---------------------> nel nostro caso sarebbe quello nella nav bar*/
 .primo{
-	background-color: #009e0f;
-	opacity: 0.9;
+	background: #009e0f;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
@@ -98,71 +92,79 @@ left: 5%;
 
 /* Secondo pulsante accedi per confermare email e pasw */
 .secondo {
-	background-color: #009e0f;
-	opacity: 0.9;
+	background: #1161ee;
+    padding: 15px 20px;
+    border-radius: 25px;
+    width: 100%;
 	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	cursor: pointer;
-	width: 95%;
-	position: absolute;
-	bottom: -25%;
-	border-radius: 10px;
+	display: block;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    cursor: pointer;
+	position: relative;
+	border:none;
+
+}
+.group{
+ margin-bottom: 30px;
 }
 
 /* Ogni bottone diventa opaco quando ci passi sopra  */
 button:hover {
-	opacity: 0.8;
+	opacity: 1;
 }
 
 /* Caratteristiche di tutte le label(etichette degli input) nel form  */
 label{
-	font-size: 20px;
+	font-size: 1.5em;
 	color: white;
+	padding: 0;
 }
 
 /* Caratteristiche del titolo 'Accedi'  */
 h1{
-	font-size: 30px;
+	font-size: 35px;
 	color: white;
 }
 
 /* Bordi arrotondati per l'immagine sfondo */
 img{
 	border-radius: 5px;
-	
 }
 
 
 /* Caratteristiche contenitore in cui si trova il form e tutto il resto*/
 .container {
 	position: absolute;
-	top: 10%;
-	background-color: transparent;
-	padding: 16px;
-	
+width:100%;
+	height:100%;
+		background:rgba(40,57,101,.9);
+
+	padding:90px 70px 50px 70px;
+
+		
 }
 
 /* Caratteristiche secondo contenitore in cui si trova il "registrati qui" (prima c'era anche un tasto annulla ma l'ho tolto) */
 .container2{
 	background-color: transparent;
-	position: absolute;
-	bottom: 0;
+	margin: auto;
+  	width: 50%;
 } /* si deve aggiustare*/
 
 /* Caratteristiche della parola "registrati qui" */
-span.reg {
+/*.reg {
 	color: white; 
 	font-style: italic;
-	font-size: 25px;
-}
+	font-size: 16px;
+	
+}*/
 
 /* The Modal (background) */ /* Cose che non ho toccato */
 .modal {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
+	
 	left: 0;
 	top: 0;
 	width: 100%; /* Full width */
@@ -171,17 +173,22 @@ span.reg {
 	background-color: rgb(0, 0, 0); /* Fallback color */
 	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 	padding-top: 60px;
+	
 }
 
 
 
 /* Modal Content/Box */
 .modal-content {
-	position: relative;
-	background-color: transparent;
-	margin: 5% auto 15% auto;
-	border: none !important;
-	width: 70%; /* Could be more or less, depending on screen size */
+		width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:670px;
+	position:relative;
+	background:url(https://images.vanityfair.it/wp-content/uploads/2019/04/19133507/P29-850x1360.jpg) no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+		border:1px, solid, black;
+
 }
 
 /* Bottone chiusura (x) */
@@ -193,7 +200,7 @@ span.reg {
 	font-size: 35px;
 	font-weight: bold;
 	opacity: 1;
-	
+	z-index: 1; /* Sit on top */
 }
 
 /* Se ci passi sopra diventa rosso e il puntatore cambia (x) */
@@ -229,3 +236,36 @@ span.reg {
 		width: 100%;
 	}
 }
+
+
+
+
+/*GRANDEZZE large, medium, small, extra-large e extra-small*/
+
+/* EXTRA-LARGE devices*/
+@media all and (min-width: 1200px) {
+	
+}
+
+/*large devices*/
+@media all and (max-width: 1199px) and (min-width: 992px) {
+	
+}
+
+/*medium devices*/
+@media all and (max-width: 991px) and (min-width: 768px) {
+	
+	
+}
+
+/*small devices*/
+@media all and (max-width: 767px) and (min-width: 601px) {
+	
+}
+
+/*extra-small devices*/
+@media all and (max-width: 600px) {
+	
+}
+
+/******************************************LOGIN******************************************************************/
