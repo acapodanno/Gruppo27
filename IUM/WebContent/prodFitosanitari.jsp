@@ -85,10 +85,18 @@
 
  <!-- ---------------------Elenco---------------------------------------------------------------- -->
 
-<div class="w3-container">
-  <h3>Prodotti fitosanitari</h3>
-  <p class="w3-large">Elenco di tutti i prodotto fitosanitari, caratterizzati da nome, componenti e avvertenze. </p>
+<div class="icon-bar shadow">
+  <a href="#registro"><i class="fa fa-book"></i><span class="icon-bar-text shadow">Registro Fitosanitario</span></a>
+  <a href="#Scadenze"><i class="fa fa-calendar-o"></i><span class="icon-bar-text shadow">Scadenze</span></a>
+  <a href="#prodotti"><i class="fa fa-archive"></i><span class="icon-bar-text shadow">Prodotti Fitosanitario</span></a>
+  <a href="#tracciabilità"><i class="fa fa-qrcode"></i><span class="icon-bar-text shadow">Tracciabilità</span></a>
 </div>
+
+
+<div class="w3-container">
+  <h3 class="text-center">Prodotti fitosanitari</h3>
+  <p class="text-center" class="w3-large">Elenco di tutti i prodotti fitosanitari esistenti. Ognuno di esso è caratterizzato da informazioni che ne specificano il tipo, l'utilizzo e le avvertenze. </p>
+</div> 
 
 
 
@@ -99,56 +107,44 @@
   <button type="submit"><i class="fa fa-search"></i></button></div>
 </form>
 
-
-
- <div class="prodFit">
-	
-
-
-<!-- Prodotto 1 -->
-<div id="intest" class="w3-row-padding">
-  <div class="w3-col w3-container m4 l3 w3">
-    <p class="text-center">Nome Prodotto Fitosanitario</p>
-  </div>
-  <div class="w3-col w3-container m8 l9">  
-    <p class="text-center">Caratteristiche Prodotto Fitosanitario</p>
-
-  </div>
+<!-- Pulsanti -->
+<div class="button">
+<button> Visualizza solo i miei prodotti</button>
+<button> Aggiungi un prodotto al mio magazzino</button>
 </div>
 
-<!-- Prodotto 2 -->
-<div class="w3-row-padding">
-   <div class="w3-col w3-container m4 l3 w3">
-    <p>This part will occupy 12 columns on a small screen, 4 on a medium screen, and 3 on a large screen.</p>
-  </div>
-    <div class="w3-col w3-container m8 l9">  
-    <p>This part will occupy 12 columns on a small screen, 8 on a medium screen, and 9 on a large screen.</p>
-    <p>This part will occupy 12 columns on a small screen, 8 on a medium screen, and 9 on a large screen.</p>
-  </div>
-  </div>
+<!-- Avvertenze -->
+<div class="avvertenze">
+<p id="avviso" class="text-center">Leggere <u>CON ATTENZIONE</u> le etichetta  prima  dell'uso.
+ Il diverso utilizzo di  questi  prodotti  rispetto a quanto  indicato  in  etichetta  può  essere  reato, oltre che <u>pericoloso per la TUA salute e DI CHI TI STA INTORNO</u>. Seguire il codice di condotta per l'uso prodotti fitosanitari, 
+ <a href="https://www.minambiente.it/sites/default/files/archivio/normativa/dim_22_01_2014.pdf" style="color:blue"> disponibile qui. </a></p>
+</div>
+
+<!-- Elenco -->
+ <div class="prodFit" style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th> Nome</th>
+      <th> Caratteristiche</th>
+      <th> Descrizione</th>
   
-<!-- Prodotto 3 -->
- <div class="w3-row-padding">
-   <div class="w3-col w3-container m4 l3 w3">
-    <p>This part will occupy 12 columns on a small screen, 4 on a medium screen, and 3 on a large screen.</p>
-  </div>
-    <div class="w3-col w3-container m8 l9">  
-    <p>This part will occupy 12 columns on a small screen, 8 on a medium screen, and 9 on a large screen.</p>
-    <p>This part will occupy 12 columns on a small screen, 8 on a medium screen, and 9 on a large screen.</p>
-  </div>
-  </div>
-
-<!-- Prodotto 4 -->
-<div class="w3-row-padding">
-   <div class="w3-col w3-container m4 l3 w3">
-    <p>This part will occupy 12 columns on a small screen, 4 on a medium screen, and 3 on a large screen.</p>
-  </div>
-    <div class="w3-col w3-container m8 l9">  
-    <p>This part will occupy 12 columns on a small screen, 8 on a medium screen, and 9 on a large screen.</p>
-    <p>This part will occupy 12 columns on a small screen, 8 on a medium screen, and 9 on a large screen.</p>
-  </div>
-  </div>
-
+    </tr>
+    <tr>
+      <td>CENTURION 240 NEO Erbicida Grammicida Selettivo per colture 		
+orticole ed erbace</td>
+  	  <td>50</td>
+      <td>Prodotto ad emulsione concentrata. Prodotto e distribuito da: Arysta LifeScience S.A.S.s</td>
+    
+   
+    </tr>
+    <tr>
+    
+    <tr>
+     
+    </tr>
+  </table>
 </div>
+ 
+
 </body>
 </html>
