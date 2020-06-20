@@ -8,8 +8,73 @@
 </head>
 <body>
 <%@ include file="navbar.jsp"%>
+<%
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:5px;">
+boolean setTop= false;
+if(session.getAttribute("loggato") != null) {
+setTop=true;
+
+
+%>
+<div class="container-fluid mt-5 ">
+	<div class="row justify-content-center ">
+	<div class="col col-lg-12 text-center ">
+			<h1>Benvenuto in</h1>
+		</div>
+		<div class="col col-lg-12 text-center ">
+			<h1>Agricolario</h1>
+		</div>
+</div>
+
+
+
+
+
+  <div class="row justify-content-center mt-5" >
+    <div class="col col-lg-4  ">
+    <div  class=" ml-4 cazzarielli">
+    <a><i class="fa fa-book"></i></a>
+    </div>
+    <div  class="shadow"style="  height: auto; width: 80%; float: right; padding-left:10% ">
+    
+    
+    <h4>REGISTRO FITOSANITARIO</h4>
+    <p>Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari!
+    </p>
+    </div>
+    </div>
+    <div class="col col-lg-4  offset-md-1 divPresentazione shadow">
+     <h4>PRODOTTI FITOSANITARIO</h4>
+    <p>Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti, consulta tutte le informazioni importanti, le etichette e le avvertenze di ogni singolo prodotto fitosanitario! <br>
+    Potrai visualizzare anche solo i tuoi prodotti fitosanitari presenti nel tuo magazzino e aggiungerne nuovi. </p>
+    </div>
+   </div>
+
+<div class="row justify-content-center mt-5" >
+    <div class="col col-lg-4  divPresentazione shadow">
+    <h4>REGISTRO FITOSANITARIO</h4>
+    <p>Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari! <br>
+    Tramite pochi pratici click potrai aggiungere un trattamento al tuo registro fitosanitario, apportare modifiche, visualizzare e stampare i registri degli anni precedenti.
+    </p>
+    </div>
+    <div class="col col-lg-4  offset-md-1 divPresentazione shadow">
+     <h4>PRODOTTI FITOSANITARIO</h4>
+    <p>Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti, consulta tutte le informazioni importanti, le etichette e le avvertenze di ogni singolo prodotto fitosanitario! <br>
+    Potrai visualizzare anche solo i tuoi prodotti fitosanitari presenti nel tuo magazzino e aggiungerne nuovi. </p>
+    </div>
+   </div>
+
+
+
+
+
+
+
+
+</div>
+
+<%} %>
+<div id="carouselExampleIndicators" class="carousel slide <% if(!setTop){ %>mt-1<%}else{ %> mt-5<%} %> " data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>

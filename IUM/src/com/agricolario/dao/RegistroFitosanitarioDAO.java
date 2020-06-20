@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
 
 import com.agricolario.bean.RegistroFitosanitario;
 import com.agricolario.bean.Trattamento;
@@ -44,7 +46,7 @@ public class RegistroFitosanitarioDAO {
 				"\r\n" + 
 				"\r\n" + 
 				"\r\n" + 
-				"SELECT * FROM registrofitosanitario JOIN trattamento  ON registrofitosanitario.idregistrofitosanitario = trattamento.idregistro where registrofitosanitario.idregistrofitosanitario=?;";
+				"SELECT * FROM registrofitosanitario JOIN trattamento  ON registrofitosanitario.idregistrofitosanitario = trattamento.idregistro where registrofitosanitario.idregistrofitosanitario=? ORDER BY registrofitosanitario.DataCreazione DESC;";
 	// 	PreparedStatement ps = con.prepareStatement(insertSql);
 	
 		Connection con= connessione.getConn();
@@ -57,7 +59,18 @@ public class RegistroFitosanitarioDAO {
 				result=ps.executeQuery();
 				RegistroFitosanitario registro=new RegistroFitosanitario();
 				ArrayList<Trattamento> trattamenti = new ArrayList<Trattamento>();
+				boolean data=true;
+				Date dataCreazione = new Date();
 				while(result.next()) {
+					
+					if(data) {
+						
+						dataCreazione = result.getDate("dataCreazione");
+						data=false;
+					}
+					
+					
+					
 					Trattamento t= new Trattamento();
 					t.setColtura(result.getString("coltura"));
 					t.setNomeProdotto(result.getString("nomeprodotto"));
@@ -67,14 +80,13 @@ public class RegistroFitosanitarioDAO {
 					t.setQuantita(result.getFloat("quantitaProdotto"));
 					t.setSuperficie(result.getDouble("superficieInEttari"));
 					t.setDatInzio(result.getDate("dataInizio"));
-					
 					trattamenti.add(t);
 				
 				
 				
 				}
 				registro.setTrattamenti(trattamenti);
-				
+				registro.setDataCreazione(dataCreazione);
 			
 				return registro; 
 			} catch (SQLException e) {
@@ -90,4 +102,84 @@ public class RegistroFitosanitarioDAO {
 		
 	//	return false;
 	}
+	
+	
+	public ArrayList<RegistroFitosanitario> getAllRegistro(int idUtente){
+		
+	/*	SELECT * FROM (registrofitosanitario JOIN trattamento  ON registrofitosanitario.idregistrofitosanitario = trattamento.idregistro)
+		 JOIN compilazioneregistro  on registrofitosanitario.idregistrofitosanitario = compilazioneregistro.idregistrofitosanitario
+		 JOIN utente on utente.idutente = compilazioneregistro.idutente  where utente.idutente=1 ;
+		*/
+		
+		String insertSql= " SELECT * FROM  (compilazioneregistro   JOIN utente on utente.idutente = compilazioneregistro.idutente) join registrofitosanitario\r\n" + 
+				" \r\n" + 
+				" on registrofitosanitario.idregistrofitosanitario = compilazioneregistro.idregistrofitosanitario where utente.idutente=?  ORDER BY registrofitosanitario.DataCreazione DESC\r\n" + 
+				" ;";
+	// 	PreparedStatement ps = con.prepareStatement(insertSql);
+	
+		Connection con= connessione.getConn();
+	 	ResultSet result;
+		
+		
+	    	try {
+				PreparedStatement ps = con.prepareStatement(insertSql);
+			    ps.setInt(1, idUtente);
+				result=ps.executeQuery();
+				
+				
+				ArrayList<Integer> idRegistro = new ArrayList<Integer>();
+				while(result.next()) {
+					idRegistro.add(result.getInt("idregistrofitosanitario"));
+					
+				}
+				
+				
+				ArrayList<RegistroFitosanitario> listaRegistri= new ArrayList<RegistroFitosanitario>();
+				for (Integer integer : idRegistro) {
+					
+					RegistroFitosanitario reg= new RegistroFitosanitarioDAO().getRegistro(integer);
+					reg.setIdRegistroFitosanitario(integer);
+					listaRegistri.add(reg);
+					
+					
+				}
+			
+				return listaRegistri; 
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				
+				return null;
+			}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

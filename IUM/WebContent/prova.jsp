@@ -19,6 +19,6 @@ $(document).ready(function() {
 <script src="jquery.qrcode.min.js">
 
 </script>
-
+<!-- rgba(210,210,210,0.1) nav bar  -->)
 </body>
 </html>

@@ -1,5 +1,6 @@
 <%@page import="com.agricolario.bean.Trattamento"%>
 <%@page import="com.agricolario.bean.RegistroFitosanitario"%>
+<%@page import="java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -24,12 +25,8 @@
 <body>
 <%@ include file="navbar.jsp"%>
  
-<div class="icon-bar shadow">
-  <a href="#registro"><i class="fa fa-book"></i><span class="icon-bar-text shadow">Registro Fitosanitario</span></a>
-  <a href="#Scadenze"><i class="fa fa-calendar-o"></i><span class="icon-bar-text shadow">Scadenze</span></a>
-  <a href="#prodotti"><i class="fa fa-archive"></i><span class="icon-bar-text shadow">Prodotti Fitosanitario</span></a>
-  <a href="#tracciabilità"><i class="fa fa-qrcode"></i><span class="icon-bar-text shadow">Tracciabilità</span></a>
-</div>
+<%@ include file="navbarLaterl.jsp"%>
+
 
 <div class="container-fluid mt-5 ">
 	<div class="row justify-content-center ">
@@ -40,33 +37,38 @@
 	</div>
 <div id="grid-registro" class="mt-5">
 <div style="width:100% ;height:auto; " id="tab-registro">
+<%ArrayList<RegistroFitosanitario> listaReg = (ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro");%>
+<%
 
-<button class="tablinks" onclick="apriContenuto(event,2019)" id="defaultOpen">2019</button>
-<button class="tablinks" onclick="apriContenuto(event,2018)">2018</button>
-<button class="tablinks" onclick="apriContenuto(event,2017)">2017</button>
+boolean primo= true;
 
-
+for(RegistroFitosanitario reg : listaReg ){ 
+if(primo){
+	primo=false;
+%>
+<button class="tablinks" onclick="apriContenuto(event,<%=reg.getDataCreazione().getYear()%>)" id="defaultOpen"><%=reg.getDataCreazione().getYear()+1900%></button>
+<%}else{ %>
+<button class="tablinks" onclick="apriContenuto(event,<%=reg.getDataCreazione().getYear()%>)"><%=reg.getDataCreazione().getYear()+1900%></button>
+<% }} %>
 </div>
     
 <div id="contenuto-registro" >
-<div id="2019" class="tabcontent"><h1>2019</h1></div>
-
-<div id="2018" class="tabcontent">2018</div>
-
-<div id="2017" class="tabcontent">
+<%for(RegistroFitosanitario reg : listaReg ){ 
+              %>
+<div id="<%=reg.getDataCreazione().getYear()%>" class="tabcontent">
 
 <table class="  table-striped">
 
 <colgroup>
-    <col style="width:10%">
-    <col  style="width:10%">
-    <col  style="width:10%">
-    <col style="width:10%">
-    <col  style="width:10%">
+    <col style="width:15%">
     <col  style="width:15%">
+    <col  style="width:15%">
+    <col style="width:15%">
+    <col  style="width:15%">
+    <col  style="width:25%">
   </colgroup>
-  <thead class="thead" style="background-color: green; color: white; font-weight: bold; font-size: 15px;">
-    <tr class="text-center">
+  <thead class="thead" style="background-color: green; color: white; font-weight: bold; font-size: 18px; height:75px;t  text-align: center;">
+    <tr class="text-center" style=" height:50px;">
       <th scope="col"  > Prodotto</th>
       <th scope="col" >Coltura</th>
       <th scope="col" >Data inizio</th>
@@ -76,7 +78,7 @@
     </tr>
   </thead>
   <tbody >
-  <%  RegistroFitosanitario reg = (RegistroFitosanitario)request.getAttribute("registro");
+  <% 
   
       for(Trattamento u : reg.getTrattamenti()){
   %>
@@ -92,13 +94,14 @@
   </tbody>
 </table>
 </div>
+<% } %>
 </div>
 <div style="width:100% ;height: 250px;" >
        
-        <button class=" ml-3 mt-5 buttone-registro" style=" height: 30px; width:100px" >Crea  </button>
-        <button class="ml-3 mt-5 buttone-registro" >Delega</button>
-        <button class=" ml-3 mt-5 buttone-registro">Modifica</button>
-        <button class="ml-3 mt-5 buttone-registro">Elimina</button>
+        <button class=" shadow ml-3 mt-5 buttone-registro"  >Crea  </button>
+        <button class="shadow ml-3 mt-5 buttone-registro" >Delega</button>
+        <button class="shadow ml-3 mt-5 buttone-registro">Modifica</button>
+        <button class="shadow ml-3 mt-5 buttone-registro">Elimina</button>
         
 </div>
                 

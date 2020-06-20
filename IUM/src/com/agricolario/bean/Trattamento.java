@@ -97,6 +97,13 @@ private String note;
 		this.note = note;
 	}
 
+	@Override
+	public String toString() {
+		return "Trattamento [coltura=" + coltura + ", datInzio=" + datInzio + ", superficie=" + superficie
+				+ ", nomeProdotto=" + nomeProdotto + ", quantita=" + quantita + ", unita=" + unita + ", avversita="
+				+ avversita + ", note=" + note + "]";
+	}
+
 	
 	
 }

@@ -6,19 +6,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class showHome
+ * Servlet implementation class showDelega
  */
-@WebServlet("/showHome")
-public class showHome extends HttpServlet {
+@WebServlet("/showDelega")
+public class showDelega extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public showHome() {
+    public showDelega() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,10 +27,7 @@ public class showHome extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession ssn= request.getSession();
-		ssn.setAttribute("loggato",true);
-		getServletContext().getRequestDispatcher("/view/HomePage.jsp").forward(request, response);;
-		System.out.println("Io sono una servlet normale creo solo disagio");
+		getServletContext().getRequestDispatcher("/view/delega.jsp").forward(request, response);;
 	}
 
 	/**

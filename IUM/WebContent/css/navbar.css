@@ -169,7 +169,7 @@ border-bottom: 1px solid;
   background-color: aqua; 
   z-index:1;
   	animation: fadeInLeft;
-	animation-duration: 2s;
+	animation-duration: 1s;
 
 float: left;
   position:fixed;
@@ -220,7 +220,7 @@ float: left;
 	height: 60px;
 	margin-left:30px;
 	animation: fadeIn;
-	animation-duration: 2s;
+	animation-duration: 1s;
 	align-content: center;
 
 }
@@ -276,21 +276,21 @@ table{
 */
 .buttone-registro{
 	
-	height: 30px;
-	width: 100px;
+	height: 20%;
+	width: 70%;
 	background-color: green;
 	color:white;
 	font-weight: bold;
+	  border: none;
+	  text-align: center;
 	
-	
+	  border-radius: 5px;
 	
 }
 #grid-registro{
 	margin-left:10%;
 	display: grid;
-		display: grid;
-  	grid-template-columns: 10% 70% 10%;
-	  justify-items: center;
+  	grid-template-columns: 5% 80% 15%;
 	  height: 500px;
 	
 }
@@ -310,9 +310,13 @@ table{
   text-align: left;
   cursor: pointer;
   transition: 0.3s;
+    text-align: center;
+  
 }
 #tab-registro button.active {
-  background-color: #ccc;
+  background-color: green;
+  color: white;
+  font-weight: bold;
 }
 
 
@@ -323,3 +327,21 @@ table{
   width: 100%;
   height: auto;
 }
+.cazzarielli{
+	
+	border-radius: 50px;
+	 background-color:white; 
+	 height: 60%;
+	  width: 20%;
+	   position: absolute; 
+	   box-shadow: -2px 0px 2px 0px rgba(0,0,0,.15);
+      text-align: center;
+	vertical-align: middle;
+	line-height: 90px;      
+	font-size: 50px;
+	
+	
+}
+
+
+
