@@ -344,8 +344,8 @@ h3{
 
 #avviso{
 	position: relative;
-	margin-top: 50px;
-	margin-left: 250px;
+	margin-top: 25px;
+	margin-left: 150px;
 	font-size: 12px;
 	font-weight: bold;
 	font-style: italic; 
@@ -353,7 +353,7 @@ h3{
 	color:white;
 	opacity: 0.8;
 	border-radius: 15px;
-	width: 65%;
+	width: 80%;
 }
 
 #avviso:hover{
@@ -363,47 +363,47 @@ h3{
 }
 
 /* barra di ricerca */
-* {
-  box-sizing: border-box;
+
+
+
+.search {
+  width: 80%;
+  position: relative;
+  margin-left: 150px;
+  border: 2px solid #00B4CC;
+  border-radius: 25px;
+  display: flex;
+  
+  
 }
 
-.barra{
-	position: relative;
-	margin-left: 150px;
+
+.searchTerm {
+  width: 80%;
+  padding-left: 10px;
+  border-radius: 5px 0 0 5px;
+  text-align: left;
+  color: #9DBFAF;
 }
 
-
-form.example input[type=text] {
-  padding: 5px;
-  font-size: 16px;
-  border-radius: 25px 0 0 25px;
-  float: left;
-  width: 85%;
-  background: #f1f1f1;
+.searchTerm:focus{
+  color: #00B4CC;
 }
 
-form.example button {
-  float: left;
-  width: 10%;
-  padding: 5px;
-  background: #2196F3;
-  color: white;
-  font-size: 16px;
-  border: none !important;
-  border-left: none;
+.searchButton {
+  width: 40px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius:25px;
   cursor: pointer;
-  border-radius: 0px 50px 50px 0px
+  font-size: 20px;
+  position: relative;
+  
 }
 
-form.example button:hover {
-  background: #0b7dda;
-}
 
-form.example::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 
 /* elenco */
 
@@ -416,13 +416,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd;
 }
 
 th, td {
   text-align: left;
   padding: 8px;
-    border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 

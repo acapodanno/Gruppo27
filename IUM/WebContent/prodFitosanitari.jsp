@@ -94,18 +94,22 @@
 
 
 <div class="w3-container">
-  <h3 class="text-center">Prodotti fitosanitari</h3>
+  <h3 class="text-center"><em>Prodotti fitosanitari</em></h3>
   <p class="text-center" class="w3-large">Elenco di tutti i prodotti fitosanitari esistenti. Ognuno di esso è caratterizzato da informazioni che ne specificano il tipo, l'utilizzo e le avvertenze. </p>
 </div> 
 
 
 
-<!-- Barra di Ricerca -->
-<form class="example" action="/action_page.php">
-<div class="barra">
-  <input type="text" placeholder="Digita il nome o il codice di un prodotto fitosanitario..." name="search">
-  <button type="submit"><i class="fa fa-search"></i></button></div>
-</form>
+<!--  Barra di Ricerca-->
+<div class="wrap">
+   <div class="search">
+   <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+      <input type="text" class="searchTerm" placeholder="Digita il nome o il codice di un prodotto fitosanitario...">
+      
+   </div>
+</div>
 
 <!-- Pulsanti -->
 <div class="button">
@@ -115,33 +119,63 @@
 
 <!-- Avvertenze -->
 <div class="avvertenze">
-<p id="avviso" class="text-center">Leggere <u>CON ATTENZIONE</u> le etichetta  prima  dell'uso.
+<p id="avviso" class="text-center"><em>Leggere <u>CON ATTENZIONE</u> le etichetta  prima  dell'uso.
  Il diverso utilizzo di  questi  prodotti  rispetto a quanto  indicato  in  etichetta  può  essere  reato, oltre che <u>pericoloso per la TUA salute e DI CHI TI STA INTORNO</u>. Seguire il codice di condotta per l'uso prodotti fitosanitari, 
- <a href="https://www.minambiente.it/sites/default/files/archivio/normativa/dim_22_01_2014.pdf" style="color:blue"> disponibile qui. </a></p>
+ <a href="https://www.minambiente.it/sites/default/files/archivio/normativa/dim_22_01_2014.pdf" style="color:blue"> disponibile qui.</a></em> </p>
 </div>
 
 <!-- Elenco -->
  <div class="prodFit" style="overflow-x:auto;">
   <table>
+  
+	<!-- Intestazione -->  
     <tr>
       <th> Nome</th>
       <th> Caratteristiche</th>
       <th> Descrizione</th>
-  
     </tr>
+    
+    <!-- Prodotto 1 -->
     <tr>
-      <td>CENTURION 240 NEO Erbicida Grammicida Selettivo per colture 		
-orticole ed erbace</td>
+      <td>CENTURION 240 NEO Erbicida Grammicida Selettivo per colture orticole ed erbace</td>
   	  <td>50</td>
       <td>Prodotto ad emulsione concentrata. Prodotto e distribuito da: Arysta LifeScience S.A.S.s</td>
-    
-   
     </tr>
-    <tr>
     
+      
+    <!-- Prodotto 2 -->
     <tr>
+      <td>CENTURION 240 NEO Erbicida Grammicida Selettivo per colture orticole ed erbace</td>
+  	  <td>50</td>
+      <td>Prodotto ad emulsione concentrata. Prodotto e distribuito da: Arysta LifeScience S.A.S.s</td>
+    </tr>
+    
+      
+    <!-- Prodotto 3 -->
+    <tr>
+      <td>CENTURION 240 NEO Erbicida Grammicida Selettivo per colture orticole ed erbace</td>
+  	  <td>50</td>
+      <td>Prodotto ad emulsione concentrata. Prodotto e distribuito da: Arysta LifeScience S.A.S.s</td>
+    </tr>
+    
+      
+    <!-- Prodotto 4 -->
+    <tr>
+      <td>CENTURION 240 NEO Erbicida Grammicida Selettivo per colture orticole ed erbace</td>
+  	  <td>50</td>
+      <td>Prodotto ad emulsione concentrata. Prodotto e distribuito da: Arysta LifeScience S.A.S.s</td>
+    </tr>
+    
+      
+    <!-- Prodotto 5 -->
+    <tr>
+      <td>CENTURION 240 NEO Erbicida Grammicida Selettivo per colture orticole ed erbace</td>
+  	  <td>50</td>
+      <td>Prodotto ad emulsione concentrata. Prodotto e distribuito da: Arysta LifeScience S.A.S.s</td>
+    </tr>
+  
      
-    </tr>
+   
   </table>
 </div>
  
