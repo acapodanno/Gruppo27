@@ -92,17 +92,33 @@
 
 
 
-<div class="w3-row-padding">
-  <div class="w3-col w3-container m4 l3 w3-yellow">
-    <p>This part will occupy 12 columns on a small screen, 4 on a medium screen, and 3 on a large screen.</p>
+<!-- Barra di Ricerca -->
+<form class="example" action="/action_page.php">
+<div class="barra">
+  <input type="text" placeholder="Digita il nome o il codice di un prodotto fitosanitario..." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button></div>
+</form>
+
+
+
+ <div class="prodFit">
+	
+
+
+<!-- Prodotto 1 -->
+<div id="intest" class="w3-row-padding">
+  <div class="w3-col w3-container m4 l3 w3">
+    <p class="text-center">Nome Prodotto Fitosanitario</p>
   </div>
   <div class="w3-col w3-container m8 l9">  
-    <p>This part will occupy 12 columns on a small screen, 8 on a medium screen, and 9 on a large screen.</p>
-    <p>This part will occupy 12 columns on a small screen, 8 on a medium screen, and 9 on a large screen.</p>
+    <p class="text-center">Caratteristiche Prodotto Fitosanitario</p>
+
   </div>
 </div>
+
+<!-- Prodotto 2 -->
 <div class="w3-row-padding">
-   <div class="w3-col w3-container m4 l3 w3-yellow">
+   <div class="w3-col w3-container m4 l3 w3">
     <p>This part will occupy 12 columns on a small screen, 4 on a medium screen, and 3 on a large screen.</p>
   </div>
     <div class="w3-col w3-container m8 l9">  
@@ -110,8 +126,10 @@
     <p>This part will occupy 12 columns on a small screen, 8 on a medium screen, and 9 on a large screen.</p>
   </div>
   </div>
+  
+<!-- Prodotto 3 -->
  <div class="w3-row-padding">
-   <div class="w3-col w3-container m4 l3 w3-yellow">
+   <div class="w3-col w3-container m4 l3 w3">
     <p>This part will occupy 12 columns on a small screen, 4 on a medium screen, and 3 on a large screen.</p>
   </div>
     <div class="w3-col w3-container m8 l9">  
@@ -120,9 +138,17 @@
   </div>
   </div>
 
+<!-- Prodotto 4 -->
+<div class="w3-row-padding">
+   <div class="w3-col w3-container m4 l3 w3">
+    <p>This part will occupy 12 columns on a small screen, 4 on a medium screen, and 3 on a large screen.</p>
+  </div>
+    <div class="w3-col w3-container m8 l9">  
+    <p>This part will occupy 12 columns on a small screen, 8 on a medium screen, and 9 on a large screen.</p>
+    <p>This part will occupy 12 columns on a small screen, 8 on a medium screen, and 9 on a large screen.</p>
+  </div>
+  </div>
 
-
-
-
+</div>
 </body>
 </html>

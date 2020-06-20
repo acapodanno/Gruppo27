@@ -269,3 +269,71 @@ width:100%;
 }
 
 /******************************************LOGIN******************************************************************/
+
+/******************************************PRODOTTI FOTOSANITARI******************************************************************/
+
+w3-row-padding{
+	border: 1px solid black;
+}
+#intest{
+	font-style: italic;
+	font-size: 22px;
+}
+
+#pulsanti{
+	margin: auto;
+	padding-top: 10px;
+	padding-botom: 20px;
+  	width: 50%;
+}
+
+
+
+/* barra di ricerca */
+* {
+  box-sizing: border-box;
+}
+
+.barra{
+	position: relative;
+	margin-left: 50px;
+}
+
+.prodFit{
+	position: relative;
+	margin-left: 50px;
+	margin-top: 50px;
+	width: 100%;
+}
+
+form.example input[type=text] {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 25px 0 0 25px;
+  float: left;
+  width: 85%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 10%;
+  padding: 5px;
+  background: #2196F3;
+  color: white;
+  font-size: 16px;
+  border: none !important;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 0px 50px 50px 0px
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
