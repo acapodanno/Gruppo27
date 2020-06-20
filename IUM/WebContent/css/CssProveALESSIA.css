@@ -337,29 +337,51 @@ h3{
 
 .button{
 	position: relative;
-	width: 50%;
-	margin-left: 400px;
-	margin-top: 25px;
+margin-top: 10px;
+display: block ruby;
+width: 50%;
+margin-left: 300px;
+
+
 }
+
+#visualizza, #aggiungi{
+	padding: 6px;
+	width: 50%;
+	background-color:#1161ee;
+	border-radius: 25px;
+	border: none;
+	color: white; 
+	font-weight: bold; 
+	opacity: 0.8;
+	
+
+}
+
+#visualizza:hover, #aggiungi:hover{
+	opacity: 1;
+}
+#aggiungi{
+	margin-left: 50px;
+}
+
 
 #avviso{
 	position: relative;
 	margin-top: 25px;
 	margin-left: 150px;
-	font-size: 12px;
+	font-size: 10px;
 	font-weight: bold;
-	font-style: italic; 
-	background-color: #ff8080; 
-	color:white;
-	opacity: 0.8;
-	border-radius: 15px;
+	font-style: italic;
+	color:red;
+	opacity: 0.6;
 	width: 80%;
+	border: 1px solid #ff8080;
 }
 
-#avviso:hover{
-	font-size: 12px;
+#avviso:hover{;
 	opacity:1; 
-	background-color: red;
+	border: 1px solid red;
 }
 
 /* barra di ricerca */
@@ -370,7 +392,7 @@ h3{
   width: 80%;
   position: relative;
   margin-left: 150px;
-  border: 2px solid #00B4CC;
+  border: 2px solid #1161ee;
   border-radius: 25px;
   display: flex;
   
@@ -387,13 +409,13 @@ h3{
 }
 
 .searchTerm:focus{
-  color: #00B4CC;
+  color: #1161ee;
 }
 
 .searchButton {
   width: 40px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
+  border: 1px solid #1161ee;
+  background: #1161ee;
   text-align: center;
   color: #fff;
   border-radius:25px;

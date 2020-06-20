@@ -113,8 +113,8 @@
 
 <!-- Pulsanti -->
 <div class="button">
-<button> Visualizza solo i miei prodotti</button>
-<button> Aggiungi un prodotto al mio magazzino</button>
+<button id="visualizza"> Visualizza il mio magazzino</button>
+<button id="aggiungi"> Aggiungi un prodotto al mio magazzino</button>
 </div>
 
 <!-- Avvertenze -->
