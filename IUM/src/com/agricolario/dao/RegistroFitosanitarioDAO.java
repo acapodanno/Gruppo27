@@ -155,8 +155,14 @@ public class RegistroFitosanitarioDAO {
 	}
 	
 	
-	
-	
+	/*ottenere il registro del delegato 
+	 * 
+	 *  SELECT * FROM  (delega   JOIN utente on utente.idutente = delega.idutente) join registrofitosanitario
+ 
+ 		on registrofitosanitario.idregistrofitosanitario = delega.idregistrofitosanitario
+ 
+ 		where utente.idutente=6;
+	*/
 	
 	
 	

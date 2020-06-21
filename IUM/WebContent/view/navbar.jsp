@@ -22,7 +22,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
-  <a class="navbar-brand ml-7" href="HomePage.jsp">
+  <a class="navbar-brand ml-7" href="showHome">
   	<img alt="" src="image/LOGO.png" width="75" height="75" class="d-inline-block align-top">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,7 @@
     
     %>
      <div class="align-baseline ml-6 icon-bar-vertical">
-  	<a class="" href="HomePage.jsp"><i class="fa fa-home"></i></a>
+  	<a class="" href="showHome"><i class="fa fa-home"></i></a>
   	<a href="#" class=" ml-3" ><i class="fa fa-user-circle"></i></a>
   	<a href="#" class=" ml-3"><i class="fa fa-bell"></i></a>
   	

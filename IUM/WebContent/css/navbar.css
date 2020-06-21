@@ -259,6 +259,7 @@ float: left;
 	
 }
 /*Registro */
+/*
 table{
  height: 500px;
   overflow-y: scroll;
@@ -266,6 +267,7 @@ table{
   
   
   }
+  */
 /*
 .table-fixed tbody {
   height: 230px;
@@ -332,16 +334,21 @@ table{
 	border-radius: 50px;
 	 background-color:white; 
 	 height: 60%;
-	  width: 20%;
+	  width: 13%;
 	   position: absolute; 
 	   box-shadow: -2px 0px 2px 0px rgba(0,0,0,.15);
       text-align: center;
 	vertical-align: middle;
-	line-height: 90px;      
-	font-size: 50px;
+   
+	font-size: 40px;
 	
 	
 }
-
+.cazzarielli-testo{
+	
+	
+	
+	height: auto; width: 80%; float: right; padding-left:6% ;
+}
 
 

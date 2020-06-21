@@ -77,6 +77,11 @@ public class Azienda {
 	public void setDataFondazione(Date dataFondazione) {
 		this.dataFondazione = dataFondazione;
 	}
+	@Override
+	public String toString() {
+		return "Azienda [id=" + id + ", nomeAzienda=" + nomeAzienda + ", indirizzo=" + indirizzo + ", città=" + città
+				+ ", cap=" + cap + ", dataFondazione=" + dataFondazione + ", idUtente=" + idUtente + "]";
+	}
 	
     
     

@@ -2,7 +2,6 @@ package com.agricolario.servlet;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.io.IOException;
@@ -20,9 +19,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-class TestAccess {
-	
-	
+class loginTest {
+
 	 @Mock
 	 	ServletContext context= mock(ServletContext.class);
 
@@ -47,40 +45,16 @@ class TestAccess {
 	void tearDown() throws Exception {
 	}
 
+
 	@Test
 	final void testDoGetHttpServletRequestHttpServletResponse() throws ServletException, IOException {
-		when(request.getParameter("access")).thenReturn("login");
-		when(request.getParameter("email")).thenReturn("alessandro.capodanno95@gmail.com");
-		when(request.getParameter("password")).thenReturn("Root");
-		//  when(request.getRequestDispatcher("/HomePage.jsp")).thenReturn(dispatcher);
+		when(request.getParameter("email")).thenReturn("pannonegiu@gmail.com");
+		when(request.getParameter("password")).thenReturn("motGP");	
+		new login().doGet(request, response);
 	
-		  new access().doGet(request, response);
-		
-//		verify(dispatcher).forward(request, response);
-		
-		
+	
+	
+	
 	}
 
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

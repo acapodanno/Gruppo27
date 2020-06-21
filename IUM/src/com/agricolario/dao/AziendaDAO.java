@@ -2,6 +2,7 @@ package com.agricolario.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.agricolario.bean.Azienda;
@@ -60,16 +61,51 @@ public class AziendaDAO {
 	    }
 	    
 	    
-	    public Utente selectAzienda(int id) {
+	    public Azienda selectAzienda(int id) {
+	    	String sql="select * from azienda where idutente=?";
+			 Connection con= connessione.getConn();
+			 	ResultSet result;
+
+			 Azienda a= new Azienda();
+				try {
+					
+					//bisogna aggiustare il nomi nomeAzienda in nome e DataFondazione tutto in minuscolo
+			    	PreparedStatement ps = con.prepareStatement(sql);
+			    	ps.setInt(1,id);
+					
+					result = ps.executeQuery();
+					while(result.next()) {
+					a.setId(result.getInt("idazienda"));
+					a.setNomeAzienda(result.getString("nomeAzienda"));
+					a.setCittà(result.getString("città"));
+					a.setDataFondazione(result.getDate("DataFondazione"));
+					a.setIndirizzo(result.getString("indirizzo"));
+					a.setCap(result.getString("cap"));
+					a.setIdUtente(result.getInt("idutente"));
+					
+					}
+					
+			    	 return a;	
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					System.out.println(e.getErrorCode()+"\n"+e.getMessage());
+					return null;
+				}finally {
+					if(connessione!=null) {
+						
+						connessione.closeConn();
+					}
+				}
+		    	
 	    	
-	    	
-	    	
-	    	return null;
 	    }
 	
 	
 	
 	
-	
-
+	    /* ottenre l'azienda del select * from azienda where idutente=1;
+	    select * from (utente join delega on utente.idutente = delega.idutente) 
+	    join azienda on delega.idtitolare= azienda.idutente
+	    where utente.idutente=6;
+	 */
 }
