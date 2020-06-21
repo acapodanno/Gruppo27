@@ -38,7 +38,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Alessia's Proves</title>
+<title>REGISTRAZIONE</title>
 </head>
 <body>
 
@@ -81,110 +81,83 @@
   </div>
   
   
-  <!-- ---------------------FINE NAV BAR---------------------------------------------------------------- -->
+  <!-- ---------------------Registrazione---------------------------------------------------------------- -->
+<div class="registrazione">
 
+    <div class="containerReg">
+    	<h1 class="text-center"><b> Registrazione</b></h1><br>
+		<div class="row justify-content-center " >
+		 <form id="form-registrazione" action="access" method="post">
+		
+  					<div class="row justify-content-center">
+    					<div class="col-4 form-group">
+    						<label class="etichette">Nome</label>
+      						<input type="text"  placeholder="Nome" name="nome" required>
+    					</div>
+    					<div class="col-4 form-group">
+    					<label class="etichette">Cognome</label>
+      					<input type="text"  placeholder="Cognome" name="cognome" required>
+    					</div>
+  					</div>
+ 
+  					<div class="row justify-content-center">
+  					   <div class="col-8 form-grupo">
+  					   		<label  class="etichette">Email</label>
+      						<input type="text"  placeholder="Email" name="email" required>
+   					   </div>
+  					</div>
+  					
+ 					 <div class="row justify-content-center mt-3">
+    					<div class="col-4 form-goup">
+    						<label  class="etichette">Password</label>
+      						<input type="text"  placeholder="Password" name="password" required>
+    					</div>
+    				 	<div class="col-4 form-group">
+    				 		<label  class="etichette">Conferma Password</label>
+      				 		<input type="text"  placeholder="Conferma Password" required>
+   					 	</div>
+  					</div>	
 
-
-<!-- --------------------------SLIDE SHOW--------------------------------------------------------------- -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:5px;">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="image/PROVA4.jpg" alt="First slide" width=auto height="525px">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="image/PROVA8.jpg" alt="Second slide" width=auto height="525px">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="image/PROVA7.jpg" alt="Third slide" width=auto height="525px">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-<!-- -------------------------FINE SLIDE SHOW----------------------------------------------------- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="id01" class="modale">
+   					<div class="row justify-content-center">
+					    <div class="col-4">
+					   	 <label  class="etichette">Data di nascita</label>
+    						<input type="date" placeholder="dd mm yyyy" name="dataNascita"    data-date-format="DD MMMM YYYY" required>
+    					</div>
+    					
+    				<div class="col-4 form-group">
+     					<label  class="etichette">Ruolo</label>	
+ 							 <select class="select" id="ruolo" name="ruolo">
+  								 <option selected>---</option>
+    						     <option value="titolare">Titolare</option>
+   							     <option value="delegato">Delegato</option>
+ 							 </select>
+    				</div>
+ 				   </div>
+ 				   
+   					<div class="row  justify-content-center">
+   				    <div class="col-8">
+ 							<div class="form-group form-check">
+    								<input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+    								<label class="etichettaAcconsento" class="form-check-label">Acconsento al trattamento dei miei dati, accetto i Termini di Servizio e la Politica della Privacy</label>
+ 							</div>    
+  					</div>
+  					</div>
+  				
+  					<div class="row  justify-content-center">
+   				    <button type="submit" class="bottoneReg" disabled>Registrati</button>   
+  					</div>
   
-  <form class="animate" action="/action_page.php"
-			method="post">
-   <div class="login">
-			 
-   <!-- <img id="sfondo" src="https://images.vanityfair.it/wp-content/uploads/2019/04/19133507/P29.jpg"  width=auto height="700px"> -->
-   <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'"
-						class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container">
-    	<h1 class="text-center"><b> Accedi</b></h1><br>
-      <label id="uname"><b>Inserisci qui la tua e-mail</b></label>
-      <input style="color: white;" type="text" placeholder="Email" name="uname" required>
-
-      <label id="psw"><b>Inserisci qui la tua password</b></label>
-      <input style="color: white;" type="password" placeholder="Password" name="psw "required> 
-        
-     
-      <div class="group">
-					<input id="check" type="checkbox" class="check" checked>
-					<label for="check"><span style="font-size:16px" "class="icon"> Ricordami</label></span>
-	</div>
-	
-	 <font color="#009e0f"> <button class="secondo" type="submit">ACCEDI</button></font>
-       <div class="hr"></div>
-			<div class="foot-lnk">
-					<a style="color:#1161ee">Non sei ancora registrato?</a> <a href="#" style="color: white; font-style: italic; font-weight: bold">Registrati qui!</a>
-			</div>
-    </div>
-    
-
-    
+   				    	<div class= "riga" class="hr"></div>
+							<div class="scritta" class="foot-lnk">
+								<a style="color: white">Visita la nostra</a> <a href="#" style="color: white; font-style: italic; font-weight: bold">Home Page.</a>
+							</div>
+    				</div>   
+  	</div>
+  	</form>						
+ </div>
   </div>
-		</form>
-</div>
-
-<script>
-	// Get the modal
-	var modal = document.getElementById('id01');
-
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
-</script>
-
-
-
-
+ </div>		
+		
+<br>
 </body>
-
-
 </html>
