@@ -39,9 +39,10 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Agricolàrio - Prodotti Fitosanitari </title>
+<title>Scadenze - Prodotti Fitosanitari </title>
 </head>
 <body>
+
 <!-- ----------------------------------------NAV BAR----------------------------------------------- -->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
@@ -83,7 +84,6 @@
   
   <!--------------------------------FINE NAV BAR------------------------------------------------------------------>
 
- <!-- ---------------------Elenco---------------------------------------------------------------- -->
 
 <div class="icon-bar shadow">
   <a href="#registro"><i class="fa fa-book"></i><span class="icon-bar-text shadow">Registro Fitosanitario</span></a>
@@ -94,90 +94,89 @@
 
 
 <div class="w3-container">
-  <h3 class="text-center"><em>Prodotti fitosanitari</em></h3>
+  <h3 class="text-center"><em>Scadenze dei Trattamenti Fitosanitari</em></h3>
   <p class="text-center" class="w3-large">Elenco di tutti i prodotti fitosanitari esistenti. Ognuno di esso è caratterizzato da informazioni che ne specificano il tipo, l'utilizzo e le avvertenze. </p>
 </div> 
 
 
 
-<!--  Barra di Ricerca-->
-<div class="wrap">
-   <div class="search">
-   <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-     </button>
-      <input type="text" class="searchTerm" placeholder="Digita il nome o il codice di un prodotto fitosanitario...">
-      
-   </div>
-</div>
-
-<!-- Pulsanti -->
-<div class="pulsanti">
-<button class="button button1">Visualizza i miei prodotti nel magazzino</button>
-<button class="button button2">Aggiungi un prodotto al mio magazzino</button>
-</div>
-
-<!-- Avvertenze -->
-<div class="avvertenze">
-<p id="avviso" class="text-center"><em>Leggere <u>CON ATTENZIONE</u> le etichetta  prima  dell'uso.
- Il diverso utilizzo di  questi  prodotti  rispetto a quanto  indicato  in  etichetta  può  essere  reato, oltre che <u>pericoloso per la TUA salute e DI CHI TI STA INTORNO</u>. Seguire il codice di condotta per l'uso prodotti fitosanitari, 
- <a href="https://www.minambiente.it/sites/default/files/archivio/normativa/dim_22_01_2014.pdf" style="color:blue"> disponibile qui.</a></em> </p>
-</div>
 
 <!-- Elenco -->
- <div class="prodFit" style="overflow-x:auto;">
+ <div class="scad" style="overflow-x:auto;">
   <table>
-  
 	<!-- Intestazione -->  
     <tr id="intest">
-      <th> Nome</th>
-      <th> Descrizione</th>
-      <th> Link</th>
+      <th> Scadenza del trattamento</th>
+      <th> Fitofarmaco</th>
+       <th>Scopo</th>
+      <th> Colutra</th>
+      <th> Riferimento</th>
     </tr>
     
     <!-- Prodotto 1 -->
     <tr>
-      <td>CENTURION 240 NEO Erbicida Grammicida Selettivo per colture orticole ed erbace</td>
-      <td>Prodotto ad emulsione concentrata. Prodotto e distribuito da: Arysta LifeScience S.A.S.s</td>
-       <td> <a href="#"> Link all'etichetta </a></td>
+      <td>23/05/2020</td>
+  	  <td>Antarktis</td>
+  	  <td>Curare la salmonella</td>
+      <td>Orzo</td>
+       <td>Vai al Registro</td>
     </tr>
     
       
     <!-- Prodotto 2 -->
-      <tr>
-      <td>CENTURION 240 NEO Erbicida Grammicida Selettivo per colture orticole ed erbace</td>
-      <td>Prodotto ad emulsione concentrata. Prodotto e distribuito da: Arysta LifeScience S.A.S.s</td>
-       <td> <a href="#"> Link all'etichetta </a></td>
+   <tr>
+      <td>23/05/2020</td>
+  	  <td>Antarktis</td>
+  	  <td>Curare la salmonella</td>
+      <td>Orzo</td>
+       <td>Vai al Registro</td>
     </tr>
     
       
     <!-- Prodotto 3 -->
-     <tr>
-      <td>CENTURION 240 NEO Erbicida Grammicida Selettivo per colture orticole ed erbace</td>
-      <td>Prodotto ad emulsione concentrata. Prodotto e distribuito da: Arysta LifeScience S.A.S.s</td>
-       <td> <a href="#"> Link all'etichetta </a></td>
+    <tr>
+      <td>23/05/2020</td>
+  	  <td>Antarktis</td>
+  	  <td>Curare la salmonella</td>
+      <td>Orzo</td>
+       <td>Vai al Registro</td>
     </tr>
     
       
     <!-- Prodotto 4 -->
     <tr>
-      <td>CENTURION 240 NEO Erbicida Grammicida Selettivo per colture orticole ed erbace</td>
-      <td>Prodotto ad emulsione concentrata. Prodotto e distribuito da: Arysta LifeScience S.A.S.s</td>
-       <td> <a href="#"> Link all'etichetta </a></td>
+      <td>23/05/2020</td>
+  	  <td>Antarktis</td>
+  	  <td>Curare la salmonella</td>
+      <td>Orzo</td>
+       <td>Vai al Registro</td>
     </tr>
     
       
     <!-- Prodotto 5 -->
-      <tr>
-      <td>CENTURION 240 NEO Erbicida Grammicida Selettivo per colture orticole ed erbace</td>
-      <td>Prodotto ad emulsione concentrata. Prodotto e distribuito da: Arysta LifeScience S.A.S.s</td>
-       <td> <a href="#"> Link all'etichetta </a></td>
+  <tr>
+      <td>23/05/2020</td>
+  	  <td>Antarktis</td>
+  	  <td>Curare la salmonella</td>
+      <td>Orzo</td>
+       <td>Vai al Registro</td>
     </tr>
-     
-   
-  </table>
-</div>
- 
+      </table>
+</div>   
+
+
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#" class="active">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>  
+</div>   
+
+
 
 </body>
 </html>
