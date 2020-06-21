@@ -1,4 +1,5 @@
 
+<%@page import="com.agricolario.dao.ProdottoFitosanitarioDAO"%>
 <%@page import="com.agricolario.servlet.registrazione"%>
 <%@page import="com.agricolario.bean.Trattamento"%>
 <%@page import="com.agricolario.bean.RegistroFitosanitario"%>
@@ -77,7 +78,32 @@
 
 <!-- Elenco -->
  <div class="scad"  style="height: 500px">
-<%         if(!lista.get(0).getTrattamenti().isEmpty()){                     %>
+<%        
+boolean ok=false;
+
+for(Trattamento reg : lista.get(0).getTrattamenti()){ 
+ int carenza = new ProdottoFitosanitarioDAO().getTempoCarenza(reg.getNomeProdotto());
+	 Date dt = reg.getDatInzio(); 
+ Calendar c = Calendar.getInstance(); 
+ c.setTime(dt); 
+ c.add(Calendar.DATE, carenza);
+ dt = c.getTime();
+ 
+ Date oggi= new Date(System.currentTimeMillis());
+if(oggi.after(dt)){
+	ok= true;
+	
+}
+}
+
+
+
+
+
+
+
+
+if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
   <table>
 	<!-- Intestazione -->  
     <tr id="intest">
@@ -91,14 +117,15 @@
     <!-- Prodotto 1 -->
     <%  
     
-    
+   
     
     for(Trattamento reg : lista.get(0).getTrattamenti()){ 
-    
+     int carenza = new ProdottoFitosanitarioDAO().getTempoCarenza(reg.getNomeProdotto());
+     System.out.println(carenza);
    	 Date dt = reg.getDatInzio(); 
 	 Calendar c = Calendar.getInstance(); 
 	 c.setTime(dt); 
-	 c.add(Calendar.DATE, 100);
+	 c.add(Calendar.DATE, carenza);
 	 dt = c.getTime();
 	 int anno = dt.getYear()+1900;
 	 int mese = dt.getMonth()+1;
@@ -106,7 +133,7 @@
 	 String date= anno+"-"+ mese+"-"+giorno;
 	 
 	 Date oggi= new Date(System.currentTimeMillis());
-	if(oggi.before(dt)){
+	if(dt.after(oggi)  ){
 		    
 	 
 	 %>

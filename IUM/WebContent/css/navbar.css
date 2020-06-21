@@ -351,4 +351,39 @@ table{
 	height: auto; width: 80%; float: right; padding-left:6% ;
 }
 
-
+/*Tabella prodotti fitosanitari*/
+/*
+.fixed_header tbody{
+  display:block;
+  overflow:auto;
+  height:500px;
+  width:100%;
+    text-align: center;
+  
+}
+.fixed_header thead tr{
+  display:block;	
+  
+}
+.fixed_header{
+	display: block;
+	
+	
+}*/
+table tbody, table thead
+{
+    display: block;
+}
+table tbody 
+{
+   overflow: auto;
+   height: 500px;
+}
+th
+{
+    width: 48%;
+}
+td
+{
+    width: 48%;
+}
