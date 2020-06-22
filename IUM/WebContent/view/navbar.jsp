@@ -52,9 +52,9 @@
       </li>
     </ul>
     <%  
- 
+   boolean loggato=(boolean) session.getAttribute("loggato");
     
-    if( session.getAttribute("loggato") != null){
+    if(loggato){
     
     %>
      <div class="align-baseline ml-6 icon-bar-vertical">
@@ -65,61 +65,12 @@
 	</div>
     
     <%}else{ %>
-    <button type="button" class="btn  ml-6 mr-3 " data-toggle="modal" id="tasto-accedi" data-target="#login">
+    <button type="button" class=" ml-6 mr-3 "  id="tasto-accedi" onclick="accediClick()">
 	ACCEDI
 	</button>
 	
-	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-      
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h5 class="modal-title  " id="exampleModalCenterTitle ">
-        ACCEDI
-        </h5>
- 		<form action="access" method="post">
- 		
-	  <div class="form-group">
-   			<label for="exampleInputEmail1">Email address</label>
-    		<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  			</div>
-  			<div class="form-group">
-    		<label for="exampleInputPassword1">Password</label>
-    		<input type="password" class="form-control" id="exampleInputPassword1">
-  			</div>
-  			<div class="form-group form-check">
-    		<input type="checkbox" class="form-check-input" id="exampleCheck1">
-    		<label class="form-check-label" for="exampleCheck1">Check me out</label>
-  			</div>
- 			<div class="form-group text-center">
- 			<button type="submit" class="btn btn-primary text-center">ACCEDI</button>
-  			</div>
- 			<div class="form-group text-center">
-    		 <label class="align-middle">Non sei registrato? <a>Registrati</a></label>
-  			</div>
-  			
-  			
-  			
-  			
- 		
- 		
- 		</form>
-
-
-
-      </div>
-      <div class="modal-footer text-center">
-      
-      </div>
-    </div>
-  </div>
 	<%} %>
-  </div>
+
   
   
   
@@ -128,67 +79,72 @@
  
   	
 </nav>
-<!-- login da sistemare urgente  -->
-<div style="display:none">
-		 <div id="login">
-    	        <h3 class="text-center text-white ">Login form</h3>
-    	        <div class="container-fluid">
-    	            <div id="login-row" class="row justify-content-center align-items-center">
-    	                <div id="login-column" class="col-lg-12">
-    	                    <div id="login-box" class="col-lg-4">
-    	                        <form id="login-form" class="form" action="" method="post">
-    	                            <h3 class="text-center text-info">Accedi</h3>
-    	                            <div class="form-group row">
-    	                                <label for="username" class="text-info col-5">Email:</label><br>
-    	                                <input type="text" name="username" id="username" class="form-control col-6">
-    	                            </div>
-    	                            <div class="form-group row">
-    	                                <label for="password" class="text-info col-5">Password:</label><br>
-    	                                <input type="text" name="password" id="password" class="form-control col-6">
-    	                            </div>
-    	                            <div class="form-group row align-items-center justify-content-center">
-    	                                <input type="submit" class="form-control col-4" placeholder="Login" value="Accedi">
-    	                            </div>
-    	                            <div id="register-link" class="text-center">
-    	                               <span>Non sei registrato? <a href="registration.jsp" class="text-info">Registrati</a></span>
-    	                            </div>
-    	                        </form>
-    	                    </div>
-    	                </div>
-    	            </div>
-    	        </div>
-    	    </div>
-    	    </div>
+
+
+
+<div id="id01" class="modale">
+  
+  <form class="animate" action="/action_page.php"
+			method="post">
+   <div class="login">
+			 
+   <!-- <img id="sfondo" src="https://images.vanityfair.it/wp-content/uploads/2019/04/19133507/P29.jpg"  width=auto height="700px"> -->
+   <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'"
+						class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="containere">
+    	<h1 class="text-center"><b> Accedi</b></h1><br>
+      <label id="uname"><b>Inserisci qui la tua e-mail</b></label>
+      <input style="color: white;" type="text" placeholder="Email" name="uname" required>
+
+      <label id="psw"><b>Inserisci qui la tua password</b></label>
+      <input style="color: white;" type="password" placeholder="Password" name="psw "required> 
+        
+     
+      <div class="grouppi">
+					<input id="check" type="checkbox" class="check" checked>
+					<label for="check"><span style="font-size:16px" "class="icon"> Ricordami</label></span>
+	</div>
+	
+	 <font color="#009e0f"> <button class="secondo" type="submit">ACCEDI</button></font>
+       <div class="hr"></div>
+			<div class="foot-lnk">
+					<a style="color:#1161ee">Non sei ancora registrato?</a> <a href="#" style="color: white; font-style: italic; font-weight: bold">Registrati qui!</a>
+			</div>
+    </div>
+    
+
+    
+  </div>
+		</form>
+</div>
+
 		<script>
-	/*
-		$(function () {
-			  $('[data-toggle="popover"]').popover({
-					  html: true,
-					  sanitize: false})
-			})
-			
-		$('#tasto-accedi').on('click', function(){
-			var login = document.getElementById("login");
-				
-				console.log(login.innerHTML);
-    	$(this).attr('data-content',login.innerHTML);
-		});
-		$('#ok').on('click', function(){
-			var login = document.getElementById("login");
-				
-				console.log(login.innerHTML);
-    	$(this).attr('data-content',login.innerHTML);
-		});
-		$(function() {
+	
+		
+		function accediClick(){
+			alert("bottone accedi cliccato");
+			var x = document.getElementsByClassName("modale");
+			x[0].style.display='block';
 			
 			
 			
-			  $('[data-toggle="popover"]').popover({
-			    html: true,
-			sanitize: false,
-			  })
-			})
-		*/
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		</script>
 		
 		

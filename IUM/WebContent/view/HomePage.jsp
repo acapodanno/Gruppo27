@@ -12,7 +12,7 @@
 <%
 
 boolean setTop= false;
-if(session.getAttribute("loggato") != null) {
+if(loggato) {
 setTop=true;
 
 
