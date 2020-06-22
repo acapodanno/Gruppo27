@@ -22,16 +22,16 @@
 </div>
 
 <div id="area-utente" >
-	<div  class="item-a">
+	<div  class="item-a shadow">
 					<h4>Dati Utente</h4>
 	</div>
 	
-	<div  class="item-b">
+	<div  class="item-b shadow">
 					<h4>Dati Azienda</h4>
 			
 
 	</div>
-	<div class="item-c">
+	<div class="item-c shadow">
 	<h4>Magazzino</h4>
 	
 	
