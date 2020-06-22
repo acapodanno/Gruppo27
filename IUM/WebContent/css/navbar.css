@@ -701,3 +701,43 @@ width:100%;
 }
 
 /****************************************** fine LOGIN******************************************************************/
+
+/*****************************************Area utente *******************************************************************/
+#area-utente{
+	width:100%;
+	display: grid;
+  	grid-template-columns:  30% 30%;
+  	grid-template-rows: 60% 10% 30% ;
+	height: 500px;
+	justify-content: center;
+	grid-column-gap:2%;
+}
+.item-a{
+	grid-row-start:1;
+	grid-row-end:1;
+	width: 100%;
+	height:auto; 
+	width: 100%;
+	text-align: center;
+	border:solid 1px black;
+	
+}
+.item-b{
+	grid-row-start:1;
+	grid-row-end:4;
+	width: 100%;
+	height:auto; 
+	width: 100%;
+	text-align: center;
+		border:solid 1px black;
+	
+}
+.item-c{
+	grid-row-start:3;
+	grid-row-end:4;
+	width: 100%;
+	height:auto; 
+	width: 100%;
+	text-align: center;
+		border:solid 1px black;
+}

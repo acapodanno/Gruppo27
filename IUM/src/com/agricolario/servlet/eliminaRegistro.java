@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class operazioniMagazzino
+ * Servlet implementation class eliminaRegistro
  */
-@WebServlet("/operazioniMagazzino")
-public class operazioniMagazzino extends HttpServlet {
+@WebServlet("/eliminaRegistro")
+public class eliminaRegistro extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public operazioniMagazzino() {
+    public eliminaRegistro() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,24 +27,7 @@ public class operazioniMagazzino extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String opMagazzino=request.getParameter("opMagazzino");
-		
-	  switch (opMagazzino) {
-	case "addProdottoFitosanitario":
-		
-		break;
-	case "showProdottoFitosanitario":
-		
-		break;
-	case "removeProdotto":
-		
-		break;
-
-	}
-	
-	
-	
-	
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

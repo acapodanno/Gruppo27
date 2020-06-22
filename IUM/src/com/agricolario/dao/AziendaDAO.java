@@ -103,7 +103,7 @@ public class AziendaDAO {
 	
 	
 	
-	    /* ottenre l'azienda del select * from azienda where idutente=1;
+	    /* ottenree l'azienda del delegato  select * from azienda where idutente=1;
 	    select * from (utente join delega on utente.idutente = delega.idutente) 
 	    join azienda on delega.idtitolare= azienda.idutente
 	    where utente.idutente=6;

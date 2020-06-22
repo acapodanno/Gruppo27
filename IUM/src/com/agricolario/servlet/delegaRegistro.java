@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class operazioniScadenze
+ * Servlet implementation class delegaRegistro
  */
-@WebServlet("/operazioniScadenze")
-public class operazioniScadenze extends HttpServlet {
+@WebServlet("/delegaRegistro")
+public class delegaRegistro extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public operazioniScadenze() {
+    public delegaRegistro() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,6 +35,7 @@ public class operazioniScadenze extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String opScadenze = request.getParameter("opScadenze");
+		doGet(request, response);
 	}
+
 }
