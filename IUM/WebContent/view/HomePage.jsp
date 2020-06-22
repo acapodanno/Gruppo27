@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" href="css/navbar.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -22,7 +23,7 @@ setTop=true;
 			<h1>Benvenuto in</h1>
 		</div>
 		<div class="col col-lg-12 text-center ">
-			<h1>Agricolario</h1>
+				<img src="image/NomeSito.png" class="d-inline-block align-top">
 		</div>
 </div>
 
