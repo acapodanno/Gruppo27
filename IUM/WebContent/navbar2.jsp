@@ -193,7 +193,7 @@ img{
 	/* position: absolute; */
 	/* width: 100%; */
 	/* height: 100%; */
-	background: rgba(0,105,50,0.7);
+	background: rgba(0,100,50,0.4);
 	padding: 90px 70px 50px 70px;
 }
 
