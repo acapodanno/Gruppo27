@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@page import="com.agricolario.bean.Trattamento"%>
 <%@page import="com.agricolario.bean.RegistroFitosanitario"%>
 <%@page import="java.util.ArrayList" %>
@@ -53,7 +54,15 @@ if(primo){
 </div>
     
 <div id="contenuto-registro" >
-<%for(RegistroFitosanitario reg : listaReg ){ 
+<%
+
+boolean creazione=false;
+
+for(RegistroFitosanitario reg : listaReg ){ 
+	  Date oggi= new Date(System.currentTimeMillis());
+	    int anno= oggi.getYear()+1900;
+	    int annoRegistro= reg.getDataCreazione().getYear()+1900;
+	  
               %>
 <div id="<%=reg.getDataCreazione().getYear()%>" class="tabcontent">
 
@@ -61,13 +70,18 @@ if(primo){
 
 <colgroup>
     <col style="width:15%">
-    <col  style="width:15%">
+    <col  style="width:10%">
     <col  style="width:15%">
     <col style="width:15%">
-    <col  style="width:15%">
-    <col  style="width:25%">
+    <col  style="width:10%">
+    <col  style="width:25%"> <%
+   
+        if(anno== annoRegistro  ){ 
+        
+        creazione=true;
+        %>     <col  style="width:5%"><%} %>
   </colgroup>
-  <thead class="thead" style="background-color: green; color: white; font-weight: bold; font-size: 18px; height:75px;t  text-align: center;">
+  <thead class="head-tabella">
     <tr class="text-center" style=" height:50px;">
       <th scope="col"  > Prodotto</th>
       <th scope="col" >Coltura</th>
@@ -75,21 +89,55 @@ if(primo){
        <th scope="col">Quantita utilizzata</th>
       <th scope="col" >Avversita</th>
       <th scope="col" >Note</th>
+       <%
+   
+        if(anno== annoRegistro  ){ 
+        
+        creazione=true;
+        %>
+      <th scope="col" ></th>
+           <%} %>
+      
     </tr>
   </thead>
   <tbody >
   <% 
-  
+    
+      
       for(Trattamento u : reg.getTrattamenti()){
+   
+           
   %>
     <tr scope="row" class="text-center">
-      <td  ><%= u.getNomeProdotto() %></td>
-      <td><%=u.getColtura() %></td>
-      <td><%= u.getDatInzio() %></td>
+      <td  >  <input type="text" class="input-testo" name="fname" value="<%= u.getNomeProdotto() %> " ></td>
+      <td><input type="text" class="input-testo" name="fname" value="<%=u.getColtura() %>" disabled="disabled" ></td>
+      <td><input type="text" class="input-testo" name="fname" value="<%= u.getDatInzio() %>" disabled="disabled"></td>
        <td ><%= u.getQuantita()%></td>
       <td><%= u.getAvversita() %></td>
      <td ><%=u.getNote() %></td>
-    </tr>
+        <%
+   
+        if(anno== annoRegistro  ){ 
+        
+        creazione=true;
+        %>
+     <th scope="col">  <i class="fa fa-check bottone-modifica" style="color: green ;"></i> <br><i class="fa fa-close bottone-modifica" style="color: red;"></i></th>
+     
+     <%} %>
+         </tr>
+    
+    <%} %>
+    <%
+   
+        if(anno== annoRegistro  ){ 
+        
+        creazione=true;
+        %>
+   <tr scope="row" class="text-center">
+      <td colspan="7" ><a href="#"><i class="fa fa-plus-circle"></i>Aggiungi trattamento</a></td>
+     </tr>
+    
+    
     <%} %>
   </tbody>
 </table>
@@ -98,9 +146,9 @@ if(primo){
 </div>
 <div style="width:100% ;height: 250px;" >
        
-        <button class=" shadow ml-3 mt-5 buttone-registro"  >Crea  </button>
+        <button class=" shadow ml-3 mt-5 buttone-registro" <%if(creazione){ %>  disabled="disabled" style="background-color: gray;" <%}%> >Crea  </button>
         <button class="shadow ml-3 mt-5 buttone-registro" >Delega</button>
-        <button class="shadow ml-3 mt-5 buttone-registro">Modifica</button>
+        <button class="shadow ml-3 mt-5 buttone-registro" id="modifica"  onclick="clickModifica()">Modifica</button>
         <button class="shadow ml-3 mt-5 buttone-registro">Elimina</button>
         
 </div>
@@ -141,8 +189,30 @@ if(primo){
     	 document.getElementById(anno).style.display = "block";
     	  evt.currentTarget.className += " active";
     	}
+      //------------------------------------------------------------------------------
       document.getElementById("defaultOpen").click();
+    //------------------------------------------------------------------------------
+      function clickModifica(){
+    	  var divsToHide = document.getElementsByClassName("bottone-modifica"); //divsToHide is an array
+    	    for(var i = 0; i < divsToHide.length; i++){
+    	        divsToHide[i].style.visibility = "visible"; // or
+    	    }
+ 	showInput();
+    	  
+      }
+    //------------------------------------------------------------------------------
+      function showInput(){
+  
+      	     var ok = document.getElementsByClassName("input-testo"); //divsToHide is an array
+       	   		 for(var i = 0; i < ok.length; i++){
+//      	        ok[i].style.pointer-events= "auto";
 
+      	        
+      	    }
+    	  
+      }
+      
+      
       
       </script>
       

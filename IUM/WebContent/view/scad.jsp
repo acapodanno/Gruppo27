@@ -106,15 +106,17 @@ if(oggi.after(dt)){
 if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
   <table>
 	<!-- Intestazione -->  
-    <tr id="intest">
+	<thead class="head-tabella">
+    <tr >
       <th> Scadenza del trattamento</th>
       <th> Fitofarmaco</th>
        <th>Scopo</th>
       <th> Colutura</th>
       <th> Riferimento</th>
     </tr>
-    
+	</thead>    
     <!-- Prodotto 1 -->
+  <tbody>
     <%  
     
    
@@ -146,7 +148,7 @@ if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
     </tr>
     <%}} %>
       
-  
+  </tbody>
       </table>
   <%	}else{				 %>
   

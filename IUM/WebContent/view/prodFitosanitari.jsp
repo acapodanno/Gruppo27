@@ -80,7 +80,7 @@
 </div>
 
 <!-- Elenco -->
- <div class="prodFit" style="overflow-x:auto;">
+ <div class="prodFit" >
   <table class="fixed_header">
   <colgroup>
     <col style="width:10%">
@@ -89,7 +89,7 @@
     </colgroup>
   
 	<!-- Intestazione -->  
-	<thead>
+	<thead class="head-tabella">
     <tr id="intest">
       <th> Nome</th>
       <th> Descrizione</th>

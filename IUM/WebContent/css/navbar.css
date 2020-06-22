@@ -259,15 +259,25 @@ float: left;
 	
 }
 /*Registro */
-/*
+
 table{
  height: 500px;
   overflow-y: scroll;
   display: block;
+  border: solid 1px gray;
   
   
   }
-  */
+ .head-tabella{
+ 
+ 
+ background-color: green;
+  color: white; 
+ font-weight: bold;
+  font-size: 18px;
+   height:75px;
+ 
+ }
 /*
 .table-fixed tbody {
   height: 230px;
@@ -370,20 +380,51 @@ table{
 	
 	
 }*/
+/*
 table tbody, table thead
 {
     display: block;
 }
+*/
+/*
 table tbody 
 {
    overflow: auto;
    height: 500px;
 }
+*/
+/*
 th
 {
     width: 48%;
 }
+*/
+/*
 td
 {
     width: 48%;
+}
+*/
+.bottone-modifica{
+	
+   visibility: hidden;
+	
+	
+}
+
+td > input[type="text"]:disabled{
+	border: none;
+	text-align: center;
+	
+	
+	
+}
+td > input[type="text"]{
+    pointer-events: none;
+    border: none;
+	text-align: center;
+	background-color: transparent;
+	
+	
+	
 }
