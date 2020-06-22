@@ -3,19 +3,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="navbar.css">
+<style type="text/css">
+nav{
+	justify-content: center;
+    display: grid;
+    grid-template-columns: 10% 60% 10%;
+    /* grid-column-gap: 5%; */
+    align-items: center;
+    min-height: 12vh;
+    background-color: white;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+}
+.nav-logo{text-align: center;}
+.nav-logo > img{
+	width: 70%;
+    height: auto;
+}
 
+.nav-links{
+	display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    /* justify-content: center; */
+    width: 100%;
+    height: auto;
+}
+.nav-links a{
+	
+	text-decoration: none;
+	color: #009e0f;
+	font-weight: bold;
+	font-size: 1.2vw;
+	width: 100%;
+	  height: auto;
+	  text-align: center;
+}
+.nav-links li{
+	
+	list-style: none;
+text-align: center;
+	
+}
+.accedi > button{
+	background-color: #009e0f;
+    color: white;
+    font-weight: bold;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    height: 50px;
+    border-radius: 4px;
+    width: 75%;
+}
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+</style>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
 <nav>
  <div class="nav-logo">
- <img alt="LOGO" src="LOGO.png">
+ <img alt="LOGO" src="image/LOGO.png">
  </div>
  
  	<ul class="nav-links">

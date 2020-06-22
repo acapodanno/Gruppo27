@@ -35,19 +35,20 @@ public class login extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		String email,password;
-		 email= request.getParameter("email");
-		 password= request.getParameter("password");
+		
+		 email= /*request.getParameter*/("pannonegiu@gmail.com");
+		 password=/* request.getParameter*/("motoGP");
 		 UtenteDAO userDao = new UtenteDAO();
 			Utente user=userDao.selectUser(email);
 			if(user!=null) {
+				
+
+
+				Azienda azienda=new AziendaDAO().selectAzienda(user.getId());
+				user.setAzienda(azienda);
 				HttpSession ssn= request.getSession();
 				ssn.setAttribute("user",user);
 				ssn.setAttribute("loggato",true);
-
-
-				System.out.println(user.toString());
-				Azienda azienda=new AziendaDAO().selectAzienda(user.getId());
-				System.out.println(azienda.toString());
 			}else {
 				
 				//pagina di errore o messaggio di errore

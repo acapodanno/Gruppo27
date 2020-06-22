@@ -14,7 +14,7 @@ public class Utente {
 	private String password;
 	private String ruolo;
 	private Date dataNascita;
-	
+	private Azienda azienda;
 	
 	public Utente(String nome, String cognome, String email, String password, String ruolo, Date dataNascita) {
 		super();
@@ -36,7 +36,7 @@ public class Utente {
 		this.password = password;
 		this.ruolo = ruolo;
 		this.dataNascita = dataNascita;
-	
+	    this.azienda =azienda;
 	}
 	public int getId() {
 		return id;
@@ -79,6 +79,13 @@ public class Utente {
 	}
 	public void setDataNascita(Date dataNascita) {
 		this.dataNascita = dataNascita;
+	}
+	
+	public Azienda getAzienda() {
+		return azienda;
+	}
+	public void setAzienda(Azienda azienda) {
+		this.azienda = azienda;
 	}
 	@Override
 	public String toString() {
