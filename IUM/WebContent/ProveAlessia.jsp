@@ -83,7 +83,80 @@
   
   <!-- ---------------------FINE NAV BAR---------------------------------------------------------------- -->
 
+<!-- FUNZIONI -->
+<div class="container-fluid mt-5 ">
+	<div class="row justify-content-center ">
+	<div class="col col-lg-12 text-center ">
+			<h1 style="color: black">Benvenuto in</h1>
+		</div>
+		<div class="col col-lg-12 text-center ">
+				<img src="image/NomeSito.png" class="d-inline-block align-top">
+		</div>
+</div>
 
+
+
+
+
+  <div class="row justify-content-center mt-5" >
+    <div class="col col-lg-4  ">
+    <div  class="mt-3 ml-5 cazzarielli">
+		<img src="https://img.icons8.com/officel/70/000000/literature.png"/>
+    </div>
+    <div  class="shadow cazzarielli-testo"style="  ">
+    
+    
+    <h4 class="mt-2">REGISTRO FITOSANITARIO</h4>
+    <p class="mt-2">Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari!
+    </p>
+    </div>
+    </div>
+    <div class="col col-lg-4 ">
+       <div  class="mt-3 ml-5 cazzarielli">
+   <img src="https://img.icons8.com/bubbles/100/000000/opened-folder.png"/>
+    </div>
+        <div  class="shadow cazzarielli-testo">
+    
+     <h4 class="mt-2">PRODOTTI FITOSANITARIO</h4>
+    <p class="mt-2">Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti! </p>
+    </div>
+    </div>
+   </div>
+
+<div class="row justify-content-center mt-5" >
+   <div class="col col-lg-4  ">
+    <div  class="mt-3 ml-5 cazzarielli">
+    
+    </div>
+    <div  class="shadow cazzarielli-testo">
+    
+    
+    <h4 class="mt-2">SCADENZE</h4>
+    <p class="mt-2">Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati!
+    </p>
+    </div>
+    </div>
+ 
+  <div class="col col-lg-4  ">
+    <div  class="mt-3 ml-5 cazzarielli">
+  <img src="https://img.icons8.com/bubbles/100/000000/qr-code.png"/>
+    </div>
+    <div  class="shadow cazzarielli-testo">
+    
+    
+    <h4 class="mt-2">TRACCIABILITA'</h4>
+    <p class="mt-2">Crea qui l'etichetta virtuale per ogni prodotto agroalimentare da te coltivato!
+    </p>
+    </div>
+    </div>
+
+
+
+
+</div>
+
+
+</div>
 
 <!-- --------------------------SLIDE SHOW--------------------------------------------------------------- -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:5px;">
