@@ -82,46 +82,47 @@
   
   
   <!-- ---------------------Registrazione---------------------------------------------------------------- -->
-<div class="registrazione">
+<div class="registration">
 
     <div class="containerReg">
     	<h1 class="text-center"><b> Registrazione</b></h1><br>
+    	
 		<div class="row justify-content-center " >
 		 <form id="form-registrazione" action="access" method="post">
 		
   					<div class="row justify-content-center">
     					<div class="col-4 form-group">
     						<label class="etichette">Nome</label>
-      						<input type="text"  placeholder="Nome" name="nome" required>
+      						<input type="text"  placeholder="Nome" name="nome"  >
     					</div>
     					<div class="col-4 form-group">
     					<label class="etichette">Cognome</label>
-      					<input type="text"  placeholder="Cognome" name="cognome" required>
+      					<input type="text"  placeholder="Cognome" name="cognome"  >
     					</div>
   					</div>
  
   					<div class="row justify-content-center">
   					   <div class="col-8 form-grupo">
   					   		<label  class="etichette">Email</label>
-      						<input type="text"  placeholder="Email" name="email" required>
+      						<input type="text"  placeholder="Email" name="email"  >
    					   </div>
   					</div>
   					
  					 <div class="row justify-content-center mt-3">
     					<div class="col-4 form-goup">
     						<label  class="etichette">Password</label>
-      						<input type="text"  placeholder="Password" name="password" required>
+      						<input type="text"  placeholder="Password" name="password"  >
     					</div>
     				 	<div class="col-4 form-group">
     				 		<label  class="etichette">Conferma Password</label>
-      				 		<input type="text"  placeholder="Conferma Password" required>
+      				 		<input type="text"  placeholder="Conferma Password"  >
    					 	</div>
   					</div>	
 
    					<div class="row justify-content-center">
 					    <div class="col-4">
 					   	 <label  class="etichette">Data di nascita</label>
-    						<input type="date" placeholder="dd mm yyyy" name="dataNascita"    data-date-format="DD MMMM YYYY" required>
+    						<input type="date" placeholder="dd mm yyyy" name="dataNascita"    data-date-format="DD MMMM YYYY"  >
     					</div>
     					
     				<div class="col-4 form-group">
@@ -137,27 +138,134 @@
    					<div class="row  justify-content-center">
    				    <div class="col-8">
  							<div class="form-group form-check">
-    								<input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+    								<input type="checkbox" class="form-check-input" id="exampleCheck1"  >
     								<label class="etichettaAcconsento" class="form-check-label">Acconsento al trattamento dei miei dati, accetto i Termini di Servizio e la Politica della Privacy</label>
  							</div>    
   					</div>
   					</div>
   				
-  					<div class="row  justify-content-center">
+  					<div id="registrazione" class="row  justify-content-center">
    				    <button type="submit" class="bottoneReg" disabled>Registrati</button>   
   					</div>
   
    				    	<div class= "riga" class="hr"></div>
 							<div class="scritta" class="foot-lnk">
-								<a style="color: white">Visita la nostra</a> <a href="#" style="color: white; font-style: italic; font-weight: bold">Home Page.</a>
+								<a style="color: white"> Torna alla </a> <a href="#" style="color: white; font-style: italic; font-weight: bold">Home Page.</a>
 							</div>
-    				</div>   
-  	</div>
-  	
-  	</form>						
- </div>
+    				
+  	</form>	
+  	</div>   
   </div>
- </div>		
+   
+  
+  <div class="shadow registration" id="azienda"  style="display: none; ">
+  
+	<div class="containerReg">
+    	<h1 class="text-center"><b> Registra la tua azienda</b></h1><br>
+    	
+			<div class="row justify-content-center " >
+		 				<form id="form-registrazione" action="access" method="post">
+		 				
+  					<div class="row justify-content-center">
+    					<div class="col-8 form-group">
+    						<label  class="etichette">Nome azienda</label>
+      						<input type="text"  placeholder="Nome Azienda" name="azienda">
+    					</div>
+    					
+  					</div>
+  					<div class="row justify-content-center">
+  					   <div class="col-8">
+  					   		<label  class="etichette">Email azienda</label>
+      						<input type="text"  placeholder="Email Azienda" name="email">
+   					   </div>
+  					</div>
+ 					 <div class="row justify-content-center">
+    					<div class="col-6">
+    						<label  class="etichette">Indirizzo</label>
+      						<input type="text"  placeholder="Indirizzo" name="indirizzo">
+    					</div>
+    					<div class="col-2">
+    						<label  class="etichette">N°Civico</label>
+      						<input type="text" placeholder="n°" name="numeroCivico">
+    					</div>
+    				 	
+    				 
+  					</div>	
+  					<div class="row justify-content-center ">
+  						<div class="col-6">
+  							<label  class="etichette">Città</label>
+      				 		<input type="text"  placeholder="Città" name="citta">
+   					 	</div>
+   					 	<div class="col-2">
+   					 		<label  class="etichette">CAP</label>
+      				 		<input type="text" placeholder="Cap" name=" cap">
+   					 	</div>
+  					
+  					
+  					
+  					</div>
+   					<div class="row justify-content-center">
+					    <div class="col-8 form-group">
+					    	<label  class="etichette">Data Fondazione:</label>
+    						<input type="date" placeholder="Data Fondazione" name="dataFondazione" >
+    					</div>
+    				
+ 				   </div>
+   				
+  					<div id="registrazione" class="row  justify-content-center">
+   				    <button type="submit" class="bottoneReg">Registrati</button>   
+  					</div>
+ 	
+ 
+ 					    	<div class= "riga" class="hr"></div>
+							<div class="scritta" class="foot-lnk">
+							 <a href="#" style="color: white; font-style: italic; font-weight: bold">Indietro</a>
+							</div>
+ 					
+			</form>
+		</div>
+	
+  
+  </div>
+  
+  
+  
+  
+  
+</div>
+
+<script >
+$( "#ruolo").on('change', function () {
+	  //ways to retrieve selected option and text outside handler
+	  if(this.value=='titolare'){
+    $("#registrazione").html('<button class="bottoneReg" type="button" id="bottone-registrazione">Avanti</button>  ');
+	  }else{
+		    $("#registrazione").html('<button class="bottoneReg" type="submit" id="bottone-avanti">Registrati</button>  ');
+		  
+	  }
+	  });
+$("#form-registrazione").on("click","#bottone-registrazione",function(){
+	$("#utente").css("animation","fadeOutLeft");
+	$("#utente").css("animation-duration","2s");
+
+setTimeout(function(){ 
+	$("#utente").hide();
+ }, 1000);
+setTimeout(function(){ 
+	$("#azienda").show();
+ }, 1000);
+
+		
+	
+	
+} );
+		
+	
+
+
+</script>			
+  					
+	
 		
 <br>
 </body>
