@@ -65,7 +65,17 @@ nav > .accedi > button{
 	
 	background-color: #f6f6f6;
 	
+} */
+
+body{
+  font-family:"Calisto MT", Times, serif;
+  overflow-x:hidden; 
 }
+
+
+
+
+
  										/*Popup form*/
 #login .container #login-row #login-column #login-box {
   
@@ -176,11 +186,7 @@ float: left;
   margin-top: 10%;
   }
   
-  body{
-  
-  overflow-x:hidden; 
-  
-  }
+
 
 .icon-bar a {
 	width:100px;
