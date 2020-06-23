@@ -29,7 +29,7 @@ public class showHome extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession ssn= request.getSession();
-		ssn.setAttribute("loggato",true);
+		ssn.setAttribute("loggato",false);
 		getServletContext().getRequestDispatcher("/view/HomePage.jsp").forward(request, response);;
 		System.out.println("Io sono una servlet normale creo solo disagio");
 	}
