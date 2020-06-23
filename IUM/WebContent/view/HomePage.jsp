@@ -12,7 +12,7 @@
 <%
 
 boolean setTop= false;
-if(loggato) {
+if(false) {
 setTop=true;
 
 

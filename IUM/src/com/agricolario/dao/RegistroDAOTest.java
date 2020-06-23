@@ -2,14 +2,13 @@ package com.agricolario.dao;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Date;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.agricolario.bean.Azienda;
-import com.agricolario.functionality.ParseDate;
-
-class AziendaDAOTest {
+class RegistroDAOTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
@@ -20,11 +19,13 @@ class AziendaDAOTest {
 	}
 
 	@Test
-	final void testInsert() {
-		Azienda azienda = new Azienda();
+	final void test() {
+
+	Date dt = new Date(System.currentTimeMillis());
+	System.out.println(dt);
+	boolean valore=new RegistroFitosanitarioDAO().insert(dt,1);
+	System.out.println(valore);
 	
-		azienda = new AziendaDAO().selectAziendaDelegato(6);
-		System.out.println(azienda);
 	}
 
 }

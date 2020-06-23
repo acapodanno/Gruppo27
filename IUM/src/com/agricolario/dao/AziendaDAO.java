@@ -99,7 +99,46 @@ public class AziendaDAO {
 		    	
 	    	
 	    }
-	
+	    public Azienda selectAziendaDelegato(int id) {
+	    	String sql="select * from (utente join delega on utente.idutente = delega.idutente) \r\n" + 
+	    			"	    join azienda on delega.idtitolare= azienda.idutente\r\n" + 
+	    			"	    where utente.idutente=?;";
+			 Connection con= connessione.getConn();
+			 	ResultSet result;
+
+			 Azienda a= new Azienda();
+				try {
+					
+					//bisogna aggiustare il nomi nomeAzienda in nome e DataFondazione tutto in minuscolo
+			    	PreparedStatement ps = con.prepareStatement(sql);
+			    	ps.setInt(1,id);
+					
+					result = ps.executeQuery();
+					while(result.next()) {
+					a.setId(result.getInt("idazienda"));
+					a.setNomeAzienda(result.getString("nomeAzienda"));
+					a.setCittà(result.getString("città"));
+					a.setDataFondazione(result.getDate("DataFondazione"));
+					a.setIndirizzo(result.getString("indirizzo"));
+					a.setCap(result.getString("cap"));
+					a.setIdUtente(result.getInt("idutente"));
+					
+					}
+					
+			    	 return a;	
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					System.out.println(e.getErrorCode()+"\n"+e.getMessage());
+					return null;
+				}finally {
+					if(connessione!=null) {
+						
+						connessione.closeConn();
+					}
+				}
+		    	
+	    	
+	    }
 	
 	
 	

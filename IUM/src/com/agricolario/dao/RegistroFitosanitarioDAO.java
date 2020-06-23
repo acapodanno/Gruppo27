@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.Random;
 
 import com.agricolario.bean.RegistroFitosanitario;
 import com.agricolario.bean.Trattamento;
@@ -21,17 +22,94 @@ public class RegistroFitosanitarioDAO {
 		connessione= new Connessione();
 
 	}
-	public boolean insert(RegistroFitosanitario rf) {
-		
-		String insertSql= "insert into registrofitosanitario (coltura,dataInizio,superficie,nomeprodotto,quantitaProdotto,avversita,note) value(?,?,?,?,?,?,?);";
+	public boolean insert(Date dataCreazione,int idUtente) {
+		Connection con= connessione.getConn();
+	    
+		//id autogenrato
+		int id= new Random().nextInt(120000000);
+		String insertSql= "insert into registrofitosanitario (dataCreazione,idregistrofitosanitario) value(?,?);";
 	// 	PreparedStatement ps = con.prepareStatement(insertSql);
-	
-	    return true;
+		PreparedStatement ps;
+		try {
+			ps = con.prepareStatement(insertSql);
+			ps.setDate(1, ParseDate.parseDateSql(dataCreazione));
+			ps.setInt(2, id);
+			ps.executeUpdate();
+			insertCompilazione(idUtente, id);
+			
+			
+			return true;
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}finally {
+			if(connessione!=null) {
+				
+				connessione.closeConn();
+			}
+		}
+    	 
+		 
+		 
+		 
+		 
 		
 		
 		
 	//	return false;
 	}
+	
+	//insert into compilazioneregistro(idutente,idregistrofitosanitario) value (1,12);
+	
+
+	public boolean insertCompilazione(int idutente,int idregistro ) {
+		Connection con= connessione.getConn();
+	    
+		//id autogenrato
+		int id= new Random().nextInt(120000000);
+		String insertSql= "insert into compilazioneregistro (idutente,idregistrofitosanitario) value(?,?);";
+	// 	PreparedStatement ps = con.prepareStatement(insertSql);
+		PreparedStatement ps;
+		try {
+			ps = con.prepareStatement(insertSql);
+			ps.setInt(1, idutente);
+			ps.setInt(2, idregistro);
+			ps.executeUpdate();
+
+			return true;
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}finally {
+			if(connessione!=null) {
+				
+				connessione.closeConn();
+			}
+		}
+    	 
+		 
+		 
+		 
+		 
+		
+		
+		
+	//	return false;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public RegistroFitosanitario getRegistro(int id) {
 		
 		String insertSql= "\r\n" + 
