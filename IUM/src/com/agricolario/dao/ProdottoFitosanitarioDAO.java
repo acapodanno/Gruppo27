@@ -52,6 +52,47 @@ public class ProdottoFitosanitarioDAO {
 			}	
 	}
 
+	public ProdottoFitosanitario getProdotto(String nomeProdotto) {
+		
+		String sql= "select * from prodottofitosanitario where nome = ?;";
+
+		 Connection con= connessione.getConn();
+		 	ResultSet result;
+			try {
+				
+				PreparedStatement ps = con.prepareStatement(sql);
+				ps.setString(1, nomeProdotto);
+                result	=   ps.executeQuery();
+			    ProdottoFitosanitario p=new ProdottoFitosanitario();
+			    while(result.next()) {	
+	            	   
+			    	   p.setIdProdottoFitosanitario(result.getInt(1));
+	            	   p.setAvversita(result.getString("avversita"));
+	            	   p.setDose(result.getString("quantita"));
+	            	   p.setNome(result.getString("nome"));
+	            	   p.setTempocarenza(result.getInt("tempocarenza"));
+	            	   p.setTemporientro(result.getInt("temporientro"));
+	            	   p.setForma(result.getString("forma"));
+	            	   p.setEtichetta(result.getString("etichetta"));
+	            	   p.setFunzione(result.getString("funzione"));         
+                }
+			
+				System.out.println(p.toString());
+				
+		    	 return p;	
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return null;
+			}finally {
+				if(connessione!=null) {
+					
+					connessione.closeConn();
+				}
+			}	
+	}
+
+
 
 
 

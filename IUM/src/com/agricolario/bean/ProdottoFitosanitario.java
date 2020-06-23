@@ -93,6 +93,13 @@ private String dose;
 private String funzione;
 private String avversita;
 private int tempocarenza;
+@Override
+public String toString() {
+	return "ProdottoFitosanitario [idProdottoFitosanitario=" + idProdottoFitosanitario + ", etichetta=" + etichetta
+			+ ", nome=" + nome + ", quantita=" + quantita + ", forma=" + forma + ", temporientro=" + temporientro
+			+ ", dose=" + dose + ", funzione=" + funzione + ", avversita=" + avversita + ", tempocarenza="
+			+ tempocarenza + "]";
+}
 
 
 
