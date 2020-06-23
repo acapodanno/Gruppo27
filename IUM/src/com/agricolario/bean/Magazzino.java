@@ -1,34 +1,28 @@
 package com.agricolario.bean;
 
+import java.util.ArrayList;
+
 public class Magazzino {
 
-	public Magazzino() {
-		// TODO Auto-generated constructor stub
-	}
 	private int idMagazzino;
 	private int idAzienda;
-	private int idProdottoFitosanitario;
-	private double quantita;
-	
-	
-	
-	
-	
-	
-	
-	public Magazzino(int idMagazzino, int idAzienda, int idProdottoFitosanitario, double quantita) {
-		super();
+	private  ArrayList<ProdottoMagazzino> prodotto;
+	public Magazzino() {
+	}
+	public Magazzino(int idMagazzino, int idAzienda, ArrayList<ProdottoMagazzino> prodotto) {
 		this.idMagazzino = idMagazzino;
 		this.idAzienda = idAzienda;
-		this.idProdottoFitosanitario = idProdottoFitosanitario;
-		this.quantita = quantita;
+		this.prodotto = prodotto;
 	}
-	public double getQuantita() {
-		return quantita;
+
+	public ArrayList<ProdottoMagazzino> getProdotto() {
+		return prodotto;
 	}
-	public void setQuantita(double quantita) {
-		this.quantita = quantita;
+
+	public void setProdotto(ArrayList<ProdottoMagazzino> prodotto) {
+		this.prodotto = prodotto;
 	}
+
 	public int getIdMagazzino() {
 		return idMagazzino;
 	}
@@ -41,12 +35,6 @@ public class Magazzino {
 	public void setIdAzienda(int idAzienda) {
 		this.idAzienda = idAzienda;
 	}
-	public int getIdProdottoFitosanitario() {
-		return idProdottoFitosanitario;
-	}
-	public void setIdProdottoFitosanitario(int idProdottoFitosanitario) {
-		this.idProdottoFitosanitario = idProdottoFitosanitario;
-	}
-	
+
 
 }

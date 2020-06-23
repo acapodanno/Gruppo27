@@ -12,7 +12,6 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 <script src="https://kit.fontawesome.com/yourcode.js"></script>
 <script type="text/javascript" src="js/qrcode.js"></script>
-
 <script type="text/javascript" src="js/qrcode.min.js"></script>
 <script src="https://kit.fontawesome.com/yourcode.js"></script>
 <script src="view/jquery.js">
@@ -68,7 +67,7 @@ $.get("operazioneTracciabilita", function(data, status){
 				</div>  
 				<div class="col col-lg-12  text-center mt-5">
  					
- 					<div class="" style="border:solid 1px red;height:200px; width: 200px; display: inline-block;"  id="qrcode">
+ 					<div class="" style="height:200px; width: 200px; display: inline-block;"  id="qrcode">
  					
  					
  					</div>
@@ -107,10 +106,16 @@ $.get("operazioneTracciabilita", function(data, status){
 $("#bottone-generaQR").click(function(){
 	
 	
+	 document.getElementById("qrcode").innerHTML = "";
 	
-	
-		alert("esco Entro spacco ciao")
-		new QRCode(document.getElementById("qrcode"), "Entro esco spacco ciao!");
+	new QRCode(document.getElementById("qrcode"), {
+		text: "Entro esco spacco ciao!", 
+		width: 200,
+		height: 200,
+		colorDark : "#009e0f",
+		colorLight : "#ffffff",
+		correctLevel : QRCode.CorrectLevel.H
+	});
 
        /*    var xhttp = new XMLHttpRequest();
 
@@ -131,14 +136,7 @@ $("#bottone-generaQR").click(function(){
 
 $("#bottone-generaQR").click(function(){
 	
-	new QRCode(document.getElementById("qrcode"), {
-		text: ""Entro esco spacco ciao!", 
-		width: 50,
-		height: 50,
-		colorDark : "#000000",
-		colorLight : "#ffffff",
-		correctLevel : QRCode.CorrectLevel.H
-	});
+	
 	
 	
 		alert("esco Entro spacco ciao")
