@@ -27,77 +27,78 @@ setTop=true;
 		</div>
 </div>
 
+</div>
 
 
+<!-- FUNZIONALITA -->
+<div class="funzionalita"  >
+		<div class="flexiamo" style="width: 100%;height: auto;">
 
-<div class="row justify-content-center mt-5" >
-    <div class="col col-lg-4  ">
-    <div  class="mt-3 ml-5 cazzarielli">
-<img src="https://img.icons8.com/bubbles/100/000000/literature.png"/>
-    </div>
-    <div class=" cazzarielli-testo" class="sinistra" >
+		   <div  class="cazzarielli">
+			<img 
+			
+			srcset=" https://img.icons8.com/bubbles/100/000000/literature.png 1500w"/>
+    		</div>
+   			 <div class=" cazzarielli-testo1" id="cazzariello1" >
     
     
-    <h4 id="melohairotto2" style="color:#009e0f; font-weight: bold;"  class="mt-2">REGISTRO DEI TRATTAMENTI FITOSANITARI</h4>
-    <p class="mt-2">Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari! <br>
-Tramite pochi pratici click potrai aggiungere un trattamento al tuo registro fitosanitario, apportare modifiche, visualizzare e stampare i registri degli anni precedenti.
+  		  <h4>REGISTRO DEI TRATTAMENTI FITOSANITARI</h4>
+  		  <p >Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari! <br>
+			Tramite pochi pratici click potrai aggiungere un trattamento al tuo registro fitosanitario, apportare modifiche, visualizzare e stampare i registri degli anni precedenti.
 
     </p>
     </div>
-    </div>
-    <div class="col col-lg-4 ">
-       <div  class="mt-3 ml-5 cazzarielli">
-<img src="https://img.icons8.com/bubbles/100/000000/search.png"/>
-    </div>
-        <div  class=" cazzarielli-testo" class="destra">
-    
-     <h4  id="melohairotto2"  class="mt-2">PRODOTTI FITOSANITARI</h4>
-    <p class="mt-2">Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti, consulta tutte le informazioni importanti, le etichette e le avvertenze di ogni singolo prodotto fitosanitario! <br>
-Potrai visualizzare anche solo i tuoi prodotti fitosanitari presenti nel tuo magazzino e aggiungerne nuovi. 
- </p>
-    </div>
-    </div>
-   </div>
 
-<div class="row justify-content-center mt-5" >
-   <div class="col col-lg-4  ">
-    <div  class="mt-3 ml-5 cazzarielli">
-    <img src="https://img.icons8.com/bubbles/100/000000/overtime.png"/>
-    </div>
-    <div  class=" cazzarielli-testo" class="sinistra">
+		</div >
+
+		<div class="flexiamo" style="width: 100%;height: auto;">
+														
+     			  <div  class="cazzarielli">
+					<img srcset="https://img.icons8.com/bubbles/100/000000/search.png 1500w"/>
+   				 </div>
+                <div  class=" cazzarielli-testo1" >
+    
+                  <h4 >PRODOTTI FITOSANITARI</h4>
+                <p >Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti, consulta tutte le informazioni importanti, le etichette e le avvertenze di ogni singolo prodotto fitosanitario! <br>
+		Potrai visualizzare anche solo i tuoi prodotti fitosanitari presenti nel tuo magazzino e aggiungerne nuovi. 
+ 			</p>
+    		</div>
+   			 
+		</div>
+
+		<div style="width: 100%;height: auto;">
+
+		   <div  class="cazzarielli">
+   			 <img srcset="https://img.icons8.com/bubbles/100/000000/overtime.png 1500w"/>
+    		</div>
+    	<div  class=" cazzarielli-testo2" id="cazzariello2">
     
     
-    <h4  id="melohairotto2"  class="mt-2">SCADENZE</h4>
-    <p class="mt-2">Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati! <br>
+  			  <h4 >SCADENZE</h4>
+    <p>Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati! <br>
 Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi tempi. 
     
     </p>
     </div>
+		</div>
+
+		<div style="width: 100%;height: auto;">
+
+		  <div  class="cazzarielli">
+  <img srcset="https://img.icons8.com/bubbles/100/000000/qr-code.png 1500w"/>
     </div>
- 
-  <div class="col col-lg-4  ">
-    <div  class="mt-3 ml-5 cazzarielli">
-  <img src="https://img.icons8.com/bubbles/100/000000/qr-code.png"/>
-    </div>
-    <div  class=" cazzarielli-testo" class="destra">
+    <div  class=" cazzarielli-testo2" class="destra">
     
     
-    <h4   id="melohairotto2"  class="mt-2">TRACCIABILITÀ</h4>
+    <h4>TRACCIABILITÀ</h4>
     <p class="mt-2">Crea qui l'etichetta virtuale per ogni prodotto agroalimentare da te coltivato! <br>
 Con una semplice generazione di un codice QR potrai visualizzare tutte le informazioni legate ai tuoi prodotti. 
 
     </p>
     </div>
-    </div>
 
-
-
-
+		</div>
 </div>
-
-
-</div>
-
 <%} %>
 <div id="carouselExampleIndicators" class="carousel slide <% if(!setTop){ %>mt-1<%}else{ %> mt-5<%} %> " data-ride="carousel">
   <ol class="carousel-indicators">
