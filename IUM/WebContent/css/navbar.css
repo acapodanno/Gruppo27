@@ -112,14 +112,36 @@ body{
 	font-size: 24px;
 }
 
+
+
+
 h4 {
-	font-size: 30px;
+	font-size: 24px;
 	font-weight: bold;
 }
  
-.imgProfilo{
-	width: 50%;
+.uff {
+	display: flex;
+	/* margin: auto; */
+	width: 35%;
 	
+}
+
+.immaginina{
+}
+
+.cazzo{
+	margin-top: 10px;
+}
+
+#melohairotto{
+	font-size: 50px;
+	margin-top: 15px;
+}
+
+#melohairotto2{
+	font-size: 30px;
+	margin-top: 15px;
 }
 
 /*Navbar*/

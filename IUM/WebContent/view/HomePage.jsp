@@ -5,14 +5,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="css/navbar.css">
-<title>Insert title here</title>
+<title>HomePage Agricolàrio</title>
 </head>
 <body>
 <%@ include file="navbar.jsp"%>
 <%
 
-boolean setTop= false;
-if(false) {
+boolean setTop= true;
+if(true) {
 setTop=true;
 
 
@@ -30,16 +30,15 @@ setTop=true;
 
 
 
-
-  <div class="row justify-content-center mt-5" >
+<div class="row justify-content-center mt-5" >
     <div class="col col-lg-4  ">
     <div  class="mt-3 ml-5 cazzarielli">
 <img src="https://img.icons8.com/bubbles/100/000000/literature.png"/>
     </div>
-    <div  class=" cazzarielli-testo"style="  ">
+    <div class=" cazzarielli-testo" class="sinistra" >
     
     
-    <h4 class="mt-2">REGISTRO FITOSANITARIO</h4>
+    <h4 id="melohairotto2" style="color:#009e0f; font-weight: bold;"  class="mt-2">REGISTRO DEI TRATTAMENTI FITOSANITARI</h4>
     <p class="mt-2">Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari! <br>
 Tramite pochi pratici click potrai aggiungere un trattamento al tuo registro fitosanitario, apportare modifiche, visualizzare e stampare i registri degli anni precedenti.
 
@@ -50,9 +49,9 @@ Tramite pochi pratici click potrai aggiungere un trattamento al tuo registro fit
        <div  class="mt-3 ml-5 cazzarielli">
 <img src="https://img.icons8.com/bubbles/100/000000/search.png"/>
     </div>
-        <div  class=" cazzarielli-testo">
+        <div  class=" cazzarielli-testo" class="destra">
     
-     <h4 class="mt-2">PRODOTTI FITOSANITARI</h4>
+     <h4  id="melohairotto2"  class="mt-2">PRODOTTI FITOSANITARI</h4>
     <p class="mt-2">Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti, consulta tutte le informazioni importanti, le etichette e le avvertenze di ogni singolo prodotto fitosanitario! <br>
 Potrai visualizzare anche solo i tuoi prodotti fitosanitari presenti nel tuo magazzino e aggiungerne nuovi. 
  </p>
@@ -65,10 +64,10 @@ Potrai visualizzare anche solo i tuoi prodotti fitosanitari presenti nel tuo mag
     <div  class="mt-3 ml-5 cazzarielli">
     <img src="https://img.icons8.com/bubbles/100/000000/overtime.png"/>
     </div>
-    <div  class=" cazzarielli-testo">
+    <div  class=" cazzarielli-testo" class="sinistra">
     
     
-    <h4 class="mt-2">SCADENZE</h4>
+    <h4  id="melohairotto2"  class="mt-2">SCADENZE</h4>
     <p class="mt-2">Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati! <br>
 Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi tempi. 
     
@@ -80,10 +79,10 @@ Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi te
     <div  class="mt-3 ml-5 cazzarielli">
   <img src="https://img.icons8.com/bubbles/100/000000/qr-code.png"/>
     </div>
-    <div  class=" cazzarielli-testo">
+    <div  class=" cazzarielli-testo" class="destra">
     
     
-    <h4 class="mt-2">TRACCIABILITÀ</h4>
+    <h4   id="melohairotto2"  class="mt-2">TRACCIABILITÀ</h4>
     <p class="mt-2">Crea qui l'etichetta virtuale per ogni prodotto agroalimentare da te coltivato! <br>
 Con una semplice generazione di un codice QR potrai visualizzare tutte le informazioni legate ai tuoi prodotti. 
 
@@ -129,12 +128,17 @@ Con una semplice generazione di un codice QR potrai visualizzare tutte le inform
  <br>
  <br>
 <div class="container-fluid" id="presentazione">
+<div class="row justify-content-center mt-5" >
+<div class="uff" class="text-center">
 
- 
-   <div class="text-center" class="titolo">
-    <h1 style="color:#009e0f; font-weight: bold;" id="cf">COME FUNZIONA</h1>
+    <div  class="immaginina" class="mt-3 ml-5 ">
+<img src="https://img.icons8.com/bubbles/100/000000/services.png"/>
     </div>
-
+    
+   <div  class="cazzo" >
+    <h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf">COME FUNZIONA</h1>
+    </div>
+</div>
  <br>
 
 
@@ -152,38 +156,54 @@ rendendo semplici tutte quelle azioni che prima sembravano impossibili effettuat
     </div>
      <br>
      </div>
- <br>
- <br>
-  <div class="container-fluid" id="presentazione">
+     </div>
+ 
+ <div class="row justify-content-center mt-5" >
+  <div class="uff" class="text-center">
 
-  <div class="row justify-content-center">
-   <div class="text-center  ">
-    <h1 style="color:#009e0f; font-weight: bold;" id="vant">VANTAGGI</h1>
+    <div  class="immaginina" class="mt-3 ml-5 ">
+<img src="https://img.icons8.com/bubbles/100/000000/checked.png"/>
     </div>
-	
- </div>
+    
+   <div  class="cazzo" >
+    <h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf"> VANTAGGI</h1>
+    </div>
+</div>
+ <br>
 <br>
   <div class="cazzarielli-testo ">
     
     <p ><h1 style="color:black; font-size: 22px;" > Agricolàrio rende il tuo lavoro di immagazzinamento dei trattamenti
-più efficiente di un qualsiasi strumento di registrazione alternativo. </h1>
+più efficiente di un qualsiasi strumento di registrazione alternativo. Scopri i vantaggi: </h1>
+	<h5>TUTTO ONLINE</h5>
+	<h5>MAI PIU' TRATTAMENTI SBAGLIATI</h5> 
+	<h5>AGGIORAMENTI COSTANTI</h5>
+	<h5>A PASSO DI LEGGE</h5>
+	<h5>CARTA DI IDENTITA' DEL PRODOTTO</h5>
+	<h5>FACILE E' BELLO</h5>
 <br>
 
 
     </div>
    
    
+   </div> 
     
-    </div>
-    </div>
    
     
     <br>
     <div class="container-fluid" id="presentazione">
 	<div class="row justify-content-center">
-   		<div class="text-center ">
-    		<h1 style="color:#009e0f; font-weight: bold;" id="cs">CHI SIAMO</h1>
-    	</div>
+   		<div class="uff" class="text-center">
+
+    <div  class="immaginina" class="mt-3 ml-5 ">
+<img src="https://img.icons8.com/bubbles/100/000000/group.png"/>
+    </div>
+    
+   <div  class="cazzo" >
+    <h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf"> CHI SIAMO</h1>
+    </div>
+</div>
 	</div>
     <br>
 	<div class="row justify-content-center " >
