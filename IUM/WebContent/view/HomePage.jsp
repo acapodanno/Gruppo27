@@ -83,7 +83,7 @@ Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi te
     <div  class=" cazzarielli-testo">
     
     
-    <h4 class="mt-2">TRACCIABILITA'</h4>
+    <h4 class="mt-2">TRACCIABILITÀ</h4>
     <p class="mt-2">Crea qui l'etichetta virtuale per ogni prodotto agroalimentare da te coltivato! <br>
 Con una semplice generazione di un codice QR potrai visualizzare tutte le informazioni legate ai tuoi prodotti. 
 
@@ -130,59 +130,46 @@ Con una semplice generazione di un codice QR potrai visualizzare tutte le inform
  <br>
 <div class="container-fluid" id="presentazione">
 
-  <div class="row justify-content-center ">
-   <div class="col col-lg-11">
+ 
+   <div class="text-center" class="titolo">
     <h1 style="color:#009e0f; font-weight: bold;" id="cf">COME FUNZIONA</h1>
     </div>
- </div>
+
  <br>
 
-  <div class="row justify-content-center" >
-    <div class="col col-lg-5  divPresentazione shadow">
-    <h4>REGISTRO FITOSANITARIO</h4>
-    <p>Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari! <br>
-    Tramite pochi pratici click potrai aggiungere un trattamento al tuo registro fitosanitario, apportare modifiche, visualizzare e stampare i registri degli anni precedenti.
-    </p>
-    </div>
-    <div class="col col-lg-5  offset-md-1 divPresentazione shadow">
-     <h4>PRODOTTI FITOSANITARIO</h4>
-    <p>Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti, consulta tutte le informazioni importanti, le etichette e le avvertenze di ogni singolo prodotto fitosanitario! <br>
-    Potrai visualizzare anche solo i tuoi prodotti fitosanitari presenti nel tuo magazzino e aggiungerne nuovi. </p>
-    </div>
-   </div>
-    <br>
-    <br>
-     <div class="row justify-content-center">
-    <div class="col col-lg-5 divPresentazione shadow">
-    <h4 >TRACCIABILITÀ</h4>
-    <p>Crea qui l'etichetta virtuale per ogni prodotto agroalimentare da te coltivato! <br> 
-	Con una semplice generazione di un codice QR potrai visualizzare tutte le informazioni legate ai tuoi prodotti. 
-    </p>
-    </div>
-    <div class="col col-lg-5 offset-md-1 divPresentazione shadow">
-     <h4>SCADENZE</h4>
-    <p>Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati!<br>
-	Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi tempi. 
-    </p>
-    </div>
-    </div>
+
+    <div class="cazzarielli-testo ">
     
+    <p ><h1 style="color:black; font-size: 22px;" >Ogni sezione del sito svolge un'azione differente e ognuna molto importante per chi gestisce un'azienda agricola. 
+Vogliamo assicurarci di accompagnare l'utente passo dopo passo, 
+rendendo semplici tutte quelle azioni che prima sembravano impossibili effettuate tramite un semplice registro cartaceo. </h1>
+<br>
+<h1 style="color:black; font-size: 22px; font-style:italic" >Non temere: il sistema verrà sempre in tuo aiuto nel caso ti trovassi in difficoltà!</h1>
+<br>
+<h1 style="color:black; font-size: 24px; font-weight:bold" > AGRICOLÀRIO </h1> <h1 style="color:black; font-size: 22px;" > è al fianco di ogni titolare di azienda e delegato che almeno una volta nella vita si è trovato in difficoltà con la compilazione e la gestione del registro fitosanitario. </h1>
+   
+
     </div>
      <br>
+     </div>
  <br>
  <br>
   <div class="container-fluid" id="presentazione">
 
   <div class="row justify-content-center">
-   <div class="col col-lg-11  ">
+   <div class="text-center  ">
     <h1 style="color:#009e0f; font-weight: bold;" id="vant">VANTAGGI</h1>
     </div>
 	
  </div>
 <br>
-  <div class="row  justify-content-center" >
-    <div  class="col col-lg-11  divPresentazione shadow rounded">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class="cazzarielli-testo ">
+    
+    <p ><h1 style="color:black; font-size: 22px;" > Agricolàrio rende il tuo lavoro di immagazzinamento dei trattamenti
+più efficiente di un qualsiasi strumento di registrazione alternativo. </h1>
+<br>
+
+
     </div>
    
    
@@ -194,14 +181,14 @@ Con una semplice generazione di un codice QR potrai visualizzare tutte le inform
     <br>
     <div class="container-fluid" id="presentazione">
 	<div class="row justify-content-center">
-   		<div class="col col-lg-11 ">
+   		<div class="text-center ">
     		<h1 style="color:#009e0f; font-weight: bold;" id="cs">CHI SIAMO</h1>
     	</div>
 	</div>
     <br>
 	<div class="row justify-content-center " >
  		<div class=" col col-lg-3 " >
- 			<div class="card divPresentazione shadow">
+ 			<div class="card divPresentazione shadow" >
   				<img src="image/profile3.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
   				<div class="card-body">
     			<h5 class="card-title" style="text-align: center">Alessandro Capodanno</h5>
@@ -209,7 +196,7 @@ Con una semplice generazione di un codice QR potrai visualizzare tutte le inform
    			</div>	
     	</div>
  		<div class=" col col-lg-3 " >
- 			<div class="card divPresentazione shadow">
+ 			<div class="card divPresentazione shadow" class="cazzarielli-testo">
   				<img src="image/profile2.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
   				<div class="card-body">
     			<h5 class="card-title" style="text-align: center">Alessia Crispo</h5>
