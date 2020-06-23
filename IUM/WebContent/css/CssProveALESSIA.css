@@ -1,13 +1,18 @@
 @charset "ISO-8859-1";
-
+*{
+	    font-family: "Dosis";
+	
+	
+}
 body {
-    font-family: "Dosis";
-	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
+ /*   font-family: "Dosis";
+	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");*/
 }
 
 
 @font-face{
-	
+	font-family: "Dosis";
+	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
 }
 
 /*icone*/

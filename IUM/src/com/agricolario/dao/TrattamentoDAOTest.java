@@ -22,6 +22,7 @@ import com.agricolario.bean.ProdottoFitosanitario;
 import com.agricolario.functionality.ParseDate;
 
 class TrattamentoDAOTest {
+	
 	private   IDataSet dataSet;
 	private  IDatabaseConnection dbconnection;
 	private FlatXmlDataSet loadedDataSer;
@@ -55,7 +56,7 @@ class TrattamentoDAOTest {
 	  
 	   
 	   System.out.println(p.toString());
-	   boolean valore = new TrattamentoDAO().addTrattamento(7, p.getIdProdottoFitosanitario(),"mele",p.getNome() , ParseDate.parseDateUtil("2020-08-17") ,220, 50, "Il mondo è infame", "Ciao mondo vi distruggo", "adfdafa");
+	   boolean valore = new TrattamentoDAO().updateTrattamento(7, p.getIdProdottoFitosanitario(),"mele",p.getNome() , ParseDate.parseDateUtil("2020-08-17") ,220, 50, "Porco infame brucia", "Cerca di colpire un pollo con un bazooka", "adfdafa",1);
 	   assertTrue(valore);
 	   
 	   
