@@ -1,36 +1,47 @@
 @charset "ISO-8859-1";
 
 body {
-	font-family: Arial, Helvetica, sans-serif;
+    font-family: "Dosis";
+	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
+}
+
+
+@font-face{
+	
 }
 
 /*icone*/
 .cazzarielli {
-    border-radius: 50px;
-    background-color: white;
-  
-    
-    position: absolute;
-    box-shadow: -5px 0px 5px 0px rgba(176, 229, 255, 1);
-    text-align: center;
-    vertical-align: middle;
-   
-    float: left;
+	border-radius: 50px;
+	background-color: white;
+	position: absolute;
+	box-shadow: -5px 0px 5px 0px rgba(40, 150, 5, 0.5);
+	text-align: center;
+	vertical-align: middle;
+	float: left;
 }
 
 .cazzarielli-testo {
 	height: auto;
 	width: 80%;
 	/* float: right; */
-	padding: 10px;
+	padding: 15px;
 	/* right: 50px; */
 	position: relative;
 	/* margin-right: 0px; */
-	margin-left: 130px;
+	margin-left: 140px;
 	/* padding-bottom: 6px; */
+	border-radius: 5px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid rgba(40, 150, 5, 0.2);
+	box-shadow: 0px 5px 0px 0px rgba(40, 150, 5, 0.5);
+	font-size: 24px;
 }
 
-
+h4 {
+	font-size: 30px;
+	font-weight: bold;
+}
 										/*Navbar*/
 .nav-item > .navbar-element{
 
