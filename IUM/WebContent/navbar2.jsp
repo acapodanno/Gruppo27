@@ -285,7 +285,7 @@ img{
 	<div class="accedi">
 <font color="#009e0f"><button class="primo" onclick="document.getElementById('id01').style.display='block'"
 		style="width:auto;">ACCEDI</button></font>
-  <div id="myDropdown" class="dropdown-content">
+  <div id="myDropdown" class="dropdown-content"> 
   <form action="">
     <span>Login</span><br>
     <input type="text"><br>

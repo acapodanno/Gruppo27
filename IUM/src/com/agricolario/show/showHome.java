@@ -33,7 +33,7 @@ public class showHome extends HttpServlet {
 		getServletContext().getRequestDispatcher("/view/HomePage.jsp").forward(request, response);;
 		System.out.println("Io sono una servlet normale creo solo disagio");
 	}
-
+ 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

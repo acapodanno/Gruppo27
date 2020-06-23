@@ -268,7 +268,7 @@ img{
   	<a href="#" class=" ml-3" ><i class="fa fa-user-circle"></i></a>
   	<a href="#" class=" ml-3"><i class="fa fa-bell"></i></a>
   	
-	</div>
+	</div> 
     
     <%}else{ %>
     <button class="primo" onclick="document.getElementById('id01').style.display='block'"
