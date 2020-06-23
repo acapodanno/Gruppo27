@@ -20,7 +20,7 @@ setTop=true;
 <div class="container-fluid mt-5 ">
 	<div class="row justify-content-center ">
 	<div class="col col-lg-12 text-center ">
-			<h1>Benvenuto in</h1>
+			<h1 style="color: black">Benvenuto in</h1>
 		</div>
 		<div class="col col-lg-12 text-center ">
 				<img src="image/NomeSito.png" class="d-inline-block align-top">
@@ -34,24 +34,28 @@ setTop=true;
   <div class="row justify-content-center mt-5" >
     <div class="col col-lg-4  ">
     <div  class="mt-3 ml-5 cazzarielli">
-    <a href="showRegistro"><i class="fa fa-book"></i></a>
+<img src="https://img.icons8.com/bubbles/100/000000/literature.png"/>
     </div>
-    <div  class="shadow cazzarielli-testo"style="  ">
+    <div  class=" cazzarielli-testo"style="  ">
     
     
     <h4 class="mt-2">REGISTRO FITOSANITARIO</h4>
-    <p class="mt-2">Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari!
+    <p class="mt-2">Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari! <br>
+Tramite pochi pratici click potrai aggiungere un trattamento al tuo registro fitosanitario, apportare modifiche, visualizzare e stampare i registri degli anni precedenti.
+
     </p>
     </div>
     </div>
     <div class="col col-lg-4 ">
        <div  class="mt-3 ml-5 cazzarielli">
-    <a><i class="fa fa-archive"></i></a>
+<img src="https://img.icons8.com/bubbles/100/000000/search.png"/>
     </div>
-        <div  class="shadow cazzarielli-testo">
+        <div  class=" cazzarielli-testo">
     
-     <h4 class="mt-2">PRODOTTI FITOSANITARIO</h4>
-    <p class="mt-2">Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti! </p>
+     <h4 class="mt-2">PRODOTTI FITOSANITARI</h4>
+    <p class="mt-2">Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti, consulta tutte le informazioni importanti, le etichette e le avvertenze di ogni singolo prodotto fitosanitario! <br>
+Potrai visualizzare anche solo i tuoi prodotti fitosanitari presenti nel tuo magazzino e aggiungerne nuovi. 
+ </p>
     </div>
     </div>
    </div>
@@ -59,26 +63,30 @@ setTop=true;
 <div class="row justify-content-center mt-5" >
    <div class="col col-lg-4  ">
     <div  class="mt-3 ml-5 cazzarielli">
-    <a><i class="fa fa-calendar-o"></i></a>
+    <img src="https://img.icons8.com/bubbles/100/000000/overtime.png"/>
     </div>
-    <div  class="shadow cazzarielli-testo">
+    <div  class=" cazzarielli-testo">
     
     
     <h4 class="mt-2">SCADENZE</h4>
-    <p class="mt-2">Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati!
+    <p class="mt-2">Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati! <br>
+Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi tempi. 
+    
     </p>
     </div>
     </div>
  
   <div class="col col-lg-4  ">
     <div  class="mt-3 ml-5 cazzarielli">
-    <a href="showTracciabilita"><i class="fa fa-qrcode"></i></a>
+  <img src="https://img.icons8.com/bubbles/100/000000/qr-code.png"/>
     </div>
-    <div  class="shadow cazzarielli-testo">
+    <div  class=" cazzarielli-testo">
     
     
     <h4 class="mt-2">TRACCIABILITA'</h4>
-    <p class="mt-2">Crea qui l'etichetta virtuale per ogni prodotto agroalimentare da te coltivato!
+    <p class="mt-2">Crea qui l'etichetta virtuale per ogni prodotto agroalimentare da te coltivato! <br>
+Con una semplice generazione di un codice QR potrai visualizzare tutte le informazioni legate ai tuoi prodotti. 
+
     </p>
     </div>
     </div>

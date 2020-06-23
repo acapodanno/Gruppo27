@@ -84,7 +84,38 @@ body{
 }
 
 
+/*icone*/
+.cazzarielli {
+	border-radius: 50px;
+	background-color: white;
+	position: absolute;
+	box-shadow: -5px 0px 5px 0px rgba(40, 150, 5, 0.5);
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+}
 
+.cazzarielli-testo {
+	height: 90%;
+	width: 80%;
+	/* float: right; */
+	padding: 15px;
+	/* right: 50px; */
+	position: relative;
+	/* margin-right: 0px; */
+	margin-left: 140px;
+	/* padding-bottom: 6px; */
+	border-radius: 5px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid rgba(40, 150, 5, 0.2);
+	box-shadow: 0px 5px 0px 0px rgba(40, 150, 5, 0.5);
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 30px;
+	font-weight: bold;
+}
  
 
 
@@ -363,28 +394,7 @@ table{
 
 
 
-/*Le card con i pallini delle funzionalità Home Page*/
-.cazzarielli{
-	
-	border-radius: 50px;
-	 background-color:white; 
-	 height: 60%;
-	  width: 13%;
-	   position: absolute; 
-	   box-shadow: -2px 0px 2px 0px rgba(0,0,0,.15);
-      text-align: center;
-	vertical-align: middle;
-   
-	font-size: 40px;
-	
-	
-}
-.cazzarielli-testo{
-	
-	
-	
-	height: auto; width: 80%; float: right; padding-left:6% ;
-}
+
 
 /*Tabella prodotti fitosanitari*/
 /*
