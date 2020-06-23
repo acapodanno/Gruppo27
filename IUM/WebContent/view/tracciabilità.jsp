@@ -11,7 +11,9 @@
 <link rel="stylesheet" href="css/navbar.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 <script src="https://kit.fontawesome.com/yourcode.js"></script>
+<script type="text/javascript" src="js/qrcode.js"></script>
 
+<script type="text/javascript" src="js/qrcode.min.js"></script>
 <script src="https://kit.fontawesome.com/yourcode.js"></script>
 <script src="view/jquery.js">
 
@@ -108,6 +110,8 @@ $("#bottone-generaQR").click(function(){
 	
 	
 		alert("esco Entro spacco ciao")
+		new QRCode(document.getElementById("qrcode"), "Entro esco spacco ciao!");
+
        /*    var xhttp = new XMLHttpRequest();
 
 	    	xhttp.onreadystatechange = function() {
@@ -127,8 +131,14 @@ $("#bottone-generaQR").click(function(){
 
 $("#bottone-generaQR").click(function(){
 	
-	$("#qrcode").qrcode("HTML.it");
-
+	new QRCode(document.getElementById("qrcode"), {
+		text: ""Entro esco spacco ciao!", 
+		width: 50,
+		height: 50,
+		colorDark : "#000000",
+		colorLight : "#ffffff",
+		correctLevel : QRCode.CorrectLevel.H
+	});
 	
 	
 		alert("esco Entro spacco ciao")
