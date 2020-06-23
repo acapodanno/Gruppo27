@@ -136,7 +136,7 @@ Potrai visualizzare anche solo i tuoi prodotti fitosanitari presenti nel tuo mag
     
     
     <h4 class="mt-2">SCADENZE</h4>
-    <p class="mt-2">c Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati! <br>
+    <p class="mt-2">Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati! <br>
 Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi tempi. 
     
     </p>

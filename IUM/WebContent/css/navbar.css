@@ -72,7 +72,16 @@ body{
   overflow-x:hidden; 
 }
 
+*{
+	    font-family: "Dosis";
+	
+	
+}
 
+@font-face{
+	font-family: "Dosis";
+	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
+}
 
 
 
