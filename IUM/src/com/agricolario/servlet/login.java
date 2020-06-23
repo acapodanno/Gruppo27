@@ -42,9 +42,16 @@ public class login extends HttpServlet {
 			Utente user=userDao.selectUser(email);
 			if(user!=null) {
 				
+				Azienda azienda = new Azienda();
+				if(user.getRuolo().equals("titolare")) {
 
-
-				Azienda azienda=new AziendaDAO().selectAzienda(user.getId());
+				azienda=new AziendaDAO().selectAzienda(user.getId());
+				}else {
+					
+				azienda=new AziendaDAO().selectAziendaDelegato(user.getId());
+					
+					
+				}
 				user.setAzienda(azienda);
 				HttpSession ssn= request.getSession();
 				ssn.setAttribute("user",user);
