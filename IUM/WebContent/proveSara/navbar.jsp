@@ -257,26 +257,7 @@ img{
         <a class="nav-link navbar-element" href="#">ASSISTENZA</a>
       </li>
     </ul>
-    <%  
-   boolean loggato=(boolean) session.getAttribute("loggato");
-    
-    if(loggato){
-    
-    %>
-     <div class="align-baseline ml-6 icon-bar-vertical">
-  	<a class="" href="showHome"><i class="fa fa-home"></i></a>
-  	<a href="#" class=" ml-3" ><i class="fa fa-user-circle"></i></a>
-  	<a href="#" class=" ml-3"><i class="fa fa-bell"></i></a>
-  	
-	</div> 
-    
-    <%}else{ %>
-    <button class="primo" onclick="document.getElementById('id01').style.display='block'"
-		style="width:auto;">
-	ACCEDI
-	</button>
-	
-	<%} %>	
+   
 </nav>
 
 
