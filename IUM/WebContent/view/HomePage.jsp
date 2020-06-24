@@ -142,17 +142,10 @@ Con una semplice generazione di un codice QR potrai visualizzare tutte le inform
 
     <div  class="immaginina" class="mt-3 ml-5 ">
 <img src="https://img.icons8.com/bubbles/100/000000/services.png"/>
+<h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf">COME FUNZIONA</h1>
     </div>
     
-   <div  class="cazzo" >
-    <h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf">COME FUNZIONA</h1>
-    </div>
-</div>
- <br>
-
-
-    <div class="cazzarielli-testo ">
-    
+   <div  class="gruppodescr" >
     <p ><h1 style="color:black; font-size: 22px;" >Ogni sezione del sito svolge un'azione differente e ognuna molto importante per chi gestisce un'azienda agricola. 
 Vogliamo assicurarci di accompagnare l'utente passo dopo passo, 
 rendendo semplici tutte quelle azioni che prima sembravano impossibili effettuate tramite un semplice registro cartaceo. </h1>
@@ -160,29 +153,25 @@ rendendo semplici tutte quelle azioni che prima sembravano impossibili effettuat
 <h1 style="color:black; font-size: 22px; font-style:italic" >Non temere: il sistema verrà sempre in tuo aiuto nel caso ti trovassi in difficoltà!</h1>
 <br>
 <h1 style="color:black; font-size: 24px; font-weight:bold" > AGRICOLÀRIO </h1> <h1 style="color:black; font-size: 22px;" > è al fianco di ogni titolare di azienda e delegato che almeno una volta nella vita si è trovato in difficoltà con la compilazione e la gestione del registro fitosanitario. </h1>
-   
-
+  
+    </div>
     </div>
      <br>
      </div>
      </div>
  
- <div class="row justify-content-center mt-5" >
-  <div class="uff" class="text-center">
+ 
+ <div class="container-fluid" id="presentazione">
+<div class="row justify-content-center mt-5" >
+<div class="uff" class="text-center">
 
     <div  class="immaginina" class="mt-3 ml-5 ">
-<img src="https://img.icons8.com/bubbles/100/000000/checked.png"/>
+   <img src="https://img.icons8.com/bubbles/100/000000/checked.png"/>
+<h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf"> VANTAGGI</h1>
     </div>
     
-   <div  class="cazzo" >
-    <h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf"> VANTAGGI</h1>
-    </div>
-</div>
- <br>
-<br>
-  <div class="cazzarielli-testo ">
-    
-    <p ><h1 style="color:black; font-size: 22px;" > Agricolàrio rende il tuo lavoro di immagazzinamento dei trattamenti
+   <div  class="gruppodescr" >
+   <p ><h1 style="color:black; font-size: 22px;" > Agricolàrio rende il tuo lavoro di immagazzinamento dei trattamenti
 più efficiente di un qualsiasi strumento di registrazione alternativo. Scopri i vantaggi: </h1>
 	<h5>TUTTO ONLINE</h5>
 	<h5>MAI PIU' TRATTAMENTI SBAGLIATI</h5> 
@@ -192,30 +181,28 @@ più efficiente di un qualsiasi strumento di registrazione alternativo. Scopri i 
 	<h5>FACILE E' BELLO</h5>
 <br>
 
-
     </div>
-   
-   
-   </div> 
-    
-   
-    
-    <br>
-    <div class="container-fluid" id="presentazione">
-	<div class="row justify-content-center">
-   		<div class="uff" class="text-center">
+     <br>
+     </div>
+     </div>
+   </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  <div class="container-fluid" id="presentazione">
+<div class="row justify-content-center mt-5" >
+<div class="uff" class="text-center">
 
     <div  class="immaginina" class="mt-3 ml-5 ">
-<img src="https://img.icons8.com/bubbles/100/000000/group.png"/>
+  <img src="https://img.icons8.com/bubbles/100/000000/group.png"/>
+<h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf"> CHI SIAMO</h1>
     </div>
     
-   <div  class="cazzo" >
-    <h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf"> CHI SIAMO</h1>
-    </div>
-</div>
-	</div>
-    <br>
-	<div class="row justify-content-center " >
+<div class="row justify-content-center " >
  		<div class=" col col-lg-3 " >
  			<div class="card divPresentazione shadow" >
   				<img src="image/profile3.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
@@ -244,10 +231,15 @@ più efficiente di un qualsiasi strumento di registrazione alternativo. Scopri i 
  	
  	
  	</div>
+
+    </div>
+     <br>
+     </div>
+     </div>
+  
+   
     
-</div>
-<br>
-<br>
+  
     
 <%@ include file="footer.jsp"%>
 

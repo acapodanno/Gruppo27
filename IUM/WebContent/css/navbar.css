@@ -216,17 +216,24 @@ h4 {
 }
  
 .uff {
+	display: block;
+	border-radius: 5px;
+	width: 80%;
+	position: relative;
+	border-bottom: 1px solid rgba(40, 150, 5, 0.2);
+	box-shadow: 0px 5px 0px 0px rgba(40, 150, 5, 0.5);
+}
+
+.immaginina {
+	margin: auto;
 	display: flex;
-	/* margin: auto; */
-	width: 35%;
-	
+	width: 50%;
 }
 
-.immaginina{
-}
 
-.cazzo{
-	margin-top: 10px;
+.gruppodescr {
+	width: 95%;
+	margin: auto;
 }
 
 #melohairotto{
