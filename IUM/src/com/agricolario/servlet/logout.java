@@ -30,9 +30,11 @@ public class logout extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		HttpSession ssn= request.getSession();
+		
 		ssn.invalidate();
 		System.out.println("Addio user");
-	
+		getServletContext().getRequestDispatcher("/view/HomePage.jsp").forward(request, response);
+
 	}
 
 	/**

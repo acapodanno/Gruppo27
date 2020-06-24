@@ -12,7 +12,7 @@
 <%
 
 boolean setTop= true;
-if(true) {
+if(loggato) {
 setTop=true;
 
 
@@ -35,9 +35,11 @@ setTop=true;
 		<div class="flexiamo" style="width: 100%;height: auto;">
 
 		   <div  class="cazzarielli">
+			<a href="showRegistro">
 			<img 
 			
 			srcset=" https://img.icons8.com/bubbles/100/000000/literature.png 1500w"/>
+    		</a>
     		</div>
    			 <div class=" cazzarielli-testo1" id="cazzariello1" >
     
@@ -75,7 +77,7 @@ setTop=true;
     
     
   			  <h4 >SCADENZE</h4>
-    <p>Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati! <br>
+    <p>Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati! 
 Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi tempi. 
     
     </p>

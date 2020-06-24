@@ -36,8 +36,8 @@ public class login extends HttpServlet {
 		
 		String email,password;
 		
-		 email= /*request.getParameter*/("pannonegiu@gmail.com");
-		 password=/* request.getParameter*/("motoGP");
+		 email= request.getParameter("email");
+		 password= request.getParameter("password");
 		 UtenteDAO userDao = new UtenteDAO();
 			Utente user=userDao.selectUser(email);
 			if(user!=null) {
@@ -56,6 +56,8 @@ public class login extends HttpServlet {
 				HttpSession ssn= request.getSession();
 				ssn.setAttribute("user",user);
 				ssn.setAttribute("loggato",true);
+				System.out.println(user.toString());
+				getServletContext().getRequestDispatcher("/view/HomePage.jsp").forward(request, response);
 			}else {
 				
 				//pagina di errore o messaggio di errore

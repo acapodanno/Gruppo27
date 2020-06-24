@@ -34,8 +34,6 @@ public class showProdottiFitosanitari extends HttpServlet {
 		// TODO Auto-generated method stubppend(request.getContextPath());
 		
 		ArrayList<ProdottoFitosanitario> pf = new ProdottoFitosanitarioDAO().getAllProdottiFitosanitario();
-		
-		
 		request.setAttribute("pf", pf);
 		getServletContext().getRequestDispatcher("/view/prodFitosanitari.jsp").forward(request, response);	
 

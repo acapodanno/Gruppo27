@@ -8,8 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.agricolario.bean.RegistroFitosanitario;
+import com.agricolario.bean.Utente;
 import com.agricolario.dao.RegistroFitosanitarioDAO;
 
 /**
@@ -32,16 +34,28 @@ public class showRegistro extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		HttpSession ssn = request.getSession();
+		Utente u= (Utente)ssn.getAttribute("user");
+		if(u!=null) {
 		
 		RegistroFitosanitarioDAO dao= new RegistroFitosanitarioDAO();
 		//RegistroFitosanitario reg = dao.getRegistro(1);
-		ArrayList<RegistroFitosanitario> lista = dao.getAllRegistro(1);
+		System.out.println(u.toString());
+		ArrayList<RegistroFitosanitario> lista = dao.getAllRegistro(u.getId());
 		
 		request.setAttribute("listaRegistro", lista);
 		
 		
 		getServletContext().getRequestDispatcher("/view/registro.jsp").forward(request, response);	
-	}
+		}else {
+			
+			getServletContext().getRequestDispatcher("/view/HomePage.jsp").forward(request, response);	
+				
+			
+			
+		}
+		
+		}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

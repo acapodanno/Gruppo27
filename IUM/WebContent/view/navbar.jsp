@@ -1,3 +1,4 @@
+<%@page import="com.agricolario.bean.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -258,15 +259,26 @@ img{
       </li>
     </ul>
     <%  
-   boolean loggato=(boolean) session.getAttribute("loggato");
     
+    boolean loggato=false;
+    if(session.getAttribute("loggato")==null){
+		loggato=false;
+		
+	}else{
+	loggato=(boolean)session.getAttribute("loggato");
+	}
+   System.out.println(loggato);
     if(loggato){
-    
+     Utente user =(Utente) session.getAttribute("utente");
     %>
      <div class="align-baseline ml-6 icon-bar-vertical">
   	<a class="" href="showHome"><i class="fa fa-home"></i></a>
-  	<a href="#" class=" ml-3" ><i class="fa fa-user-circle"></i></a>
+  	<a href="showAccount" class=" ml-3" ><i class="fa fa-user-circle"></i></a>
   	<a href="#" class=" ml-3"><i class="fa fa-bell"></i></a>
+  	<a href="logout" class=" ml-3" ><i class="fa fa-sign-out"></i></a>
+  	
+  	
+  	
   	
 	</div> 
     
@@ -282,7 +294,7 @@ img{
 
 <div id="id01" class="modale">
   
-  <form class="animate" action="/action_page.php"
+  <form class="animate" action="login"
 			method="post">
    <div class="login">
 			 
@@ -295,10 +307,10 @@ img{
     <div class="contenitore">
     	<h1 class="titolo"><b> Accedi</b></h1><br>
       <label><b>Inserisci qui la tua e-mail</b></label>
-      <input style="color: white;" type="text" placeholder="Email" name="uname" required>
+      <input style="color: white;" type="text" placeholder="Email" name="email" required>
 
       <label><b>Inserisci qui la tua password</b></label>
-      <input style="color: white;" type="password" placeholder="Password" name="psw "required> 
+      <input style="color: white;" type="password" placeholder="Password" name="password"required> 
         
      
       <div class="gruppo">
@@ -309,10 +321,9 @@ img{
 	 <font color="#009e0f"> <button class="secondo" type="submit">ACCEDI</button></font>
        <div class="hr"></div>
 			<div class="foot-lnk">
-					<a style="color:white">Non sei ancora registrato?</a> <a href="#" style="color: white; font-style: italic; font-weight: bold">Registrati qui!</a>
+					<a style="color:white">Non sei ancora registrato?</a> <a href="showRegistrazione" style="color: white; font-style: italic; font-weight: bold">Registrati qui!</a>
 			</div>
     </div>
-    
 
     
   </div>

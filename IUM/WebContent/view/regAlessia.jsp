@@ -41,48 +41,9 @@
 <title>REGISTRAZIONE</title>
 </head>
 <body>
+<%@ include file="navbar.jsp"%>
 
-<!-- ----------------------------------------NAV BAR----------------------------------------------- -->
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
-  <a class="navbar-brand ml-7" href="#HomePage.jsp">
-  	<img src="image/LOGO.png" width="75" height="75" class="d-inline-block align-top">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-    <ul class="navbar-nav justify-content-center ">
-      <li class="nav-item active mr-5  dropdown ">
-     
-        <a class=" nav-link navbar-element" href="#" role="button" data-toggle="dropdown"  data-hover="dropdown">COME FUNZIONA</a>
-        <div class="dropdown-menu dropdown-menu-animation" >
-   			 	 <a class="dropdown-item" href="#">Registro Fitosanitario</a>
-   				 <a class="dropdown-item" href="#">Prodotti Fitosanitario</a>
-    			 <a class="dropdown-item" href="#">Scadenze</a>
- 				 <a class="dropdown-item" href="#">Tracciabilità</a>
- 	
- 		</div>
-      </li>
-      <li class="nav-item active mr-5 navbar-element">
-        <a class="nav-link navbar-element" href="#">VANTAGGI</a>
-      </li>
-      <li class="nav-item active mr-5 ">
-        <a class="nav-link active navbar-element" href="#">CHI SIAMO</a>
-      </li>
-      <li class="nav-item active mr-5">
-        <a class="nav-link navbar-element" href="#">ASSISTENZA</a>
-      </li>
-    </ul>
-   <font color="#009e0f"><button class="primo" onclick="document.getElementById('id01').style.display='block'"
-		style="width:auto;">ACCEDI</button></font>
-   
-	</nav>
-  </div>
-  
-  
-  <!-- ---------------------Registrazione---------------------------------------------------------------- -->
-<div class="registration">
+<div class="registration mt-5">
 
     <div class="containerReg">
     	<h1 class="text-center"><b> Registrazione</b></h1><br>
@@ -234,6 +195,7 @@
   
 </div>
 
+</div>
 <script >
 $( "#ruolo").on('change', function () {
 	  //ways to retrieve selected option and text outside handler
@@ -268,5 +230,7 @@ setTimeout(function(){
 	
 		
 <br>
+<%@ include file="footer.jsp"%>
+
 </body>
 </html>
