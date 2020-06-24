@@ -55,49 +55,7 @@ public class operazioneTracciabilita extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		System.out.println("Sono stata chimata");
-		String text = request.getParameter("text");
-		codeQr c=new codeQr();
-			
-			
-			/*
-			c.generateQRCodeImage(text, 350, 350,getServletContext().getContextPath());
-			getServletContext().getContextPath();
-		*/
-		
-
-				Hashtable<EncodeHintType, ErrorCorrectionLevel> hintMap = new Hashtable<>();
-		hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
-		QRCodeWriter qrCodeWriter = new QRCodeWriter();
 	
-		
-		try {
-			BitMatrix byteMatrix;
-			byteMatrix = qrCodeWriter.encode("ok", BarcodeFormat.QR_CODE, 350, 350, hintMap);
-			int matrixWidth = byteMatrix.getWidth();
-			BufferedImage image = new BufferedImage(matrixWidth, matrixWidth, BufferedImage.TYPE_INT_RGB);
-		   	File qrFile = new File("../DIOCANE.png");
-				    
-				    image.createGraphics();
-
-					Graphics2D graphics = (Graphics2D) image.getGraphics();
-					graphics.setColor(Color.WHITE);
-					graphics.fillRect(0, 0, matrixWidth, matrixWidth);
-					// Paint and save the image using the ByteMatrix
-					graphics.setColor(Color.BLACK);
-
-					for (int i = 0; i < matrixWidth; i++) {
-						for (int j = 0; j < matrixWidth; j++) {
-							if (byteMatrix.get(i, j)) {
-								graphics.fillRect(i, j, 1, 1);
-							}
-						}
-					}
-					ImageIO.write(image, "png", qrFile);
-		} catch (WriterException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		// Make the BufferedImage that are to hold the QRCode
 		
 			    
 	}

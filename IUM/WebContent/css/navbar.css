@@ -431,14 +431,14 @@ float: left;
 }
 /*Inizia tutta la roba del registro */
 
-table{
- height: 500px;
-  overflow-y: scroll;
-  display: block;
-  border: solid 1px gray;
-  
-  
-  }
+.tableFixHead { overflow-y: auto; height: 500px; }
+.tableFixHead thead th { position: sticky; top: 0; }
+.head-tabella  th{
+border:none;
+background-color: green;
+color:white;
+
+}
  .head-tabella{
  
  

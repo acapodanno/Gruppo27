@@ -42,6 +42,17 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <title>Agricolàrio - Prodotti Fitosanitari </title>
+<style type="text/css">
+.tableFixHead { overflow-y: auto; height: 500px; }
+.tableFixHead thead th { position: sticky; top: 0; }
+.head-tabella  th{
+border:none;
+background-color: green;
+color:white;
+
+}
+
+</style>
 </head>
 <body>
   <%@ include file="navbar.jsp"%>
@@ -80,8 +91,9 @@
 </div>
 
 <!-- Elenco -->
- <div class="prodFit" >
-  <table class="fixed_header">
+ <div class="prodFit tableFixHead" >
+ 
+  <table >
   <colgroup>
     <col style="width:10%">
     <col  style="width:70%">
@@ -90,7 +102,7 @@
   
 	<!-- Intestazione -->  
 	<thead class="head-tabella">
-    <tr id="intest">
+    <tr >
       <th> Nome</th>
       <th> Descrizione</th>
       <th> Link</th>

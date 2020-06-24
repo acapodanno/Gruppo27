@@ -22,6 +22,17 @@
   />
   
 <title>Insert title here</title>
+<style type="text/css">
+.tableFixHead { overflow-y: auto; height: 500px; }
+.tableFixHead thead th { position: sticky; top: 0; }
+.head-tabella  th{
+border:none;
+background-color: green;
+color:white;
+
+}
+
+</style>
 </head>
 <body>
 <%@ include file="navbar.jsp"%>
@@ -64,8 +75,8 @@ for(RegistroFitosanitario reg : listaReg ){
 	    int annoRegistro= reg.getDataCreazione().getYear()+1900;
 	  
               %>
-<div id="<%=reg.getDataCreazione().getYear()%>" class="tabcontent">
-
+<div id="<%=reg.getDataCreazione().getYear()%>" class="tabcontent tableFixHead">
+<div class="tableFixHead">
 <table class="  table-striped">
 
 <colgroup>
@@ -109,9 +120,9 @@ for(RegistroFitosanitario reg : listaReg ){
            
   %>
     <tr scope="row" class="text-center">
-      <td  >  <input type="text" class="input-testo" name="fname" value="<%= u.getNomeProdotto() %> " ></td>
-      <td><input type="text" class="input-testo" name="fname" value="<%=u.getColtura() %>" disabled="disabled" ></td>
-      <td><input type="text" class="input-testo" name="fname" value="<%= u.getDatInzio() %>" disabled="disabled"></td>
+      <td  >  <%= u.getNomeProdotto() %> </td>
+      <td><%=u.getColtura() %></td>
+      <td><%= u.getDatInzio() %></td>
        <td ><%= u.getQuantita()%></td>
       <td><%= u.getAvversita() %></td>
      <td ><%=u.getNote() %></td>
@@ -141,6 +152,7 @@ for(RegistroFitosanitario reg : listaReg ){
     <%} %>
   </tbody>
 </table>
+</div>
 </div>
 <% } %>
 </div>

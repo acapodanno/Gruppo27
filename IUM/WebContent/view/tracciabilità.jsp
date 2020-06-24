@@ -7,22 +7,14 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/navbar.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 <script src="https://kit.fontawesome.com/yourcode.js"></script>
 <script type="text/javascript" src="js/qrcode.js"></script>
 <script type="text/javascript" src="js/qrcode.min.js"></script>
+
 <script src="https://kit.fontawesome.com/yourcode.js"></script>
-<script src="view/jquery.js">
-
-$.get("operazioneTracciabilita", function(data, status){
-    alert("Data: " + data + "\nStatus: " + status);
-  });
-
-
-</script>
-
+<script type="text/javascript" src="js/jquery.js"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link
@@ -44,7 +36,7 @@ $.get("operazioneTracciabilita", function(data, status){
 <div class="container-fluid mt-5 ">
 	<div class="row justify-content-center ">
 	<div class="col col-lg-12 text-center ">
-			<h1>Traccibilità</h1>
+			<h2>Traccibilità</h2>
 		</div>
 		<div class="progress col col-lg-6 ">
   			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -83,7 +75,7 @@ $.get("operazioneTracciabilita", function(data, status){
 			<h5>Informazioni</h5>
 			</div>
 			<div class="form-group textarea" >
-  				<textarea class="form-control z-depth-1 " id="exampleFormControlTextarea6" rows="10"  ></textarea>
+  				<textarea class="form-control z-depth-1  " id="informazioni" rows="10"  ></textarea>
 			</div>
 		
 			<button class="align-bottom col col-lg-2 float-right bottone-tracciabilità shadow"  id="bottone-generaQR" >Genera QR</button>
@@ -104,15 +96,24 @@ $.get("operazioneTracciabilita", function(data, status){
 
 
 $("#bottone-generaQR").click(function(){
+    
+	jQuery.noConflict();
 	
+	$.get("operazioneTracciabilita", function(data, status){
+	    alert("Data: " + data + "\nStatus: " + status);
+	  });
+
+	  var informazioni ="";
+	  informazioni = document.getElementById("informazioni").value;
+
 	
 	 document.getElementById("qrcode").innerHTML = "";
 	
 	new QRCode(document.getElementById("qrcode"), {
-		text: "Entro esco spacco ciao!", 
+		text: informazioni, 
 		width: 200,
 		height: 200,
-		colorDark : "#009e0f",
+		colorDark : "#009e0f",0
 		colorLight : "#ffffff",
 		correctLevel : QRCode.CorrectLevel.H
 	});

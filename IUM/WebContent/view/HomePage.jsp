@@ -56,7 +56,9 @@ setTop=true;
 		<div class="flexiamo" style="width: 100%;height: auto;">
 														
      			  <div  class="cazzarielli">
+     			  <a href="showProdottiFitosanitari">
 					<img srcset="https://img.icons8.com/bubbles/100/000000/search.png 1500w"/>
+   				 </a>
    				 </div>
                 <div  class=" cazzarielli-testo1" >
     
@@ -71,7 +73,9 @@ setTop=true;
 		<div style="width: 100%;height: auto;">
 
 		   <div  class="cazzarielli">
+		     <a href="showScadenze">
    			 <img srcset="https://img.icons8.com/bubbles/100/000000/overtime.png 1500w"/>
+    		</a>
     		</div>
     	<div  class=" cazzarielli-testo2" id="cazzariello2">
     
@@ -87,7 +91,9 @@ Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi te
 		<div style="width: 100%;height: auto;">
 
 		  <div  class="cazzarielli">
-  <img srcset="https://img.icons8.com/bubbles/100/000000/qr-code.png 1500w"/>
+		   <a href="showTracciabilita">
+  			<img srcset="https://img.icons8.com/bubbles/100/000000/qr-code.png 1500w"/>
+  			</a>
     </div>
     <div  class=" cazzarielli-testo2" class="destra">
     

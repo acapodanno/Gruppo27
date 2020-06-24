@@ -47,7 +47,18 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style type="text/css">
 
+.tableFixHead { overflow-y: auto; height: 500px; }
+.tableFixHead thead th { position: sticky; top: 0; }
+.head-tabella  th{
+border:none;
+background-color: green;
+color:white;
+
+}
+
+</style>
 <title>Scadenze - Prodotti Fitosanitari </title>
 </head>
 <body >
@@ -77,7 +88,8 @@
 <%  ArrayList<RegistroFitosanitario> lista =(ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro") ;   %>
 
 <!-- Elenco -->
- <div class="scad"  style="height: 500px">
+ <div class="scad  "  style="height: 500px">
+ <div class="tableFixHead">
 <%        
 boolean ok=false;
 
@@ -105,8 +117,8 @@ if(oggi.after(dt)){
 
 if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
   <table>
-	<!-- Intestazione -->  
-	<thead class="head-tabella">
+	<!-- Intestazione -->
+	<thead class="head-tabella">  
     <tr >
       <th> Scadenza del trattamento</th>
       <th> Fitofarmaco</th>
@@ -114,9 +126,9 @@ if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
       <th> Colutura</th>
       <th> Riferimento</th>
     </tr>
-	</thead>    
+    </thead>
+    <tbody>
     <!-- Prodotto 1 -->
-  <tbody>
     <%  
     
    
@@ -147,8 +159,7 @@ if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
        <td>Vai al Registro</td>
     </tr>
     <%}} %>
-      
-  </tbody>
+      </tbody>
       </table>
   <%	}else{				 %>
   
@@ -157,7 +168,8 @@ if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
   <h5 class="text-center" class="w3-large">Non ci sono scadenze </h5>
 </div>
   <%} %>
-</div>   
+</div> 
+</div>  
 
 <!-- 
 <div class="pagination">
