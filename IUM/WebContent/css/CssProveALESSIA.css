@@ -47,6 +47,61 @@ h4 {
 	font-size: 30px;
 	font-weight: bold;
 }
+
+								/*Error page, 404 not found*/
+#sorry{
+	font-size: 50px;
+	color: black;
+}
+
+#sorry2{
+	font-size: 40px;
+	color: black;
+}
+
+
+.intestazione {
+	position: relative;
+	background-color: #f4f4f4;
+	width: 50%;
+	margin: auto;
+	padding: 25px;
+	margin-top: 20px;
+	margin-bottom: 70px;
+	border: 1px solid grey;
+	background: rgba(244,244,244,0.7);
+	box-shadow:0 6px 7px 0 rgba(0,0,0,.24),0 8px 25px 0 rgba(0,0,0,.19);
+	z-index: 1;
+}
+
+.bottone {
+	position: relative;
+	background-color: transparent;
+	width: 25%;
+	margin: auto;
+	padding: 10px;
+	margin-top: 5px;
+	border: none;
+
+}
+
+.torna{
+	background: rgba(244,244,244,0.9);
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid grey;
+	font-size: 36px;
+}
+
+.torna:hover{
+		box-shadow:0 6px 7px 0 rgba(0,0,0,.24),0 8px 25px 0 rgba(0,0,0,.19);
+}
+
+.tutto{
+
+z-index: 0 !important; 
+}
+
 										/*Navbar*/
 .nav-item > .navbar-element{
 
@@ -72,7 +127,7 @@ h4 {
 	
 }
 
-.containerReg {
+.contenitoreReg {
 	position: absolute;
 	width:100%;
 	height:100%;
@@ -293,7 +348,7 @@ img{
 
 
 /* Caratteristiche contenitore in cui si trova il form e tutto il resto*/
-.container {
+.contenitore {
 	position: absolute;
 width:100%;
 	height:100%;
@@ -305,7 +360,7 @@ width:100%;
 }
 
 /* Caratteristiche secondo contenitore in cui si trova il "registrati qui" (prima c'era anche un tasto annulla ma l'ho tolto) */
-.container2{
+.contenitore2{
 	background-color: transparent;
 	margin: auto;
   	width: 50%;

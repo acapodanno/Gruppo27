@@ -84,7 +84,7 @@
   <!-- ---------------------FINE NAV BAR---------------------------------------------------------------- -->
 
 <!-- FUNZIONI -->
-<div class="container-fluid mt-5 ">
+<div class="contenitore-fluid mt-5 ">
 	<div class="row justify-content-center ">
 	<div class="col col-lg-12 text-center ">
 			<h1 style="color: black">Benvenuto in</h1>
@@ -218,12 +218,12 @@ Con una semplice generazione di un codice QR potrai visualizzare tutte le inform
    <div class="login">
 			 
    <!-- <img id="sfondo" src="https://images.vanityfair.it/wp-content/uploads/2019/04/19133507/P29.jpg"  width=auto height="700px"> -->
-   <div class="imgcontainer">
+   <div class="imgcontenitore">
       <span onclick="document.getElementById('id01').style.display='none'"
 						class="close" title="Close Modal">&times;</span>
     </div>
 
-    <div class="container">
+    <div class="contenitore">
     	<h1 class="text-center"><b> Accedi</b></h1><br>
       <label id="uname"><b>Inserisci qui la tua e-mail</b></label>
       <input style="color: white;" type="text" placeholder="Email" name="uname" required>
