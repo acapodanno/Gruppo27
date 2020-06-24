@@ -99,10 +99,10 @@ $("#bottone-generaQR").click(function(){
     
 	jQuery.noConflict();
 	
-	$.get("operazioneTracciabilita", function(data, status){
+	/*$.get("operazioneTracciabilita", function(data, status){
 	    alert("Data: " + data + "\nStatus: " + status);
 	  });
-
+*/
 	  var informazioni ="";
 	  informazioni = document.getElementById("informazioni").value;
 
@@ -113,22 +113,12 @@ $("#bottone-generaQR").click(function(){
 		text: informazioni, 
 		width: 200,
 		height: 200,
-		colorDark : "#009e0f",0
+		colorDark : "#009e0f",
 		colorLight : "#ffffff",
 		correctLevel : QRCode.CorrectLevel.H
 	});
 
-       /*    var xhttp = new XMLHttpRequest();
-
-	    	xhttp.onreadystatechange = function() {
-			  if (this.readyState == 4 && this.status == 200) {
-
-			  }
-			};
-			xhttp.open("POST", "operazioneTracciabilita", true);
-			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-			xhttp.send("text=ciaoAlessandro");
-		*/
+      
 });
 </script>
 <script type="text/javascript" src="jquery.qrcode.js">
