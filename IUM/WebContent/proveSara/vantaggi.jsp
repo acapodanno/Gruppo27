@@ -4,19 +4,26 @@
 <html>
 
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
 <link rel="stylesheet" href="stylesheet.css">
-
 <meta charset="ISO-8859-1">
 
 <title>Vantaggi</title>
 </head>
+<style>
 
+</style>
 <body>
 
 <%@ include file="navbar.jsp"%>
 
-<div class="header">
+<div class="header" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('../image/vantaggisfondo.jpg')">
 <h2 class="title">,VANTAGGI</h2>
 <h5><br>Agricolàrio rende il tuo lavoro di immagazzinamento dei trattamenti fitosanitari</h5>
 <h5>più <b>efficiente</b>, <b>sicuro</b> e <b>rapido</b></h5>
@@ -28,57 +35,83 @@
 <h5 style="padding-bottom:30px">Scopriamo insieme i vantaggi della piattaforma:</h5>
 </div>
 
-<div class="row">
-  	
-	<div class="column">
-   		<h5>MAI PIÙ TRATTAMENTI SBAGLIATI</h5>
-			<p>Il registro dei trattamenti fitosanitari di Agricolàrio ti accompagnerà
+<div class="container">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-1">
+	<div class="col mb-4">
+    <div class="card shadow rounded-0 h-100"> <!-- rounded-0 toglie i bordi tondi -->
+      <div class="card-body text-center">
+      	<img class="card-img-top img-fluid" style="width:auto" src="https://img.icons8.com/bubbles/70/000000/ok-hand.png"/>
+      	<h4 class="card-title">MAI PIÙ TRATTAMENTI SBAGLIATI</h4>
+        <p class="card-text">Il registro dei trattamenti fitosanitari di Agricolàrio ti accompagnerà
 			nella compilazione dei campi di ogni trattamento. La banca dati relativa ai prodotti
 			fitosanitari effettua in automatico un controllo sui dati immessi nei campi del singolo 
 			trattamento, così da compiere e registrare un'operazione corretta.</p>
-	</div>
-	
-	<div class="column">
-   		<h5>TUTTO ONLINE</h5>
-			<p>Agricolàrio è un'applicazione web, ciò significa che non avrai bisogno 
+      </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+    <div class="card shadow rounded-0 h-100">
+      <div class="card-body text-center">
+      <img class="card-img-top img-fluid" style="width:auto" src="https://img.icons8.com/bubbles/70/000000/laptop-flower.png"/>
+       	<h4 class="card-title">TUTTO ONLINE</h4>
+       	<p class="card-text">Agricolàrio è un'applicazione web, ciò significa che non avrai bisogno 
 			di scaricare il software né di comprarne una versione su dispositivi di storage.
 			Dovrai solo collegarti a www.agricolario.it e iscriverti. 
 			Avrai sempre a portata di mano il software, senza doverti preoccupare di nulla 
 			(aggiornamenti inclusi).</p>
-	</div>
-  
-  	<div class="column">
-   		<h5>AGGIORAMENTI COSTANTI</h5>
-			<p>Un sistema di ricezione notifiche ti aggiornerà sull'avanzamento della produzione:
+      </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+    <div class="card shadow rounded-0 h-100">  
+      <div class="card-body text-center">
+      <img class="card-img-top img-fluid" style="width:auto" src="https://img.icons8.com/bubbles/70/000000/refresh.png"/>
+      	<h4 class="card-title">AGGIORNAMENTI COSTANTI</h4>
+        <p class="card-text">Un sistema di ricezione notifiche ti aggiornerà sull'avanzamento della produzione:
 			sarai avvisato costantemente sulle scadenze dei trattamenti, sulla quantità
 			di prodotti presenti nel tuo magazzino e sulle azioni eseguite da 
 			un tuo delegato, prevenendo gli imprevisti e ottimizzando i tempi di lavorazione.</p>
-	</div>
-	
-  	<div class="column">
-   		<h5>A PASSO DI LEGGE</h5>
-			<p>Un prodotto senza imperfezioni corrisponde ad un registro dei trattamenti regolare. 
+      </div>
+      </div>
+    </div>
+	<div class="col mb-4">
+    <div class="card shadow rounded-0 h-100"> 
+      <div class="card-body text-center">
+      	<img class="card-img-top img-fluid" style="width:auto" src="https://img.icons8.com/bubbles/70/000000/agreement.png"/>
+       	<h4 class="card-title">A PASSO DI LEGGE</h4>
+        <p class="card-text">Un prodotto senza imperfezioni corrisponde ad un registro dei trattamenti regolare. 
 			I tuoi dati rimarranno conservati finché lo riterrai opportuno. Avrai a disposizione 
 			in qualsiasi momento tutte le informazioni necessarie per non 
 			sbagliare nulla da un punto di vista legale e finalmente potrai evitare di ricevere 
 			fastidiose e onerose multe.</p>
-	</div>
-	
-	<div class="column">
-   		<h5>CARTA D'IDENTITÀ DEL PRODOTTO</h5>
-			<p>I tuoi prodotti non saranno più anonimi. Tutti i trattamenti effettuati su di essi
+      </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+    <div class="card shadow rounded-0 h-100">
+      <div class="card-body text-center">
+       	<img class="card-img-top img-fluid" style="width:auto" src="https://img.icons8.com/bubbles/70/000000/report-card.png"/>
+       	<h4 class="card-title">CARTA D'IDENTITÀ DEL PRODOTTO</h4>
+       	<p class="card-text">I tuoi prodotti non saranno più anonimi. Tutti i trattamenti effettuati su di essi
 			con la cura e la passione che la tua azienda vi dedica e la precisione che Agricolàrio 
 			mette a disposizione saranno mostrati al consumatore tramite Codice QR. Nessuno
 			vorrà più staccarsi dai tuoi prodotti, comprendendone la qualità.</p>
-	</div>
-  
-  	<div class="column">
-   		<h5>FACILE È BELLO</h5>
-			<p>Agricolàrio è così semplice da usare che sarà impossibile voler tornare indietro. 
+      </div>
+    </div>
+    </div>
+    <div class="col mb-4">
+    <div class="card shadow rounded-0 h-100 ">  
+      <div class="card-body text-center">
+      	<img class="card-img-top img-fluid" style="width:auto" src="https://img.icons8.com/bubbles/70/000000/broccoli.png"/>
+      	<h4 class="card-title">FACILE È BELLO</h4>
+        <p class="card-text">Agricolàrio è così semplice da usare che sarà impossibile voler tornare indietro. 
 			Il registro dei trattamenti di Agricolàrio è sintetico come il classico registro 
 			cartaceo. Il dinamismo alla base favorisce rapidità e fluidità d'utilizzo. Raggiungere
-			i risultati auspicati sarà facile come bere un bicchier d'acqua. </p>
-	</div>
+			i risultati auspicati sarà facile come bere un bicchier d'acqua.</p>
+      </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <%@ include file="footer.jsp"%>	

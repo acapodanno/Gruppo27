@@ -3,16 +3,21 @@
 <!DOCTYPE html>
 <html>
 <head>
- 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   
 <link rel="stylesheet" href="stylesheet.css">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta charset="ISO-8859-1">
 <title>Chi siamo</title>
+
 </head>
 <body>
 <%@ include file="navbar.jsp"%>
-<div class="header">
+<div class="header" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('../image/chisiamosfondo.jpg')">
 <h2 class="title">,CHI SIAMO</h2>
 <h5><br>Agricolàrio nasce dall'idea di realizzare un sistema adatto alla compilazione di un <b><i>registro fitosanitario</i></b></h5>
 <h5><b>innovativo</b>, <b>moderno</b>, <b>dinamico</b> e, sopra ogni cosa,
@@ -27,35 +32,36 @@
 <h5 style="padding-bottom:30px">I membri del Team:</h5>
 </div>
 
-	<div class="row justify-content-center " >
- 		<div class=" col col-lg-3 " >
- 			<div class="card divPresentazione shadow">
-  				<img src="alessandro.png" class="card-img-top rounded-circle img-fluid" alt="...">
-  				<div class="card-body">
-    			<h5 class="card-title" style="text-align: center">Alessandro Capodanno</h5>
-       			<p align="center">Io non scrivo codice. <br>Io implemento forte. Troppo forte.<p>
-   				</div>
-   			</div>	
-    	</div>
- 		<div class=" col col-lg-3 " >
- 			<div class="card divPresentazione shadow">
-  				<img src="alessia.png" class="card-img-top rounded-circle img-fluid" alt="...">
-  				<div class="card-body">
-    			<h5 class="card-title" style="text-align: center">Alessia Crispo</h5>
-       			<p align="center">Mi sveglio presto la mattina <br>per fare più pause studio.<p>
-   				</div>
-   			</div>	
-    	</div>
- 		<div class=" col col-lg-3 " >
- 			<div class="card divPresentazione shadow">
-  				<img src="sara.png" class="card-img-top rounded-circle img-fluid" alt="...">
-  				<div class="card-body">
-    			<h5 class="card-title" style="text-align: center">Sara Patierno</h5>
-    			<p align="center">Faccio i capricci, <br>ma per il bene dell'universo.<p>
-   				</div>
-   			</div>	
-    	</div>
-</div>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3">
+   <div class="col mb-4">
+    <div class="card shadow h-100">
+    <img class="card-img-top rounded-circle img-fluid" src="../image/alessandro.png" alt="Card image" style="width:100%">
+      <div class="card-body text-center">
+      	<h4 class="card-title">Alessandro Capodanno</h4>
+        <p class="card-text">Io non scrivo codice. <br>Io implemento forte. Troppo forte.</p>
+      </div>
+    </div>
+    </div>
+    <div class="col mb-4">
+    <div class="card shadow h-100">
+    <img class="card-img-top rounded-circle img-fluid" src="../image/alessia.png" alt="Card image" style="width:100%">
+      <div class="card-body text-center">
+       	<h4 class="card-title">Alessia Crispo</h4>
+       	<p class="card-text">Mi sveglio presto la mattina <br>per fare più pause studio.</p>
+      </div>
+    </div>
+    </div>
+    <div class="col mb-4">
+    <div class="card shadow h-100">
+    <img class="card-img-top rounded-circle img-fluid" src="../image/sara.png" alt="Card image" style="width:100%">
+      <div class="card-body text-center">
+      	<h4 class="card-title">Sara Patierno</h4>
+        <p class="card-text">Faccio i capricci, <br>ma per il bene dell'universo.</p>
+      </div>
+    </div>
+    </div>
+  </div>
 </div>
 <%@ include file="footer.jsp"%>	
 </body>
