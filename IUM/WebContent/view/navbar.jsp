@@ -156,7 +156,7 @@ img{
 }
 
 		
-}
+
 
 /* Caratteristiche secondo contenitore in cui si trova il "registrati qui" (prima c'era anche un tasto annulla ma l'ho tolto) */
 .contenitore2{
@@ -230,7 +230,7 @@ img{
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
   <a class="navbar-brand ml-7" href="showHome">
-  	<img alt="" src="image/LOGO.png" width="75" height="75" class="d-inline-block align-top">
+  	<img alt="" src="image/LOGO.png" width="100" height="75" class="d-inline-block align-top">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

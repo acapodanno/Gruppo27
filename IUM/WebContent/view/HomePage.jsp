@@ -142,7 +142,7 @@ Con una semplice generazione di un codice QR potrai visualizzare tutte le inform
 
     <div  class="immaginina" class="mt-3 ml-5 ">
 <img src="https://img.icons8.com/bubbles/100/000000/services.png"/>
-<h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf">COME FUNZIONA</h1>
+<h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf">COME-FUNZIONA</h1>
     </div>
     
    <div  class="gruppodescr" >
@@ -153,7 +153,8 @@ rendendo semplici tutte quelle azioni che prima sembravano impossibili effettuat
 <h1 style="color:black; font-size: 22px; font-style:italic" >Non temere: il sistema verrà sempre in tuo aiuto nel caso ti trovassi in difficoltà!</h1>
 <br>
 <h1 style="color:black; font-size: 24px; font-weight:bold" > AGRICOLÀRIO </h1> <h1 style="color:black; font-size: 22px;" > è al fianco di ogni titolare di azienda e delegato che almeno una volta nella vita si è trovato in difficoltà con la compilazione e la gestione del registro fitosanitario. </h1>
-  
+  <br>
+  <br>
     </div>
     </div>
      <br>
@@ -173,12 +174,12 @@ rendendo semplici tutte quelle azioni che prima sembravano impossibili effettuat
    <div  class="gruppodescr" >
    <p ><h1 style="color:black; font-size: 22px;" > Agricolàrio rende il tuo lavoro di immagazzinamento dei trattamenti
 più efficiente di un qualsiasi strumento di registrazione alternativo. Scopri i vantaggi: </h1>
-	<h5>TUTTO ONLINE</h5>
-	<h5>MAI PIU' TRATTAMENTI SBAGLIATI</h5> 
-	<h5>AGGIORAMENTI COSTANTI</h5>
-	<h5>A PASSO DI LEGGE</h5>
-	<h5>CARTA DI IDENTITA' DEL PRODOTTO</h5>
-	<h5>FACILE E' BELLO</h5>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/laptop-flower.png"/> <h5 id="listaVantaggi">TUTTO ONLINE</h5></div>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/ok-hand.png"/><h5 id="listaVantaggi">MAI PIU' TRATTAMENTI SBAGLIATI</h5></div>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/refresh.png"/><h5 id="listaVantaggi">AGGIORAMENTI COSTANTI</h5></div>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/agreement.png"/><h5 id="listaVantaggi">A PASSO DI LEGGE</h5></div>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/report-card.png"/><h5 id="listaVantaggi">CARTA DI IDENTITA' DEL PRODOTTO</h5></div>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/broccoli.png"/><h5 id="listaVantaggi">FACILE E' BELLO</h5></div>
 <br>
 
     </div>
@@ -199,7 +200,7 @@ più efficiente di un qualsiasi strumento di registrazione alternativo. Scopri i 
 
     <div  class="immaginina" class="mt-3 ml-5 ">
   <img src="https://img.icons8.com/bubbles/100/000000/group.png"/>
-<h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf"> CHI SIAMO</h1>
+<h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf"> CHI-SIAMO</h1>
     </div>
     
 <div class="row justify-content-center " >
