@@ -346,18 +346,7 @@ border-bottom: 1px solid;
     height: 500px;
 }
 
-.registration{
-	
-	animation: fadeInRight;
-	animation-duration: 2s;
-	
-}
 
-#utente{
-	
-	animation: fadeInRight;
-	animation-duration: 2s;
-}
 /*Navbar animazione dropdown*/
 .dropdown-menu-animation{
 	

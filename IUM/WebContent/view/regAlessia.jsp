@@ -220,13 +220,25 @@ input[type=date]:focus, .select:focus{
 	margin-top: 20px;
 }
 
+.registration{
+	animation: fadeInRight;
+	animation-duration: 2s;
+
+}
+
+/*#utente{
+	animation: fadeInRight;
+	animation-duration: 2s;
+}*/
+
+
 </style>
 
 
 <body>
 <%@ include file="navbar.jsp"%>
 
-<div class="registration mt-5">
+<div class=" mt-5">
   <div class="shadow registration" id="utente"  style="display: block; ">
     <div class="containerReg">
     	<h1 class="text-center"><b> Registrazione</b></h1><br>
