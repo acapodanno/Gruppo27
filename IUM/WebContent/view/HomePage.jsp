@@ -138,13 +138,11 @@ Con una semplice generazione di un codice QR potrai visualizzare tutte le inform
  <br>
 <div class="container-fluid" id="presentazione">
 <div class="row justify-content-center mt-5" >
-<div class="uff" class="text-center">
+<div class="uff">
 
-    <div  class="immaginina" class="mt-3 ml-5 ">
-<img src="https://img.icons8.com/bubbles/100/000000/services.png"/>
-<h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf">COME-FUNZIONA</h1>
-    </div>
-    
+   
+<div class="text-center" id="rigaVantaggi"> <img src="https://img.icons8.com/bubbles/100/000000/services.png"/><h5 id="listaCategiorie">COME FUNZIONA</h5></div>
+
    <div  class="gruppodescr" >
     <p ><h1 style="color:black; font-size: 22px;" >Ogni sezione del sito svolge un'azione differente e ognuna molto importante per chi gestisce un'azienda agricola. 
 Vogliamo assicurarci di accompagnare l'utente passo dopo passo, 
@@ -164,12 +162,10 @@ rendendo semplici tutte quelle azioni che prima sembravano impossibili effettuat
  
  <div class="container-fluid" id="presentazione">
 <div class="row justify-content-center mt-5" >
-<div class="uff" class="text-center">
+<div class="uff" >
 
-    <div  class="immaginina" class="mt-3 ml-5 ">
-   <img src="https://img.icons8.com/bubbles/100/000000/checked.png"/>
-<h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf"> VANTAGGI</h1>
-    </div>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/100/000000/checked.png"/><h5 id="listaCategiorie">VANTAGGI</h5></div>
+
     
    <div  class="gruppodescr" >
    <p ><h1 style="color:black; font-size: 22px;" > Agricolàrio rende il tuo lavoro di immagazzinamento dei trattamenti
@@ -197,12 +193,10 @@ più efficiente di un qualsiasi strumento di registrazione alternativo. Scopri i 
   <div class="container-fluid" id="presentazione">
 <div class="row justify-content-center mt-5" >
 <div class="uff" class="text-center">
+  
+  <div class="text-center" id="rigaVantaggi">  <img src="https://img.icons8.com/bubbles/100/000000/group.png"/><h5 id="listaCategiorie">CHI SIAMO</h5></div>
+  
 
-    <div  class="immaginina" class="mt-3 ml-5 ">
-  <img src="https://img.icons8.com/bubbles/100/000000/group.png"/>
-<h1  id="melohairotto" style="color:#009e0f; font-weight: bold;" id="cf"> CHI-SIAMO</h1>
-    </div>
-    
 <div class="row justify-content-center " >
  		<div class=" col col-lg-3 " >
  			<div class="card divPresentazione shadow" >
