@@ -153,6 +153,7 @@ img{
 	/* height: 100%; */
 	background: rgba(0,100,50,0.4);
 	padding: 90px 70px 50px 70px;
+	z-index: 5000000000000000000000;
 }
 
 		
@@ -163,6 +164,7 @@ img{
 	background-color: transparent;
 	margin: auto;
   	width: 50%;
+  	z-index: 5000000000000000000000;
 } /* si deve aggiustare*/
 
 
@@ -181,6 +183,7 @@ img{
 	background-color: rgb(0, 0, 0); /* Fallback color */
 	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 	padding-top: 60px;
+	z-index: 5000000000000000000000;
 	
 }
 
@@ -217,11 +220,37 @@ img{
 	cursor: pointer;
 }
 
+
 /* Add Zoom Animation */   /*  funziona */
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
 }
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+	
+	span.reg {
+ 
+	}
+	
+	h1 {
+		width: 100%;
+	}
+}
+
+
+
 
 </style>
 	

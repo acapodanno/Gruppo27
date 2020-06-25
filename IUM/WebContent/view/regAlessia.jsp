@@ -21,7 +21,7 @@
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
 <script src="bootstrap.min.js"></script>
-<link rel="stylesheet" href="css/CssProveALESSIA.css">
+
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/yourcode.js"></script>
@@ -40,11 +40,194 @@
 
 <title>REGISTRAZIONE</title>
 </head>
+
+<style>
+.hr {
+	height: 2px;
+	margin: 60px 0 50px 0;
+	background: rgba(255,255,255,.2);
+}
+
+.foot-lnk {
+    text-align: center;
+}
+
+
+.containerReg{
+background: rgba(0,100,50,0.4);
+}
+
+/* Caselle di input */
+
+input[type="text"], input[type="password"] {
+	width: 100%;
+	/* margin: 16px; */
+	display: inline-block;
+	border: none;
+	box-sizing: border-box;
+	background: transparent;
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	color: white;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
+#text, #psw{
+	margin-top: 36px;
+}	
+
+input[type=text]:focus, input[type=password]:focus{
+	-webkit-transition: 0.2s;
+ 	 transition: 0.2s;
+ 	 border-bottom: 2px solid white;
+ 	 
+}
+
+/* Checkbox di 'Ricordami' quando cliccata */
+input[type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
+	color:white;
+}
+
+/* Checkbox disposizione */
+.checkbox{
+display: inline-block;
+}
+
+
+/* Cambia forma il puntatore quando passi sulla checkbox*/
+.form-check-input:hover{
+	cursor: pointer;
+}
+
+/*Grandezza di ricordami*/
+.white-text{
+	font-size: 20px;
+}
+
+
+.registration {
+	width:100%;
+	margin:auto;
+	max-width:600px;
+	min-height:700px;
+	position:relative;
+	background:url(https://static.winenews.it/2019/01/AgricolturaItalia.jpg) no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+	
+}
+
+.contenitoreReg {
+	position: absolute;
+	width:100%;
+	height:100%;
+	background:rgba(30,105,50,.7);
+	padding:50px 5px 10px 5px;
+}
+
+.etichette{
+	font-weight: bold;
+    font-size: 1.2em;
+	color: white;
+	padding: 0;
+}
+
+.etichettaAcconsento{
+	font-size: 1em;
+	color: white;
+	padding: 0;
+}
+
+.bottoneReg{ /*non so come si fa a far cambiare colore quando un pulsante è disabilitato e quando non */
+	background: #1161ee;
+    padding: 15px 20px;
+    border-radius: 25px;
+    width: 60%;
+	color: white;
+	margin:auto;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    cursor: pointer;
+	position: relative;
+	border:none;
+	margin-top: 20px;
+}
+
+
+.bottoneReg2{ 
+	background: #1161ee;
+    padding: 15px 20px;
+    border-radius: 25px;
+    width: 60%;
+	color: white;
+	margin:auto;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    cursor: pointer;
+	position: relative;
+	border:none;
+	margin-top: 50px;
+}
+
+ input[type=date] {
+	width: 100%;
+	margin: 0px 0 0px 0;
+	display: inline-block;
+	border: none;
+	box-sizing: border-box;
+	background: transparent;
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	color:white; 
+
+  	
+}
+
+.select{
+	width: 100%;
+	margin-top: 6px;;
+	display: inline-block;
+	border: none;
+	box-sizing: border-box;
+	background: transparent;
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	color:white; 
+}
+
+option{
+	opacity: 0.7;
+}
+
+input[type=date]:focus, .select:focus{
+	-webkit-transition: 0.2s;
+ 	 transition: 0.2s;
+ 	 border-bottom: 2px solid white;
+ 	 
+}
+
+
+.riga {
+    height: 2px;
+   margin-top: 30px;
+   margin-left: 100px;
+   margin-right: 100px;
+    background: rgba(255,255,255,.2);
+}
+
+.scritta{
+	text-align: center;
+	margin-top: 20px;
+}
+
+</style>
+
+
 <body>
 <%@ include file="navbar.jsp"%>
 
 <div class="registration mt-5">
-
+  <div class="shadow registration" id="utente"  style="display: block; ">
     <div class="containerReg">
     	<h1 class="text-center"><b> Registrazione</b></h1><br>
     	
@@ -106,7 +289,7 @@
   					</div>
   				
   					<div id="registrazione" class="row  justify-content-center">
-   				    <button type="submit" class="bottoneReg" disabled>Registrati</button>   
+   				    <button type="submit" class="bottoneReg" id="bottone-registrazione">Registrati</button>   
   					</div>
   
    				    	<div class= "riga" class="hr"></div>
@@ -117,7 +300,7 @@
   	</form>	
   	</div>   
   </div>
-   
+   </div>
   
   <div class="shadow registration" id="azienda"  style="display: none; ">
   
