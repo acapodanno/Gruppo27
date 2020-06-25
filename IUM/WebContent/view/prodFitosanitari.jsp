@@ -43,14 +43,57 @@
 
 <title>Agricolàrio - Prodotti Fitosanitari </title>
 <style type="text/css">
-.tableFixHead { overflow-y: auto; height: 500px; }
-.tableFixHead thead th { position: sticky; top: 0; }
-.head-tabella  th{
-border:none;
-background-color: green;
-color:white;
 
+@media 
+only screen and (max-width: 1280px)  {
+    .head-tabella{
+    display: none;
+    
+    }
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Prodotto"; }
+	td:nth-of-type(2):before { content: "Descrizione"; }
+	td:nth-of-type(3):before { content: "Link"; }
 }
+
+
+
+
 
 </style>
 </head>
