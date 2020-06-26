@@ -141,8 +141,28 @@ td> input[type="text"]{
 .buttone-modifica{
 width: 12%;
 height: auto;
+background-color: #009e0f;
+	color:white;
+	font-weight: bold;
+
+}
+.bottoni{
+
+text-align: center;
 
 
+}
+#bottone-aggiungi {
+  background-color: DodgerBlue; 
+  border: none; 
+  color: white; 
+  padding: 12px 16px; 
+  font-size: 16px;
+  cursor: pointer; 
+}
+
+#bottone-aggiungi:hover {
+  background-color: RoyalBlue;
 }
 </style>
 </head>
@@ -228,14 +248,15 @@ for(RegistroFitosanitario reg : listaReg ){
   </thead>
   <tbody >
   <% 
-    
+       
+      int i=0;
       
       for(Trattamento u : reg.getTrattamenti()){
-   
+       
            
   %>
-    <tr scope="row" class="text-center trattamenti" id="10">
-      <td  >  <%= u.getNomeProdotto() %> </td>
+    <tr scope="row" class="text-center trattamenti" id="<%=i%>">
+      <td  ><%= u.getNomeProdotto() %></td>
       <td><%=u.getColtura() %></td>
       <td><%= u.getDatInzio() %></td>
       <td><%= u.getSuperficie() %></td>
@@ -248,12 +269,15 @@ for(RegistroFitosanitario reg : listaReg ){
         
         creazione=true;
         %>
-     <th scope="col">  <input type="checkbox" style=" display:none" class="select-prodotto" onclick="visualizzaBottoni(this)" value="10" checked="checked">  </th>
+     <td scope="col">  <input type="checkbox" style=" display:none" class="select-prodotto" onclick="visualizzaBottoni(this)" value="<%=i%>" >  </td>
      
      <%} %>
          </tr>
     
-    <%} %>
+    <%
+    
+      i++;
+      } %>
     <%
    
         if(anno== annoRegistro  ){ 
@@ -261,7 +285,7 @@ for(RegistroFitosanitario reg : listaReg ){
         creazione=true;
         %>
    <tr scope="row" class="text-center ultimo">
-      <td colspan="8"><a href="#"  id="bottone-aggiungi"><i class="fa fa-plus-circle"></i>Aggiungi trattamento</a></td>
+      <td colspan="8"><button href="#"  id="bottone-aggiungi"><i class="fa fa-plus-circle"></i>Aggiungi trattamento</button></td>
      </tr>
     
     
@@ -276,7 +300,7 @@ for(RegistroFitosanitario reg : listaReg ){
        
         <button class=" shadow ml-3 mt-5 buttone-registro" <%if(creazione){ %>  disabled="disabled" style="background-color: gray;" <%}%> >Crea  </button>
         <button class="shadow ml-3 mt-5 buttone-registro" >Delega</button>
-        <button class="shadow ml-3 mt-5 buttone-registro" id="modifica"  onclick="clickModifica()">Modifica</button>
+        <button class="shadow ml-3 mt-5 buttone-registro" id="modifica"  onclick="clickModifica(this)">Modifica</button>
         <button class="shadow ml-3 mt-5 buttone-registro">Elimina</button>
         
 </div>
@@ -284,20 +308,34 @@ for(RegistroFitosanitario reg : listaReg ){
 </div>
 
 
-        <!-- 
-        <div class="col-1"  ">
-       
-        <button class=" mt-5 buttone-registro" style=" height: 30px; width:100px" >Crea  </button>
-        <button class="mt-5 buttone-registro" >Delega</button>
-        <button class="mt-5 buttone-registro">Modifica</button>
-        <button class=" mt-5 buttone-registro">Elimina</button>
-        
-        </div>
-         -->
       </div> 
       
       <script type="text/javascript">
-  
+       var annullaModifica=false;
+      function clickAnnulla( ){
+    		
+          $(".select-prodotto").prop("checked", false);
+
+    		var buttons=document.getElementsByClassName('select-prodotto')
+    	    //$('.select-prodotto').prop('disabled', false);
+    	    for (i = 0; i < buttons.length; i++) {
+    	        buttons[i].disabled = false;
+    	    } 
+    		$('.bottoni').empty();
+    		console.log('Sono stato cliccato');
+    		
+    	}
+      function clickAnnullaAggiungi(){
+    	  
+    	  
+  		$('#trattamento , .bottoni').empty();
+
+    	  
+    	  
+      }
+    
+      
+    
       function apriContenuto(evt,anno) {
     	  // Declare all variables
     	  var i, tabcontent, tablinks;
@@ -321,14 +359,25 @@ for(RegistroFitosanitario reg : listaReg ){
       //------------------------------------------------------------------------------
       document.getElementById("defaultOpen").click();
     //------------------------------------------------------------------------------
-      function clickModifica(){
+      function clickModifica(el){
+    	  if(annullaModifica===false){
+    	  $(el).css( "background-color" ,"red");
+    	  $(el).text("Annulla");
     	  $(".select-prodotto").show();
+      	  annullaModifica=true;   
+    	  }else{
+    		  $( el ).css( "background-color" ,"green");
+        	  $(el).text("Modifica");
+        	  $(".select-prodotto").hide();
+          	  annullaModifica=false;    
+    	  }
     	  
       }
     //---------------------------------------------------------------------- onchange="deleteNome()"--------
 
       var set= false;
       $("#bottone-aggiungi").click(function(){
+    	  $('.select-prodotto').hide();
 	                      
     	  $("table .ultimo").before('<tr scope="row" class="text-center trattamenti" id="trattamento">'+
     		      '<td  > <input type="text" class="input-trattamento"  onchange="deleteNome()" onkeyup="deleteNome()" id="nomeProdotto" value="">'+
@@ -336,12 +385,17 @@ for(RegistroFitosanitario reg : listaReg ){
     		      '</td>'+
     		      '<td ><select id="coltura" ><option>---------</option></select></td>'+
     		      '<td ><input  type="date" id="data" value="2020-06-26" min="2020-01-01" max="2020-12-31">'+
-    		      ' <td> <input  type="text" id="superficie"></td>'+
-    		      ' <td> <input  type="text" id="quantita" value=""></td>'+
+    		      ' <td> <input  type="text" id="superficie" oninput="soloNumeri(this)"></td>'+
+    		      ' <td> <input  type="text" id="quantita" value="" oninput="soloNumeri(this)"></td>'+
     		      '<td ><input type="text" id="avversita"></td>'+
-    		     '<td ><input type="text" id="note"></td> <th><a href="#"> <i class="fa fa-check " style="color: green ;" onclick="addTrattamento()"></i></a> <br><i class="fa fa-close" style="color: red;" onclick="reset()"></i></th>'+
-    		     '</tr>');
-         $("#nomeProdotto").keyup(function() {
+    		     '<td ><input type="text" id="note"></td>'+
+    		     		'<td></td>'								+
+    		     '</tr>'+'<tr  scope="row" class="bottoni" > <td colspan="8"> <button onclick="" class="shadow buttone-modifica" id="aggiungi">Aggiungi</button> <button class="shadow buttone-modifica" id="annulla" onClick="clickAnnullaAggiungi()">Annulla</button></td><tr>');
+       
+    	   
+    	  
+    	  
+    	  $("#nomeProdotto").keyup(function() {
 
 			 if(this.value!="") {
         	 $( "#livesearch" ).html("");
@@ -454,24 +508,39 @@ function addTrattamento(){
 	console.log(nome+" "+ coltura+" " +" " +data +" "+sup+" "+id+" "+quantita);
 	
 }
-
+//Funzione per la check box
 function visualizzaBottoni(el){
 	var str= parseInt(el.value) 
-	$("."+el.className).click(function(){
-          if($(this).is(":checked")){
-              console.log("Checkbox is checked.");
+	console.log(str)
+          if($(el).is(":checked")){
+              var buttons=document.getElementsByClassName('select-prodotto');
+              for (i = 0; i < buttons.length; i++) {
+                  buttons[i].disabled = true;
+              }  
+              var s= '.input-trattamento'+str;
+       			s.concat(el.value);		 
+       			$(s).prop("disabled", false); 
+                
+       			
+              $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9"> <button onclick="a" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button></td><tr>')
+ 			 
+ 			 
+        	  
           }
-          else if($(this).is(":not(:checked)")){
-              console.log("Checkbox is unchecked.");
+          else if($(el).is(":not(:checked)")){
+        	  $('.bottoni').empty();
           }
-      });
-	console.log(el.value);
+
+	  
+  
 	
-	$("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="8"> <button class="shadow ml-3 mt-5 buttone-modifica">Conferma</button> <button  class="shadow ml-3 mt-5  buttone-modifica">Annula</button></td><tr>')
+}
+function soloNumeri(el){
+	
+	el.value=el.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
 	
 	
 }
-
 
 </script>      
       
