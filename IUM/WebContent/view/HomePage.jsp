@@ -19,7 +19,7 @@ setTop=true;
 %>
 <div class="container-fluid mt-5 ">
 	<div class="row justify-content-center ">
-	<div class="col col-lg-12 text-center ">
+	<div class="col-lg-12 text-center ">
 			<h1 id="titoloPagina" style="color: black"> ,Benvenuto in</h1>
 		</div>
 		<div id="titoloPagina" class="col col-lg-12 text-center ">
