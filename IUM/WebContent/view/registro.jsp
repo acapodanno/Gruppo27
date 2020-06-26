@@ -138,6 +138,12 @@ td> input[type="text"]{
  overflow-x:auto;
  background-color: white;
 }
+.buttone-modifica{
+width: 12%;
+height: auto;
+
+
+}
 </style>
 </head>
 <body>
@@ -184,6 +190,7 @@ for(RegistroFitosanitario reg : listaReg ){
 <div id="<%=reg.getDataCreazione().getYear()%>" class="tabcontent tableFixHead">
 <div class="tableFixHead">
 <table class="  table-striped">
+<input type="hidden" id="idregistro" value="<%= reg.getIdRegistroFitosanitario()%>">
 
 <colgroup>
     <col style="width:15%">
@@ -227,7 +234,7 @@ for(RegistroFitosanitario reg : listaReg ){
    
            
   %>
-    <tr scope="row" class="text-center trattamenti" id="">
+    <tr scope="row" class="text-center trattamenti" id="10">
       <td  >  <%= u.getNomeProdotto() %> </td>
       <td><%=u.getColtura() %></td>
       <td><%= u.getDatInzio() %></td>
@@ -241,7 +248,7 @@ for(RegistroFitosanitario reg : listaReg ){
         
         creazione=true;
         %>
-     <th scope="col">  <i class="fa fa-check bottone-modifica" style="color: green ;"></i> <br><i class="fa fa-close bottone-modifica" style="color: red;"></i></th>
+     <th scope="col">  <input type="checkbox" style=" display:none" class="select-prodotto" onclick="visualizzaBottoni(this)" value="10" checked="checked">  </th>
      
      <%} %>
          </tr>
@@ -315,23 +322,20 @@ for(RegistroFitosanitario reg : listaReg ){
       document.getElementById("defaultOpen").click();
     //------------------------------------------------------------------------------
       function clickModifica(){
-    	  var divsToHide = document.getElementsByClassName("bottone-modifica"); //divsToHide is an array
-    	    for(var i = 0; i < divsToHide.length; i++){
-    	        divsToHide[i].style.visibility = "visible"; // or
-    	    }
+    	  $(".select-prodotto").show();
     	  
       }
     //---------------------------------------------------------------------- onchange="deleteNome()"--------
 
       var set= false;
       $("#bottone-aggiungi").click(function(){
-	
+	                      
     	  $("table .ultimo").before('<tr scope="row" class="text-center trattamenti" id="trattamento">'+
-    		      '<td  > <input type="text" class="input-trattamento"  onchange="deleteNome()" onkeyup="deleteNome()" id="nomeProdotto">'+
+    		      '<td  > <input type="text" class="input-trattamento"  onchange="deleteNome()" onkeyup="deleteNome()" id="nomeProdotto" value="">'+
     		      '<div id="livesearch"></div>'+
     		      '</td>'+
     		      '<td ><select id="coltura" ><option>---------</option></select></td>'+
-    		      '<td ><input  type="date" id="dataInzio" value="2020-06-26" min="2020-01-01" max="2020-12-31">'+
+    		      '<td ><input  type="date" id="data" value="2020-06-26" min="2020-01-01" max="2020-12-31">'+
     		      ' <td> <input  type="text" id="superficie"></td>'+
     		      ' <td> <input  type="text" id="quantita" value=""></td>'+
     		      '<td ><input type="text" id="avversita"></td>'+
@@ -439,16 +443,36 @@ function getDose(el){
 }
 function addTrattamento(){
 	var elemt= document.getElementById('trattamento');
-	var nome= elemt.getElementsByTagName('input')[0];
-	var coltura= elemt.getElementsByTagName('input')[1];
-	var data= elemt.getElementsByTagName('input')[2];
-	var sup= elemt.getElementsByTagName('input')[3];
-	var dose= elemt.getElementsByTagName('input')[4];
-	var avv= elemt.getElementsByTagName('input')[5];
-	var note= elemt.getElementsByTagName('input')[6];
-	console.log(nome+" "+ coltura+" " +" " +data +" "+sup);
+	var nome = $("#nomeProdotto").val();;
+	var coltura= $("#coltura").val();;
+	var data= $("#data").val();;
+	var sup= $("#superficie").val();;
+	var quantita= $("#quantita").val();
+	var avv= $("#avv").val();;
+	var note= $("#note").val();
+	var id= $("#idregistro").val();
+	console.log(nome+" "+ coltura+" " +" " +data +" "+sup+" "+id+" "+quantita);
 	
 }
+
+function visualizzaBottoni(el){
+	var str= parseInt(el.value) 
+	$("."+el.className).click(function(){
+          if($(this).is(":checked")){
+              console.log("Checkbox is checked.");
+          }
+          else if($(this).is(":not(:checked)")){
+              console.log("Checkbox is unchecked.");
+          }
+      });
+	console.log(el.value);
+	
+	$("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="8"> <button class="shadow ml-3 mt-5 buttone-modifica">Conferma</button> <button  class="shadow ml-3 mt-5  buttone-modifica">Annula</button></td><tr>')
+	
+	
+}
+
+
 </script>      
       
 <%@ include file="footer.jsp"%>
