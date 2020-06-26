@@ -115,7 +115,7 @@ only screen and (max-width: 1280px)  {
    <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
      </button>
-      <input type="text" class="searchTerm" placeholder="Digita il nome o il codice di un prodotto fitosanitario...">
+      <input type="text" class="searchTerm" placeholder="Digita il nome di un prodotto fitosanitario...">
       
    </div>
 </div>

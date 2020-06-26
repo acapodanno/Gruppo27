@@ -534,7 +534,7 @@ th, td {
    <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
      </button>
-      <input type="text" id="testo-per-ricerca" class="searchTerm" placeholder="Digita il nome o il codice di un prodotto fitosanitario...">
+      <input type="text" id="testo-per-ricerca" class="searchTerm" placeholder="Digita il nome di un prodotto fitosanitario...">
       <div id="live-search">Ciao alessia io sono un div  a caso Ciauu</div>
    </div>
 </div>
