@@ -26,15 +26,8 @@ class ParseDateTest {
     	
     	
     	
-    	
-    	
-    	
-    	
-    	
-    	
-		Date d	=	ParseDate.parseDateUtil(data);
-	    assertNotNull(d);
-	    System.out.println(d.toString());
+    	Validator v = new Validator();
+    	v.extractSuperficie("1.5 l/ha");
 		
 		
 	}

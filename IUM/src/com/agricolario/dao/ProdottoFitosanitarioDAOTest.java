@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.agricolario.bean.ProdottoFitosanitario;
+import com.agricolario.functionality.Validator;
 
 class ProdottoFitosanitarioDAOTest {
 
@@ -21,10 +22,11 @@ class ProdottoFitosanitarioDAOTest {
 	@Test
 	final void test() {
 			ProdottoFitosanitarioDAO dao = new ProdottoFitosanitarioDAO();
-			
-		   ProdottoFitosanitario p= dao.getProdotto("Centurion 240 Neo");
-
-	System.out.println(p.toString());
+			 
+			String superficie =dao.getDose("Priaxor", "orzo");
+			System.out.println(superficie);
+			System.out.println(new Validator().extractSuperficie(superficie));
+	
 	}
 
 }

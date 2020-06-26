@@ -51,6 +51,39 @@ public class ProdottoFitosanitarioDAO {
 				}
 			}	
 	}
+	public ArrayList<String> getNomeLiveSerch(String str) {
+		
+		String sql= "select nome from prodottofitosanitario where nome like ?;";
+
+		 Connection con= connessione.getConn();
+		 	ResultSet result;
+		 	ArrayList<String> lista= new ArrayList<String>();
+			try {
+				
+				PreparedStatement ps = con.prepareStatement(sql);
+				ps.setString(1, "%"+str+"%" );
+                result	=   ps.executeQuery();
+			    
+                while(result.next()) {	
+                	 String nome= result.getString("nome");
+                	 lista.add(nome);
+				}
+			
+				
+				
+		    	 return lista;	
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				System.out.println(e.getErrorCode()+"\n"+e.getMessage());
+				return null;
+			}finally {
+				if(connessione!=null) {
+					
+					connessione.closeConn();
+				}
+			}	
+	}
+
 
 	public ProdottoFitosanitario getProdotto(String nomeProdotto) {
 		
@@ -74,7 +107,7 @@ public class ProdottoFitosanitarioDAO {
 	            	   p.setTemporientro(result.getInt("temporientro"));
 	            	   p.setForma(result.getString("forma"));
 	            	   p.setEtichetta(result.getString("etichetta"));
-	            	   p.setFunzione(result.getString("funzione"));         
+	            	   p.setFunzione(result.getString("funzione")); 
                 }
 			
 				System.out.println(p.toString());
@@ -92,6 +125,40 @@ public class ProdottoFitosanitarioDAO {
 			}	
 	}
 
+
+	public ArrayList<String> getColtura(String nomeProdotto) {
+		
+		String sql= "select coltura from prodottofitosanitario join applicazioneprodotto on prodottofitosanitario.idprodottofitosanitario= applicazioneprodotto.idprodottofitosanitario  where nome=?";
+
+		 Connection con= connessione.getConn();
+		 	ResultSet result;
+			try {
+				
+				PreparedStatement ps = con.prepareStatement(sql);
+				ps.setString(1, nomeProdotto);
+                result	=   ps.executeQuery();
+			    
+                ArrayList<String> lista= new ArrayList<String>();
+                while(result.next()) {	
+	            	   
+                	String  coltura = result.getString("coltura");
+                    lista.add(coltura);	
+			   }
+			
+				System.out.println(lista.toString());
+				
+		    	 return lista;	
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return null;
+			}finally {
+				if(connessione!=null) {
+					
+					connessione.closeConn();
+				}
+			}	
+	}
 
 
 
@@ -136,8 +203,43 @@ public class ProdottoFitosanitarioDAO {
 				}
 			}		}
 	
-	
-	
+	//get dose in base alla coltura e il prodotto
+	/*select dose from prodottofitosanitario join applicazioneprodotto on prodottofitosanitario.idprodottofitosanitario= applicazioneprodotto.idprodottofitosanitario  where prodottofitosanitario.nome="Priaxor" and coltura="orzo" ;*/
+	public String getDose(String nome,String coltura) {
+		// TODO Auto-generated method stub
+		String sql= "select dose from prodottofitosanitario join applicazioneprodotto on prodottofitosanitario.idprodottofitosanitario= applicazioneprodotto.idprodottofitosanitario  where prodottofitosanitario.nome=? and coltura=?";
+
+		 Connection con= connessione.getConn();
+		 	ResultSet result;
+			String dose ="";
+
+		 	try {
+				
+				PreparedStatement ps = con.prepareStatement(sql);               
+				ps.setString(1, nome);
+				ps.setString(2, coltura);				
+				result	=   ps.executeQuery();
+			 
+				
+				while(result.next()) {	
+				
+					dose= result.getString("dose");
+					
+				}
+			
+				
+				
+		    	 return dose;	
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				System.out.println(e.getErrorCode()+"\n"+e.getMessage());
+				return null;
+			}finally {
+				if(connessione!=null) {
+					
+					connessione.closeConn();
+				}
+			}		}
 	
 	
 	

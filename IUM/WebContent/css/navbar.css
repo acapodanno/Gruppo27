@@ -584,22 +584,6 @@ td
 	
 }
 
-td > input[type="text"]:disabled{
-	border: none;
-	text-align: center;
-	
-	
-	
-}
-td > input[type="text"]{
-    pointer-events: none;
-    border: none;
-	text-align: center;
-	background-color: transparent;
-	
-	
-	
-}
 
 
 

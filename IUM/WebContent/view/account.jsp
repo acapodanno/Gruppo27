@@ -36,17 +36,22 @@
 	</div>
 	
 	<div  class="item-b shadow">
+	<%if (user.getAzienda().getNomeAzienda()!= null){ %>
 					<h4>Dati Azienda</h4>
 					<span><strong>Nome:</strong><%= user.getAzienda().getNomeAzienda() %></span><br>
 					<span><strong>Città:</strong><%= user.getAzienda().getCittà() %></span><br>
 					<span><strong>Indirizzo:</strong><%=user.getAzienda().getIndirizzo() %></span><br>
 					<span><strong>Cap:</strong> <%= user.getAzienda().getCap() %></span><br>
 					<span><strong>Data Fondazioen:</strong> <%= user.getAzienda().getDataFondazione() %></span><br>
-								
+	<%}else{ %>
+			<h4>Dati  Azienda</h4>
+			<span><strong>Non sei stato ancora delegato!Ciao Fra</span><br>
+	<% } %>
+					
 	</div>
 	<div class="item-c shadow">
 	<h4>Magazzino</h4>
-	
+    <a href="#"> Vai in magazzino </a>
 	
 	</div>
 </div>

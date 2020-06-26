@@ -9,11 +9,51 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="stylesheet" href="css/navbar.css">
+
+<script type="text/javascript" src="js/jquery.js">
+
+
+
+
+
+
+</script>
+<script type="text/javascript" src="js/jquery.min.js">
+
+
+
+</script>
+<script type="text/javascript">
+
+
+
+$( window ).ready(function() {
+    
+	
+	
+	
+	
+	  function myFunction( el){
+		  var value=el.value;
+		  console.log(value);
+		  
+	  }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+});
+
+</script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link
@@ -82,7 +122,22 @@ only screen and (max-width: 1280px)  {
 
 
 
-
+td> input[type="text"]{
+ border: solid 1px black;
+ color: black;
+}
+#livesearch{
+ z-index: 1;
+   position: absolute;
+ display: none;
+ height: auto;
+ max-height:100px;
+ width:10%;
+ max-width:11;
+ margin-top: -15px;
+ overflow-x:auto;
+ background-color: white;
+}
 </style>
 </head>
 <body>
@@ -134,6 +189,7 @@ for(RegistroFitosanitario reg : listaReg ){
     <col style="width:15%">
     <col  style="width:10%">
     <col  style="width:15%">
+    <col style="width:8%">
     <col style="width:15%">
     <col  style="width:10%">
     <col  style="width:25%"> <%
@@ -148,6 +204,7 @@ for(RegistroFitosanitario reg : listaReg ){
       <th scope="col"  > Prodotto</th>
       <th scope="col" >Coltura</th>
       <th scope="col" >Data inizio</th>
+      <th scope="col" >Superficie</th>
        <th scope="col">Quantita utilizzata</th>
       <th scope="col" >Avversita</th>
       <th scope="col" >Note</th>
@@ -170,10 +227,11 @@ for(RegistroFitosanitario reg : listaReg ){
    
            
   %>
-    <tr scope="row" class="text-center">
+    <tr scope="row" class="text-center trattamenti" id="">
       <td  >  <%= u.getNomeProdotto() %> </td>
       <td><%=u.getColtura() %></td>
       <td><%= u.getDatInzio() %></td>
+      <td><%= u.getSuperficie() %></td>
        <td ><%= u.getQuantita()%></td>
       <td><%= u.getAvversita() %></td>
      <td ><%=u.getNote() %></td>
@@ -195,8 +253,8 @@ for(RegistroFitosanitario reg : listaReg ){
         
         creazione=true;
         %>
-   <tr scope="row" class="text-center">
-      <td colspan="7" ><a href="#"><i class="fa fa-plus-circle"></i>Aggiungi trattamento</a></td>
+   <tr scope="row" class="text-center ultimo">
+      <td colspan="8"><a href="#"  id="bottone-aggiungi"><i class="fa fa-plus-circle"></i>Aggiungi trattamento</a></td>
      </tr>
     
     
@@ -232,6 +290,7 @@ for(RegistroFitosanitario reg : listaReg ){
       </div> 
       
       <script type="text/javascript">
+  
       function apriContenuto(evt,anno) {
     	  // Declare all variables
     	  var i, tabcontent, tablinks;
@@ -260,25 +319,137 @@ for(RegistroFitosanitario reg : listaReg ){
     	    for(var i = 0; i < divsToHide.length; i++){
     	        divsToHide[i].style.visibility = "visible"; // or
     	    }
- 	showInput();
     	  
       }
-    //------------------------------------------------------------------------------
-      function showInput(){
-  
-      	     var ok = document.getElementsByClassName("input-testo"); //divsToHide is an array
-       	   		 for(var i = 0; i < ok.length; i++){
-//      	        ok[i].style.pointer-events= "auto";
+    //---------------------------------------------------------------------- onchange="deleteNome()"--------
 
-      	        
-      	    }
-    	  
-      }
+      var set= false;
+      $("#bottone-aggiungi").click(function(){
+	
+    	  $("table .ultimo").before('<tr scope="row" class="text-center trattamenti" id="trattamento">'+
+    		      '<td  > <input type="text" class="input-trattamento"  onchange="deleteNome()" onkeyup="deleteNome()" id="nomeProdotto">'+
+    		      '<div id="livesearch"></div>'+
+    		      '</td>'+
+    		      '<td ><select id="coltura" ><option>---------</option></select></td>'+
+    		      '<td ><input  type="date" id="dataInzio" value="2020-06-26" min="2020-01-01" max="2020-12-31">'+
+    		      ' <td> <input  type="text" id="superficie"></td>'+
+    		      ' <td> <input  type="text" id="quantita" value=""></td>'+
+    		      '<td ><input type="text" id="avversita"></td>'+
+    		     '<td ><input type="text" id="note"></td> <th><a href="#"> <i class="fa fa-check " style="color: green ;" onclick="addTrattamento()"></i></a> <br><i class="fa fa-close" style="color: red;" onclick="reset()"></i></th>'+
+    		     '</tr>');
+         $("#nomeProdotto").keyup(function() {
+
+			 if(this.value!="") {
+        	 $( "#livesearch" ).html("");
+ 			 
+        	 jQuery.noConflict();
+  
+     $("#livesearch").show();
+
+     
+     $.ajax({
+	      type:"POST",
+	      data:{"nome":this.value},
+	      url:"addTrattamentoLv",
+	      success : function(data){
+	    	 var object= JSON.parse(data);
+	    	 console.log(object);
+	    	 for (var i = 0; i < object.length; i++) {
+				 $( "#livesearch" ).append("<p onClick='cercaColtura(this)' id='"+object[i].name +"'>"+object[i].name +"</p>");
+			}
+	    	}});
+}else{
+	
+    $("#livesearch").hide();}
+        	 
+			 $("#superficie").keyup(function () {getDose(this);});
+    	 
+         });});
+         
+         
+         
+         
+         
+         
+         
+         
+  function cercaColtura( el){
+	
+	  var value=el.innerText;
+	  $("#nomeProdotto").val(value);
+	  $("#coltura").html("");
+	  
+	     $.ajax({
+		      type:"POST",
+		      data:{"nome":value},
+		      url:"getColtura",
+		      success : function(data){
+		    	 var object= JSON.parse(data);
+		    	 console.log(object);
+		    	 for (var i = 0; i < object.length; i++) {
+				
+		    		 $( "#coltura" ).append("<option value='"+object[i].coltura +"'>"+object[i].coltura +"</option>");
+				}
+		    	
+		      }
+		});
+	     set=true;
+	    
+	     $("#livesearch").hide();
+  
+  }
       
-      
-      
-      </script>
-      
+function deleteNome(){
+	if(set===true){
+		
+		
+		  $("#coltura").html("<option>------</option>");
+		  set=false;
+	}
+	
+	
+	
+}    
+
+function getDose(el){
+	
+	var superficie  =  el.value;
+	var nome = $("#nomeProdotto").val();
+	var coltura = $("#coltura").val();
+	console.log(coltura)
+    $.ajax({
+	      type:"POST",
+	      data:{"nome":nome,"coltura":coltura,"superficie":superficie},
+	      url:"getDose",
+	      success : function(data){
+	    	 var object= JSON.parse(data);
+	    	 console.log(object.dose);
+	    	$("#quantita").val(object.dose); 
+	    	 
+	    	
+	      }
+	});
+	
+	
+	
+	
+	
+	
+	
+}
+function addTrattamento(){
+	var elemt= document.getElementById('trattamento');
+	var nome= elemt.getElementsByTagName('input')[0];
+	var coltura= elemt.getElementsByTagName('input')[1];
+	var data= elemt.getElementsByTagName('input')[2];
+	var sup= elemt.getElementsByTagName('input')[3];
+	var dose= elemt.getElementsByTagName('input')[4];
+	var avv= elemt.getElementsByTagName('input')[5];
+	var note= elemt.getElementsByTagName('input')[6];
+	console.log(nome+" "+ coltura+" " +" " +data +" "+sup);
+	
+}
+</script>      
       
 <%@ include file="footer.jsp"%>
 

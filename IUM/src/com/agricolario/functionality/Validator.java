@@ -43,7 +43,36 @@ public boolean validatorDate(String date) {
 	return	matcher.find();
 	
 }
+public double extractSuperficie(String superficie) {
+	//([0-9]*\.[0-9]+|[0-9]+)(\\d)+\\.(\\d+)
+	pattern = Pattern.compile("([0-9]*\\.[0-9]+|[0-9]+)");
+	matcher = pattern.matcher(superficie);
+	
+	double s=0;
+	if (matcher.find())
+	{
+	s=Double.parseDouble( matcher.group().toString()); 
 	
 	
+	
+   }
+	return s;
+}
+
+public String extractSuperficieString(String superficie) {
+	//([0-9]*\.[0-9]+|[0-9]+)(\\d)+\\.(\\d+)
+	pattern = Pattern.compile("([0-9]*\\.[0-9]+|[0-9]+)");
+	matcher = pattern.matcher(superficie);
+	
+	String s="";
+	if (matcher.find())
+	{
+	s=( matcher.group().toString()); 
+	
+	
+	
+   }
+	return s;
+}
 	
 }

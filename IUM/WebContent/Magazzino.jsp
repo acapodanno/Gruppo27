@@ -47,7 +47,8 @@
 	<meta name="Owner" content="HTML.it srl"> 
 	<meta name="Author" content="HTML.it srl">  
 	<meta name="Copyright" content="HTML.it srl">
-
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 
 
 	<style>
@@ -456,7 +457,18 @@ th, td {
 }
 
 }
-
+#live-search{
+ z-index: 1;
+  position: absolute;
+ display: none;
+ height: auto;
+ max-height:100px;
+ width:10%;
+ max-width:11;
+ margin-top: -15px;
+ overflow-x:auto;
+ background-color: white;
+}
 
 
 
@@ -522,8 +534,8 @@ th, td {
    <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
      </button>
-      <input type="text" class="searchTerm" placeholder="Digita il nome o il codice di un prodotto fitosanitario...">
-      
+      <input type="text" id="testo-per-ricerca" class="searchTerm" placeholder="Digita il nome o il codice di un prodotto fitosanitario...">
+      <div id="live-search">Ciao alessia io sono un div  a caso Ciauu</div>
    </div>
 </div>
 
@@ -612,7 +624,51 @@ th, td {
   </table>
 </div>
  
+<script type="text/javascript">
 
+
+	jQuery.noConflict();
+//Io sono la ricerca e non faccio ancora nulla
+	$("#testo-per-ricerca").keyup(function() {
+		 
+		 var value= $("#testo-per-ricerca").val();
+              //Chiamata asincorna con jquery ohohohohohoh!!!!
+		         
+	    		 $.ajax({
+		      			type:"POST",
+		      			data:{"nome":this.value},
+		      			url:"ricercaMag",
+		      			success : function(data){
+		    	 		var object= JSON.parse(data);
+		    	 		console.log(object);
+		    	 		for (var i = 0; i < object.length; i++) {
+				//	 	$( "#live-search" ).append("<p onClick='cercaColtura(this)' id='"+object[i].name +"'>"+object[i].name +"</p>");
+				}
+		    	}});
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 });
+
+		
+	
+
+
+
+
+
+
+
+</script>
 </body>
 
 

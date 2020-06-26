@@ -1,5 +1,7 @@
 package com.agricolario.bean;
 
+import java.util.ArrayList;
+
 public class ProdottoFitosanitario {
 
 	public ProdottoFitosanitario() {
@@ -83,6 +85,20 @@ public int getTempocarenza() {
 public void setTempocarenza(int tempocarenza) {
 	this.tempocarenza = tempocarenza;
 }
+
+
+
+public ArrayList<String> getColtura() {
+	return coltura;
+}
+
+
+public void setColtura(ArrayList<String> coltura) {
+	this.coltura = coltura;
+}
+
+
+
 private int idProdottoFitosanitario;
 private String	etichetta;
 private String nome;
@@ -93,6 +109,10 @@ private String dose;
 private String funzione;
 private String avversita;
 private int tempocarenza;
+private ArrayList<String> coltura;
+
+
+
 @Override
 public String toString() {
 	return "ProdottoFitosanitario [idProdottoFitosanitario=" + idProdottoFitosanitario + ", etichetta=" + etichetta
