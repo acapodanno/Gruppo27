@@ -74,13 +74,30 @@ body{
 
 *{
 	    font-family: "Dosis";
-	
-
 }
 
-@font-face{
-	font-family: "Dosis";
-	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
+
+
+@font-face {
+    font-family: 'treeftrregular';
+    src: url("../font/treeftr-webfont/treeftr-p58o-webfont.woff") format('woff2'),
+         url("../font/treeftr-webfont/treeftr-p58o-webfont.woff2") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#titoloPagina{  /*titoloi di tutte le pagine*/
+	font-size: 52px; 
+	color: black;
+	font-family: 'treeftrregular';
+	margin-top: 15px;
+}
+
+#titoloParagrafo{ /*paragrafi nella homepage*/
+	font-size: 28px; 
+	color: black;
+	font-family: 'treeftrregular';
+	margin-top: 15px;
 }
 
 
@@ -253,16 +270,16 @@ display: block ruby;
 }
 
 #listaVantaggi{
-	font-size: 16px;
+
 	font-weight: bold;
-	text-align: center;
+color: #289605;
 }
 
 #listaCategiorie{
-	font-size: 24px;
+
 	font-weight: bold;
-	text-align: center;
-	color: green;
+	
+	color: #289605;
 }
 
 /*Navbar*/

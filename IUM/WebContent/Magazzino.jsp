@@ -57,20 +57,20 @@
 	
 	
 }
-body {
-   font-family: "Dosis";
-	src: url("font/Dosis/AnyConv.com__Dosis-Regular.otf");
+
+@font-face {
+    font-family: 'treeftrregular';
+    src: url("font/treeftr-webfont/treeftr-p58o-webfont.woff") format('woff2'),
+         url("font/treeftr-webfont/treeftr-p58o-webfont.woff2") format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-
-@font-face{
-	font-family: "Dosis";
-	src: url("font/Dosis/AnyConv.com__Dosis-Regular.otf");
-}
-#magazzino{
-	font-size: 36px;
-	font-weight: bold; 
+#titoloPagina{
+	font-size: 52px; 
 	color: black;
+	font-family: 'treeftrregular';
+	margin-top: 15px;
 }
 	
 	
@@ -523,7 +523,7 @@ th, td {
   <!-- ---------------------FINE NAV BAR---------------------------------------------------------------- -->
 
 <div class="w3-container">
-  <h3 id="magazzino" class="text-center">Magazzino</h3>
+  <h3 id="titoloPagina" class="text-center"> ,MAGAZZINO</h3>
   <p class="text-center" class="w3-large">Elenco dei prodotti da te posseduti, classificati per nome, descrizione e quantità rimasta. </p>
 </div> 
 
