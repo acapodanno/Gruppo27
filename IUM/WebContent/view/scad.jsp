@@ -123,7 +123,7 @@ only screen and (max-width: 1280px)  {
 <div class="container-fluid mt-5 ">
 	<div class="row justify-content-center ">
 	<div class="col col-lg-12 text-center ">
-             <h2>Scadenze dei Trattamenti Fitosanitari</h2>
+             <h2 id="titoloPagina">Scadenze dei Trattamenti Fitosanitari</h2>
 	</div>
 		
 	

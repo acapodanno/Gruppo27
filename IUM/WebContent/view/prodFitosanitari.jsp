@@ -104,7 +104,7 @@ only screen and (max-width: 1280px)  {
 <!--  -->
 
 <div class="w3-container">
-  <h3 class="text-center"><em>Prodotti fitosanitari</em></h3>
+  <h3 id="titoloPagina" class="text-center"><em>Prodotti fitosanitari</em></h3>
   <p class="text-center" class="w3-large">Elenco di tutti i prodotti fitosanitari esistenti. Ognuno di esso è caratterizzato da informazioni che ne specificano il tipo, l'utilizzo e le avvertenze. </p>
 </div> 
 

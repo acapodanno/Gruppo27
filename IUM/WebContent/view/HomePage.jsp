@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="css/navbar.css">
-<title>HomePage Agricolàrio</title>
+<title>HomePage - Agricolàrio</title>
 </head>
 <body>
 <%@ include file="navbar.jsp"%>
@@ -22,8 +22,8 @@ setTop=true;
 	<div class="col col-lg-12 text-center ">
 			<h1 id="titoloPagina" style="color: black"> ,Benvenuto in</h1>
 		</div>
-		<div class="col col-lg-12 text-center ">
-			<h1 id="titoloPagina" style="color: #289605; font-size: 78px;" > AGRICOL<a id="titoloPagina"  style="color: #47cf00; font-size: 78px;">À</a>RIO,</h1>
+		<div id="titoloPagina" class="col col-lg-12 text-center ">
+			<h1 id="titoloPagina" style="color: #289605; font-size: 68px;" > AGRICOL<a id="titoloPagina"  style="color: #47cf00; font-size: 78px;">À</a>RIO,</h1>
 		</div>
 </div>
 
@@ -44,8 +44,8 @@ setTop=true;
    			 <div class=" cazzarielli-testo1" id="cazzariello1" >
     
     
-  		  <h4 id="titoloParagrafo"> ,REGISTRO DEI TRATTAMENTI FITOSANITARI</h4>
-  		  <p >Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari! <br>
+  		  <h4 id="titoloParagrafo2"> ,REGISTRO DEI TRATTAMENTI FITOSANITARI</h4>
+  		  <p id="sparisci">Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari! <br>
 			Tramite pochi pratici click potrai aggiungere un trattamento al tuo registro fitosanitario, apportare modifiche, visualizzare e stampare i registri degli anni precedenti.
 
     </p>
@@ -62,8 +62,8 @@ setTop=true;
    				 </div>
                 <div  class=" cazzarielli-testo1" >
     
-                  <h4 id="titoloParagrafo" > ,PRODOTTI FITOSANITARI</h4>
-                <p >Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti, consulta tutte le informazioni importanti, le etichette e le avvertenze di ogni singolo prodotto fitosanitario! <br>
+                  <h4 id="titoloParagrafo2" > ,PRODOTTI FITOSANITARI</h4>
+                <p id="sparisci">Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti, consulta tutte le informazioni importanti, le etichette e le avvertenze di ogni singolo prodotto fitosanitario! <br>
 		Potrai visualizzare anche solo i tuoi prodotti fitosanitari presenti nel tuo magazzino e aggiungerne nuovi. 
  			</p>
     		</div>
@@ -80,8 +80,8 @@ setTop=true;
     	<div  class=" cazzarielli-testo2" id="cazzariello2">
     
     
-  			  <h4 id="titoloParagrafo"> ,SCADENZE</h4>
-    <p>Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati! 
+  			  <h4 id="titoloParagrafo2"> ,SCADENZE</h4>
+    <p id="sparisci">Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati! <br>
 Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi tempi. 
     
     </p>
@@ -98,9 +98,9 @@ Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi te
     <div  class=" cazzarielli-testo2" class="destra">
     
     
-    <h4 id="titoloParagrafo"> ,TRACCIABILITÀ</h4>
-    <p class="mt-2">Crea qui l'etichetta virtuale per ogni prodotto agroalimentare da te coltivato! <br>
-Con una semplice generazione di un codice QR potrai visualizzare tutte le informazioni legate ai tuoi prodotti. 
+    <h4 id="titoloParagrafo2"> ,TRACCIABILITÀ</h4>
+    <p id="sparisci" class="mt-2">Crea qui l'etichetta virtuale! <br>
+Generando un semplice codice QR potrai visualizzare tutte le informazioni suoi tuoi prodotti. 
 
     </p>
     </div>
@@ -170,12 +170,12 @@ rendendo semplici tutte quelle azioni che prima sembravano impossibili effettuat
    <div  class="gruppodescr" >
    <p ><h1 style="color:black; font-size: 22px;" > Agricolàrio rende il tuo lavoro di immagazzinamento dei trattamenti
 più efficiente di un qualsiasi strumento di registrazione alternativo. Scopri i vantaggi: </h1>
-<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/laptop-flower.png"/> <h5 id="titoloParagrafo" id="listaVantaggi">TUTTO ONLINE</h5></div>
-<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/ok-hand.png"/><h5 id="titoloParagrafo" id="listaVantaggi">MAI PIU' TRATTAMENTI SBAGLIATI</h5></div>
-<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/refresh.png"/><h5  id="titoloParagrafo" id="listaVantaggi">AGGIORAMENTI COSTANTI</h5></div>
-<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/agreement.png"/><h5 id="titoloParagrafo"  id="listaVantaggi">A PASSO DI LEGGE</h5></div>
-<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/report-card.png"/><h5 id="titoloParagrafo" id="listaVantaggi">CARTA DI IDENTITA' DEL PRODOTTO</h5></div>
-<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/broccoli.png"/><h5 id="titoloParagrafo"  id="listaVantaggi">FACILE E' BELLO</h5></div>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/laptop-flower.png"/> <h5   id="listaVantaggi">TUTTO ONLINE</h5></div>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/ok-hand.png"/><h5   id="listaVantaggi">MAI PIÙ TRATTAMENTI SBAGLIATI</h5></div>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/refresh.png"/><h5    id="listaVantaggi">AGGIORAMENTI COSTANTI</h5></div>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/agreement.png"/><h5    id="listaVantaggi">A PASSO DI LEGGE</h5></div>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/report-card.png"/><h5   id="listaVantaggi">CARTA DI IDENTITÀ DEL PRODOTTO</h5></div>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/70/000000/broccoli.png"/><h5    id="listaVantaggi">FACILE É BELLO</h5></div>
 <br>
 
     </div>

@@ -36,7 +36,7 @@
 <div class="container-fluid mt-5 ">
 	<div class="row justify-content-center ">
 	<div class="col col-lg-12 text-center ">
-			<h2>Traccibilità</h2>
+			<h2 id="titoloPagina">Traccibilità</h2>
 		</div>
 		<div class="progress col col-lg-6 ">
   			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>

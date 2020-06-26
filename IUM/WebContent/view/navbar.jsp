@@ -300,11 +300,11 @@ img{
     if(loggato){
      Utente user =(Utente) session.getAttribute("utente");
     %>
-     <div class="align-baseline ml-6 icon-bar-vertical">
-  	<a class="" href="showHome"><i class="fa fa-home"></i></a>
-  	<a href="showAccount" class=" ml-3" ><i class="fa fa-user-circle"></i></a>
-  	<a href="#" class=" ml-3"><i class="fa fa-bell"></i></a>
-  	<a href="logout" class=" ml-3" ><i class="fa fa-sign-out"></i></a>
+     <div id="icone" class="align-baseline ml-6 icon-bar-vertical">
+  	<a class="" href="showHome"><img src="https://img.icons8.com/officel/30/000000/home-page.png"/></a>
+  	<a href="showAccount" class=" ml-3" ><img src="https://img.icons8.com/officel/30/000000/gender-neutral-user.png"/></a>
+  	<a href="#" class=" ml-3"><img src="https://img.icons8.com/officel/30/000000/appointment-reminders.png"/></a>
+  	<a href="logout" class=" ml-3" ><img src="https://img.icons8.com/officel/30/000000/exit.png"/></a>
   	
   	
   	

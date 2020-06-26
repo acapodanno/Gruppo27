@@ -16,7 +16,7 @@
 <div class="container-fluid mt-5 ">
 	<div class="row justify-content-center ">
 		<div class="col col-lg-12 text-center ">
-			<h2>Area Utente</h2>
+			<h2 id="titoloPagina">Area Utente</h2>
 		</div>
 	</div>
 

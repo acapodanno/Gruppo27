@@ -241,7 +241,7 @@ input[type=date]:focus, .select:focus{
 <div class=" mt-5">
   <div class="shadow registration" id="utente"  style="display: block; ">
     <div class="containerReg">
-    	<h1 class="text-center"><b> Registrazione</b></h1><br>
+    	<h1 id="titoloPagina" class="text-center"><b> Registrazione</b></h1><br>
     	
 		<div class="row justify-content-center " >
 		 <form id="form-registrazione" action="access" method="post">
@@ -317,7 +317,7 @@ input[type=date]:focus, .select:focus{
   <div class="shadow registration" id="azienda"  style="display: none; ">
   
 	<div class="containerReg">
-    	<h1 class="text-center"><b> Registra la tua azienda</b></h1><br>
+    	<h1 id="titoloPagina" class="text-center"><b> Registra la tua azienda</b></h1><br>
     	
 			<div class="row justify-content-center " >
 		 				<form id="form-registrazione" action="access" method="post">
