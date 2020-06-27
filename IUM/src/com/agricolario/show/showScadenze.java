@@ -39,10 +39,21 @@ public class showScadenze extends HttpServlet {
 		HttpSession ssn = request.getSession();
 		Utente u= (Utente)ssn.getAttribute("user");
 		if(u!=null) {
-		RegistroFitosanitarioDAO dao= new RegistroFitosanitarioDAO();
-		//RegistroFitosanitario reg = dao.getRegistro(1);
-		ArrayList<RegistroFitosanitario> lista = dao.getAllRegistro(u.getId());
-		request.setAttribute("listaRegistro", lista);
+			
+			
+
+			RegistroFitosanitarioDAO dao= new RegistroFitosanitarioDAO();
+			System.out.println(u.toString());
+			ArrayList<RegistroFitosanitario> lista = new ArrayList<RegistroFitosanitario>();
+			if(u.getRuolo().equals("titolare")) {
+				 lista = dao.getAllRegistro(u.getId());
+				}else {
+					System.out.println();
+				 lista= dao.getAllRegistroDelegato(u.getId());
+					System.out.println(lista.toString());
+					
+				}
+				request.setAttribute("listaRegistro", lista);
 		getServletContext().getRequestDispatcher("/view/scad.jsp").forward(request, response);	
 		}else {
 			getServletContext().getRequestDispatcher("/view/HomePage.jsp").forward(request, response);		

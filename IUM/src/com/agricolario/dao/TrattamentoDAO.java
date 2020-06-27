@@ -33,9 +33,9 @@ public class TrattamentoDAO {
 				ps.setDouble(5,superficie);
 				ps.setString(6, nome);
 				ps.setFloat(7, quantita);
-				ps.setString(8, avversità);
-				ps.setString(9, note);
-				ps.setString(10,unita);
+				ps.setString(8,unita);
+				ps.setString(9, avversità);
+				ps.setString(10, note);
 				
 				ps.executeUpdate();
 		    	 return true;	

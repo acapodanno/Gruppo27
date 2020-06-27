@@ -1,3 +1,4 @@
+<%@page import="com.agricolario.servlet.registrazione"%>
 <%@page import="java.util.Date"%>
 <%@page import="com.agricolario.bean.Trattamento"%>
 <%@page import="com.agricolario.bean.RegistroFitosanitario"%>
@@ -166,6 +167,8 @@ text-align: center;
 }
 input[type="text"]:disabled {
 border: none;}
+input[type="date"]:disabled {
+border: none;}
 </style>
 </head>
 <body>
@@ -185,12 +188,13 @@ border: none;}
 <div style="width:100% ;height:auto; " id="tab-registro">
 <%ArrayList<RegistroFitosanitario> listaReg = (ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro");%>
 <%
-
+Utente user = (Utente) session.getAttribute("user");
 boolean primo= true;
-
+int idregistro;
 for(RegistroFitosanitario reg : listaReg ){ 
 if(primo){
 	primo=false;
+	
 %>
 <button class="tablinks" onclick="apriContenuto(event,<%=reg.getDataCreazione().getYear()%>)" id="defaultOpen"><%=reg.getDataCreazione().getYear()+1900%></button>
 <%}else{ %>
@@ -224,7 +228,7 @@ for(RegistroFitosanitario reg : listaReg ){
     <col  style="width:25%"> <%
    
         if(anno== annoRegistro  ){ 
-        
+        idregistro= reg.getIdRegistroFitosanitario();
         creazione=true;
         %>     <col  style="width:5%"><%} %>
   </colgroup>
@@ -257,21 +261,21 @@ for(RegistroFitosanitario reg : listaReg ){
        
            
   %>
-    <tr scope="row" class="text-center trattamenti" id="<%=i%>">
-      <td  ><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="input-modifica<%=i%>" ></td>
-      <td><input type="text" value="<%=u.getColtura() %>" disabled="disabled" class="input-modifica<%=i%>" ></td>
-      <td><input type="text" value="<%= u.getDatInzio() %>" disabled="disabled" class="input-modifica<%=i%>" ></td>
-      <td><input type="text" value="<%= u.getSuperficie() %>" disabled="disabled" class="input-modifica<%=i%>"></td>
-       <td ><input type="text" value="<%= u.getQuantita()%>" disabled="disabled" class="input-modifica<%=i%>"></td>
-      <td><input type="text" value="<%= u.getAvversita() %>" disabled="disabled" class="input-modifica<%=i%>"></td>
-     <td ><input type="text" value="<%=u.getNote() %>" disabled="disabled" class="input-modifica<%=i%>"></td>
+    <tr scope="row" class="text-center trattamenti" id="<%=u.getIdTrattamento()%>">
+      <td  ><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" ></td>
+      <td><input type="text" value="<%=u.getColtura() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" ></td>
+      <td><input type="date" value="<%= u.getDatInzio() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" ></td>
+      <td><input type="text" value="<%= u.getSuperficie() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"oninput="soloNumeri(this)" ></td>
+       <td ><input type="text" value="<%= u.getQuantita()%>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"oninput="soloNumeri(this)"></td>
+      <td><input type="text" value="<%= u.getAvversita() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"></td>
+     <td ><input type="text" value="<%=u.getNote() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"></td>
         <%
    
         if(anno== annoRegistro  ){ 
         
         creazione=true;
         %>
-     <td scope="col">  <input type="checkbox" style=" display:none" class="select-prodotto" onclick="visualizzaBottoni(this)" value="<%=i%>" >  </td>
+     <td scope="col">  <input type="checkbox" style=" display:none" class="select-prodotto" onclick="visualizzaBottoni(this)" value="<%=u.getIdTrattamento()%>" >  </td>
      
      <%} %>
          </tr>
@@ -300,10 +304,10 @@ for(RegistroFitosanitario reg : listaReg ){
 </div>
 <div style="width:100% ;height: 250px;" >
        
-        <button class=" shadow ml-3 mt-5 buttone-registro" <%if(creazione){ %>  disabled="disabled" style="background-color: gray;" <%}%> >Crea  </button>
-        <button class="shadow ml-3 mt-5 buttone-registro" >Delega</button>
+        <button class=" shadow ml-3 mt-5 buttone-registro" <%if(creazione || user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;" <%}%> >Crea  </button>
+        <button class="shadow ml-3 mt-5 buttone-registro" onclick="redirectDelega(<%=idregistro %>,<%=user.getId()%>)">Delega</button>
         <button class="shadow ml-3 mt-5 buttone-registro" id="modifica"  onclick="clickModifica(this)">Modifica</button>
-        <button class="shadow ml-3 mt-5 buttone-registro">Elimina</button>
+        <button class="shadow ml-3 mt-5 buttone-registro" <%if(creazione || user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;" <%}%>>Elimina</button>
         
 </div>
                 
@@ -315,7 +319,8 @@ for(RegistroFitosanitario reg : listaReg ){
       <script type="text/javascript">
        var annullaModifica=false;
       function clickAnnulla( ){
-    		
+       	 $('.input-modifica').prop('disabled',true);
+
           $(".select-prodotto").prop("checked", false);
 
     		var buttons=document.getElementsByClassName('select-prodotto')
@@ -331,6 +336,7 @@ for(RegistroFitosanitario reg : listaReg ){
     	  
     	  
   		$('#trattamento , .bottoni').empty();
+  		$("#bottone-aggiungi").prop('disabled',false);
 
     	  
     	  
@@ -362,16 +368,30 @@ for(RegistroFitosanitario reg : listaReg ){
       document.getElementById("defaultOpen").click();
     //------------------------------------------------------------------------------
       function clickModifica(el){
+    	  $("#bottone-aggiungi").prop('disabled',false);
+
     	  if(annullaModifica===false){
+    		 
     	  $(el).css( "background-color" ,"red");
     	  $(el).text("Annulla");
     	  $(".select-prodotto").show();
       	  annullaModifica=true;   
+      	$('#trattamento , .bottoni').empty();
+	      $(".select-prodotto").prop("checked", false);
+   	      $(".select-prodotto").prop("disabled", false); 
+   	      
+
     	  }else{
+    	      	$('#trattamento , .bottoni').empty();
+
+       	      $(".select-prodotto").prop("disabled", false); 
+  	          $(".select-prodotto").prop("checked", false);
+  	          $('#trattamento , .bottoni').empty();
     		  $( el ).css( "background-color" ,"green");
         	  $(el).text("Modifica");
         	  $(".select-prodotto").hide();
-          	  annullaModifica=false;    
+          	 $('.input-modifica').prop('disabled',true);
+        	  annullaModifica=false;    
     	  }
     	  
       }
@@ -379,9 +399,12 @@ for(RegistroFitosanitario reg : listaReg ){
 
       var set= false;
       $("#bottone-aggiungi").click(function(){
-    	  $('.select-prodotto').hide();
-	                      
-    	  $("table .ultimo").before('<tr scope="row" class="text-center trattamenti" id="trattamento">'+
+    	  $("#bottone-aggiungi").prop('disabled',true);
+    	      var bottoneModifica= document.getElementById('modifica');
+    	      if(annullaModifica===true){
+	          clickModifica(bottoneModifica);
+    	      }
+	          $("table .ultimo").before('<tr scope="row" class="text-center trattamenti" id="trattamento">'+
     		      '<td  > <input type="text" class="input-trattamento"  onchange="deleteNome()" onkeyup="deleteNome()" id="nomeProdotto" value="">'+
     		      '<div id="livesearch"></div>'+
     		      '</td>'+
@@ -393,10 +416,6 @@ for(RegistroFitosanitario reg : listaReg ){
     		     '<td ><input type="text" id="note"></td>'+
     		     		'<td></td>'								+
     		     '</tr>'+'<tr  scope="row" class="bottoni" > <td colspan="8"> <button onclick="" class="shadow buttone-modifica" id="aggiungi">Aggiungi</button> <button class="shadow buttone-modifica" id="annulla" onClick="clickAnnullaAggiungi()">Annulla</button></td><tr>');
-       
-    	   
-    	  
-    	  
     	  $("#nomeProdotto").keyup(function() {
 
 			 if(this.value!="") {
@@ -498,7 +517,6 @@ function getDose(el){
 	
 }
 function addTrattamento(){
-	var elemt= document.getElementById('trattamento');
 	var nome = $("#nomeProdotto").val();;
 	var coltura= $("#coltura").val();;
 	var data= $("#data").val();;
@@ -520,12 +538,9 @@ function visualizzaBottoni(el){
                   buttons[i].disabled = true;
               }  
               var s= '.input-trattamento'+str;
-       			s.concat(el.value);
-       			$(s).prop("disabled", false); 
-       			$('.input-modifica'+el.value).prop("disabled", false); 
-
-       			var c =document.getElementById(el.value);
-       			console.log(c.textContent);
+       		  s.concat(el.value);
+       		  $(s).prop("disabled", false); 
+       	      $('.input-modifica'+el.value).prop("disabled", false); 
               $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9"> <button onclick="a" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button></td><tr>')
  			 
  			 
@@ -539,12 +554,20 @@ function visualizzaBottoni(el){
   
 	
 }
+
 function soloNumeri(el){
-	
 	el.value=el.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
-	
-	
 }
+
+
+function redirectDelega(idregistro,idUtente) 
+{
+	location.href = "showDelega?idRegistro="+idregistro+"&idUtente="+idUtente;
+}
+
+
+
+
 
 </script>      
       

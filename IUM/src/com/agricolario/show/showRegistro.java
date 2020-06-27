@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.agricolario.bean.ProdottoFitosanitario;
 import com.agricolario.bean.RegistroFitosanitario;
 import com.agricolario.bean.Utente;
 import com.agricolario.dao.RegistroFitosanitarioDAO;
@@ -41,10 +42,16 @@ public class showRegistro extends HttpServlet {
 		RegistroFitosanitarioDAO dao= new RegistroFitosanitarioDAO();
 		//RegistroFitosanitario reg = dao.getRegistro(1);
 		System.out.println(u.toString());
-		ArrayList<RegistroFitosanitario> lista = dao.getAllRegistro(u.getId());
-		
+		ArrayList<RegistroFitosanitario> lista = new ArrayList<RegistroFitosanitario>();
+		if(u.getRuolo().equals("titolare")) {
+		 lista = dao.getAllRegistro(u.getId());
+		}else {
+			System.out.println();
+		 lista= dao.getAllRegistroDelegato(u.getId());
+			System.out.println(lista.toString());
+			
+		}
 		request.setAttribute("listaRegistro", lista);
-		
 		
 		getServletContext().getRequestDispatcher("/view/registro.jsp").forward(request, response);	
 		}else {

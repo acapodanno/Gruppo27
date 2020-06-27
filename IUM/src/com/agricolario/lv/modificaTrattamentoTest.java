@@ -1,8 +1,7 @@
-package com.agricolario.servlet;
+package com.agricolario.lv;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.io.IOException;
@@ -20,10 +19,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-class TestAccess {
-	
-	
-	    @Mock
+class modificaTrattamentoTest {
+
+	 @Mock
 	 	ServletContext context= mock(ServletContext.class);
 
 	 	@Mock
@@ -42,45 +40,23 @@ class TestAccess {
 	void setUp() throws Exception {
 		  MockitoAnnotations.initMocks(this);
 	}
-
-	@AfterEach
-	void tearDown() throws Exception {
-	}
-
 	@Test
-	final void testDoGetHttpServletRequestHttpServletResponse() throws ServletException, IOException {
-		when(request.getParameter("access")).thenReturn("login");
-		when(request.getParameter("email")).thenReturn("alessandro.capodanno95@gmail.com");
-		when(request.getParameter("password")).thenReturn("Root");
-		//  when(request.getRequestDispatcher("/HomePage.jsp")).thenReturn(dispatcher);
+	final void test() throws ServletException, IOException {
+		when(request.getParameter("idtrattamento")).thenReturn("61");
+
+		when(request.getParameter("idregistro")).thenReturn("4");
+		when(request.getParameter("nomeProdotto")).thenReturn("Centurion 240 Neo");
+		when(request.getParameter("coltura")).thenReturn("pomodoro");
+		when(request.getParameter("dataInizio")).thenReturn("2020-06-12");
+		when(request.getParameter("quantita")).thenReturn("0.5");
+		when(request.getParameter("superficie")).thenReturn("0.8");
+		when(request.getParameter("avversita")).thenReturn("giavone");
+		when(request.getParameter("note")).thenReturn("Attento pericoloso al bagnato");
+
+		
+		new  modificaTrattamento().doGet(request, response);
 	
-		  new access().doGet(request, response);
-		
-//		verify(dispatcher).forward(request, response);
-		
-		
+	
 	}
-
-
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

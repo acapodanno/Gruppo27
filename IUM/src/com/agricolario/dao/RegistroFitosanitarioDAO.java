@@ -150,6 +150,7 @@ public class RegistroFitosanitarioDAO {
 					
 					
 					Trattamento t= new Trattamento();
+					t.setIdTrattamento(result.getInt("idtrattamento"));
 					t.setColtura(result.getString("coltura"));
 					t.setNomeProdotto(result.getString("nomeprodotto"));
 					t.setAvversita(result.getString("avversita"));
@@ -243,8 +244,57 @@ public class RegistroFitosanitarioDAO {
 	*/
 	
 	
+	public ArrayList<RegistroFitosanitario> getAllRegistroDelegato(int idUtente){
+		
+	/*	SELECT * FROM (registrofitosanitario JOIN trattamento  ON registrofitosanitario.idregistrofitosanitario = trattamento.idregistro)
+		 JOIN compilazioneregistro  on registrofitosanitario.idregistrofitosanitario = compilazioneregistro.idregistrofitosanitario
+		 JOIN utente on utente.idutente = compilazioneregistro.idutente  where utente.idutente=1 ;
+		*/
+		
+		String insertSql= "  SELECT * FROM  (delega   JOIN utente on utente.idutente = delega.idutente) join registrofitosanitario\r\n" + 
+				" \r\n" + 
+				" 		on registrofitosanitario.idregistrofitosanitario = delega.idregistrofitosanitario\r\n" + 
+				" \r\n" + 
+				" 		where utente.idutente=? ORDER BY registrofitosanitario.DataCreazione DESC;\r\n" + 
+				" ;";
+	// 	PreparedStatement ps = con.prepareStatement(insertSql);
 	
-	
+		Connection con= connessione.getConn();
+	 	ResultSet result;
+		
+		
+	    	try {
+				PreparedStatement ps = con.prepareStatement(insertSql);
+			    ps.setInt(1, idUtente);
+				result=ps.executeQuery();
+				
+				
+				ArrayList<Integer> idRegistro = new ArrayList<Integer>();
+				while(result.next()) {
+					idRegistro.add(result.getInt("idregistrofitosanitario"));
+					
+				}
+				
+				
+				ArrayList<RegistroFitosanitario> listaRegistri= new ArrayList<RegistroFitosanitario>();
+				for (Integer integer : idRegistro) {
+					
+					RegistroFitosanitario reg= new RegistroFitosanitarioDAO().getRegistro(integer);
+					reg.setIdRegistroFitosanitario(integer);
+					listaRegistri.add(reg);
+					
+					
+				}
+			
+				return listaRegistri; 
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				
+				return null;
+			}
+		
+	}
 	
 	
 	

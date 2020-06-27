@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.agricolario.dao.DelegaDAO;
+
 /**
  * Servlet implementation class delegaRegistro
  */
@@ -26,8 +28,38 @@ public class delegaRegistro extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+
+	
+	String idUtente = request.getParameter("idUtente");//titolare
+
+	String idRegistro = request.getParameter("idRegistro");
+
+	String idDelegato = request.getParameter("idDelegato");
+	
+	
+	if(new DelegaDAO().insertDelegato(Integer.parseInt(idUtente), Integer.parseInt(idDelegato), Integer.parseInt(idRegistro))) {
+
+		
+		
+	//	getServletContext().getRequestDispatcher("view/registro.jsp").forward(request, response);
+		
+	}else {
+		
+   //getServletContext().getRequestDispatcher("view/registro.jsp").forward(request, response);
+
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	}
 
 	/**

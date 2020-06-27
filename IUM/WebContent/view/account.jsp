@@ -63,17 +63,18 @@
 	</div>
 	
 	<div  class="item-b ">
-	<%if (user.getAzienda().getNomeAzienda()!= null){ %>
+	
 					<h4 id="titoloCaselle" >Dati Azienda</h4>
 					<br>
+	<%if (user.getAzienda().getNomeAzienda()!= null){ %>
 					<p id="righe2"><strong>Nome:</strong> <a id="caselle"><%= user.getAzienda().getNomeAzienda() %></a></p><br>
 					<p id="righe2"><strong>Città:</strong> <a id="caselle"><%= user.getAzienda().getCittà() %></a></p><br>
 					<p id="righe2"><strong>Indirizzo:</strong> <a id="caselle"><%=user.getAzienda().getIndirizzo() %></a></p><br>
 					<p id="righe2"><strong>Cap:</strong> <a id="caselle"><%= user.getAzienda().getCap() %></a></p><br>
 					<p id="righe2"><strong>Data Fondazione:</strong> <a id="caselle"> <%= user.getAzienda().getDataFondazione() %></a></p><br>
 	<%}else{ %>
-			<h4>Dati  Azienda</h4>
-			<span><strong>Non sei stato ancora delegato!Ciao Fra</span><br>
+	
+			<span id="caselle"><strong >Non sei stato ancora delegato!Ciao Fra</span><br>
 	<% } %>
 					
 	</div>

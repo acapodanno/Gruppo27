@@ -11,6 +11,7 @@ private float quantita;
 private String unita;
 private String avversita;
 private String note;
+private int idTrattamento;
 	
 	public Trattamento() {
 		// TODO Auto-generated constructor stub
@@ -35,6 +36,34 @@ private String note;
 		this.unita = unita;
 		this.avversita = avversita;
 		this.note = note;
+	}
+
+	
+	
+	
+	
+	
+	
+	public Trattamento(String coltura, Date datInzio, double superficie, String nomeProdotto, float quantita,
+			String unita, String avversita, String note, int idTrattamento) {
+		super();
+		this.coltura = coltura;
+		this.datInzio = datInzio;
+		this.superficie = superficie;
+		this.nomeProdotto = nomeProdotto;
+		this.quantita = quantita;
+		this.unita = unita;
+		this.avversita = avversita;
+		this.note = note;
+		this.idTrattamento = idTrattamento;
+	}
+
+	public int getIdTrattamento() {
+		return idTrattamento;
+	}
+
+	public void setIdTrattamento(int idTrattamento) {
+		this.idTrattamento = idTrattamento;
 	}
 
 	public void setColtura(String coltura) {
