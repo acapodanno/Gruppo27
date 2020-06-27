@@ -164,6 +164,8 @@ text-align: center;
 #bottone-aggiungi:hover {
   background-color: RoyalBlue;
 }
+input[type="text"]:disabled {
+border: none;}
 </style>
 </head>
 <body>
@@ -256,13 +258,13 @@ for(RegistroFitosanitario reg : listaReg ){
            
   %>
     <tr scope="row" class="text-center trattamenti" id="<%=i%>">
-      <td  ><%= u.getNomeProdotto() %></td>
-      <td><%=u.getColtura() %></td>
-      <td><%= u.getDatInzio() %></td>
-      <td><%= u.getSuperficie() %></td>
-       <td ><%= u.getQuantita()%></td>
-      <td><%= u.getAvversita() %></td>
-     <td ><%=u.getNote() %></td>
+      <td  ><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="input-modifica<%=i%>" ></td>
+      <td><input type="text" value="<%=u.getColtura() %>" disabled="disabled" class="input-modifica<%=i%>" ></td>
+      <td><input type="text" value="<%= u.getDatInzio() %>" disabled="disabled" class="input-modifica<%=i%>" ></td>
+      <td><input type="text" value="<%= u.getSuperficie() %>" disabled="disabled" class="input-modifica<%=i%>"></td>
+       <td ><input type="text" value="<%= u.getQuantita()%>" disabled="disabled" class="input-modifica<%=i%>"></td>
+      <td><input type="text" value="<%= u.getAvversita() %>" disabled="disabled" class="input-modifica<%=i%>"></td>
+     <td ><input type="text" value="<%=u.getNote() %>" disabled="disabled" class="input-modifica<%=i%>"></td>
         <%
    
         if(anno== annoRegistro  ){ 
@@ -518,10 +520,12 @@ function visualizzaBottoni(el){
                   buttons[i].disabled = true;
               }  
               var s= '.input-trattamento'+str;
-       			s.concat(el.value);		 
+       			s.concat(el.value);
        			$(s).prop("disabled", false); 
-                
-       			
+       			$('.input-modifica'+el.value).prop("disabled", false); 
+
+       			var c =document.getElementById(el.value);
+       			console.log(c.textContent);
               $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9"> <button onclick="a" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button></td><tr>')
  			 
  			 
