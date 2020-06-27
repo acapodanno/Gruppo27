@@ -1048,7 +1048,7 @@ border-bottom: 1px solid rgba(40, 150, 5, 0.9);
 	display: grid;
 	grid-template-columns: 30% 30%;
 	grid-template-rows: 45% 5% 25%;
-	height: 290px;
+	height: 300px;
 	justify-content: center;
 	grid-column-gap: 2%;
 }
