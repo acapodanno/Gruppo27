@@ -740,41 +740,102 @@ td
 
 
 /*****************************************Area utente *******************************************************************/
-#area-utente{
-	width:100%;
+#area-utente {
+	width: 100%;
 	display: grid;
-  	grid-template-columns:  30% 30%;
-  	grid-template-rows: 60% 10% 30% ;
-	height: 500px;
+	grid-template-columns: 30% 30%;
+	grid-template-rows: 65% 5% 25%;
+	height: 300px;
 	justify-content: center;
-	grid-column-gap:2%;
+	grid-column-gap: 2%;
 }
+
+
 .item-a{
 	grid-row-start:1;
-	grid-row-end:1;
+	grid-row-end:5;
 	width: 100%;
 	height:auto; 
 	width: 100%;
 	text-align: center;
+	border-bottom: 1px solid rgba(40, 150, 5, 0.2);
+	box-shadow: 0px 5px 0px 0px rgba(40, 150, 5, 0.5);
+	border-radius: 5px;
 	
 }
 .item-b{
 	grid-row-start:1;
-	grid-row-end:4;
+	grid-row-end:5;
 	width: 100%;
 	height:auto; 
 	width: 100%;
 	text-align: center;
+	border-bottom: 1px solid rgba(40, 150, 5, 0.2);
+	box-shadow: 0px 5px 0px 0px rgba(40, 150, 5, 0.5);
+	border-radius: 5px;
 	
 }
-.item-c{
-	grid-row-start:3;
-	grid-row-end:4;
-	width: 100%;
-	height:auto; 
-	width: 100%;
+
+#divMag{
+	margin-top: 25px;
+}
+
+#bottoneMag{
+	margin-top: 20px;
+	margin: auto;
+	text-align: center;
+	border-bottom: 1px solid rgba(40, 150, 5, 0.2);
+	box-shadow: 0px 5px 0px 0px rgba(40, 150, 5, 0.5);
+	border-radius: 5px;
+	background: transparent; 
+	font-size: 32px;
+	font-weight: ;
+	border: none;
+
+}
+
+#titoloPagina{
+margin-bottom: 50px;
+}
+
+#titoloCaselle{ 
+	font-size: 45px;
+	color: #289605;
+	font-family: 'treeftrregular';
+	margin-top: 55px;
+	font-weight: bold;
+	margin:auto;
 	text-align: center;
 }
+
+#caselle{
+border-bottom: 1px solid gainsboro;
+}
+
+#righe {
+	margin: 0;
+	font-size: 24px;
+	line-height: 35px;
+	/* margin-bottom: 1rem; */
+}
+
+#righe2 {
+	
+	margin: 0;
+	font-size: 24px;
+	line-height: 22px;
+	/* margin-bottom: 1rem; */
+}
+
+#righe3 {
+	margin: 0;
+	font-size: 22px;
+	line-height: 30px;
+	/* margin-bottom: 1rem; */
+	color: black;
+	font-weight: bold;
+}
+
 /*modifiche navbar*/
 
 .dropdown-content {

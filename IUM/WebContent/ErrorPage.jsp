@@ -68,7 +68,7 @@ background:url("image/cactus.jpeg") repeat;
 </div>
 	
 <div class="bottone">
-	<button class="torna">Torna alla Home Page.</button>
+	<button class="torna"><a href="showHome">Torna alla Home Page.</a></button>
 </div>
 </div>
 </body>
