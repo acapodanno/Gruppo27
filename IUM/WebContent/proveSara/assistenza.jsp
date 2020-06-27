@@ -14,19 +14,17 @@
 <title>Assistenza</title>
 
 <style>
-
+/** Style che serve per il form */
 .etichetta {
 	font-size: 20px;
 	padding: 0 0 5px 0;
 	margin:0;
 }
-
 .form-control:valid{
   background-color: white;
   margin:0;
   color: black;
 }
-
 .bottoneInvio{
 	background: #1161ee;
     padding: 15px 20px;
@@ -41,7 +39,6 @@
 	border:none;
 	margin-top: 20px;
 }
-
 .bottoneInvio:hover {
 	-webkit-transition: 0.3s;
  	 transition: 0.3s;
@@ -49,7 +46,6 @@
 	font-weight: bold;
 }
 </style>
-
 </head>
 <body>
 
