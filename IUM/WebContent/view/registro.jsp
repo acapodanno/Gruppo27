@@ -1,4 +1,3 @@
-<%@page import="com.agricolario.servlet.registrazione"%>
 <%@page import="java.util.Date"%>
 <%@page import="com.agricolario.bean.Trattamento"%>
 <%@page import="com.agricolario.bean.RegistroFitosanitario"%>
@@ -190,11 +189,11 @@ border: none;}
 <%
 Utente user = (Utente) session.getAttribute("user");
 boolean primo= true;
-int idregistro;
+int idRegistro=0;
 for(RegistroFitosanitario reg : listaReg ){ 
 if(primo){
 	primo=false;
-	
+	idRegistro= reg.getIdRegistroFitosanitario();
 %>
 <button class="tablinks" onclick="apriContenuto(event,<%=reg.getDataCreazione().getYear()%>)" id="defaultOpen"><%=reg.getDataCreazione().getYear()+1900%></button>
 <%}else{ %>
@@ -228,7 +227,7 @@ for(RegistroFitosanitario reg : listaReg ){
     <col  style="width:25%"> <%
    
         if(anno== annoRegistro  ){ 
-        idregistro= reg.getIdRegistroFitosanitario();
+        
         creazione=true;
         %>     <col  style="width:5%"><%} %>
   </colgroup>
@@ -305,9 +304,9 @@ for(RegistroFitosanitario reg : listaReg ){
 <div style="width:100% ;height: 250px;" >
        
         <button class=" shadow ml-3 mt-5 buttone-registro" <%if(creazione || user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;" <%}%> >Crea  </button>
-        <button class="shadow ml-3 mt-5 buttone-registro" onclick="redirectDelega(<%=idregistro %>,<%=user.getId()%>)">Delega</button>
+        <button class="shadow ml-3 mt-5 buttone-registro" onclick="redirectDelega(<%=idRegistro %>,<%=user.getId()%>)">Delega</button>
         <button class="shadow ml-3 mt-5 buttone-registro" id="modifica"  onclick="clickModifica(this)">Modifica</button>
-        <button class="shadow ml-3 mt-5 buttone-registro" <%if(creazione || user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;" <%}%>>Elimina</button>
+        <button class="shadow ml-3 mt-5 buttone-registro" <%if(user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;" <%}%>>Elimina</button>
         
 </div>
                 
