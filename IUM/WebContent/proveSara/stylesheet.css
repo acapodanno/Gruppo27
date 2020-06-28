@@ -13,8 +13,8 @@ body {
 }
 @font-face {
     font-family: 'treeftrregular';
-    src: url('treeftr-webfont/treeftr-p58o-webfont.woff2') format('woff2'),
-         url('treeftr-webfont/treeftr-p58o-webfont.woff') format('woff');
+    src: url('../font/treeftr-webfont/treeftr-p58o-webfont.woff2') format('woff2'),
+         url('../font/treeftr-webfont/treeftr-p58o-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
