@@ -27,7 +27,10 @@ public class showDelega extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		getServletContext().getRequestDispatcher("/view/delega.jsp").forward(request, response);;
+	     String idreg =(String)request.getParameter("idRegistro"); 
+	     System.out.println(idreg);
+         request.setAttribute("idRegistro", idreg);
+				getServletContext().getRequestDispatcher("/view/delega.jsp").forward(request, response);;
 	}
 
 	/**
