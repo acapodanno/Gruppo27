@@ -168,7 +168,62 @@ input[type="text"]:disabled {
 border: none;}
 input[type="date"]:disabled {
 border: none;}
+ .contenitore-delega{
+    width: 100%;
+    height: 100%;
+    z-index:1;
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:center;   
+    align-items: center;
+    padding-top: 20%;
+ }
+
+.close-delegato{
+    width:15px;
+    color: #000;
+	font-size: 20px;
+	font-weight: bold;
+	position:relative;
+	float: right;
+	
+}
+.bottoni-pop-up{
+height:80%;
+ width: 100%;
+ display: grid;
+ 	grid-template-columns: 100px 100px;
+
+justify-content: center;
+	grid-Column-gap:5%;
+
+}
+.colore-bottoni{
+
+  background: #1161ee;
+  border-radius: 25px;
+  color: white;
+  border:none;
+  text-transform: uppercase;
+
+}
+#delega-pop-up{
+	display: none;
+}
+
+#blocco-delega{
+    width: 400px;
+    height:auto;
+    background-color: white;
+	display: grid;
+	grid-template-rows:25px 50px 50px 50px ;
+	border-radius: 10px;
+}
 </style>
+
+
 </head>
 <body>
 <%@ include file="navbar.jsp"%>
@@ -303,10 +358,10 @@ for(RegistroFitosanitario reg : listaReg ){
 </div>
 <div style="width:100% ;height: 250px;" >
        
-        <button class=" shadow ml-3 mt-5 buttone-registro" <%if(creazione || user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;" <%}%> >Crea  </button>
+        <button class=" shadow ml-3 mt-5 buttone-registro" <%if(creazione || user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;"  onclick="showPop(this.id)" id="crea-registro"<%}%> >Crea  </button>
         <button class="shadow ml-3 mt-5 buttone-registro" onclick="redirectDelega(<%=idRegistro %>,<%=user.getId()%>)">Delega</button>
         <button class="shadow ml-3 mt-5 buttone-registro" id="modifica"  onclick="clickModifica(this)">Modifica</button>
-        <button class="shadow ml-3 mt-5 buttone-registro" <%if(user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;" <%}%>>Elimina</button>
+        <button class="shadow ml-3 mt-5 buttone-registro" <%if(user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;"  <%}%> onclick="showPop(this.id)" id="elimina-registro" >Elimina</button>
         
 </div>
                 
@@ -314,6 +369,27 @@ for(RegistroFitosanitario reg : listaReg ){
 
 
       </div> 
+      
+      
+      <div class="contenitore-delega" id="delega-pop-up">
+		 <div id="blocco-delega" class="animazione-login">
+		     <span class ="close-delegato" style="color: black"><i class=" fa fa-close" onclick="document.getElementById('delega-pop-up').style.display='none'"></i></span>
+		    <h2 id="titolo-pop-up">Conferma </h2>
+		    <div >
+		    
+		    <p id="pop-text"></p>
+		     </div>
+		  
+		   
+		    <div class="bottoni-pop-up" >
+		      <input type="submit" class="colore-bottoni" id="bottone-popu-conferma" value="Conferma">
+		 		 <input type="button" value="Annulla" onclick="document.getElementById('delega-pop-up').style.display='none'" class="colore-bottoni">
+		     </div>
+		
+		    </div>
+		           
+		 
+ </div>
       
       <script type="text/javascript">
        var annullaModifica=false;
@@ -411,10 +487,10 @@ for(RegistroFitosanitario reg : listaReg ){
     		      '<td ><input  type="date" id="data" value="2020-06-26" min="2020-01-01" max="2020-12-31">'+
     		      ' <td> <input  type="text" id="superficie" oninput="soloNumeri(this)"></td>'+
     		      ' <td> <input  type="text" id="quantita" value="" oninput="soloNumeri(this)"></td>'+
-    		      '<td ><input type="text" id="avversita"></td>'+
+    		      '<td ><input type="text" id="avv"></td>'+
     		     '<td ><input type="text" id="note"></td>'+
     		     		'<td></td>'								+
-    		     '</tr>'+'<tr  scope="row" class="bottoni" > <td colspan="8"> <button onclick="" class="shadow buttone-modifica" id="aggiungi">Aggiungi</button> <button class="shadow buttone-modifica" id="annulla" onClick="clickAnnullaAggiungi()">Annulla</button></td><tr>');
+    		     '</tr>'+'<tr  scope="row" class="bottoni" > <td colspan="8"> <button onclick="showPop(this.id)" class="shadow buttone-modifica" id="aggiungi">Aggiungi</button> <button class="shadow buttone-modifica" id="annulla" onClick="clickAnnullaAggiungi()">Annulla</button></td><tr>');
     	  $("#nomeProdotto").keyup(function() {
 
 			 if(this.value!="") {
@@ -515,18 +591,7 @@ function getDose(el){
 	
 	
 }
-function addTrattamento(){
-	var nome = $("#nomeProdotto").val();;
-	var coltura= $("#coltura").val();;
-	var data= $("#data").val();;
-	var sup= $("#superficie").val();;
-	var quantita= $("#quantita").val();
-	var avv= $("#avv").val();;
-	var note= $("#note").val();
-	var id= $("#idregistro").val();
-	console.log(nome+" "+ coltura+" " +" " +data +" "+sup+" "+id+" "+quantita);
-	
-}
+
 //Funzione per la check box
 function visualizzaBottoni(el){
 	var str= parseInt(el.value) 
@@ -540,7 +605,7 @@ function visualizzaBottoni(el){
        		  s.concat(el.value);
        		  $(s).prop("disabled", false); 
        	      $('.input-modifica'+el.value).prop("disabled", false); 
-              $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9"> <button onclick="a" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button></td><tr>')
+              $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9"> <button onclick="showPop(this.id)" id="update" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button></td><tr>')
  			 
  			 
         	  
@@ -563,8 +628,52 @@ function redirectDelega(idregistro,idUtente)
 {
 	location.href = "showDelega?idRegistro="+idregistro+"&idUtente="+idUtente;
 }
+function addTrattamento(){
+	var nome = $("#nomeProdotto").val();;
+	var coltura= $("#coltura").val();;
+	var data= $("#data").val();;
+	var sup= $("#superficie").val();;
+	var quantita= $("#quantita").val();
+	var avv= $("#avv").val();;
+	var note= $("#note").val();
+	var id= $("#idregistro").val();
+	console.log(nome+" "+ coltura+" " +" " +data +" "+sup+" "+id+" "+quantita+" "+avv+" "+note +" ");
+	
+}
+function showPop(str){
+ 	
+	//$(".pop-up-delega").show();
+	document.getElementById('delega-pop-up').style.display='flex'
+		if(str=="aggiungi"){
+			document.getElementById('titolo-pop-up').innerText="Conferma"
+			document.getElementById('pop-text').innerText="Sei sicuro di voler aggiungere il trattamento?"
+				document.getElementById('bottone-popu-conferma').setAttribute("onclick","addTrattamento()");
 
+	 	}else if(str=="update"){
+	 		document.getElementById('titolo-pop-up').innerText="Conferma"	
+			document.getElementById('pop-text').innerText="Sei sicuro di voler modificare il trattamento?"
+	 		//
+				document.getElementById('bottone-popu-conferma').setAttribute("onclick","sonoPremuto()");
+			 		
+	 	}else if(str=="elimina-registro"){
+	 		document.getElementById('titolo-pop-up').innerText="Conferma"	
+			document.getElementById('pop-text').innerText="Sei sicuro di voler eliminare il registro del ?"
+					
+				document.getElementById('bottone-popu-conferma').setAttribute("onclick","sonoPremuto()");
 
+	 	}else if(str=="crea-registro"){
+	 		document.getElementById('titolo-pop-up').innerText="Conferma"	
+				document.getElementById('pop-text').innerText="Sei sicuro di voler creare un nuovo registro?"
+					document.getElementById('bottone-popu-conferma').setAttribute("onclick","sonoPremuto()");
+
+		}else if(str=true)
+	}
+function sonoPremuto(){
+	
+	console.log("sono premuto ")
+	
+	
+}
 
 
 
