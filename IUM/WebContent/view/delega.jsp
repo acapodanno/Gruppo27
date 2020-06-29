@@ -193,7 +193,7 @@ justify-content: center;
 		   
 		    <div class="bottoni-pop-up" >
 		      <input type="submit" class="colore-bottoni" value="Conferma">
-		 		 <input type="button" value="Annulla" class="colore-bottoni">
+		 		 <input type="button" value="Annulla" onclick="document.getElementById('delega-pop-up').style.display='none'" class="colore-bottoni">
 		     </div>
 		
 		    </div>
