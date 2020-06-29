@@ -20,10 +20,10 @@ setTop=true;
 <div class="container-fluid mt-5 ">
 	<div class="row justify-content-center ">
 	<div class="col-lg-12 text-center ">
-			<h1 id="titoloPagina" style="color: black"> ,Benvenuto in</h1>
+			<p id="titoloHP" style="font-size: 34px;"> Benvenuto in</p>
 		</div>
-		<div id="titoloPagina" class="col col-lg-12 text-center ">
-			<h1 id="titoloPagina" style="color: #289605; font-size: 68px;" > AGRICOL<a id="titoloPagina"  style="color: #47cf00; font-size: 78px;">À</a>RIO,</h1>
+		<div id="" class="col col-lg-12 text-center ">
+			<h1 id="titoloPagina" style="color: #289605; font-size: 77px;" > AGRICOL<a id="titoloPagina"  style="color: #47cf00; font-size: 82px;">À</a>RIO,</h1>
 		</div>
 </div>
 

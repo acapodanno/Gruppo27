@@ -179,7 +179,7 @@ border: none;}
 <div class="container-fluid mt-5 ">
 	<div class="row justify-content-center ">
 	<div class="col col-lg-12 text-center ">
-			<h1 id="titoloPagina">Registro Fitosanitario</h1>
+			<h1 id="titoloPagina"> ,Registro Dei Trattamenti Fitosanitari</h1>
 		</div>
 		
 	</div>

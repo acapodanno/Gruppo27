@@ -336,10 +336,10 @@ img{
     <div class="contenitore">
     	<h1 class="titolo"><b> Accedi</b></h1><br>
       <label><b>Inserisci qui la tua e-mail</b></label>
-      <input style="color: white;" type="text" placeholder="Email" name="email" required>
+      <input  style="color: white;" type="text" placeholder="Email" name="email" required>
 
       <label><b>Inserisci qui la tua password</b></label>
-      <input style="color: white;" type="password" placeholder="Password" name="password"required> 
+      <input  style="color: white;" type="password" placeholder="Password" name="password"required> 
         
      
       <div class="gruppo">

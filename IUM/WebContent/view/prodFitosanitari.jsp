@@ -23,7 +23,7 @@
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
 <script src="bootstrap.min.js"></script>
-<link rel="stylesheet" href="css/CssProveALESSIA.css">
+<link rel="stylesheet" href="css/navbar.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/yourcode.js"></script>
@@ -104,27 +104,28 @@ only screen and (max-width: 1280px)  {
 <!--  -->
 
 <div class="w3-container">
-  <h3 id="titoloPagina" class="text-center"><em>Prodotti fitosanitari</em></h3>
-  <p class="text-center" class="w3-large">Elenco di tutti i prodotti fitosanitari esistenti. Ognuno di esso è caratterizzato da informazioni che ne specificano il tipo, l'utilizzo e le avvertenze. </p>
+  <p id="titoloPagina" class="text-center"> ,Prodotti Fitosanitari</p>
+  <p id="sottoTitolo" class="text-center" class="w3-large">Elenco di tutti i prodotti fitosanitari esistenti. Ognuno di esso è caratterizzato da informazioni che ne specificano il tipo, l'utilizzo e le avvertenze. </p>
 </div> 
 
 <!--  Barra di Ricerca-->
 
 <div class="wrap">
-   <div class="search">
+   <div class="barraRicerca">
    <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
      </button>
-      <input type="text" class="searchTerm" placeholder="Digita il nome di un prodotto fitosanitario...">
-      
+      <input type="text" class="testoRicerca" class="searchTerm" placeholder="Digita il nome di un prodotto fitosanitario...">
+
    </div>
 </div>
 
 <!-- Pulsanti -->
-<div class="pulsanti">
-<button class="button button1">Visualizza i miei prodotti nel magazzino</button>
-<button class="button button2">Aggiungi un prodotto al mio magazzino</button>
+<div id="pulsante" class="text-center">
+<a class="link1">Clicca qui per:</a> <a  href="Magazzino.jsp" class="link button1"> Mostra solo <em><u>"I miei prodotti"</u></em> in Magazzino</a>
+
 </div>
+ 
 
 <!-- Avvertenze -->
 <div class="avvertenze">
@@ -212,12 +213,7 @@ only screen and (max-width: 1280px)  {
    </div>
 </div>
  -->
-<!-- Pulsanti 
-<div class="pulsanti">
-<button class="button button1">Visualizza i miei prodotti nel magazzino</button>
-<button class="button button2">Aggiungi un prodotto al mio magazzino</button>
-</div>
- -->
+
 <!-- Avvertenze 
 <div class="avvertenze">
 <p id="avviso" class="text-center"><em>Leggere <u>CON ATTENZIONE</u> le etichetta  prima  dell'uso.

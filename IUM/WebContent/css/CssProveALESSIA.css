@@ -537,19 +537,8 @@ width:100%;
 
 /******************************************PRODOTTI FOTOSANITARI******************************************************************/
 
-w3-row-padding{
-	border: 1px solid black;
-}
 
-h3{
-	font-size: 36px;
-	font-weight: bold; 
-	color: blue;
-}
 
-.pulsanti{
-	margin-left: 200px;
-}
 
 .button {
   background-color: #4CAF50; /* Green */

@@ -91,7 +91,17 @@ body{
 	color: black;
 	font-family: 'treeftrregular';
 	margin-top: 15px;
+	margin-bottom: 20px;
 }
+
+#titoloHP{  /*titoli Home page loggata*/
+	font-size: 42px; 
+	color: black;
+	/*font-family: 'treeftrregular';*/
+	margin-top: 15px;
+
+}
+
 
 #titoloParagrafo{ /*paragrafi nella homepage NON LOGGATA*/
 	font-size: 34px;
@@ -109,6 +119,13 @@ body{
 	font-weight: bold;
 }
 
+
+#sottoTitolo{
+	font-size: 22px;
+	color: black;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
 
 /*******************************************************HOME PAGE LOGGATA E NON ***************************************************/
 /*Cards funzionalità sulla Homepage loggata*/
@@ -498,7 +515,7 @@ border-bottom: 1px solid;
 }
 
 
-/*Navbar animazione dropdown*/
+/*Navbar animazione dropdown*/  /************* NAV BAR LATERALE *******************************************************************/
 .dropdown-menu-animation{
 	
 	animation:slideInUp;
@@ -509,14 +526,15 @@ border-bottom: 1px solid;
 
 .icon-bar {
   width: 100px; 
-  background-color: aqua; 
+  background-color: #23a9d8; 
   z-index:1;
-  	animation: fadeInLeft;
-	animation-duration: 1s;
-
-float: left;
+  animation: fadeInLeft;
+  animation-duration: 1s;
+  float: left;
   position:fixed;
   margin-top: 10%;
+  border-radius: 0px;
+ border: 1px solid white;
   }
   
 
@@ -529,12 +547,13 @@ float: left;
   transition: all 0.3s ease; 
   color: white; 
   font-size: 40px; 
-  
+   border-radius: 0px;
+border: 1px solid white;
 }
 
 .icon-bar a:hover {
   background-color: white; 
-   color:aqua;
+  color:aqua;
   
 
 }
@@ -544,7 +563,7 @@ float: left;
 	visibility: hidden;
 	text-align: center;
 	  position: absolute;
-	background-color: aqua;
+	background-color: #23a9d8;
 	color:white;
 	font-size: 20px;
 	
@@ -554,9 +573,9 @@ float: left;
      visibility: visible;
 	text-align: center;
 	  position: absolute;
-	background-color: aqua;
-	width: 150px;
-	height: 60px;
+	background-color: #23a9d8;
+	width: 180px;
+	height: 70px;
 	margin-left:30px;
 	animation: fadeIn;
 	animation-duration: 1s;
@@ -603,18 +622,16 @@ float: left;
 .tableFixHead thead th { position: sticky; top: 0; }
 .head-tabella  th{
 border:none;
-background-color: green;
+background-color: #4CAF50;
 color:white;
 
 }
  .head-tabella{
- 
- 
- background-color: green;
+ background-color: #4CAF50;
   color: white; 
  font-weight: bold;
-  font-size: 18px;
-   height:75px;
+  font-size: 24px;
+   height: auto;
  
  }
 /*
@@ -798,9 +815,7 @@ td
 	  text-shadow: 2px 2px 5px rgba(40, 150, 5, 1);
 }
 
-#titoloPagina{
-margin-bottom: 50px;
-}
+
 
 #titoloCaselle{ 
 	font-size: 45px;
@@ -1120,7 +1135,180 @@ border-bottom: 1px solid rgba(40, 150, 5, 0.9);
 	}
 
 
+/******************************************PRODOTTI FOTOSANITARI******************************************************************/
 
 
+
+
+
+/* .button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 14px 50px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari 
+  transition-duration: 0.4s; 
+}
+
+.button1:hover {
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2), 0 6px 6px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2),0 6px 6px 0 rgba(0,0,0,0.19);
+}*/
+
+
+.link {
+  border: none;
+  color: #4CAF50;
+  text-align: center;
+  display: inline-block;
+  font-size: 32px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s; 
+  margin:auto;
+  width: 50%;
+}
+
+
+.link1 {
+  border: none;
+  color: #4CAF50;
+  text-align: center;
+  display: inline-block;
+  font-size: 32px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s; 
+  margin:auto;
+  width: 20%;
+}
+.button1:hover {
+  text-shadow: 2px 2px 5px rgba(40, 150, 5, 1);
+
+}
+
+#avviso{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 150px;
+	font-size: 10px;
+	font-weight: bold;
+	font-style: italic;
+	color:red;
+	opacity: 0.6;
+	width: 80%;
+	border: 1px solid #ff8080;
+}
+
+#avviso:hover{;
+	opacity:1; 
+	border: 1px solid red;
+}
+
+/* barra di ricerca */
+
+
+
+.barraRicerca {
+	width: 80%;
+	position: relative;
+	border: 1px solid #23a9d8;
+	border-radius: 25px;
+	margin: auto;
+	display: inline-flex;
+	height: 35px;
+	margin-left: 10%;
+	margin-bottom: 15px;
+}
+
+.searchTerm {
+	width: 80%;
+	padding-left: 10px;
+	border-radius: 5px 0 0 5px;
+	text-align: left;
+	color: grey;
+	border: none;
+}
+
+.searchTerm:focus{
+  color: black;
+  font-size: 18px;
+}
+
+.searchButton {
+	width: 40px;
+	border: 1px solid #23a9d8;
+	background: #23a9d8;
+	text-align: center;
+	color: #fff;
+	border-radius: 25px;
+	cursor: pointer;
+	font-size: 20px;
+	position: relative;
+}
+
+.testoRicerca[type="text"] {
+	width: 100%;
+	/* margin: 16px; */
+	display: inline-block;
+	border: none;
+	box-sizing: border-box;
+	background: transparent;
+	color: black;
+	margin: auto;
+}
+
+
+/* elenco */
+
+#intest{
+	font-size: 18px;
+	
+}
+
+.prodFit{
+	margin-left: 150px;
+	width: 80%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+
+
+
+.head-tabella {
+	background-color: #4CAF50;
+	color: white;
+	font-weight: normal;
+	/* font-size: 34px; */
+	height: auto;
+}
+
+.tableFixHead thead th {
+	position: sticky;
+	top: 0;
+	font-size: 24px;
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+	border-bottom: 1px solid #ddd;
+	font-size: 18px;
+}
 
 
