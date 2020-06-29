@@ -125,7 +125,7 @@ only screen and (max-width: 1280px)  {
 <a class="link1">Clicca qui per:</a> <a  href="Magazzino.jsp" class="link button1"> Mostra solo <em><u>"I miei prodotti"</u></em> in Magazzino</a>
 
 </div>
- 
+  
 
 <!-- Avvertenze -->
 <div class="avvertenze">
