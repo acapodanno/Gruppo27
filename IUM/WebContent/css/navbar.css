@@ -1427,14 +1427,17 @@ th, td {
 	border: none;
 	cursor: pointer;
 	width: 20%;
-	padding: 15px 20px;
+	padding: 1px 1px;
 	border-radius: 5px;
 	font-size: 18px;
 	text-transform: uppercase;
 	text-align: center;
 }
 
-
+#addBottone:hover {
+	 background-color: RoyalBlue;
+	
+}
 
 /* elenco */
 

@@ -200,38 +200,45 @@ input[type="text"]:disabled {
 border: none;}
 input[type="date"]:disabled {
 border: none;}
- .contenitore-delega{
-    width: 100%;
-    height: 100%;
-    z-index:1;
-    position:absolute;
-    top:0;
-    left:0;
-    display:flex;
-    justify-content:center;   
-    align-items: center;
-    padding-top: 20%;
- }
+
+.contenitore-delega {
+	width: 100%;
+	height: auto;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20%;
+}
 
 .close-delegato{
     width:15px;
-    color: #000;
+    color: black;
 	font-size: 20px;
 	font-weight: bold;
 	position:relative;
 	float: right;
-	
+	margin-right: 10px;
 }
-.bottoni-pop-up{
-height:80%;
- width: 100%;
- display: grid;
- 	grid-template-columns: 100px 100px;
 
-justify-content: center;
-	grid-Column-gap:5%;
 
+.fa-close:hover{
+	color: red;
+	cursor: pointer;
 }
+.bottoni-pop-up {
+	height: 20%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 100px 100px;
+	justify-content: center;
+	grid-Column-gap: 5%;
+	margin-top: 30px;
+}
+
 .colore-bottoni{
 
  /* background: #1161ee;
@@ -256,17 +263,48 @@ justify-content: center;
 	font-size: 20px;
 }
 
+
+#confermaBottone:hover{
+
+background-color: green;
+
+}
+
+#annullaBottone:hover{
+
+background-color: red;
+
+}
+
+
+
 #delega-pop-up{
 	display: none;
 }
 
-#blocco-delega{
-    width: 400px;
-    height:auto;
-    background-color: white;
-	display: grid;
-	grid-template-rows:25px 50px 50px 50px ;
+#blocco-delega {
+	width: 400px;
+	height: 150px;
+	background-color: white;
+	/* display: grid; */
+	grid-template-rows: 25px 50px 50px 50px;
 	border-radius: 10px;
+	border: 1px solid gainsboro;
+}
+
+
+#titolo-pop-up{
+font-size: 28px;
+font-weight: bold; 
+ margin: auto;
+ width: 30%;
+}
+
+#pop-text {
+	font-size: 18px;
+	/* margin: auto; */
+	/* width: 80%; */
+	margin-left: 50px;
 }
 </style>
 
@@ -421,7 +459,7 @@ for(RegistroFitosanitario reg : listaReg ){
       <div class="contenitore-delega" id="delega-pop-up">
 		 <div id="blocco-delega" class="animazione-login">
 		     <span class ="close-delegato" style="color: black"><i class=" fa fa-close" onclick="document.getElementById('delega-pop-up').style.display='none'"></i></span>
-		    <h2 id="titolo-pop-up">Conferma </h2>
+		    <p id="titolo-pop-up">Conferma </p>
 		    <div >
 		    
 		    <p id="pop-text"></p>
@@ -429,8 +467,8 @@ for(RegistroFitosanitario reg : listaReg ){
 		  
 		   
 		    <div class="bottoni-pop-up" >
-		      <input type="submit" class="colore-bottoni" id="bottone-popu-conferma" value="Conferma">
-		 		 <input type="button" value="Annulla" onclick="document.getElementById('delega-pop-up').style.display='none'" class="colore-bottoni">
+		      <input type="submit" class="colore-bottoni" id="confermaBottone" id="bottone-popu-conferma" value="Conferma">
+		 		 <input type="button" id="annullaBottone" value="Annulla" onclick="document.getElementById('delega-pop-up').style.display='none'" class="colore-bottoni">
 		     </div>
 		
 		    </div>
