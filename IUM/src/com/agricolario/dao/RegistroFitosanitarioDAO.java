@@ -296,7 +296,32 @@ public class RegistroFitosanitarioDAO {
 		
 	}
 	
-	
+public boolean deleteRegistroId(int idregistro) {
+		  
+			
+		//delete from trattamento where idregistro = 5;
+		String sql="delete from registrofitosanitario where idregistrofitosanitario = ? ;";
+		Connection con= connessione.getConn();
+		new TrattamentoDAO().deleteTrattamentoByIdRegistro(idregistro);
+		
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, idregistro);
+			ps.executeUpdate();
+			return true;
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}finally {
+			if(connessione!=null) {
+				
+				connessione.closeConn();
+			}
+		}
+			
+	}
 	
 	
 	

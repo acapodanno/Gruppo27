@@ -55,8 +55,7 @@ class TrattamentoDAOTest {
 	   ProdottoFitosanitario p= new ProdottoFitosanitarioDAO().getProdotto("Centurion 240 Neo");
 	  
 	   
-	   System.out.println(p.toString());
-	   boolean valore = new TrattamentoDAO().updateTrattamento(7, p.getIdProdottoFitosanitario(),"mele",p.getNome() , ParseDate.parseDateUtil("2020-08-17") ,220, 50, "Porco infame brucia", "Cerca di colpire un pollo con un bazooka", "adfdafa",1);
+	   boolean valore = new TrattamentoDAO().deleteTrattamentoByIdRegistro(3);
 	   assertTrue(valore);
 	   
 	   

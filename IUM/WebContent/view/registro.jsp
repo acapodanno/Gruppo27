@@ -363,20 +363,20 @@ for(RegistroFitosanitario reg : listaReg ){
            
   %>
     <tr scope="row" class="text-center trattamenti" id="<%=u.getIdTrattamento()%>">
-      <td  ><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" ></td>
-      <td><input type="text" value="<%=u.getColtura() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" ></td>
-      <td><input type="date" value="<%= u.getDatInzio() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" ></td>
-      <td><input type="text" value="<%= u.getSuperficie() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"oninput="soloNumeri(this)" ></td>
-       <td ><input type="text" value="<%= u.getQuantita()%>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"oninput="soloNumeri(this)"></td>
-      <td><input type="text" value="<%= u.getAvversita() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"></td>
-     <td ><input type="text" value="<%=u.getNote() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"></td>
+      <td  ><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="nomeProdotto<%=u.getIdTrattamento()%>" ></td>
+      <td><input type="text" value="<%=u.getColtura() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="coltura<%=u.getIdTrattamento()%>"></td>
+      <td><input type="date" value="<%= u.getDatInzio() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"  id="data<%=u.getIdTrattamento()%>"></td>
+      <td><input type="text" value="<%= u.getSuperficie() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" oninput="soloNumeri(this)" id="sup<%=u.getIdTrattamento()%>" ></td>
+       <td ><input type="text" value="<%= u.getQuantita()%>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"oninput="soloNumeri(this)"id="quantita<%=u.getIdTrattamento()%>"></td>
+      <td><input type="text" value="<%= u.getAvversita() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="avv<%=u.getIdTrattamento()%>"></td>
+     <td ><input type="text" value="<%=u.getNote() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="note<%=u.getIdTrattamento()%>"></td>
         <%
    
         if(anno== annoRegistro  ){ 
         
         creazione=true;
         %>
-     <td scope="col">  <input type="checkbox" style=" display:none" class="select-prodotto" onclick="visualizzaBottoni(this)" value="<%=u.getIdTrattamento()%>" >  </td>
+     <td scope="col">  <input type="checkbox"  checked="checked" style=" display:none" class="select-prodotto" onclick="visualizzaBottoni(this)" value="<%=u.getIdTrattamento()%>" >  </td>
      
      <%} %>
          </tr>
@@ -498,7 +498,7 @@ for(RegistroFitosanitario reg : listaReg ){
     	  $(el).text("Annulla");
     	  $(".select-prodotto").show();
       	  annullaModifica=true;   
-      	$('#trattamento , .bottoni').empty();
+      	  $('#trattamento , .bottoni').empty();
 	      $(".select-prodotto").prop("checked", false);
    	      $(".select-prodotto").prop("disabled", false); 
    	      
@@ -509,7 +509,7 @@ for(RegistroFitosanitario reg : listaReg ){
        	      $(".select-prodotto").prop("disabled", false); 
   	          $(".select-prodotto").prop("checked", false);
   	          $('#trattamento , .bottoni').empty();
-    		  $( el ).css( "background-color" ,"green");
+    		  $( el ).css( "background-color" ,"#23A9D8");
         	  $(el).text("Modifica");
         	  $(".select-prodotto").hide();
           	 $('.input-modifica').prop('disabled',true);
@@ -537,7 +537,7 @@ for(RegistroFitosanitario reg : listaReg ){
     		      '<td ><input type="text" id="avv"></td>'+
     		     '<td ><input type="text" id="note"></td>'+
     		     		'<td></td>'								+
-    		     '</tr>'+'<tr  scope="row" class="bottoni" > <td colspan="8"> <div class= "text-center"> <button onclick="showPop(this.id)" class="shadow buttone-modifica" id="aggiungi">Aggiungi</button> <button class="shadow buttone-modifica" id="annulla" onClick="clickAnnullaAggiungi()">Annulla</button></div> </td><tr>');
+    		     '</tr>'+'<tr  scope="row" class="bottoni" > <td colspan="8" class= "text-center"> <button onclick="showPop(this.id)" class="shadow buttone-modifica" id="aggiungi">Aggiungi</button> <button class="shadow buttone-modifica" id="annulla" onClick="clickAnnullaAggiungi()">Annulla</button></td><tr>');
     	  $("#nomeProdotto").keyup(function() {
 
 			 if(this.value!="") {
@@ -652,7 +652,7 @@ function visualizzaBottoni(el){
        		  s.concat(el.value);
        		  $(s).prop("disabled", false); 
        	      $('.input-modifica'+el.value).prop("disabled", false); 
-              $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9"> <button onclick="showPop(this.id)" id="update" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button></td><tr>')
+              $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9" class= "text-center"> <button onclick="showPop(this.id)" id="update" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button></td><tr>')
  			 
  			 
         	  
@@ -685,6 +685,111 @@ function addTrattamento(){
 	var note= $("#note").val();
 	var id= $("#idregistro").val();
 	console.log(nome+" "+ coltura+" " +" " +data +" "+sup+" "+id+" "+quantita+" "+avv+" "+note +" ");
+	   
+    $.ajax({
+	      type:"POST",
+	      data:{
+	    	  "idregistro" : id,
+	    	  "nomeProdotto":nome,
+	    	  "coltura" : coltura,
+	    	  "dataInizio" : data,
+	    	  "quantita" : quantita,
+	    	  "superficie" : sup,
+	    	  "avversita" : avv,
+	    	  "note" : note
+	      },
+	      url:"aggiungiTrattamento",
+	      success : function(data){
+	    	 var object= JSON.parse(data);
+	    	   showPop(object.inserimento);
+	    	 
+	    	 
+	    	 
+	    	}});
+	
+	
+	
+	
+	
+	
+	
+	
+}
+function modificaTrattamento(){
+//	var  items= document.getElementsByClassName('select-prodotto'); // elementi check-box
+	var idTrattamento = 0; 
+
+	var array = document.getElementsByTagName("input");
+
+
+	for(var ii = 0; ii < array.length; ii++)
+	{
+
+	   if(array[ii].type == "checkbox")
+	   {
+	      if(array[ii].className == 'select-prodotto')
+	       {
+	       if( array[ii].checked){
+	    	   
+	    	  idTrattamento = array[ii].value;
+	    	   
+	       }
+
+	       }
+
+
+	   }
+	}
+	
+	
+	
+//	var nome = $('#nomeProdotto'+idTrattamento).val();
+	var nome = $("#nomeProdotto"+idTrattamento).val();;
+	var coltura= $("#coltura"+idTrattamento).val();;
+	var data= $("#data"+idTrattamento).val();;
+	var sup= $("#sup"+idTrattamento).val();;
+	var quantita= $("#quantita"+idTrattamento).val();
+	var avv= $("#avv"+idTrattamento).val();;
+	var note= $("#note"+idTrattamento).val();
+	var id= $("#idregistro").val();
+	console.log(nome+" "+ coltura+" " +" " +data +" "+sup+" "+id+" "+quantita+" "+avv+" "+note +" ");
+	   jQuery.noConflict();
+    $.ajax({
+	      type:"POST",
+	      data:{
+	    	  "idtrattamento" : idTrattamento,
+	    	  "idregistro" : id,
+	    	  "nomeProdotto":nome,
+	    	  "coltura" : coltura,
+	    	  "dataInizio" : data,
+	    	  "quantita" : quantita,
+	    	  "superficie" : sup,
+	    	  "avversita" : avv,
+	    	  "note" : note
+	      },
+	      url:"modificaTrattamento",
+	      success : function(data){
+	    	 var object= JSON.parse(data);
+	    	   showPop(object.inserimento);
+	    	 
+	    	}});
+	
+	
+}
+function eliminaRegistro(){
+	//
+		   jQuery.noConflict();
+
+	  $.ajax({
+	      type:"POST",
+	      url:"eliminaRegistro",
+	      success : function(data){
+	    	 var object= JSON.parse(data);
+	    	   showPop(object.eliminazione);
+	    	}});
+	
+	
+	
 	
 }
 function showPop(str){
@@ -700,21 +805,41 @@ function showPop(str){
 	 		document.getElementById('titolo-pop-up').innerText="Conferma"	
 			document.getElementById('pop-text').innerText="Sei sicuro di voler modificare il trattamento?"
 	 		//
-				document.getElementById('bottone-popu-conferma').setAttribute("onclick","sonoPremuto()");
+				document.getElementById('bottone-popu-conferma').setAttribute("onclick","modificaTrattamento()");
 			 		
 	 	}else if(str=="elimina-registro"){
 	 		document.getElementById('titolo-pop-up').innerText="Conferma"	
 			document.getElementById('pop-text').innerText="Sei sicuro di voler eliminare il registro del ?"
 					
-				document.getElementById('bottone-popu-conferma').setAttribute("onclick","sonoPremuto()");
+				document.getElementById('bottone-popu-conferma').setAttribute("onclick","eliminaRegistro()");
 
 	 	}else if(str=="crea-registro"){
 	 		document.getElementById('titolo-pop-up').innerText="Conferma"	
 				document.getElementById('pop-text').innerText="Sei sicuro di voler creare un nuovo registro?"
 					document.getElementById('bottone-popu-conferma').setAttribute("onclick","sonoPremuto()");
 
-		}
+		}else  if(str=="true"){
+			
+			document.getElementById('titolo-pop-up').innerText="Operzione Effettuata";
+		    document.getElementById('pop-text').innerText="Il prodotto è stato inserito!!";
+			$('.bottoni-pop-up').hide();
+					window.setTimeout("ricaricaPagina()", 2000);
+			}else if(str=="false"){
+				
+				
+				
+			}
+
 	}
+	
+function ricaricaPagina(){
+	
+    location.reload();
+
+	
+}	
+	
+	
 function sonoPremuto(){
 	
 	console.log("sono premuto ")

@@ -1,6 +1,7 @@
 package com.agricolario.lv;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -44,28 +45,16 @@ public class aggiungiTrattamento extends HttpServlet {
 		String superficie = request.getParameter("superficie");
 		String avversita = request.getParameter("avversita");
 		String note = request.getParameter("note");
-			
-		
-		
-		
 		ProdottoFitosanitario p = new ProdottoFitosanitario();
 		p= new ProdottoFitosanitarioDAO().getProdotto(nomeProdotto);
 		int idProdotto = p.getIdProdottoFitosanitario();
 		String unita = p.getDose();
-		//int idregistro,int idProdotto,String coltura,String nome,Date dataInizio,double superficie,float quantita,String avversità,String note,String unita
 		boolean inserimento =new TrattamentoDAO().addTrattamento(Integer.parseInt(idregistro), idProdotto, coltura, nomeProdotto,ParseDate.parseDateUtil(dataInizio), Double.parseDouble(superficie), Float.parseFloat(quantita), avversita, note, unita);
-		
-		
-		
-		
-		
-		
-		/*
-		 * 
-		 * 
-		 * 
-		 * 
-		 * idprodotto`,`idregistro`,`coltura`,`dataInizio`,`superficieInEttari`,`nomeprodotto`,`quantitaProdotto`,`unitaDiMisuraProdotto`,`avversita`,`note`*/
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
+		out.append("{\"inserimento\":\""+inserimento+"\"}");
+		out.flush();
 	
 	
 	

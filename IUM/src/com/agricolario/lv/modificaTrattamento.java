@@ -1,6 +1,8 @@
 package com.agricolario.lv;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,22 +33,41 @@ public class modificaTrattamento extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		String idregistro = request.getParameter("idregistro");
 		System.out.println(idregistro);
 		String idtrattamento = request.getParameter("idtrattamento");
 		System.out.println(idtrattamento);
 		String nomeProdotto= request.getParameter("nomeProdotto");
+		System.out.println(nomeProdotto);
+
 		String coltura= request.getParameter("coltura");
+		System.out.println(coltura);
+
 		String dataInizio = request.getParameter("dataInizio");
+		System.out.println(dataInizio);
+
 		String quantita = request.getParameter("quantita");
+		System.out.println(quantita);
+
 		String superficie = request.getParameter("superficie");
+		System.out.println(superficie);
+
 		String avversita = request.getParameter("avversita");
+		System.out.println(avversita);
+
 		String note = request.getParameter("note");
+		System.out.println(note);
+
 		ProdottoFitosanitario p = new ProdottoFitosanitario();
 		p= new ProdottoFitosanitarioDAO().getProdotto(nomeProdotto);
 		int idProdotto = p.getIdProdottoFitosanitario();
-		new TrattamentoDAO().updateTrattamento(Integer.parseInt(idregistro), idProdotto, coltura, nomeProdotto,ParseDate.parseDateUtil(dataInizio), Double.parseDouble(superficie), Float.parseFloat(quantita), avversita, note, p.getDose(), Integer.parseInt(idtrattamento));
-		
+		boolean modifca = new TrattamentoDAO().updateTrattamento(Integer.parseInt(idregistro), idProdotto, coltura, nomeProdotto,ParseDate.parseDateUtil(dataInizio), Double.parseDouble(superficie), Float.parseFloat(quantita), avversita, note, p.getDose(), Integer.parseInt(idtrattamento));
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
+		out.append("{\"inserimento\":\""+modifca+"\"}");
+		out.flush();
 	}
 
 	/**
