@@ -21,6 +21,12 @@
 	<title> </title>
 	
 	<style> 
+	
+	body{
+	   font-family: "Dosis";
+	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
+	}
+	
 .hr {
 	height: 2px;
 	margin: 60px 0 50px 0;
@@ -300,7 +306,7 @@ img{
     if(loggato){
      Utente user =(Utente) session.getAttribute("utente");
     %>
-     <div id="icone" class="align-baseline ml-6 icon-bar-vertical">
+     <div id="icone" class="align-baseline icon-bar-vertical">
   	<a class="" href="showHome"><img src="https://img.icons8.com/officel/30/000000/home-page.png"/></a>
   	<a href="showAccount" class=" ml-3" ><img src="https://img.icons8.com/officel/30/000000/gender-neutral-user.png"/></a>
   	<a href="#" class=" ml-3"><img src="https://img.icons8.com/officel/30/000000/appointment-reminders.png"/></a>

@@ -44,10 +44,10 @@ setTop=true;
    			 <div class=" cazzarielli-testo1" id="cazzariello1" >
     
     
-  		  <h4 id="titoloParagrafo2"> ,REGISTRO DEI TRATTAMENTI FITOSANITARI</h4>
+  		 <a href="showRegistro"> <h4 id="titoloParagrafo2"> ,REGISTRO DEI TRATTAMENTI FITOSANITARI</h4></a>
   		  <p id="sparisci">Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari! <br>
 			Tramite pochi pratici click potrai aggiungere un trattamento al tuo registro fitosanitario, apportare modifiche, visualizzare e stampare i registri degli anni precedenti.
-
+		
     </p>
     </div>
 
@@ -62,7 +62,7 @@ setTop=true;
    				 </div>
                 <div  class=" cazzarielli-testo1" >
     
-                  <h4 id="titoloParagrafo2" > ,PRODOTTI FITOSANITARI</h4>
+                 <a href="showProdottiFitosanitari">  <h4 id="titoloParagrafo2" > ,PRODOTTI FITOSANITARI</h4> </a>
                 <p id="sparisci">Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti, consulta tutte le informazioni importanti, le etichette e le avvertenze di ogni singolo prodotto fitosanitario! <br>
 		Potrai visualizzare anche solo i tuoi prodotti fitosanitari presenti nel tuo magazzino e aggiungerne nuovi. 
  			</p>
@@ -80,7 +80,7 @@ setTop=true;
     	<div  class=" cazzarielli-testo2" id="cazzariello2">
     
     
-  			  <h4 id="titoloParagrafo2"> ,SCADENZE</h4>
+  			<a href="showScadenze">  <h4 id="titoloParagrafo2"> ,SCADENZE</h4> </a>
     <p id="sparisci">Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati! <br>
 Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi tempi. 
     
@@ -98,7 +98,7 @@ Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi te
     <div  class=" cazzarielli-testo2" class="destra">
     
     
-    <h4 id="titoloParagrafo2"> ,TRACCIABILITÀ</h4>
+    <a href="showTracciabilita"> <h4 id="titoloParagrafo2"> ,TRACCIABILITÀ</h4> </a>
     <p id="sparisci" class="mt-2">Crea qui l'etichetta virtuale! <br>
 Generando un semplice codice QR potrai visualizzare tutte le informazioni suoi tuoi prodotti. 
 
