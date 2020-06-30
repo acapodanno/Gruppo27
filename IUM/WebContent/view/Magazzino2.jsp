@@ -64,16 +64,16 @@
    <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
      </button>
-      <input type="text" id="testo-per-ricerca" class="searchTerm" placeholder="Digita il nome di un prodotto fitosanitario...">
+      <input type="text" class="testoRicerca" class="searchTerm" placeholder="Digita il nome di un prodotto fitosanitario...">
       <div id="live-search">Ciao alessia io sono un div  a caso Ciauu</div>
    </div>
 </div>
 
 
 <!-- Label -->
-<div class="">
-<p  class="tit2"> Per aggiungere un prodotto a "I miei Prodotti" compila i seguenti campi:</p>
-</div>
+<div class="formAgg">
+<p  class="text-center tit2"> Per aggiungere un prodotto a "I miei Prodotti" compila i seguenti campi:</p>
+
 
   <form method="post" id="frm">
 <div  id="theFormDiv" class="text-center" >
@@ -87,12 +87,12 @@
   
 </form>
 
-
-<!-- Pulsanti -->
-<div id="pulsante" class="text-center">
-<p class="click" style="color: black">Clicca qui per:<a href="showProdottiFitosanitari" class="link"> Mostra <em><u>"Prodotti Fitosanitari"</u></em> </a></p>
-
+<div class="text-center" >
+<p class="click2" style="color: black">Oppure clicca qui:<a href="showProdottiFitosanitari" class="link2"> Visualizzare <em><u>"Prodotti Fitosanitari"</u></em> </a></p>
 </div>
+</div>
+
+
   
 
 <!-- Label -->

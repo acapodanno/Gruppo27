@@ -84,7 +84,7 @@
 
 	<div id="divMag" class="text-center">
 	<h4 id="titoloCaselle" >Magazzino</h4>
-    <a href= "Magazzino.jsp"> <button id="bottoneMag"  > Visualizza le tue giacenze.</button></a>
+    <a href= "showMagazzino"> <button id="bottoneMag"  > Visualizza le tue giacenze.</button></a>
 </div>
 
 
