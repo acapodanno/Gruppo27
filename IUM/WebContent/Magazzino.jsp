@@ -481,50 +481,11 @@ th, td {
 </head>
 <body>
 
-<!-- ----------------------------------------NAV BAR----------------------------------------------- -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
-  <a class="navbar-brand ml-7" href="#HomePage.jsp">
-  	<img src="image/LOGO.png" width="75" height="75" class="d-inline-block align-top">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-    <ul class="navbar-nav justify-content-center ">
-      <li class="nav-item active mr-5  dropdown ">
-     
-        <a class=" nav-link navbar-element" href="#" role="button" data-toggle="dropdown"  data-hover="dropdown">COME FUNZIONA</a>
-        <div class="dropdown-menu dropdown-menu-animation" >
-   			 	 <a class="dropdown-item" href="#">Registro Fitosanitario</a>
-   				 <a class="dropdown-item" href="#">Prodotti Fitosanitario</a>
-    			 <a class="dropdown-item" href="#">Scadenze</a>
- 				 <a class="dropdown-item" href="#">Tracciabilità</a>
- 	
- 		</div>
- 	
-      </li>
-      <li class="nav-item active mr-5 navbar-element">
-        <a class="nav-link navbar-element" href="#">VANTAGGI</a>
-      </li>
-      <li class="nav-item active mr-5 ">
-        <a class="nav-link active navbar-element" href="#">CHI SIAMO</a>
-      </li>
-      <li class="nav-item active mr-5">
-        <a class="nav-link navbar-element" href="#">ASSISTENZA</a>
-      </li>
-    </ul>
-   <font color="#009e0f"><button class="primo" onclick="document.getElementById('id01').style.display='block'"
-		style="width:auto;">ACCEDI</button></font>
-   	</div>
-	</nav>
-  
-  
-  <!-- ---------------------FINE NAV BAR---------------------------------------------------------------- -->
 
 <div class="w3-container">
   <h3 id="titoloPagina" class="text-center"> ,MAGAZZINO</h3>
-  <p class="text-center" class="w3-large">Elenco dei prodotti da te posseduti, classificati per nome, descrizione e quantità rimasta. </p>
+  <p id="sottoTitolo" class="text-center" class="w3-large">Elenco dei prodotti da te posseduti, classificati per nome, descrizione e quantità rimasta. </p>
 </div> 
 
 <!--  Barra di Ricerca-->

@@ -61,7 +61,7 @@ $( window ).ready(function() {
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
   />
   
-<title>Insert title here</title>
+<title>Agricolàrio - Registro dei Trattamenti Fitosanitari</title>
 <style type="text/css">
 
 
@@ -138,14 +138,31 @@ td> input[type="text"]{
  overflow-x:auto;
  background-color: white;
 }
+
+
 .buttone-modifica{
-width: 12%;
+/*width: 12%;
 height: auto;
 background-color: #009e0f;
 	color:white;
-	font-weight: bold;
-
+	font-weight: bold;*/
+	
+	height: 25%;
+	width: 12%;
+	background-color: #23a9d8;
+	color:white;
+	font-weight: ;
+	border: none;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 24px;
 }
+
+
+.buttone-modifica:hover{
+background-color: RoyalBlue;
+}
+
 .bottoni{
 
 text-align: center;
@@ -153,17 +170,32 @@ text-align: center;
 
 }
 #bottone-aggiungi {
-  background-color: DodgerBlue; 
+ /* background-color: DodgerBlue; 
   border: none; 
   color: white; 
   padding: 12px 16px; 
   font-size: 16px;
-  cursor: pointer; 
+  cursor: pointer; */
+  
+  	height: 25%;
+	width: 40%;
+	background-color: #23a9d8;
+	color:white;
+	font-weight: ;
+	border: none;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 28px;
 }
 
 #bottone-aggiungi:hover {
   background-color: RoyalBlue;
 }
+
+
+
+
+
 input[type="text"]:disabled {
 border: none;}
 input[type="date"]:disabled {
@@ -202,13 +234,28 @@ justify-content: center;
 }
 .colore-bottoni{
 
-  background: #1161ee;
+ /* background: #1161ee;
   border-radius: 25px;
   color: white;
   border:none;
-  text-transform: uppercase;
-
+  text-transform: uppercase; */
+  
+	background: #1161ee;
+	border-radius: 25px;
+	color: white;
+	border: none;
+	text-transform: uppercase;
+	height: 100%;
+	width: 100%;
+	background-color: #23a9d8;
+	color: white;
+	font-weight: ;
+	border: none;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 20px;
 }
+
 #delega-pop-up{
 	display: none;
 }
@@ -232,12 +279,12 @@ justify-content: center;
 
 
 <div class="container-fluid mt-5 ">
-	<div class="row justify-content-center ">
-	<div class="col col-lg-12 text-center ">
-			<h1 id="titoloPagina"> ,Registro Dei Trattamenti Fitosanitari</h1>
-		</div>
+
+	<div class="w3-container">
+  <p id="titoloPagina" class="text-center"> ,Registro Dei Trattamenti Fitosanitari </p>
+  <p id="sottoTitolo" class="text-center" class="w3-large">Visualizza, crea, modifica con facilità il tuo registro dei trattamenti fitosanitari.  </p>
+</div> 
 		
-	</div>
 <div id="grid-registro" class="mt-5">
 <div style="width:100% ;height:auto; " id="tab-registro">
 <%ArrayList<RegistroFitosanitario> listaReg = (ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro");%>
@@ -345,7 +392,7 @@ for(RegistroFitosanitario reg : listaReg ){
         creazione=true;
         %>
    <tr scope="row" class="text-center ultimo">
-      <td colspan="8"><button href="#"  id="bottone-aggiungi"><i class="fa fa-plus-circle"></i>Aggiungi trattamento</button></td>
+      <td colspan="8"><div class="text-center"> <button   href="#"  id="bottone-aggiungi"><i class="fa fa-plus-circle"></i> Aggiungi trattamento</button></div></td>
      </tr>
     
     
@@ -490,7 +537,7 @@ for(RegistroFitosanitario reg : listaReg ){
     		      '<td ><input type="text" id="avv"></td>'+
     		     '<td ><input type="text" id="note"></td>'+
     		     		'<td></td>'								+
-    		     '</tr>'+'<tr  scope="row" class="bottoni" > <td colspan="8"> <button onclick="showPop(this.id)" class="shadow buttone-modifica" id="aggiungi">Aggiungi</button> <button class="shadow buttone-modifica" id="annulla" onClick="clickAnnullaAggiungi()">Annulla</button></td><tr>');
+    		     '</tr>'+'<tr  scope="row" class="bottoni" > <td colspan="8"> <div class= "text-center"> <button onclick="showPop(this.id)" class="shadow buttone-modifica" id="aggiungi">Aggiungi</button> <button class="shadow buttone-modifica" id="annulla" onClick="clickAnnullaAggiungi()">Annulla</button></div> </td><tr>');
     	  $("#nomeProdotto").keyup(function() {
 
 			 if(this.value!="") {
@@ -666,7 +713,7 @@ function showPop(str){
 				document.getElementById('pop-text').innerText="Sei sicuro di voler creare un nuovo registro?"
 					document.getElementById('bottone-popu-conferma').setAttribute("onclick","sonoPremuto()");
 
-		}else if(str=true)
+		}
 	}
 function sonoPremuto(){
 	

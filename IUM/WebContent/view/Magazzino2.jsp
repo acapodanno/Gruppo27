@@ -41,73 +41,22 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Agricolàrio - Prodotti Fitosanitari </title>
-<style type="text/css">
+<title>Agricolàrio - Magazzino </title>
 
-@media 
-only screen and (max-width: 1280px)  {
-    .head-tabella{
-    display: none;
-    
-    }
-	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr { 
-		display: block; 
-	}
-	
-	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-	
-	tr { border: 1px solid #ccc; }
-	
-	td { 
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 50%; 
-	}
-	
-	td:before { 
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
-		white-space: nowrap;
-	}
-	
-	/*
-	Label the data
-	*/
-	td:nth-of-type(1):before { content: "Prodotto"; }
-	td:nth-of-type(2):before { content: "Descrizione"; }
-	td:nth-of-type(3):before { content: "Link"; }
-}
-
-
-
-
-
-</style>
 </head>
 <body>
   <%@ include file="navbar.jsp"%>
  
 <%@ include file="navbarLaterl.jsp"%>
 <!--  -->
-<div class="row justify-content-center ">
+
 <div class="w3-container">
-  <p id="titoloPagina" class="text-center"> ,Prodotti Fitosanitari</p>
-  <p id="sottoTitolo" class="text-center" class="w3-large">Elenco di tutti i prodotti fitosanitari esistenti. Ognuno di esso è caratterizzato da informazioni che ne specificano il tipo, l'utilizzo e le avvertenze. </p>
+  <p id="titoloPagina" class="text-center"> ,Magazzino </p>
+  <p id="sottoTitolo" class="text-center" class="w3-large">Elenco dei prodotti da te posseduti, classificati per nome, descrizione e quantità rimasta. </p>
 </div> 
-</div> 
+
+
+
 <!--  Barra di Ricerca-->
 
 <div class="wrap">
@@ -115,17 +64,41 @@ only screen and (max-width: 1280px)  {
    <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
      </button>
-      <input type="text" class="testoRicerca" class="searchTerm" placeholder="Digita il nome di un prodotto fitosanitario...">
-
+      <input type="text" id="testo-per-ricerca" class="searchTerm" placeholder="Digita il nome di un prodotto fitosanitario...">
+      <div id="live-search">Ciao alessia io sono un div  a caso Ciauu</div>
    </div>
 </div>
 
+
+<!-- Label -->
+<div class="">
+<p  class="tit2"> Per aggiungere un prodotto a "I miei Prodotti" compila i seguenti campi:</p>
+</div>
+
+  <form method="post" id="frm">
+<div  id="theFormDiv" class="text-center" >
+
+  <div class="aggProd">
+  <label id="label-first">Nome:</label> <input id="label-f"name="first" type="text">
+  <label id="label-first">Quantità:</label> <input id="label-f" name="last" type="text">
+  <button id="addBottone"> Aggiungi </button>
+	</div> 
+</div>
+  
+</form>
+
+
 <!-- Pulsanti -->
 <div id="pulsante" class="text-center">
-<p class="click" style="color: black">Clicca qui per:<a href="showMagazzino" class="link"> Mostra solo <em><u>"I miei prodotti"</u></em> in Magazzino</a></p>
+<p class="click" style="color: black">Clicca qui per:<a href="showProdottiFitosanitari" class="link"> Mostra <em><u>"Prodotti Fitosanitari"</u></em> </a></p>
 
 </div>
   
+
+<!-- Label -->
+<div class="">
+<p  class="tit">I miei prodotti: </p>
+</div>
 
 <!-- Avvertenze -->
 <div class="avvertenze">
@@ -134,10 +107,13 @@ only screen and (max-width: 1280px)  {
  <a href="https://www.minambiente.it/sites/default/files/archivio/normativa/dim_22_01_2014.pdf" style="color:blue"> disponibile qui.</a></em> </p>
 </div>
 
+
+
+
+
 <!-- Elenco -->
- <div class="prodFit tableFixHead" >
- 
-  <table >
+ <div class="prodFit" >
+  <table class="fixed_header">
   <colgroup>
     <col style="width:10%">
     <col  style="width:70%">
@@ -146,43 +122,81 @@ only screen and (max-width: 1280px)  {
   
 	<!-- Intestazione -->  
 	<thead class="head-tabella">
-    <tr >
+    <tr id="intest">
       <th> Nome</th>
       <th> Descrizione</th>
       <th> Link</th>
     </tr>
     </thead>
-    <tbody>
+
     <!-- Prodotto 1 -->
-    <%ArrayList<ProdottoFitosanitario> lista =(ArrayList<ProdottoFitosanitario>) request.getAttribute("pf");
-    for(ProdottoFitosanitario pf : lista)
-    {
-    %>
-    <tr>
-      <td><%=pf.getNome()%></td>
-      <td> 
-      <strong>Funzione:</strong> <%=pf.getFunzione() %><br>
-      <strong>Avversita:</strong> <%=pf.getAvversita() %><br>
-     <strong>Tempo carenza:</strong> <%=pf.getAvversita() %><br>
-     <strong>Tempo Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
-     <strong>Tempo carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
-     <strong>Dose :</strong> <%=pf.getDose() %>  <br>
-     <strong>Quantita :</strong> <%=pf.getQuantita() %> <br>
-     	
-      
-      </td>
-      <td> <a href="<%= pf.getEtichetta() %>">Link Etichetta</a></td>
+	<tr id="prod">
+      <th> nome qualcosa 66445</th>
+      <th> serve a fare tanta cacca e quindi a depurare il corpo e lo spirito insieme. </th>
+      <th> <a href=""> a mammt</a></th>
     </tr>
-    <%} %>
-    </tbody>
+
+     <!-- Prodotto 1 -->
+	<tr id="prod">
+      <th> nome qualcosa 66445</th>
+      <th> serve a fare tanta cacca e quindi a depurare il corpo e lo spirito insieme. </th>
+      <th> <a href=""> a mammt</a></th>
+    </tr>
+    
+     <!-- Prodotto 1 -->
+	<tr id="prod">
+      <th> nome qualcosa 66445</th>
+      <th> serve a fare tanta cacca e quindi a depurare il corpo e lo spirito insieme. </th>
+      <th> <a href=""> a mammt</a></th>
+    </tr>
   </table>
 </div>
  
- 
- 
- 
- 
-   <%@ include file="footer.jsp"%> 
+<script type="text/javascript">
+
+
+	jQuery.noConflict();
+//Io sono la ricerca e non faccio ancora nulla
+	$("#testo-per-ricerca").keyup(function() {
+		 
+		 var value= $("#testo-per-ricerca").val();
+              //Chiamata asincorna con jquery ohohohohohoh!!!!
+		         
+	    		 $.ajax({
+		      			type:"POST",
+		      			data:{"nome":this.value},
+		      			url:"ricercaMag",
+		      			success : function(data){
+		    	 		var object= JSON.parse(data);
+		    	 		console.log(object);
+		    	 		for (var i = 0; i < object.length; i++) {
+				//	 	$( "#live-search" ).append("<p onClick='cercaColtura(this)' id='"+object[i].name +"'>"+object[i].name +"</p>");
+				}
+		    	}});
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 });
+
+		
+	
+
+
+
+
+
+
+
+</script>
  
  
  
