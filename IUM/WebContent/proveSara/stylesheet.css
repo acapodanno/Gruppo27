@@ -1,4 +1,3 @@
-/* per chi siamo, vantaggi */
 *{
 	    font-family: "Dosis";	
 }
@@ -19,11 +18,11 @@ body {
     font-style: normal;
 }
 
+/* titolo generale delle pagine, è quello più grande di tutti */
 .title {
 	font-family: 'treeftrregular';
 	font-size: 70px;
 }
-
 @media screen and (max-width: 320px) {
   .title {
     font-size: 45px;
@@ -37,18 +36,17 @@ body {
     color: #289605;
     margin-top: 15px;
 }
-
 @media screen and (min-width: 320px) and (max-width: 1199px){
   .titoloParagrafo {
     font-size: 30px;
   }
 }
 
-
 .corpoParagrafo {
 	font-size: 18px;
 }
 
+/* header delle pagine chi siamo e vantaggi */
 .header {
 	color: white;
   	padding: 70px;
@@ -60,8 +58,31 @@ body {
  	background-image: linear-gradient(to bottom right, aquamarine, darkturquoise, mediumturquoise, darkseagreen);
 }
 
+/* pic di sfondo per l'header */
 .picture {
 	background-repeat: no-repeat;
  	background-size: cover;
  	background-position: center;
+}
+
+/*elenco puntato con foglie di tre colori con colori ordinati a gradiente */
+.foglie {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.foglie li:nth-child(4n+1) {
+	list-style-image: url('../image/foglia1.png');
+}
+
+.foglie li:nth-child(4n+2) {
+	list-style-image: url('../image/foglia2.png');
+}
+
+.foglie li:nth-child(4n+3) {
+	list-style-image: url('../image/foglia3.png');
+}
+
+.foglie li:nth-child(4n+4) {
+	list-style-image: url('../image/foglia2.png');
 }
