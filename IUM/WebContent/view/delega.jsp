@@ -10,7 +10,11 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <style type="text/css">
 
-
+body{
+	   font-family: "Dosis";
+	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
+	} 
+	
 #blocco-delega> h2 {
 text-align: center;
 

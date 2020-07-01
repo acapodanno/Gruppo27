@@ -43,7 +43,10 @@
 
 <title>Agricolàrio - Prodotti Fitosanitari </title>
 <style type="text/css">
-
+body{
+	   font-family: "Dosis";
+	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
+	} 
 @media 
 only screen and (max-width: 1280px)  {
     .head-tabella{

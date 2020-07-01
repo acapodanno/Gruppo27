@@ -56,6 +56,10 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style type="text/css">
+	body{
+	   font-family: "Dosis";
+	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
+	}
 #livesearch{
  z-index: 1;
   position: absolute;

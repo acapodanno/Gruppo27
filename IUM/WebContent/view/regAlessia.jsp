@@ -42,6 +42,12 @@
 </head>
 
 <style>
+
+body{
+	   font-family: "Dosis";
+	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
+	} 
+	
 .hr {
 	height: 2px;
 	margin: 60px 0 50px 0;

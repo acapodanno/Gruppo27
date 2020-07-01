@@ -4,6 +4,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
+<style>
+body{
+	   font-family: "Dosis";
+	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
+	} 
+</style>
 </head>
 <body >
 <div class="footer mt-5"  style="width: 100%; background-color: #009e0f">

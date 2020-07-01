@@ -5,6 +5,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="css/navbar.css">
+
+<style>
+
+	body{
+	   font-family: "Dosis";
+	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
+	}  
+</style>
+
 <title>HomePage - Agricolàrio</title>
 </head>
 <body>

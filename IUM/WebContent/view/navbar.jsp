@@ -90,10 +90,12 @@ display: inline-block;
 	font-size: 20px;
 }
 
-
+/* Caratteristiche del titolo 'Accedi'  */
 .titolo {
 	margin: auto;
 	width: 50%;
+	font-size: 35px;
+	color: white;
 }
 
 /* Primo pulsante accedi "esterno"*/   
@@ -133,17 +135,13 @@ button:hover {
 }
 
 /* Caratteristiche di tutte le label(etichette degli input) nel form  */
-label{
+.etichetteAccedi{
 	font-size: 1.5em;
 	color: white;
 	padding-bottom: 16px;
 }
 
-/* Caratteristiche del titolo 'Accedi'  */
-h1{
-	font-size: 35px;
-	color: white;
-}
+
 
 /* Bordi arrotondati per l'immagine sfondo */
 img{
@@ -341,10 +339,10 @@ img{
 
     <div class="contenitore">
     	<h1 class="titolo"><b> Accedi</b></h1><br>
-      <label><b>Inserisci qui la tua e-mail</b></label>
+      <label class="etichetteAccedi"><b>Inserisci qui la tua e-mail</b></label>
       <input  style="color: white;" type="text" placeholder="Email" name="email" required>
 
-      <label><b>Inserisci qui la tua password</b></label>
+      <label class="etichetteAccedi"><b>Inserisci qui la tua password</b></label>
       <input  style="color: white;" type="password" placeholder="Password" name="password"required> 
         
      

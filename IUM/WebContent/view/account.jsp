@@ -8,7 +8,10 @@
 <link rel="stylesheet" href="css/navbar.css">
 
 <style>
-
+body{
+	   font-family: "Dosis";
+	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
+	} 
 /*GRANDEZZE large, medium, small, extra-large e extra-small*/
 
 

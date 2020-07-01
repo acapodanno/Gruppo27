@@ -4,6 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<style>
+body{
+	   font-family: "Dosis";
+	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
+	} 
+</style>
 <title>Insert title here</title>
 </head>
 <body>
