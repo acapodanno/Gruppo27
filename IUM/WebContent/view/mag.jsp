@@ -270,7 +270,7 @@ font-weight: bold;
     <!-- Prodotto 1 -->
 	<tr id="prod">
       <th> <%= pm.getProdotto().getNome() %></th>
-      <th>  <%= pm.getQuantita() %> </th>
+      <th> <%if(pm.getQuantita()>0){ %> <%= pm.getQuantita() %><%}else{ %>Esaurito<%} %> </th>
       <th> <a href="<%= pm.getProdotto().getEtichetta() %>"> LINK ETICHETTA </a></th>
     </tr>
     

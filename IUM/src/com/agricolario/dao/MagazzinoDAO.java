@@ -73,7 +73,59 @@ public class MagazzinoDAO {
 		    	
 			
 		}
-		
+		public ArrayList<ProdottoMagazzino> liveSearchMagazzino(int idAzienda,String str) {
+			String sql ="SELECT * FROM magazzino join prodottofitosanitario \r\n" + 
+					"					 on prodottofitosanitario.idprodottofitosanitario = magazzino.idprodottofitosanitario \r\n" + 
+					"					 join azienda on magazzino.idazienda = azienda.idazienda \r\n" + 
+					"					where azienda.idazienda = 1 and prodottofitosanitario.nome  like \"%c%\"";
+			Connection con= connessione.getConn();
+             ArrayList<ProdottoMagazzino> lista= new ArrayList<ProdottoMagazzino>();
+			 try {
+					
+					PreparedStatement ps = con.prepareStatement(sql);
+					ps.setInt(1, idAzienda);
+					
+					ResultSet result= ps.executeQuery();
+					while(result.next()){
+						
+						ProdottoMagazzino pm= new ProdottoMagazzino();
+						ProdottoFitosanitario p = new  ProdottoFitosanitario();
+						double quantita=0;
+						  
+				    	   p.setIdProdottoFitosanitario(result.getInt("idprodottofitosanitario"));
+		            	   p.setAvversita(result.getString("avversita"));
+		            	   p.setDose(result.getString("quantita"));
+		            	   p.setNome(result.getString("nome"));
+		            	   p.setTempocarenza(result.getInt("tempocarenza"));
+		            	   p.setTemporientro(result.getInt("temporientro"));
+		            	   p.setForma(result.getString("forma"));
+		            	   p.setEtichetta(result.getString("etichetta"));
+		            	   p.setFunzione(result.getString("funzione"));   
+		            	   quantita = result.getDouble("quantitaDisp");
+
+						
+						pm.setProdotto(p);
+						pm.setQuantita(quantita);
+						lista.add(pm);
+						
+					}
+			    	 
+					
+					
+					return lista;	
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					System.out.println(e.getErrorCode()+"\n"+e.getMessage());
+					return null;
+				}finally {
+					if(connessione!=null) {
+						
+						connessione.closeConn();
+					}
+				}
+		    	
+			
+		}
 		public boolean insertProdottoMagazzino(int idprodotto,int idazienda,double quantita) {
 			
 			String sql ="insert into magazzino (idazienda,idprodottofitosanitario,quantitaDisp) values (?,?,?)";
