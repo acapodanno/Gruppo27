@@ -1,7 +1,7 @@
-package com.agricolario.show;
+package com.agricolario.servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,24 +11,21 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.agricolario.bean.ProdottoFitosanitario;
-import com.agricolario.bean.ProdottoMagazzino;
-import com.agricolario.bean.RegistroFitosanitario;
 import com.agricolario.bean.Utente;
 import com.agricolario.dao.MagazzinoDAO;
 import com.agricolario.dao.ProdottoFitosanitarioDAO;
-import com.agricolario.dao.RegistroFitosanitarioDAO;
 
 /**
- * Servlet implementation class showProdottiFitosanitari
+ * Servlet implementation class addProdottoMagazzino
  */
-@WebServlet("/showMagazzino")
-public class showMagazzino extends HttpServlet {
+@WebServlet("/addProdottoMagazzino")
+public class addProdottoMagazzino extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public showMagazzino() {
+    public addProdottoMagazzino() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,20 +34,37 @@ public class showMagazzino extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stubppend(request.getContextPath());
-		
+		// TODO Auto-generated method stub
+ System.out.println("sono chimata");
+		String nomeProdotto= request.getParameter("nomeProdotto");
+		String quantita= request.getParameter("quantita");
 		HttpSession ssn = request.getSession();
 		Utente u= (Utente)ssn.getAttribute("user");
 		if(u!=null) {
-			MagazzinoDAO dao= new MagazzinoDAO();
-			System.out.println(u.toString());
-			ArrayList<ProdottoMagazzino> lista = new ArrayList<ProdottoMagazzino>();
-			lista =  dao.getProdottiMagazzino(u.getAzienda().getId());
-		    request.setAttribute("lista", lista);
-		getServletContext().getRequestDispatcher("/view/mag.jsp").forward(request, response);	
+		
+		
+		ProdottoFitosanitario p = new ProdottoFitosanitarioDAO().getProdotto(nomeProdotto);
+		
+		
+		
+		boolean inserimento = new MagazzinoDAO().insertProdottoMagazzino(p.getIdProdottoFitosanitario(), u.getAzienda().getId(),Double.parseDouble(quantita));
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
+		out.append("{\"inserimento\":\""+inserimento+"\"}");
+		out.flush();
 		}else {
-			getServletContext().getRequestDispatcher("/view/HomePage.jsp").forward(request, response);		
-		}
+			
+			
+			PrintWriter out = response.getWriter();
+			response.setContentType("text/html");
+			response.setCharacterEncoding("UTF-8");
+			out.append("{\"inserimento\":\""+false+"\"}");
+			out.flush();
+			
+		}	
+	
+	
 	}
 
 	/**

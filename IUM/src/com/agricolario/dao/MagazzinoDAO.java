@@ -73,5 +73,32 @@ public class MagazzinoDAO {
 		    	
 			
 		}
+		
+		public boolean insertProdottoMagazzino(int idprodotto,int idazienda,double quantita) {
+			
+			String sql ="insert into magazzino (idazienda,idprodottofitosanitario,quantitaDisp) values (?,?,?)";
+			Connection con= connessione.getConn();
+             ArrayList<ProdottoMagazzino> lista= new ArrayList<ProdottoMagazzino>();
+			 try {
+					
+					PreparedStatement ps = con.prepareStatement(sql);
+					ps.setInt(1, idazienda);
+					ps.setInt(2, idprodotto);
+					ps.setDouble(3, quantita);
+
+					int  result= ps.executeUpdate();
+					return true ;	
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					System.out.println(e.getErrorCode()+"\n"+e.getMessage());
+					return false;
+				}finally {
+					if(connessione!=null) {
+						
+						connessione.closeConn();
+					}
+				}
+			
+		}
 
 }

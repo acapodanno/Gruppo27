@@ -1,0 +1,431 @@
+<%@page import="com.agricolario.bean.ProdottoMagazzino"%>
+<%@page import="com.agricolario.bean.ProdottoFitosanitario"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	crossorigin="anonymous"></script>
+<script src="bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.js">
+
+
+
+
+
+
+</script>
+<script type="text/javascript" src="js/jquery.min.js">
+
+
+
+</script>
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/yourcode.js"></script>
+
+<script src="https://kit.fontawesome.com/yourcode.js"></script>
+
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style type="text/css">
+#livesearch{
+ z-index: 1;
+  position: absolute;
+ display: none;
+ height: auto;
+ max-height:250px;
+ width:50%;
+ max-width:240px;
+ overflow-x:auto;
+     margin-top: 35px;
+    margin-left: 60px;
+ background-color: white;
+}
+.contenitore-delega {
+	width: 100%;
+	height: auto;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20%;
+}
+
+.close-delegato{
+    width:15px;
+    color: black;
+	font-size: 20px;
+	font-weight: bold;
+	position:relative;
+	float: right;
+	margin-right: 10px;
+}
+
+
+.fa-close:hover{
+	color: red;
+	cursor: pointer;
+}
+.bottoni-pop-up {
+	height: 20%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 100px 100px;
+	justify-content: center;
+	grid-Column-gap: 5%;
+	margin-top: 30px;
+}
+
+.colore-bottoni{
+
+ /* background: #1161ee;
+  border-radius: 25px;
+  color: white;
+  border:none;
+  text-transform: uppercase; */
+  
+	background: #1161ee;
+	border-radius: 25px;
+	color: white;
+	border: none;
+	text-transform: uppercase;
+	height: 100%;
+	width: 100%;
+	background-color: #23a9d8;
+	color: white;
+	font-weight: ;
+	border: none;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+
+#confermaBottone:hover{
+
+background-color: green;
+
+}
+
+#annullaBottone:hover{
+
+background-color: red;
+
+}
+
+
+
+#delega-pop-up{
+	display: none;
+}
+
+#blocco-delega {
+	width: 400px;
+	height: 150px;
+	background-color: white;
+	/* display: grid; */
+	grid-template-rows: 25px 50px 50px 50px;
+	border-radius: 10px;
+	border: 1px solid gainsboro;
+}
+
+
+#titolo-pop-up{
+font-size: 28px;
+font-weight: bold; 
+ margin: auto;
+ width: 30%;
+}
+
+#pop-text {
+	font-size: 18px;
+	/* margin: auto; */
+	/* width: 80%; */
+	margin-left: 50px;
+}
+
+
+</style>
+<title>Agricolàrio - Magazzino </title>
+
+</head>
+<body>
+  <%@ include file="navbar.jsp"%>
+ 
+<%@ include file="navbarLaterl.jsp"%>
+<!--  -->
+
+<div class="w3-container">
+  <p id="titoloPagina" class="text-center"> ,Magazzino </p>
+  <p id="sottoTitolo" class="text-center" class="w3-large">Elenco dei prodotti da te posseduti, classificati per nome, descrizione e quantità rimasta. </p>
+</div> 
+
+
+
+<!--  Barra di Ricerca-->
+
+<div class="wrap">
+   <div class="barraRicerca">
+   <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+      <input type="text" class="testoRicerca" class="searchTerm" placeholder="Digita il nome di un prodotto fitosanitario...">
+      <div id="live-search">Ciao alessia io sono un div  a caso Ciauu</div>
+   </div>
+</div>
+
+
+<!-- Label -->
+<div class="formAgg">
+<p  class="text-center tit2"> Per aggiungere un prodotto a "I miei Prodotti" compila i seguenti campi:</p>
+
+
+  <form method="post" id="frm">
+<div  id="theFormDiv" class="text-center" >
+
+  <div class="aggProd">
+  <label id="label-first">Nome:</label><input id="nomeProdotto" style="color:black; border-bottom:solid 1px black;" name="nomeProdotto" type="text" onkeyup="parolaccia(this)"> <div id="livesearch"></div>
+  <label id="label-first">Quantità:</label> <input id="quantita"  oninput="soloNumeri(this)"  style="color:black; border-bottom:solid 1px black;" name="last" type="text">
+  <input type="button" id="addBottone" onclick="addProdotto()" value="aggiungi">  </input>
+	</div> 
+</div>
+  
+</form>
+
+<div class="text-center" >
+<p class="click2" style="color: black">Oppure clicca qui:<a href="showProdottiFitosanitari" class="link2"> Visualizzare <em><u>"Prodotti Fitosanitari"</u></em> </a></p>
+</div>
+</div>
+
+<%ArrayList<ProdottoMagazzino> lista = (ArrayList<ProdottoMagazzino>) request.getAttribute("lista");  %>
+ <%if(lista == null || lista.isEmpty()){ %>
+ <h3  class="text-center">Non ci sono prodotti nel magazzino</h3>
+ <%}else{ %> 
+
+<!-- Label -->
+<div class="">
+<p  class="tit">I miei prodotti: </p>
+</div>
+
+<!-- Avvertenze -->
+<div class="avvertenze">
+<p id="avviso" class="text-center"><em>Leggere <u>CON ATTENZIONE</u> le etichetta  prima  dell'uso.
+ Il diverso utilizzo di  questi  prodotti  rispetto a quanto  indicato  in  etichetta  può  essere  reato, oltre che <u>pericoloso per la TUA salute e DI CHI TI STA INTORNO</u>. Seguire il codice di condotta per l'uso prodotti fitosanitari, 
+ <a href="https://www.minambiente.it/sites/default/files/archivio/normativa/dim_22_01_2014.pdf" style="color:blue"> disponibile qui.</a></em> </p>
+</div>
+
+
+
+
+
+<!-- Elenco -->
+ <div class="prodFit" >
+  <table class="fixed_header">
+  <colgroup>
+    <col style="width:10%">
+    <col  style="width:70%">
+    <col  style="width:15%">
+    </colgroup>
+  
+	<!-- Intestazione -->  
+	<thead class="head-tabella">
+    <tr id="intest">
+      <th> Nome</th>
+      <th> Descrizione</th>
+      <th> Link</th>
+    </tr>
+    </thead>
+ <%for (ProdottoMagazzino pm : lista){ %>
+    <!-- Prodotto 1 -->
+	<tr id="prod">
+      <th> <%= pm.getProdotto().getNome() %></th>
+      <th>  <%= pm.getQuantita() %> </th>
+      <th> <a href="<%= pm.getProdotto().getEtichetta() %>"> LINK ETICHETTA </a></th>
+    </tr>
+    
+  <%} %>
+  </table>
+</div>
+ <%} %>
+ 
+ 
+ <datalist id="browsers">
+   
+  </datalist>
+<script type="text/javascript">
+
+
+//Io sono la ricerca e non faccio ancora nulla
+	function parolaccia(el) {
+		 console.log("sono chiamatr")
+		$( "#livesearch" ).show();
+         
+		$( "#livesearch" ).html("");
+              //Chiamata asincorna con jquery ohohohohohoh!!!!
+		         	jQuery.noConflict();
+
+	    		 $.ajax({
+		      			type:"POST",
+		      			data:{"nome":el.value},
+		      			url:"addTrattamentoLv",
+		      			success : function(data){
+		    	 		var object= JSON.parse(data);
+		    	 		console.log(object);
+		    	 		for (var i = 0; i < object.length; i++) {
+				  	$( "#livesearch" ).append("<p onClick='setNome(this)' id='"+object[i].name +"'>"+object[i].name +"</p>");
+				}
+		    	}});
+	 
+	 
+	 
+	 }
+
+		
+	
+
+    
+	  function setNome( el){
+		
+		  var value=el.innerText;
+		
+		    
+		     $("#nomeProdotto").val(value);
+				$( "#livesearch" ).hide();
+
+	  
+	  }
+
+
+function addProdotto(){
+	
+	
+	
+	
+	
+	
+ 	jQuery.noConflict();
+
+	//addProdottoMagazzino
+	
+     var nome =   $("#nomeProdotto").val();
+	 var quantita = $("#quantita").val()
+	 console.log(nome +" " +quantita)
+	$.ajax({
+			type:"POST",
+			data:{"nomeProdotto":nome,
+				"quantita":quantita	
+			},
+			
+			
+			url:"addProdottoMagazzino",
+			success : function(data){
+	 		var object= JSON.parse(data);
+	 	    showPop(object.inserimento);
+	}
+	});
+
+
+
+
+
+
+	
+}
+
+function showPop(str){
+	document.getElementById('delega-pop-up').style.display='flex'
+
+	if(str=="true"){
+			
+			document.getElementById('titolo-pop-up').innerText="Operzione Effettuata";
+		    document.getElementById('pop-text').innerText="Il prodotto è stato inserito!!";
+			$('.bottoni-pop-up').hide();
+					window.setTimeout("ricaricaPagina()", 2000);
+			}else if(str=="false"){
+				document.getElementById('titolo-pop-up').innerText="Operzione NON Effettuata";
+
+			 document.getElementById('pop-text').innerText="Il prodotto non  è stato inserito!!";
+							
+				$('.bottoni-pop-up').hide();
+				window.setTimeout("ricaricaPagina()", 2000);
+			}
+
+	}
+	
+	
+function ricaricaPagina(){
+	
+    location.reload();
+
+	
+}	
+function soloNumeri(el){
+	el.value=el.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
+}
+	
+</script>
+ 
+  <div class="contenitore-delega" id="delega-pop-up">
+		 <div id="blocco-delega" class="animazione-login">
+		     <span class ="close-delegato" style="color: black"><i class=" fa fa-close" onclick="document.getElementById('delega-pop-up').style.display='none'"></i></span>
+		    <p id="titolo-pop-up">Conferma </p>
+		    <div >
+		    
+		    <p id="pop-text"></p>
+		     </div>
+		  
+		   
+		    <div class="bottoni-pop-up" >
+		      <input type="submit" class="colore-bottoni" id="confermaBottone" id="bottone-popu-conferma" value="Conferma">
+		 		 <input type="button" id="annullaBottone" value="Annulla" onclick="document.getElementById('delega-pop-up').style.display='none'" class="colore-bottoni">
+		     </div>
+		
+		    </div>
+		           
+		 
+ </div>
+ 
+ 
+ 
+ 
+   <%@ include file="footer.jsp"%>
+ 
+ 
+ 
+ 
+ 
+ 
+
+</body>
+</html>
