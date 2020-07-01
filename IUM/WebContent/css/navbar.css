@@ -622,7 +622,7 @@ border: 1px solid white;
 	
 	
 }
-/*Inizia tutta la roba del registro */
+/*Inizia tutta la roba del registro */ /************************* REGISTRO FIT ****************************************/
 
 .tableFixHead { overflow-y: auto; height: 500px; }
 .tableFixHead thead th { position: sticky; top: 0; }
@@ -759,6 +759,12 @@ td
 	
 	
 }
+
+
+
+
+
+
 
 
 
