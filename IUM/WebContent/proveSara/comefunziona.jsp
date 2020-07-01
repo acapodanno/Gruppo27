@@ -796,6 +796,11 @@ span {
 	<%@ include file="../view/footer.jsp"%>
 
 	<script>
+	$(document).ready(function(){
+		  $('[data-toggle="tooltip"]').tooltip();
+		});
+	
+	
 	$(function() {
 		  $(".expand").on( "click", function() {
 		    $(this).next().slideToggle(200);
