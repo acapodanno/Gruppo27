@@ -103,7 +103,7 @@ only screen and (max-width: 1280px)  {
 
 
 </style>
-<title>Scadenze - Prodotti Fitosanitari </title>
+<title>Agrocolàrio - Scadenze </title>
 </head>
 <body >
 
@@ -120,6 +120,7 @@ only screen and (max-width: 1280px)  {
   <%@ include file="navbar.jsp"%>
  
 <%@ include file="navbarLaterl.jsp"%>
+
 <div class="container-fluid mt-5 ">
 	<div class="row justify-content-center ">
 	<div class="col col-lg-12 text-center ">

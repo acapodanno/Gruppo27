@@ -25,7 +25,7 @@
   
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title> Agricolàrio - Traccibilità </title>
 </head>
 <body>
 
@@ -34,22 +34,18 @@
 <%@ include file="navbarLaterl.jsp"%>
 
 <div class="container-fluid mt-5 ">
-	<div class="row justify-content-center ">
-	<div class="col col-lg-12 text-center ">
-			<h2 id="titoloPagina">Traccibilità</h2>
-		</div>
-		<div class="progress col col-lg-6 ">
-  			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-		</div>
-	</div>
+<div class="w3-container">
+  <p id="titoloPagina" class="text-center"> ,Traccibilità </p>
+  <p id="sottoTitolo" class="text-center" class="w3-large">Crea, in modo facile e veloce, l'etichetta virtuale per i tuoi prodotti agroalimentari. </p>
+</div> 
 	<div class="row justify-content-center mt-5">
 		<div class="col col-lg-3 " style=" height: 500px;">
 			<div class="col col-lg-12 text-center ">
-			<h5>Scegli il prodotto</h5>
+			<p class="sceltaTit" >SCEGLI IL PRODOTTO</p>
 			</div>
 						<div class="col col-lg-12 text-center mt-3 ">
 			
-		      <select class="custom-select col col-lg-6" id="inputGroupSelect01">
+		      <select class="custom-select col col-lg-9" id="inputGroupSelect01">
   				    <option selected>Choose...</option>
     			    <option value="1">Albiccoche</option>
    				    <option value="2">Mele</option>
@@ -70,16 +66,16 @@
 							 
 		</div>
 		
-		<div class=" col col-lg-6 " >
+		<div class=" col col-lg-5 " >
 		<div class="col col-lg-12 text-center ">
-			<h5>Informazioni</h5>
+			<p class="sceltaTit" > INFORMAZIONI </p>
 			</div>
 			<div class="form-group textarea" >
-  				<textarea class="form-control z-depth-1  " id="informazioni" rows="10"  ></textarea>
+  				<textarea class="form-control z-depth-1  " id="informazioni" rows="7"  ></textarea>
 			</div>
-		
-			<button class="align-bottom col col-lg-2 float-right bottone-tracciabilità shadow"  id="bottone-generaQR" >Genera QR</button>
-		
+			<div  class="bottoneQr">
+			<button class="shadow"  id="bottone-generaQR" >Genera QR</button>
+			</div>
 		</div>
 		</div>
 		
