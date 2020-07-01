@@ -21,7 +21,7 @@
 
 <%@ include file="../view/navbar.jsp"%>
 
-<div class="header picture" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('../image/vantaggisfondo.jpg')">
+<div class="header picture" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('image/vantaggisfondo.jpg')">
 <h2 class="title">,VANTAGGI</h2>
 <h5><br>Agricolàrio rende il tuo lavoro di immagazzinamento dei trattamenti fitosanitari</h5>
 <h5>più <b>efficiente</b>, <b>sicuro</b> e <b>rapido</b></h5>

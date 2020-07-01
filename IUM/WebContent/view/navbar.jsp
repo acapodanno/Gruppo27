@@ -272,7 +272,7 @@ img{
     <ul class="navbar-nav justify-content-center ">
       <li class="nav-item active mr-5  dropdown ">
      
-        <a class=" nav-link navbar-element" href="#" role="button" data-toggle="dropdown"  data-hover="dropdown">COME FUNZIONA</a>
+        <a class=" nav-link navbar-element" href="showFunzionalita?funzionalita=comefunziona" role="button" data-toggle="dropdown"  data-hover="dropdown">COME FUNZIONA</a>
         <div class="dropdown-menu dropdown-menu-animation" >
    			 	 <a class="dropdown-item" href="#">Registro Fitosanitario</a>
    				 <a class="dropdown-item" href="#">Prodotti Fitosanitario</a>
@@ -282,13 +282,13 @@ img{
  		</div>
       </li>
       <li class="nav-item active mr-5 navbar-element">
-        <a class="nav-link navbar-element" href="#">VANTAGGI</a>
+        <a class="nav-link navbar-element" href="showFunzionalita?funzionalita=vantaggi">VANTAGGI</a>
       </li>
       <li class="nav-item active mr-5 ">
-        <a class="nav-link active navbar-element" href="#">CHI SIAMO</a>
+        <a class="nav-link active navbar-element" href="showFunzionalita?funzionalita=chisiamo">CHI SIAMO</a>
       </li>
       <li class="nav-item active mr-5">
-        <a class="nav-link navbar-element" href="#">ASSISTENZA</a>
+        <a class="nav-link navbar-element" href="showFunzionalita?funzionalita=assistenza">ASSISTENZA</a>
       </li>
     </ul>
     <%  

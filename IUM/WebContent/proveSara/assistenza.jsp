@@ -62,7 +62,7 @@
                 <img class="img-fluid" style="width:auto" src="https://img.icons8.com/bubbles/300/000000/online-support.png"/>
       </div>
     <div class="col justify-content-center p-5">
-    <div class="card card-body rounded-0 shadow picture" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../image/formbackground.jpg')">
+    <div class="card card-body rounded-0 shadow picture" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('image/formbackground.jpg')">
  	<h1 class="text-center py-4"><b>Contattaci</b></h1><br>
 		 <form id="form-contattaci" action="access" method="post">
 			
