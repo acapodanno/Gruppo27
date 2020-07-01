@@ -522,7 +522,7 @@ border-bottom: 1px solid;
 
 
 /*Navbar animazione dropdown*/  /************* NAV BAR LATERALE *******************************************************************/
-.dropdown-menu-animation{
+.dropdown-menu-animation .prova{
 	
 	animation:slideInUp;
 	animation-duration:1s!important;
