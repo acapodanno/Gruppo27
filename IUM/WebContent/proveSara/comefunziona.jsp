@@ -20,107 +20,61 @@
 <title>Come Funziona</title>
 
 <style>
-*,
-*:before,
-*:after {
-    -webkit-box-sizing: border-box; 
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
+
+.accordion {
+  background: transparent;
+  color: #444;
+  cursor: pointer;
+  padding: 30px;
+  width: 100%;
+  border: none;
+  font-size: 22px;
+  text-weight: bold;
+   text-transform: uppercase;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  border-top: 2px solid gray;
 }
 
-#integration-list {
-    font-family: 'Open Sans', sans-serif;
-    width: 80%;
-    margin: 0 auto;
-    display: table;
-}
-#integration-list ul {
-    padding: 0;
-    margin: 20px 0;
-    color: #555;
-}
-#integration-list ul > li {
-    list-style: none;
-    border-top: 1px solid #ddd;
-    display: block;
-    padding: 15px;
-    overflow: hidden;
-}
-#integration-list ul:last-child {
-    border-bottom: 1px solid #ddd;
-}
-#integration-list ul > li:hover {
-    background: #efefef;
-}
-.expand {
-    display: block;
-    text-decoration: none;
-    color: #555;
-    cursor: pointer;
-}
-h2 {
-    padding: 0;
-    margin: 0;
-    font-size: 17px;
-    font-weight: 400;
-}
-span {
-    font-size: 12.5px;
-}
-#left,#right{
-    display: table;
-}
-#sup{
-    display: table-cell;
-    vertical-align: middle;
-    width: 80%;
-}
-.detail a {
-    text-decoration: none;
-    color: #C0392B;
-    border: 1px solid #C0392B;
-    padding: 6px 10px 5px;
-    font-size: 13px;
-  margin-right: 7px;
-}
-.detail {
-    margin: 10px 0 10px 0px;
-    display: none;
-    line-height: 22px;
-    height: 150px;
-}
-.detail span{
-    margin: 0;
-}
-.right-arrow {
-    margin-top: 12px;
-    margin-left: 20px;
-    width: 10px;
-    height: 100%;
-    float: right;
-    font-weight: bold;
-    font-size: 20px;
-}
-.icon {
-    height: 75px;
-    width: 75px;
-    float: left;
-    margin: 0 15px 0 0;
-}
-.london {
-    background: url("http://placehold.it/50x50") top left no-repeat;
-    background-size: cover;
-}
-.newyork {
-    background: url("http://placehold.it/50x50") top left no-repeat;
-    background-size: cover;
-}
-.paris {
-    background: url("http://placehold.it/50x50") top left no-repeat;
-    background-size: cover;
+.activ, .accordion:hover {
+  background-color: #23a9d8;
+  color: white;
+	
 }
 
-/* intestazione tabella del registro fitosanitario */
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion:hover:after {
+	color:white;
+}
+
+.activ:after {
+  content: "\2212";
+  color: white;
+  
+}
+
+.panel {
+  font-size: 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel > p {
+padding:30px;
+text-align: left;
+}
+
+/* intestazione tabelle*/
 .cellaIntest {
 	background: #23a9d8;
 }
@@ -638,181 +592,133 @@ span {
 		<h5>Tramite un'<b>ETICHETTA VIRTUALE</b> per ogni prodotto agroalimentare. <br>
 		Sarai tu stesso a creare l'etichetta, in pochissimi passaggi. 
 		</h5>
-	</div>
+		<br>
+		<button class="accordion">Che cos'è un'etichetta virtuale?</button>
+<div class="panel">
+  <p>Un'etichetta virtuale è il tuo marchio di garanzia con il consumatore. <br>
+È grazie ad essa che potrai certificare al consumatore in modo facile e veloce quanto 
+sia realmente genuino, fresco, buono ma soprattutto <b>affidabile</b> il tuo prodotto. 
+In questo modo, chiunque si sentirà più ispirato nell'acquistare i prodotti 
+dallo stesso produttore. <br>
+Un'etichetta virtuale è composta da un insieme di informazioni molto importanti, 
+menzioni e indicazioni, marchi di fabbrica o di commercio. <br>Solitamente queste 
+informazioni appaiono su un'etichetta in modo sparso e confuso, talvolta anche 
+illeggibile. È per questo motivo che le aziende più influenti del settore hanno 
+introdotto l'utilizzo dell'etichetta virtuale onde evitare che le etichette 
+cartacee dei prodotti alimentari andassero addirittura perse.<br>
+In questo modo tramite la scannerizzazione di un QR-Code fatta direttamente dal 
+proprio smartphone, consente di visualizzare l'insieme delle informazioni 
+citate sopra. Nessuna di esse in questo modo andrà persa ma saranno ben leggibili 
+e disposte in modo ordinato. 
+  </p>
+</div>
 
+<button class="accordion">Dove si trovano queste informazioni?</button>
+<div class="panel">
+  <p>Le informazioni sono digitalizzate, ciò significa che il nostro sistema
+   si occupa di conservarle per te in maniera quasi permanente, 
+   per tutto il tempo che il tuo prodotto resterà in commercio. La maggior parte
+   di queste informazioni sono tratte dal Registro dei Trattamenti stesso. </p>
+</div>
 
+<button class="accordion">Che tipo di informazioni conterrà l'etichetta virtuale?</button>
+<div class="panel">
+  <p class="pb-0">Le informazioni contenute all'interno dell'etichetta virtuale sono le stesse informazioni che erano contenute nella precede etichetta cartacea, con la differenza di essere leggermente più approfondite e scritte in modo per ordinato.
+Le informazioni sull'etichetta virtuale inerenti al prodotto agroalimentare 
+a cui esse si riferiscono sono:</p>
+	  <ol class="px-5 text-left">
+	<li>Da chi è stato prodotto;
+	<li>Dove è stato prodotto;
+	<li>In che periodo è stato prodotto;
+	<li>Quanti e quali trattamenti fitosanitari e agrosanitari ha subito durante la sua coltivazione; 
+	<li>Per ogni trattamento è specificato:
+		<ol style="list-style-type: lower-latin;">
+		<li>	Come si chiama il prodotto utilizzato (compreso di codice, le componenti, coltura su cui è applicabile)
+<li>	Qual è il suo codice di riconoscimento;
+<li>	In quale quantità è stato utilizzato
+<li>	Quanto è durato il trattamento
+<li>	Se e quando è stato rinnovato il trattamento
+<li>	Altre informazioni utili</ol>
+	<li>Altre informazioni aggiuntive, a discrezione del coltivatore
+  </ol>
 
+</div>
 
-<div id="integration-list">
-    <ul>
-        <li>
-            <a class="expand">
-                <div class="right-arrow">+</div>
-                <div>
-                    <h2>Domanda</h2>
-                    <span>Sottotitolo</span>
-                </div>
-            </a>
+<button class="accordion">Come faccio a generare l'etichetta virtuale?</button>
+<div class="panel">
+  <p class="pb-0">È molto semplice! 
+Generare un etichetta virtuale significa generare un codice QR-code. 
+Per farlo basta eseguire questi pochi e semplici passi: </p>
+	 <ol class="px-5 text-left">
+	<li>Seleziona un prodotto che hai coltivato e di cui intendi creare l'etichetta virtuale; 
+	<li>Visualizza e/o modifica le informazioni che il sistema genera automaticamente;
+	<li>Genera il codice Qr (potrai anche stamparlo e/o salvarlo in pdf se lo riterrai necessario);
+	</ol>
+</div>
 
-            <div class="detail">
-                <div id="left" style="width:15%;float:left;height:100%;">
-                    <div id="sup">
-                        <img src="http://www.ciagent.com/ciagent/cialogo4.png" width="100%" />
-                    </div>
-                </div>
-                <div id="right" style="width:85%;float:right;height:100%;padding-left:20px;">
-                    <div id="sup">
-                        <div><span>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</span>
-                            <br />
-                            <br /><a target="_blank" href="http://ciagent.com">Visit Website</a><a href="#">Secondary Containment</a><a href="#">Vaults & Manholes</a><a href="#">Storm-Water</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a class="expand">
-                <div class="right-arrow">+</div>
-                
-                <h2>Domanda</h2>
-                <span>Sottotitolo</span>
-            </a>
+<button class="accordion">Che cos'è un codice QR?</button>
+<div class="panel">
+  <p>Un codice QR è un codice a barre bidimensionale di forma quadrata 
+  composto da diversi moduli di colore nero inseriti all'interno di uno schema 
+  a sfondo bianco. <br> La funzione principale del codice QR è l'archiviazione di 
+  informazioni e dati, formati da caratteri alfanumerici e/o numerici.</p>
+</div>
 
-            <div class="detail">
-                <div id="left" style="width:15%;float:left;height:100%;">
-                    <div id="sup">
-                        <img src="http://www.lonestarprestress.com/images/main_logo.jpg" width="100%" />
-                    </div>
-                </div>
-                <div id="right" style="width:85%;float:right;height:100%;padding-left:20px;">
-                    <div id="sup">
-                        <div><span>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</span>
-                            <br />
-                            <br /><a href="#">Visit Website</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a class="expand">
-                <div class="right-arrow">+</div>
-                <h2>Domanda</h2>
-                <span>Sottotitolo</span>
-            </a>
-
-            <div class="detail">
-                <div id="left" style="width:15%;float:left;height:100%;">
-                    <div id="sup">
-                        <img src="http://www.twrlighting.com/images/rohn.jpg" width="100%" />
-                    </div>
-                </div>
-                <div id="right" style="width:85%;float:right;height:100%;padding-left:20px;">
-                    <div id="sup">
-                        <div><span>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</span>
-                            <br />
-                            <br /><a href="#">Visit Website</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a class="expand">
-                <div class="right-arrow">+</div>
-                <h2>Domanda</h2>
-                <span>Sottotitolo</span>
-            </a>
-
-            <div class="detail">
-                <div id="left" style="width:15%;float:left;height:100%;">
-                    <div id="sup">
-                        <img src="http://www.spdsystems.com/Content/Images/SpdSysLogo.gif" width="100%" />
-                    </div>
-                </div>
-                <div id="right" style="width:85%;float:right;height:100%;padding-left:20px;">
-                    <div id="sup">
-                        <div><span>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</span>
-                            <br />
-                            <br /><a href="#">Visit Website</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a class="expand">
-                <div class="right-arrow">+</div>
-               <h2>Domanda</h2>
-                <span>Sottotitolo</span>
-            </a>
-
-            <div class="detail">
-                <div id="left" style="width:15%;float:left;height:100%;">
-                    <div id="sup">
-                        <img src="http://www.tiiger.com/images/Tiiger_logo.jpg" width="100%" />
-                    </div>
-                </div>
-                <div id="right" style="width:85%;float:right;height:100%;padding-left:20px;">
-                    <div id="sup">
-                        <div><span>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</span>
-                            <br />
-                            <br /><a href="#">Visit Website</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a class="expand">
-                <div class="right-arrow">+</div>
-                <h2>Domanda</h2>
-                <span>Sottotitolo</span>
-            </a>
-
-            <div class="detail">
-                <div id="left" style="width:15%;float:left;height:100%;">
-                    <div id="sup">
-                        <img src="http://trayer.com/wp-content/uploads/2013/11/trayer-logo.jpg" width="100%" />
-                    </div>
-                </div>
-                <div id="right" style="width:85%;float:right;height:100%;padding-left:20px;">
-                    <div id="sup">
-                        <div><span>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</span>
-                            <br />
-                            <br /><a href="#">Visit Website</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-
-    </ul>
+<button class="accordion">Come faccio a reperire le informazioni all'interno dell'etichetta virtuale?</button>
+<div class="panel">
+  <p>Utilizzando il tuo stesso smartphone o tablet! <br>
+Questi dispositivi sono predisposti ad accedere alle informazioni in 
+formato QR, sarà sufficiente inquadrare il codice QR con la fotocamera 
+del proprio dispositivo, come illustrato nella foto.<br>
+Dopo aver scannerizzato il codice QR, in pochi secondi, l'utente verrà reindirizzato 
+alla pagina di informazione desiderata. <br>
+<b>ATTENZIONE</b>: alcuni dispositivi meno moderni non supportano la funzione di 
+scan del codice QR. <br>
+<i>Se il tuo telefono non possiede la funzione di scan del QR-Code: Niente paura!</i><br>
+È possibile, dall'apposito store presente su ogni dispositivo, 
+poter scaricare in modo totalmente gratuito una specifica app che permette la 
+scannerizzazione il codice QR, permettendo così l'accesso alle informazioni.  </p>
 </div>
 
 
-
+<button class="accordion" style="border-bottom: 2px solid gray;">Perché utilizzare l'etichetta virtuale?</button>
+<div class="panel">
+  <p class="pb-0">I vantaggi che presenta l'utilizzo di questo meccanismo sono diversi:</p>
+<ol class="px-5 text-left">
+<li>Le informazioni importanti di OGNI SINGOLO PRODOTTO da te coltivato sono ben conservate.
+<li>L'etichetta virtuale, per chi acquista, rappresenta un marchio di genuinità e freschezza dei prodotti. 
+<li>	Le informazioni di ogni singolo prodotto non solo sono accessibili a te ma anche ai consumatori che acquisteranno i tuoi prodotti. 
+In questo modo c'è possibilità di rendere l'utente fruitore attivo delle informazioni, ciò significa che il consumatore non subisce in modo passivo la comunicazione, bensì partecipa attivamente al processo informativo, inquadrando il codice QR e visualizzando le informazioni che gli interessano.
+<li>	Dato che tutte le informazioni sono visibili ed il processo di coltivazione è totalmente trasparente, in questo modo il consumatore può verificare autonomamente come un prodotto agro alimentare è stato coltivato, quanti trattamenti esso ha subito, in che quantità, in che periodo, dove è stato coltivato e soprattutto chi è il produttore/coltivatore. 
+<li>	Una buona etichetta virtuale rappresenta anche un mezzo pubblicitario per la tua azienda agroalimentare perché spinge sempre più consumatori ad acquistare prodotti coltivati nella TUA azienda, scaturendo in essi una sensazione di fiducia sapendo che i prodotti vengono coltivati in maniera del tutto salutare e legale. 
+  </ol>
+  </div>
+	</div>
+<hr class="riga">
 
 	<%@ include file="../view/footer.jsp"%>
 
-	<script>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("activ");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
 	$(document).ready(function(){
 		  $('[data-toggle="tooltip"]').tooltip();
 		});
 	
-	
-	$(function() {
-		  $(".expand").on( "click", function() {
-		    $(this).next().slideToggle(200);
-		    $expand = $(this).find(">:first-child");
-		    
-		    if($expand.text() == "+") {
-		      $expand.text("-");
-		    } else {
-		      $expand.text("+");
-		    }
-		  });
-		});
 </script>
 
 </body>
