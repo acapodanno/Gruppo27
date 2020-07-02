@@ -47,18 +47,81 @@ body{
 	   font-family: "Dosis";
 	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
 	} 
+	
+.dueColonne{
+	display: none; 
+	visibility: hidden;
+}
+
+
+	
+	
 @media 
 only screen and (max-width: 1280px)  {
+
+.dueColonne{
+	display: block; 
+	visibility: visible;
+	 width: 80%;
+	 margin: auto;
+}
+
+.head-tabella2{
+		background-color: #4CAF50;
+	color: white;
+	font-weight: normal;
+	/* font-size: 34px; */
+	height: auto;
+}
+
+#due {
+	font-size: 16px;
+}
+
+.avvertenze{
+
+	display: none;
+}
+
+.link{
+	font-size: 16px !important;
+}
+
+.click{
+	font-size: 17px !important;
+}
+
+.head-tabella{
+	display: none;
+}
+
+.prodFit {
+	display: none;
+}
+
+
+.tableFixHead{
+	display: none;
+}
+
+.dueColonne{
+	display: block;
+	visibility: visible;
+}
+
+
+/*
+
     .head-tabella{
     display: none;
     
     }
-	/* Force table to not be like tables anymore */
+	/* Force table to not be like tables anymore 
 	table, thead, tbody, th, td, tr { 
 		display: block; 
 	}
 	
-	/* Hide table headers (but not display: none;, for accessibility) */
+	/* Hide table headers (but not display: none;, for accessibility) 
 	thead tr { 
 		position: absolute;
 		top: -9999px;
@@ -68,7 +131,7 @@ only screen and (max-width: 1280px)  {
 	tr { border: 1px solid #ccc; }
 	
 	td { 
-		/* Behave  like a "row" */
+		/* Behave  like a "row" 
 		border: none;
 		border-bottom: 1px solid #eee; 
 		position: relative;
@@ -76,9 +139,9 @@ only screen and (max-width: 1280px)  {
 	}
 	
 	td:before { 
-		/* Now like a table header */
+		/* Now like a table header 
 		position: absolute;
-		/* Top/left values mimic padding */
+		/* Top/left values mimic padding 
 		top: 6px;
 		left: 6px;
 		width: 45%; 
@@ -88,10 +151,11 @@ only screen and (max-width: 1280px)  {
 	
 	/*
 	Label the data
-	*/
+	
 	td:nth-of-type(1):before { content: "Prodotto"; }
 	td:nth-of-type(2):before { content: "Descrizione"; }
 	td:nth-of-type(3):before { content: "Link"; }
+	*/
 }
 
 
@@ -156,7 +220,7 @@ only screen and (max-width: 1280px)  {
     </tr>
     </thead>
     <tbody>
-    <!-- Prodotto 1 -->
+    <!-- Prodotti -->
     <%ArrayList<ProdottoFitosanitario> lista =(ArrayList<ProdottoFitosanitario>) request.getAttribute("pf");
     for(ProdottoFitosanitario pf : lista)
     {
@@ -179,6 +243,50 @@ only screen and (max-width: 1280px)  {
     <%} %>
     </tbody>
   </table>
+</div>
+  
+<div class="dueColonne">
+  <table >
+  <colgroup>
+    <col style="width:25%">
+    <col  style="width:75%">
+    </colgroup>
+    
+   	<!-- Intestazione -->  
+	<thead class="head-tabella2">
+    <tr >
+      <th id="due"> Nome</th>
+      <th id="due"> Descrizione</th>
+    </tr>
+    </thead>
+<tbody>
+    <!-- Prodotti -->
+   
+    <%
+    for(ProdottoFitosanitario pf : lista)
+    {
+    %>
+    <tr>
+      <td id="due"><%=pf.getNome()%></td>
+   
+      <td id="due"> 
+      <strong>Funzione:</strong> <%=pf.getFunzione() %><br>
+      <strong>Avversita:</strong> <%=pf.getAvversita() %><br>
+     <strong>Tempo carenza:</strong> <%=pf.getAvversita() %><br>
+     <strong>Tempo Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
+     <strong>Tempo carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
+     <strong>Dose :</strong> <%=pf.getDose() %>  <br>
+     <strong>Quantita :</strong> <%=pf.getQuantita() %> <br>
+     <a href="<%= pf.getEtichetta() %>">Link Etichetta</a>
+     </td>	
+      
+    </tr>
+    <%} %>
+    </tbody>
+</table>
+  
+  
+  
 </div>
  
  

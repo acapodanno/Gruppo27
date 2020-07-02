@@ -1221,7 +1221,7 @@ border-bottom: 1px solid rgba(40, 150, 5, 0.9);
 
 .link {
   color: #4CAF50;
-  font-size: 32px;
+  font-size: 24px;
   cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;  
@@ -1234,7 +1234,7 @@ border-bottom: 1px solid rgba(40, 150, 5, 0.9);
   color: #4CAF50;
   text-align: center;
   display: inline-block;
-  font-size: 32px;
+  font-size: 24px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s; 
   margin:auto;
