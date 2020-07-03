@@ -20,59 +20,40 @@
 <title>Come Funziona</title>
 
 <style>
-
-.accordion {
-  background: transparent;
-  color: #444;
-  cursor: pointer;
-  padding: 30px;
-  width: 100%;
-  border: none;
-  font-size: 22px;
-  text-weight: bold;
-   text-transform: uppercase;
-  text-align: left;
-  outline: none;
-  transition: 0.4s;
-  border-top: 2px solid gray;
+/* per accordion: Horizontal line icon */
+.collapsible-link::before {
+  content: '';
+  width: 14px;
+  height: 2px;
+  background: #0275d8;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 1rem;
+  display: block;
+  transition: all 0.3s;
 }
 
-.activ, .accordion:hover {
-  background-color: #23a9d8;
-  color: white;
-	
+/* per accordion: Vertical line icon */
+.collapsible-link::after {
+  content: '';
+  width: 2px;
+  height: 14px;
+  background: #0275d8;
+  position: absolute;
+  top: calc(50% - 7px);
+  right: calc(1rem + 6px);
+  display: block;
+  transition: all 0.3s;
 }
 
-.accordion:after {
-  content: '\002B';
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
+.collapsible-link[aria-expanded='true']::after {
+  transform: rotate(90deg) translateX(-1px);
 }
 
-.accordion:hover:after {
-	color:white;
+.collapsible-link[aria-expanded='true']::before {
+  transform: rotate(180deg);
 }
 
-.activ:after {
-  content: "\2212";
-  color: white;
-  
-}
-
-.panel {
-  font-size: 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
-.panel > p {
-padding:30px;
-text-align: left;
-}
 
 /* intestazione tabelle*/
 .cellaIntest {
@@ -593,9 +574,21 @@ text-align: left;
 		Sarai tu stesso a creare l'etichetta, in pochissimi passaggi. 
 		</h5>
 		<br>
-		<button class="accordion">Che cos'è un'etichetta virtuale?</button>
-<div class="panel">
-  <p>Un'etichetta virtuale è il tuo marchio di garanzia con il consumatore. <br>
+		
+		
+  <div class="row">
+    <div class="col-lg-9 mx-auto">
+      <!-- Accordion -->
+      <div id="accordionExample" class="accordion shadow text-left">
+
+        <!-- Accordion item 1 -->
+        <div class="card">
+          <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+            <h6 class="mb-0 pl-2 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="d-block position-relative text-uppercase pr-5 collapsible-link py-2">Che cos'è un'etichetta virtuale?</a></h6>
+          </div>
+          <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse">
+            <div class="card-body p-5">
+              <p class="font-weight-light m-0">Un'etichetta virtuale è il tuo marchio di garanzia con il consumatore. <br>
 È grazie ad essa che potrai certificare al consumatore in modo facile e veloce quanto 
 sia realmente genuino, fresco, buono ma soprattutto <b>affidabile</b> il tuo prodotto. 
 In questo modo, chiunque si sentirà più ispirato nell'acquistare i prodotti 
@@ -609,24 +602,37 @@ cartacee dei prodotti alimentari andassero addirittura perse.<br>
 In questo modo tramite la scannerizzazione di un QR-Code fatta direttamente dal 
 proprio smartphone, consente di visualizzare l'insieme delle informazioni 
 citate sopra. Nessuna di esse in questo modo andrà persa ma saranno ben leggibili 
-e disposte in modo ordinato. 
-  </p>
-</div>
+e disposte in modo ordinato. </p>
+            </div>
+          </div>
+        </div>
 
-<button class="accordion">Dove si trovano queste informazioni?</button>
-<div class="panel">
-  <p>Le informazioni sono digitalizzate, ciò significa che il nostro sistema
+        <!-- Accordion item 2 -->
+        <div class="card">
+          <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+            <h6 class="mb-0 pl-2 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="d-block position-relative collapsed text-uppercase pr-5 collapsible-link py-2">Dove si trovano queste informazioni?</a></h6>
+          </div>
+          <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+            <div class="card-body p-5">
+              <p class="font-weight-light m-0">Le informazioni sono digitalizzate, ciò significa che il nostro sistema
    si occupa di conservarle per te in maniera quasi permanente, 
    per tutto il tempo che il tuo prodotto resterà in commercio. La maggior parte
-   di queste informazioni sono tratte dal Registro dei Trattamenti stesso. </p>
-</div>
+   di queste informazioni sono tratte dal Registro dei Trattamenti Fitosanitari stesso.</p>
+            </div>
+          </div>
+        </div>
 
-<button class="accordion">Che tipo di informazioni conterrà l'etichetta virtuale?</button>
-<div class="panel">
-  <p class="pb-0">Le informazioni contenute all'interno dell'etichetta virtuale sono le stesse informazioni che erano contenute nella precede etichetta cartacea, con la differenza di essere leggermente più approfondite e scritte in modo per ordinato.
+        <!-- Accordion item 3 -->
+        <div class="card">
+          <div id="headingThree" class="card-header bg-white shadow-sm border-0">
+            <h6 class="mb-0 pl-2 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="d-block position-relative collapsed text-uppercase pr-5 collapsible-link py-2">Che tipo di informazioni conterrà l'etichetta virtuale?</a></h6>
+          </div>
+          <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+            <div class="card-body p-5">
+              <p class="font-weight-light m-0">Le informazioni contenute all'interno dell'etichetta virtuale sono le stesse informazioni che erano contenute nella precede etichetta cartacea, con la differenza di essere leggermente più approfondite e scritte in modo per ordinato.
 Le informazioni sull'etichetta virtuale inerenti al prodotto agroalimentare 
 a cui esse si riferiscono sono:</p>
-	  <ol class="px-5 text-left">
+	  <ol class="pb-0">
 	<li>Da chi è stato prodotto;
 	<li>Dove è stato prodotto;
 	<li>In che periodo è stato prodotto;
@@ -641,32 +647,61 @@ a cui esse si riferiscono sono:</p>
 <li>	Altre informazioni utili</ol>
 	<li>Altre informazioni aggiuntive, a discrezione del coltivatore
   </ol>
+              
+            </div>
+          </div>
+        </div>
 
-</div>
-
-<button class="accordion">Come faccio a generare l'etichetta virtuale?</button>
-<div class="panel">
-  <p class="pb-0">È molto semplice! 
+		<!-- Accordion item 4 -->
+        <div class="card">
+          <div id="headingFour" class="card-header bg-white shadow-sm border-0">
+            <h6 class="mb-0 pl-2 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="d-block position-relative collapsed text-uppercase pr-5 collapsible-link py-2">Come faccio a generare l'etichetta virtuale?</a></h6>
+          </div>
+          <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample" class="collapse">
+            <div class="card-body p-5">
+              <p class="font-weight-light m-0">È molto semplice! 
 Generare un etichetta virtuale significa generare un codice QR-code. 
 Per farlo basta eseguire questi pochi e semplici passi: </p>
-	 <ol class="px-5 text-left">
+	 <ol class="pb-0">
 	<li>Seleziona un prodotto che hai coltivato e di cui intendi creare l'etichetta virtuale; 
 	<li>Visualizza e/o modifica le informazioni che il sistema genera automaticamente;
 	<li>Genera il codice Qr (potrai anche stamparlo e/o salvarlo in pdf se lo riterrai necessario);
 	</ol>
-</div>
-
-<button class="accordion">Che cos'è un codice QR?</button>
-<div class="panel">
-  <p>Un codice QR è un codice a barre bidimensionale di forma quadrata 
+            </div>
+          </div>
+        </div>
+        
+        <!-- Accordion item 5 -->
+        <div class="card">
+          <div id="headingFour" class="card-header bg-white shadow-sm border-0">
+            <h6 class="mb-0 pl-2 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" class="d-block position-relative collapsed text-uppercase pr-5 collapsible-link py-2">Che cos'è un codice QR?</a></h6>
+          </div>
+          <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample" class="collapse">
+            <div class="card-body p-5">
+              <p class="font-weight-light m-0">
+              Un codice QR è un codice a barre bidimensionale di forma quadrata 
   composto da diversi moduli di colore nero inseriti all'interno di uno schema 
-  a sfondo bianco. <br> La funzione principale del codice QR è l'archiviazione di 
-  informazioni e dati, formati da caratteri alfanumerici e/o numerici.</p>
-</div>
+  a sfondo bianco. La funzione principale del codice QR è l'archiviazione di 
+  informazioni e dati, formati da caratteri alfanumerici e/o numerici. </p>
+<div align="center"><img src="../image/qr-code-ex1.png" alt="QR-code Image" width="250"/>
+  <img src="../image/qr-code-ex2.png" alt="QR-code Image" width="210"/>
+  <br><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-exclamation-triangle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M7.938 2.016a.146.146 0 0 0-.054.057L1.027 13.74a.176.176 0 0 0-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 0 0 .066-.017.163.163 0 0 0 .055-.06.176.176 0 0 0-.003-.183L8.12 2.073a.146.146 0 0 0-.054-.057A.13.13 0 0 0 8.002 2a.13.13 0 0 0-.064.016zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
+  <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
+</svg> Le immagini sono solo illustrative.</div>
+  
+            </div>
+          </div>
+        </div>
 
-<button class="accordion">Come faccio a reperire le informazioni all'interno dell'etichetta virtuale?</button>
-<div class="panel">
-  <p>Utilizzando il tuo stesso smartphone o tablet! <br>
+		<!-- Accordion item 6 -->
+        <div class="card">
+          <div id="headingSix" class="card-header bg-white shadow-sm border-0">
+            <h6 class="mb-0 pl-2 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" class="d-block position-relative collapsed text-uppercase pr-5 collapsible-link py-2">Come faccio a reperire le informazioni all'interno dell'etichetta virtuale?</a></h6>
+          </div>
+          <div id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionExample" class="collapse">
+            <div class="card-body p-5">
+              <p class="font-weight-light m-0">Utilizzando il tuo stesso smartphone o tablet! <br>
 Questi dispositivi sono predisposti ad accedere alle informazioni in 
 formato QR, sarà sufficiente inquadrare il codice QR con la fotocamera 
 del proprio dispositivo, come illustrato nella foto.<br>
@@ -677,14 +712,20 @@ scan del codice QR. <br>
 <i>Se il tuo telefono non possiede la funzione di scan del QR-Code: Niente paura!</i><br>
 È possibile, dall'apposito store presente su ogni dispositivo, 
 poter scaricare in modo totalmente gratuito una specifica app che permette la 
-scannerizzazione il codice QR, permettendo così l'accesso alle informazioni.  </p>
-</div>
+scannerizzazione il codice QR, permettendo così l'accesso alle informazioni.</p>
+            </div>
+          </div>
+        </div>
 
-
-<button class="accordion" style="border-bottom: 2px solid gray;">Perché utilizzare l'etichetta virtuale?</button>
-<div class="panel">
-  <p class="pb-0">I vantaggi che presenta l'utilizzo di questo meccanismo sono diversi:</p>
-<ol class="px-5 text-left">
+		<!-- Accordion item 7 -->
+        <div class="card">
+          <div id="headingSeven" class="card-header bg-white shadow-sm border-0">
+            <h6 class="mb-0 pl-2 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" class="d-block position-relative collapsed text-uppercase pr-5 collapsible-link py-2">Perché utilizzare l'etichetta virtuale?</a></h6>
+          </div>
+          <div id="collapseSeven" aria-labelledby="headingSeven" data-parent="#accordionExample" class="collapse">
+            <div class="card-body p-5">
+              <p class="font-weight-light m-0">I vantaggi che presenta l'utilizzo di questo meccanismo sono diversi:</p>
+<ol class="pb-0">
 <li>Le informazioni importanti di OGNI SINGOLO PRODOTTO da te coltivato sono ben conservate.
 <li>L'etichetta virtuale, per chi acquista, rappresenta un marchio di genuinità e freschezza dei prodotti. 
 <li>	Le informazioni di ogni singolo prodotto non solo sono accessibili a te ma anche ai consumatori che acquisteranno i tuoi prodotti. 
@@ -692,6 +733,12 @@ In questo modo c'è possibilità di rendere l'utente fruitore attivo delle informa
 <li>	Dato che tutte le informazioni sono visibili ed il processo di coltivazione è totalmente trasparente, in questo modo il consumatore può verificare autonomamente come un prodotto agro alimentare è stato coltivato, quanti trattamenti esso ha subito, in che quantità, in che periodo, dove è stato coltivato e soprattutto chi è il produttore/coltivatore. 
 <li>	Una buona etichetta virtuale rappresenta anche un mezzo pubblicitario per la tua azienda agroalimentare perché spinge sempre più consumatori ad acquistare prodotti coltivati nella TUA azienda, scaturendo in essi una sensazione di fiducia sapendo che i prodotti vengono coltivati in maniera del tutto salutare e legale. 
   </ol>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 	</div>
 <hr class="riga">
@@ -700,6 +747,7 @@ In questo modo c'è possibilità di rendere l'utente fruitore attivo delle informa
 
 
 <script>
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 
