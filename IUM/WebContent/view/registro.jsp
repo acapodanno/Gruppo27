@@ -157,7 +157,7 @@ background-color: #009e0f;
 	font-weight: bold;*/
 	
 	height: 25%;
-	width: 12%;
+	
 	background-color: #23a9d8;
 	color:white;
 	font-weight: ;
@@ -594,7 +594,6 @@ for(RegistroFitosanitario reg : listaReg ){
   
      $("#livesearch").show();
 
-     
      $.ajax({
 	      type:"POST",
 	      data:{"nome":this.value},
@@ -699,7 +698,7 @@ function visualizzaBottoni(el){
        		  s.concat(el.value);
        		  $(s).prop("disabled", false); 
        	      $('.input-modifica'+el.value).prop("disabled", false); 
-              $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9" class= "text-center"> <button onclick="showPop(this.id)" id="update" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button></td><tr>')
+              $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9" class= "text-center"> <button onclick="showPop(this.id)" id="update" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button>    <button class="shadow buttone-modifica" id="elimina" onClick="">Elimina il Trattamento</button></td><tr>')
  			 
  			 
         	  
