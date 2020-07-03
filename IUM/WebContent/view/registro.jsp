@@ -273,7 +273,7 @@ border: none;}
 }
 
 
-#confermaBottone:hover{
+#bottone-popu-conferma:hover{
 
 background-color: green;
 
@@ -476,7 +476,7 @@ for(RegistroFitosanitario reg : listaReg ){
 		  
 		   
 		    <div class="bottoni-pop-up" >
-		      <input type="submit" class="colore-bottoni" id="confermaBottone" id="bottone-popu-conferma" value="Conferma">
+		      <input type="submit" class="colore-bottoni" id="bottone-popu-conferma" value="Conferma">
 		 		 <input type="button" id="annullaBottone" value="Annulla" onclick="document.getElementById('delega-pop-up').style.display='none'" class="colore-bottoni">
 		     </div>
 		
