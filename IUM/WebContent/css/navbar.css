@@ -111,7 +111,7 @@ body{
 
 #titoloParagrafo{ /*paragrafi nella homepage NON LOGGATA*/
 	font-size: 34px;
-	color: #289605;
+	color: #4CAF50;
 	font-family: 'treeftrregular';
 	margin-top: 15px;
 	font-weight: bold;
@@ -119,7 +119,7 @@ body{
 
 #titoloParagrafo2{ /*paragrafi nella homepage LOGGATA*/
 	font-size: 28px;
-	color: #289605;
+	color: #4CAF50;
 	font-family: 'treeftrregular';
 	margin-top: 15px;
 	font-weight: bold;
@@ -431,7 +431,7 @@ display: block ruby;
 
 	font-weight: bold;
 	
-	color: #289605;
+	color: #4CAF50;
 }
 
 /***********************************************   NAVBAR   *******************************************************************/
@@ -444,7 +444,7 @@ display: block ruby;
 
 .nav-item > .navbar-element{
 
-	color: #289605 !important;
+	color: #4CAF50 !important;
 	font-weight: bold;
 	font-size: 1.2rem !important;
 	
@@ -472,7 +472,7 @@ display: block ruby;
 
 #tasto-accedi{
 	text-align: center;
-	background-color: #009e0f;
+	background-color: #4CAF50;
 	color:white;
 	font-weight: bold;
 	 border: none;
@@ -1023,7 +1023,7 @@ td
 
 #titoloCaselle{ 
 	font-size: 45px;
-	color: #289605;
+	color: #4CAF50;
 	font-family: 'treeftrregular';
 	margin-top: 55px;
 	font-weight: bold;
@@ -1132,7 +1132,7 @@ margin-bottom: 50px;
 
 #titoloCaselle{ 
 	font-size: 45px;
-	color: #289605;
+	color: #4CAF50;
 	font-family: 'treeftrregular';
 	margin-top: 55px;
 	font-weight: bold;
@@ -1250,7 +1250,7 @@ border-bottom: 1px solid rgba(40, 150, 5, 0.9);
 
 #titoloCaselle{ 
 	font-size: 40px;
-	color: #289605;
+	color: #4CAF50;
 	font-family: 'treeftrregular';
 	margin-top: 55px;
 	font-weight: bold;
@@ -1310,7 +1310,7 @@ border-bottom: 1px solid rgba(40, 150, 5, 0.9);
 
 #titoloCaselle{ 
 	font-size: 30px;
-	color: #289605;
+	color: #4CAF50;
 	font-family: 'treeftrregular';
 	margin-top: 55px;
 	font-weight: bold;
@@ -1878,7 +1878,7 @@ th, td {	/*anche registro*/
 	display: block;
 	width: 35px;
 	height: 35px;
-	background-color: #2ecc71;
+	background-color: #4CAF50;
 	opacity: .9;
 	-webkit-border-radius: 50%;
 	-webkit-background-clip: padding-box;
@@ -1902,7 +1902,7 @@ th, td {	/*anche registro*/
 	background: 0 0;
 	width: 64px;
 	height: 64px;
-	border: 6px solid #2ecc71;
+	border: 6px solid #4CAF50;
 	opacity: 0;
 	z-index: 1;
 	border-radius: 50%;

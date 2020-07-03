@@ -32,7 +32,7 @@ setTop=true;
 			<p id="titoloHP" style="font-size: 34px;"> Benvenuto in</p>
 		</div>
 		<div id="" class="col col-lg-12 text-center ">
-			<h1 id="titoloPagina" style="color: #289605; font-size: 77px;" > AGRICOL<a id="titoloPagina"  style="color: #47cf00; font-size: 82px;">À</a>RIO,</h1>
+			<h1 id="titoloPagina" style="color: #4CAF50; font-size: 77px;" > AGRICOL<a id="titoloPagina"  style="color: #47cf00; font-size: 82px;">À</a>RIO,</h1>
 		</div>
 </div>
 
