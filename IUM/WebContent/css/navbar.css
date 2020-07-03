@@ -682,17 +682,81 @@ color:white;
 
 
 
+.opRegistro {
+	width: 100px;
+	/* display: block; */
+	position: relative;
+	height: 300px;
+}
+
+
 .buttone-registro{
-	height: 25%;
-	width: 70%;
+    cursor: pointer;
+
 	background-color: #23a9d8;
 	color:white;
-	font-weight: ;
 	border: none;
+    color: white;
+
 	text-align: center;
 	border-radius: 5px;
-	font-size: 24px;
+
 	
+}
+
+
+/*GRANDEZZE bottoni operazioni registro /
+
+/* EXTRA-LARGE devices*/
+@media all and (min-width: 1200px) {
+	.buttone-registro {
+	font-size: 22px;
+	padding: 14px 16px;
+	width: 150px;
+	margin: 18px;
+	}
+}
+
+/*large devices*/
+@media all and (max-width: 1199px) and (min-width: 992px) {
+	.buttone-registro {
+	font-size: 20px;
+	padding: 12px 14px;
+	width: 125px;
+	margin: 15px;
+	}
+	
+}
+
+/*medium devices*/
+@media all and (max-width: 991px) and (min-width: 768px) {
+	.buttone-registro {
+	font-size: 18px;
+	padding: 10px 12px;
+	width: 100px;
+	margin: 12px;
+	}
+	
+}
+
+/*small devices*/
+@media all and (max-width: 767px) and (min-width: 601px) {
+	.buttone-registro {
+	font-size: 16px;
+	padding: 8px 10px;
+	width: 75px;
+	margin: 10px;
+	}
+}
+
+/*extra-small devices*/
+@media all and (max-width: 600px) {
+	.buttone-registro {
+	font-size: 14px;
+	padding: 5px 8px;
+	width: 55px;
+	margin: 8px;
+}
 }
 
 .buttone-registro:hover {
