@@ -333,7 +333,7 @@ font-weight: bold;
 </div> 
 		
 <div id="grid-registro" class="mt-5">
-<div style="width:100% ;height:auto; " id="tab-registro">
+<div id="tab-registro"  class="tab-registro">
 <%ArrayList<RegistroFitosanitario> listaReg = (ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro");%>
 <%
 Utente user = (Utente) session.getAttribute("user");
