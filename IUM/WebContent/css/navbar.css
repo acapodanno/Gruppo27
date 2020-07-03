@@ -1331,7 +1331,7 @@ border-bottom: 1px solid rgba(40, 150, 5, 0.9);
 	width: 80%;
 }
 
-table {
+table {	/*anche registro*/
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
@@ -1340,7 +1340,7 @@ table {
 
 
 
-.head-tabella {
+.head-tabella {  /*anche registro*/
 	background-color: #4CAF50;
 	color: white;
 	font-weight: normal;
@@ -1348,23 +1348,23 @@ table {
 	height: auto;
 }
 
-.tableFixHead   {
+.tableFixHead{ /*anche registro*/
 	position: sticky;
 	top: 0;
 	font-size: 24px;
 }
 
-thead th{
+thead th{    /*anche registro*/
 	position: sticky;
 	top: 0;
-	font-size: 19px;
+	font-size: 16px;
 }
 
-th, td {
+th, td {	/*anche registro*/
 	text-align: left;
-	padding: 8px;
+	/*padding: 8px;*/
 	border-bottom: 1px solid #ddd;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 /************************************************* MAGAZZINO ******************************************************************/

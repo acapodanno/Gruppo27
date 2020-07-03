@@ -78,6 +78,12 @@ only screen and (max-width: 1280px)  {
     display: none;
     
     }
+    
+    th, td {	/*anche registro*/
+	font-weight: bold;
+}
+    
+    
 	/* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr { 
 		display: block; 
