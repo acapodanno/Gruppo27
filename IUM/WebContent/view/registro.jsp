@@ -71,6 +71,10 @@ body{
 
 
 
+.titles{
+width: 100%;
+height: 100px;
+}
 
 @media 
 only screen and (max-width: 1280px)  {
@@ -327,11 +331,23 @@ font-weight: bold;
 
 <div class="container-fluid mt-5 ">
 
-	<div class="w3-container">
+
+<div class="w3-container">
   <p id="titoloPagina" class="text-center"> ,Registro Dei Trattamenti Fitosanitari </p>
   <p id="sottoTitolo" class="text-center" class="w3-large">Visualizza, crea, modifica con facilità il tuo registro dei trattamenti fitosanitari.  </p>
-</div> 
-		
+	   	<div class="pnd-pulse">
+    <span class="pnd-pulse-dot">?</span>
+    <span class="pnd-pulse-ring"></span>
+    <div class=" description">
+         <p class="pnd-pulse-text"> 
+         I pulsanti a destra della tabella ti permettono di effettuare operazioni di Creazione, Modifica, Eliminazione e Delega del registro. Le taghette a sinistra della tabella, qualora ce ne fossero, indicano i registri degli anni precedenti e per visualizzarli basta cliccarci sopra.Per aggiungere un trattamento è necessario cliccare sul pulsante "Aggiungi trattamento" presente al centro della riga vuota nella tabella.  </p>
+         <p class="pnd-pulse-text"> 
+         Per altre informazioni più dettagliate consultare la pagina <a href=""> Come Funziona </a> oppure contattare l'assistenza <a href=""> qui </a>.   </p>
+    </div>	
+    </div>
+</div>
+
+
 <div id="grid-registro" class="mt-5">
 <div id="tab-registro"  class="tab-registro">
 <%ArrayList<RegistroFitosanitario> listaReg = (ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro");%>
@@ -698,7 +714,7 @@ function visualizzaBottoni(el){
        		  s.concat(el.value);
        		  $(s).prop("disabled", false); 
        	      $('.input-modifica'+el.value).prop("disabled", false); 
-              $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9" class= "text-center"> <button onclick="showPop(this.id)" id="update" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button>    <button class="shadow buttone-modifica" id="elimina" onClick="">Elimina il Trattamento</button></td><tr>')
+              $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9" class= "text-center"> <button onclick="showPop(this.id)" id="update" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button>    <button class="shadow buttone-modifica" id="eliminaTrattamento" onClick="">Elimina il Trattamento</button></td><tr>')
  			 
  			 
         	  

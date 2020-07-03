@@ -169,12 +169,32 @@ only screen and (max-width: 1280px)  {
  
 <%@ include file="navbarLaterl.jsp"%>
 <!--  -->
-<div class="row justify-content-center ">
+<div class="row justify-content-center mt-5 ">
 <div class="w3-container">
   <p id="titoloPagina" class="text-center"> ,Prodotti Fitosanitari</p>
-  <p id="sottoTitolo" class="text-center" class="w3-large">Elenco di tutti i prodotti fitosanitari esistenti. Ognuno di esso è caratterizzato da informazioni che ne specificano il tipo, l'utilizzo e le avvertenze. </p>
+  <p id="sottoTitolo" class="text-center" class="w3-large">Visualizza l'elenco di tutti i prodotti fitosanitari esistenti e la loro etichetta. </p>
+   	<div class="pnd-pulse">								
+    <span class="pnd-pulse-dot">?</span>
+    <span class="pnd-pulse-ring"></span>
+    <div class=" description">
+         <p class="pnd-pulse-text"> 
+         La tabella è formata da tre colonne.  </p>
+         <ul class="pnd-pulse-text">
+          <li> Nome del prodotto fitosanitario </li>
+          <li> Descrizione di esso nei miei dettagli </li>
+          <li> Collegamento all'etichetta cartacea del prodotto fitosanitario </li>
+         </ul>
+         <p class="pnd-pulse-text"> 
+         Per altre informazioni più dettagliate consultare la pagina <a href=""> Come Funziona </a> oppure contattare l'assistenza <a href=""> qui </a>.   </p>
+    </div>	
+    </div>
+
 </div> 
 </div> 
+
+
+
+
 <!--  Barra di Ricerca-->
 
 <div class="wrap">
