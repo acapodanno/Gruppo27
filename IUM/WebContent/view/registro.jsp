@@ -883,7 +883,7 @@ function showPop(str){
 		}else  if(str=="true"){
 			
 			document.getElementById('titolo-pop-up').innerText="Operzione Effettuata";
-		    document.getElementById('pop-text').innerText="Operazione effettuata con successo ";
+		    document.getElementById('pop-text').innerText="Operazione effettuata con successo !";
 			$('.bottoni-pop-up').hide();
 					window.setTimeout("ricaricaPagina()", 2000);
 			}else if(str=="false"){
