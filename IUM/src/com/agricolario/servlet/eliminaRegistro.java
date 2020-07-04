@@ -75,7 +75,7 @@ public class eliminaRegistro extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
-		out.append("{\"inserimento\":\""+elimina+"\"}");
+		out.append("{\"eliminazione\":\""+elimina+"\"}");
 		out.flush();
 		
 		
@@ -88,7 +88,7 @@ public class eliminaRegistro extends HttpServlet {
 			PrintWriter out = response.getWriter();
 			response.setContentType("text/html");
 			response.setCharacterEncoding("UTF-8");
-			out.append("{\"inserimento\":\""+false+"\"}");
+			out.append("{\"eliminazione\":\""+false+"\"}");
 			out.flush();
 			
 		}	
