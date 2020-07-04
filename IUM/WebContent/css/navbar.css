@@ -169,7 +169,7 @@ body{
 	border-radius: 5px;
 
 	border-bottom: 1px solid rgba(40, 150, 5, 0.2);
-	box-shadow: 0px 5px 0px 0px rgba(40, 150, 5, 0.5);
+	box-shadow: 0px 15px 8px -11px rgba(40, 150, 5, 0.8);
 
 	background-color: white;
 
@@ -195,7 +195,7 @@ margin-top: 2%
 	border-radius: 5px;
 
 	border-bottom: 1px solid rgba(40, 150, 5, 0.2);
-	box-shadow: 0px 5px 0px 0px rgba(40, 150, 5, 0.5);
+	box-shadow: 0px 15px 8px -11px rgba(40, 150, 5, 0.8);
 	font-size: 1.4vw;
 	background-color: white;
 }
@@ -390,7 +390,7 @@ h4 {
 	width: 80%;
 	position: relative;
 	border-bottom: 1px solid rgba(40, 150, 5, 0.2);
-	box-shadow: 0px 5px 0px 0px rgba(40, 150, 5, 0.5);
+	box-shadow: 0px 15px 8px -11px rgba(40, 150, 5, 0.8);
 }
 
 .immaginina {
@@ -980,7 +980,7 @@ td
 	width: 100%;
 	text-align: center;
 	border: 1px solid rgba(40, 150, 5, 0.2);
-	box-shadow: 0px 5px 0px 0px rgba(40, 150, 5, 0.5);
+	box-shadow: 0px 15px 8px -11px rgba(40, 150, 5, 0.8);
 	border-radius: 5px;
 	
 }
@@ -992,7 +992,7 @@ td
 	width: 100%;
 	text-align: center;
 	border: 1px solid rgba(40, 150, 5, 0.2);
-	box-shadow: 0px 5px 0px 0px rgba(40, 150, 5, 0.5);
+	box-shadow: 0px 15px 8px -11px rgba(40, 150, 5, 0.8);
 	border-radius: 5px;
 	
 }
@@ -1006,7 +1006,7 @@ td
 	margin: auto;
 	text-align: center;
 	border-bottom: 1px solid rgba(40, 150, 5, 0.2);
-	box-shadow: 0px 5px 0px 0px rgba(40, 150, 5, 0.5);
+	box-shadow: 0px 15px 8px -11px rgba(40, 150, 5, 0.8);
 	border-radius: 5px;
 	background: transparent; 
 	font-size: 32px;
@@ -1127,7 +1127,7 @@ border-bottom: 1px solid rgba(40, 150, 5, 0.9);
 }
 
 #titoloPagina{
-margin-bottom: 50px;
+margin-bottom: 25px;
 }
 
 #titoloCaselle{ 
@@ -1869,7 +1869,7 @@ th, td {	/*anche registro*/
 
 .pnd-pulse {
 	position: absolute;
-	right: 300px;
+	right: 150px;
 	top: 250px;
 }
 
@@ -1977,35 +1977,35 @@ th, td {	/*anche registro*/
     -ms-transform: scale(0);
     -webkit-transform: scale(0);
     transform: scale(0);
-    opacity: 0
+    opacity: 0;
   }
   25% {
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     -webkit-transform: scale(0);
     transform: scale(0);
-    opacity: .3
+    opacity: .3;
   }
   50% {
     -moz-transform: scale(.2);
     -ms-transform: scale(.2);
     -webkit-transform: scale(.2);
     transform: scale(.2);
-    opacity: .5
+    opacity: .5;
   }
   75% {
     -moz-transform: scale(.6);
     -ms-transform: scale(.6);
     -webkit-transform: scale(.6);
     transform: scale(.6);
-    opacity: .7
+    opacity: .7;
   }
   100% {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
     transform: scale(1);
-    opacity: 0
+    opacity: 0;
   }
 }
 
@@ -2015,35 +2015,35 @@ th, td {	/*anche registro*/
     -ms-transform: scale(0);
     -webkit-transform: scale(0);
     transform: scale(0);
-    opacity: 0
+    opacity: 0;
   }
   25% {
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     -webkit-transform: scale(0);
     transform: scale(0);
-    opacity: .3
+    opacity: .3;
   }
   50% {
     -moz-transform: scale(.2);
     -ms-transform: scale(.2);
     -webkit-transform: scale(.2);
     transform: scale(.2);
-    opacity: .5
+    opacity: .5;
   }
   75% {
     -moz-transform: scale(.6);
     -ms-transform: scale(.6);
     -webkit-transform: scale(.6);
     transform: scale(.6);
-    opacity: .7
+    opacity: .7;
   }
   100% {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
     transform: scale(1);
-    opacity: 0
+    opacity: 0;
   }
 }
 
@@ -2053,35 +2053,35 @@ th, td {	/*anche registro*/
     -ms-transform: scale(0);
     -webkit-transform: scale(0);
     transform: scale(0);
-    opacity: 0
+    opacity: 0;
   }
   25% {
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     -webkit-transform: scale(0);
     transform: scale(0);
-    opacity: .3
+    opacity: .3;
   }
   50% {
     -moz-transform: scale(.2);
     -ms-transform: scale(.2);
     -webkit-transform: scale(.2);
     transform: scale(.2);
-    opacity: .5
+    opacity: .5;
   }
   75% {
     -moz-transform: scale(.6);
     -ms-transform: scale(.6);
     -webkit-transform: scale(.6);
     transform: scale(.6);
-    opacity: .7
+    opacity: .7;
   }
   100% {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
     transform: scale(1);
-    opacity: 0
+    opacity: 0;
   }
 }
 
@@ -2091,35 +2091,35 @@ th, td {	/*anche registro*/
     -ms-transform: scale(0);
     -webkit-transform: scale(0);
     transform: scale(0);
-    opacity: 0
+    opacity: 0;
   }
   25% {
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     -webkit-transform: scale(0);
     transform: scale(0);
-    opacity: .3
+    opacity: .3;
   }
   50% {
     -moz-transform: scale(.2);
     -ms-transform: scale(.2);
     -webkit-transform: scale(.2);
     transform: scale(.2);
-    opacity: .5
+    opacity: .5;
   }
   75% {
     -moz-transform: scale(.6);
     -ms-transform: scale(.6);
     -webkit-transform: scale(.6);
     transform: scale(.6);
-    opacity: .7
+    opacity: .7;
   }
   100% {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
     transform: scale(1);
-    opacity: 0
+    opacity: 0;
   }
 }
 
@@ -2129,38 +2129,80 @@ th, td {	/*anche registro*/
     -ms-transform: scale(0);
     -webkit-transform: scale(0);
     transform: scale(0);
-    opacity: 0
+    opacity: 0;
   }
   25% {
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     -webkit-transform: scale(0);
     transform: scale(0);
-    opacity: .3
+    opacity: .3;
   }
   50% {
     -moz-transform: scale(.2);
     -ms-transform: scale(.2);
     -webkit-transform: scale(.2);
     transform: scale(.2);
-    opacity: .5
+    opacity: .5;
   }
   75% {
     -moz-transform: scale(.6);
     -ms-transform: scale(.6);
     -webkit-transform: scale(.6);
     transform: scale(.6);
-    opacity: .7
+    opacity: .7;
   }
   100% {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
     transform: scale(1);
-    opacity: 0
+    opacity: 0;
   }
 }	
 
 
+/*GRANDEZZE icon help */
+
+/* EXTRA-LARGE devices*/
+@media only screen and (max-width: 1280px) {
+	.pnd-pulse {
+	position: absolute;
+	right: 100px;
+}
+
+
+	
+}
+
+/*large devices*/
+@media all and (max-width: 1199px) and (min-width: 992px) {
+		.pnd-pulse {
+	position: absolute;
+	right: 150px;
+
+}
+}
+
+/*medium devices*/
+@media all and (max-width: 991px) and (min-width: 768px) {
+			.pnd-pulse {
+	position: absolute;
+	right: 50px;
+	top: 250px;
+	display: block;
+}
+	
+}
+
+/*small devices*/
+@media all and (max-width: 767px) and (min-width: 601px) {
+	
+}
+
+/*extra-small devices*/
+@media all and (max-width: 600px) {
+	
+}
 
 

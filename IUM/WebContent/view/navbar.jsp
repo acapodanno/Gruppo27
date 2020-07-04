@@ -100,13 +100,14 @@ display: inline-block;
 
 /* Primo pulsante accedi "esterno"*/   
 .primo{
-	background: #009e0f;
+	background: #00BB2D;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
 	width: 20%;
+	border-radius: 5px;
 }
 
 /* Secondo pulsante accedi per confermare email e pasw */
