@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import com.agricolario.bean.RegistroFitosanitario;
 import com.agricolario.bean.Utente;
 import com.agricolario.dao.RegistroFitosanitarioDAO;
+import com.agricolario.dao.TrattamentoDAO;
 
 /**
  * Servlet implementation class eliminaRegistro
@@ -61,7 +62,8 @@ public class eliminaRegistro extends HttpServlet {
 		for(RegistroFitosanitario registro : lista) {
 			if((oggi.getYear()  - registro.getDataCreazione().getYear()) == 3     ) {
 				
-		         System.out.println("cancella registro " + registro.getDataCreazione());	     
+		         System.out.println("cancella registro " + registro.getDataCreazione());
+		     	new TrattamentoDAO().deleteTrattamentoByIdRegistro(registro.getIdRegistroFitosanitario());
 		       elimina =   dao.deleteRegistroId(registro.getIdRegistroFitosanitario());
 			}
 			

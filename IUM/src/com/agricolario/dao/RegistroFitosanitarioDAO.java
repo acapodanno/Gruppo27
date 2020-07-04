@@ -138,7 +138,7 @@ public class RegistroFitosanitarioDAO {
 				RegistroFitosanitario registro=new RegistroFitosanitario();
 				ArrayList<Trattamento> trattamenti = new ArrayList<Trattamento>();
 				boolean data=true;
-				Date dataCreazione = new Date();
+				Date dataCreazione = getDataRegistro(id);
 				while(result.next()) {
 					
 					if(data) {
@@ -181,8 +181,25 @@ public class RegistroFitosanitarioDAO {
 		
 	//	return false;
 	}
-	
-	
+		//select dataCreazione from registrofitosanitario where  idregistrofitosanitario= 2;
+	  public Date getDataRegistro(int id) {
+		  
+		  	String sql = "select dataCreazione from registrofitosanitario where  idregistrofitosanitario= ?;";
+			Connection con= connessione.getConn();
+		 	ResultSet result;
+			
+			
+		    	try {
+					PreparedStatement ps = con.prepareStatement(sql);
+				    ps.setInt(1, id);
+		    	} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					return null;
+				}
+		  return null ;
+		  
+	  }
 	public ArrayList<RegistroFitosanitario> getAllRegistro(int idUtente){
 		
 	/*	SELECT * FROM (registrofitosanitario JOIN trattamento  ON registrofitosanitario.idregistrofitosanitario = trattamento.idregistro)
@@ -302,7 +319,7 @@ public boolean deleteRegistroId(int idregistro) {
 		//delete from trattamento where idregistro = 5;
 		String sql="delete from registrofitosanitario where idregistrofitosanitario = ? ;";
 		Connection con= connessione.getConn();
-		new TrattamentoDAO().deleteTrattamentoByIdRegistro(idregistro);
+	
 		
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
