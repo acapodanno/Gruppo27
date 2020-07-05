@@ -867,6 +867,7 @@ function showPop(str){
 	//$(".pop-up-delega").show();
 	document.getElementById('delega-pop-up').style.display='flex'
 		if(str=="aggiungi"){
+			
 			document.getElementById('titolo-pop-up').innerText="Conferma"
 			document.getElementById('pop-text').innerText="Sei sicuro di voler aggiungere il trattamento?"
 				document.getElementById('bottone-popu-conferma').setAttribute("onclick","addTrattamento()");
@@ -874,7 +875,7 @@ function showPop(str){
 	 	}else if(str=="update"){
 	 		document.getElementById('titolo-pop-up').innerText="Conferma"	
 			document.getElementById('pop-text').innerText="Sei sicuro di voler modificare il trattamento?"
-	 		//
+	 		
 				document.getElementById('bottone-popu-conferma').setAttribute("onclick","modificaTrattamento()");
 			 		
 	 	}else if(str=="elimina-registro"){
@@ -896,7 +897,11 @@ function showPop(str){
 					window.setTimeout("ricaricaPagina()", 2000);
 			}else if(str=="false"){
 				
-				
+				document.getElementById('titolo-pop-up').innerText="Operzione non Effettuata";
+			    document.getElementById('pop-text').innerText="Non è stato è possibile effettuare l'operazione!";
+				$('.bottoni-pop-up').hide();
+				window.setTimeout("ricaricaPagina()", 2000);
+
 				
 			}
 
