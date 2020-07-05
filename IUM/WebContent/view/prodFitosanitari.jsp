@@ -169,10 +169,14 @@ only screen and (max-width: 1280px)  {
  
 <%@ include file="navbarLaterl.jsp"%>
 <!--  -->
-<div class="row justify-content-center mt-5 ">
-<div class="w3-container">
+<div class="titles">
+<div  class="titoloPagina ">
   <p id="titoloPagina" class="text-center"> ,Prodotti Fitosanitari</p>
-  <p id="sottoTitolo" class="text-center" class="w3-large">Visualizza l'elenco di tutti i prodotti fitosanitari esistenti e la loro etichetta. </p>
+</div>
+<div class="sottoTitolo" class="text-center">
+  <p  id="sottoTitolo" class="text-center" class="w3-large">Visualizza l'elenco di tutti i prodotti fitosanitari esistenti e la loro etichetta. </p>
+</div>  
+<div  class="iconHelp "> 	
    	<div class="pnd-pulse">								
     <span class="pnd-pulse-dot">?</span>
     <span class="pnd-pulse-ring"></span>
@@ -188,8 +192,7 @@ only screen and (max-width: 1280px)  {
          Per altre informazioni più dettagliate consultare la pagina <a href=""> Come Funziona </a> oppure contattare l'assistenza <a href=""> qui </a>.   </p>
     </div>	
     </div>
-
-</div> 
+</div>
 </div> 
 
 

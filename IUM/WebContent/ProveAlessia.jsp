@@ -21,7 +21,7 @@
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
 <script src="bootstrap.min.js"></script>
-<link rel="stylesheet" href="css/CssProveALESSIA.css">
+<link rel="stylesheet" href="">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/yourcode.js"></script>
@@ -39,228 +39,432 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <title>Alessia's Proves</title>
+<style>
+
+
+.pnd-pulse {
+	position: relative;
+
+}
+
+.pnd-pulse .pnd-pulse-dot {
+	position: relative;
+	display: block;
+	width: 35px;
+	height: 35px;
+	background-color: #4CAF50;
+	opacity: .9;
+	-webkit-border-radius: 50%;
+	-webkit-background-clip: padding-box;
+	-moz-border-radius: 50%;
+	-moz-background-clip: padding;
+	border-radius: 50%;
+	background-clip: padding-box;
+	z-index: 10;
+	cursor: pointer;
+	color: #fff !important;
+	text-align: center;
+	line-height: 31px;
+	font-size: 16px;
+}
+
+.pnd-pulse .pnd-pulse-ring {
+	position: absolute;
+	left: -15px;
+	top: -15px;
+	display: block;
+	background: 0 0;
+	width: 64px;
+	height: 64px;
+	border: 6px solid #4CAF50;
+	opacity: 0;
+	z-index: 1;
+	border-radius: 50%;
+	background-clip: padding-box;
+	animation: pnd-pulse 3s ease-out infinite;
+}
+
+
+
+.pnd-pulse .description {
+	background-color: #fff;
+	border: 2px solid black;
+	max-width: 240px;
+	min-width: 180px;
+	padding: 12px 18px;
+	border-radius: 3px;
+	background-clip: padding-box;
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	left: 44px;
+	display: none;
+	transition: all .2s ease-out;
+}
+
+.pnd-pulse .description:after,
+.pnd-pulse .description:before {
+  right: 100%;
+  top: 14px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none
+}
+
+.pnd-pulse .description:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: white;
+  border-width: 7px;
+  margin-top: -7px
+}
+
+.pnd-pulse .description:before {
+  border-color: transparent;
+  border-right-color: black;
+  border-width: 10px;
+  margin-top: -10px
+}
+
+.pnd-pulse .description .pnd-pulse-text {
+ 
+  color: #000;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: none
+}
+
+
+.pnd-pulse:hover .description {
+  display: block;
+  
+}
+
+
+
+
+@-moz-keyframes pnd-pulse {
+  0% {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: .3;
+  }
+  50% {
+    -moz-transform: scale(.2);
+    -ms-transform: scale(.2);
+    -webkit-transform: scale(.2);
+    transform: scale(.2);
+    opacity: .5;
+  }
+  75% {
+    -moz-transform: scale(.6);
+    -ms-transform: scale(.6);
+    -webkit-transform: scale(.6);
+    transform: scale(.6);
+    opacity: .7;
+  }
+  100% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes pnd-pulse {
+  0% {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: .3;
+  }
+  50% {
+    -moz-transform: scale(.2);
+    -ms-transform: scale(.2);
+    -webkit-transform: scale(.2);
+    transform: scale(.2);
+    opacity: .5;
+  }
+  75% {
+    -moz-transform: scale(.6);
+    -ms-transform: scale(.6);
+    -webkit-transform: scale(.6);
+    transform: scale(.6);
+    opacity: .7;
+  }
+  100% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes pnd-pulse {
+  0% {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: .3;
+  }
+  50% {
+    -moz-transform: scale(.2);
+    -ms-transform: scale(.2);
+    -webkit-transform: scale(.2);
+    transform: scale(.2);
+    opacity: .5;
+  }
+  75% {
+    -moz-transform: scale(.6);
+    -ms-transform: scale(.6);
+    -webkit-transform: scale(.6);
+    transform: scale(.6);
+    opacity: .7;
+  }
+  100% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pnd-pulse {
+  0% {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: .3;
+  }
+  50% {
+    -moz-transform: scale(.2);
+    -ms-transform: scale(.2);
+    -webkit-transform: scale(.2);
+    transform: scale(.2);
+    opacity: .5;
+  }
+  75% {
+    -moz-transform: scale(.6);
+    -ms-transform: scale(.6);
+    -webkit-transform: scale(.6);
+    transform: scale(.6);
+    opacity: .7;
+  }
+  100% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes pnd-pulse {
+  0% {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: .3;
+  }
+  50% {
+    -moz-transform: scale(.2);
+    -ms-transform: scale(.2);
+    -webkit-transform: scale(.2);
+    transform: scale(.2);
+    opacity: .5;
+  }
+  75% {
+    -moz-transform: scale(.6);
+    -ms-transform: scale(.6);
+    -webkit-transform: scale(.6);
+    transform: scale(.6);
+    opacity: .7;
+  }
+  100% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}	
+
+
+@font-face {
+    font-family: 'treeftrregular';
+    src: url("../font/treeftr-webfont/treeftr-p58o-webfont.woff") format('woff2'),
+         url("../font/treeftr-webfont/treeftr-p58o-webfont.woff2") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.titles {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 85% 15%;
+	grid-template-rows: 45% 25%;
+	height: 300px;
+	justify-content: center;
+	grid-column-gap: 2%;
+}
+
+
+.titoloPagina{
+	grid-row-start:1;
+	grid-row-end:1;
+	width: 100%;
+	height:auto;
+	text-align: center;	
+	font-size: 52px; 
+	color: black;
+	font-family: 'treeftrregular';
+}
+
+.sottoTitolo{
+grid-row-start:2;
+	grid-row-end:2;
+	font-size: 22px;
+	color: black;
+	
+}
+
+.iconHelp{
+	grid-row-start:1;
+	grid-row-end:3;
+	width: 100%;
+	height:auto; 
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+</style>
 </head>
 <body>
+<!-- 
+<div id="area-utente" >
+	<div  class="titoloPagina ">
 
-<!-- ----------------------------------------NAV BAR----------------------------------------------- -->
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
-  <a class="navbar-brand ml-7" href="#HomePage.jsp">
-  	<img src="image/LOGO.png" width="75" height="75" class="d-inline-block align-top">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-    <ul class="navbar-nav justify-content-center ">
-      <li class="nav-item active mr-5  dropdown ">
-     
-        <a class=" nav-link navbar-element" href="#" role="button" data-toggle="dropdown"  data-hover="dropdown">COME FUNZIONA</a>
-        <div class="dropdown-menu dropdown-menu-animation" >
-   			 	 <a class="dropdown-item" href="#">Registro Fitosanitario</a>
-   				 <a class="dropdown-item" href="#">Prodotti Fitosanitario</a>
-    			 <a class="dropdown-item" href="#">Scadenze</a>
- 				 <a class="dropdown-item" href="#">Tracciabilità</a>
- 	
- 		</div>
-      </li>
-      <li class="nav-item active mr-5 navbar-element">
-        <a class="nav-link navbar-element" href="#">VANTAGGI</a>
-      </li>
-      <li class="nav-item active mr-5 ">
-        <a class="nav-link active navbar-element" href="#">CHI SIAMO</a>
-      </li>
-      <li class="nav-item active mr-5">
-        <a class="nav-link navbar-element" href="#">ASSISTENZA</a>
-      </li>
-    </ul>
-   <font color="#009e0f"><button class="primo" onclick="document.getElementById('id01').style.display='block'"
-		style="width:auto;">ACCEDI</button></font>
-   
-	</nav>
-  </div>
-  
-  
-  <!-- ---------------------FINE NAV BAR---------------------------------------------------------------- -->
-
-<!-- FUNZIONI -->
-<div class="contenitore-fluid mt-5 ">
-	<div class="row justify-content-center ">
-	<div class="col col-lg-12 text-center ">
-			<h1 style="color: black">Benvenuto in</h1>
-		</div>
-		<div class="col col-lg-12 text-center ">
-				<img src="image/NomeSito.png" class="d-inline-block align-top">
-		</div>
-</div>
-
-
-
-
-
-  <div class="row justify-content-center mt-5" >
-    <div class="col col-lg-4  ">
-    <div  class="mt-3 ml-5 cazzarielli">
-<img src="https://img.icons8.com/bubbles/100/000000/literature.png"/>
-    </div>
-    <div  class=" cazzarielli-testo"style="  ">
-    
-    
-    <h4 class="mt-2">REGISTRO FITOSANITARIO</h4>
-    <p class="mt-2">Compila qui il tuo registro fitosanitario dei trattamenti fitosanitari! <br>
-Tramite pochi pratici click potrai aggiungere un trattamento al tuo registro fitosanitario, apportare modifiche, visualizzare e stampare i registri degli anni precedenti.
-
-    </p>
-    </div>
-    </div>
-    <div class="col col-lg-4 ">
-       <div  class="mt-3 ml-5 cazzarielli">
-<img src="https://img.icons8.com/bubbles/100/000000/search.png"/>
-    </div>
-        <div  class=" cazzarielli-testo">
-    
-     <h4 class="mt-2">PRODOTTI FITOSANITARI</h4>
-    <p class="mt-2">Sfoglia qui l'elenco di tutti i prodotti fitosanitari esistenti, consulta tutte le informazioni importanti, le etichette e le avvertenze di ogni singolo prodotto fitosanitario! <br>
-Potrai visualizzare anche solo i tuoi prodotti fitosanitari presenti nel tuo magazzino e aggiungerne nuovi. 
- </p>
-    </div>
-    </div>
-   </div>
-
-<div class="row justify-content-center mt-5" >
-   <div class="col col-lg-4  ">
-    <div  class="mt-3 ml-5 cazzarielli">
-    <img src="https://img.icons8.com/bubbles/100/000000/overtime.png"/>
-    </div>
-    <div  class=" cazzarielli-testo">
-    
-    
-    <h4 class="mt-2">SCADENZE</h4>
-    <p class="mt-2">Visualizza qui tutte le scadenze dei trattamenti fitosanitari effettuati! <br>
-Potrai tenere sotto controllo il termine dei trattamenti e stare al passo coi tempi. 
-    
-    </p>
-    </div>
-    </div>
- 
-  <div class="col col-lg-4  ">
-    <div  class="mt-3 ml-5 cazzarielli">
-  <img src="https://img.icons8.com/bubbles/100/000000/qr-code.png"/>
-    </div>
-    <div  class=" cazzarielli-testo">
-    
-    
-    <h4 class="mt-2">TRACCIABILITA'</h4>
-    <p class="mt-2">Crea qui l'etichetta virtuale per ogni prodotto agroalimentare da te coltivato! <br>
-Con una semplice generazione di un codice QR potrai visualizzare tutte le informazioni legate ai tuoi prodotti. 
-
-    </p>
-    </div>
-    </div>
-
-
-
-
-</div>
-
-
-</div>
-
-<!-- --------------------------SLIDE SHOW--------------------------------------------------------------- -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:5px;">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="image/PROVA4.jpg" alt="First slide" width=auto height="525px">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="image/PROVA8.jpg" alt="Second slide" width=auto height="525px">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="image/PROVA7.jpg" alt="Third slide" width=auto height="525px">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-<!-- -------------------------FINE SLIDE SHOW----------------------------------------------------- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="id01" class="modale">
-  
-  <form class="animate" action="/action_page.php"
-			method="post">
-   <div class="login">
-			 
-   <!-- <img id="sfondo" src="https://images.vanityfair.it/wp-content/uploads/2019/04/19133507/P29.jpg"  width=auto height="700px"> -->
-   <div class="imgcontenitore">
-      <span onclick="document.getElementById('id01').style.display='none'"
-						class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="contenitore">
-    	<h1 class="text-center"><b> Accedi</b></h1><br>
-      <label id="uname"><b>Inserisci qui la tua e-mail</b></label>
-      <input style="color: white;" type="text" placeholder="Email" name="uname" required>
-
-      <label id="psw"><b>Inserisci qui la tua password</b></label>
-      <input style="color: white;" type="password" placeholder="Password" name="psw "required> 
-        
-     
-      <div class="group">
-					<input id="check" type="checkbox" class="check" checked>
-					<label for="check"><span style="font-size:16px" "class="icon"> Ricordami</label></span>
+	<h4 id="titoloCaselle" >Prodotti Fitosanitari</h4>
+				
+					
 	</div>
 	
-	 <font color="#009e0f"> <button class="secondo" type="submit">ACCEDI</button></font>
-       <div class="hr"></div>
-			<div class="foot-lnk">
-					<a style="color:#1161ee">Non sei ancora registrato?</a> <a href="#" style="color: white; font-style: italic; font-weight: bold">Registrati qui!</a>
-			</div>
+	
+		<div id="sottoTitolo" class="text-center">
+	<h4 id="titoloCaselle" >Visualizza l'elenco di tutti i prodotti fitosanitari esistenti e la loro etichetta.</h4>
+ 
+</div>
+	
+	
+	<div  class="iconHelp ">
+	
+	<h4 id="titoloCaselle" >punto</h4>
+	<div class="pnd-pulse">								
+    <span class="pnd-pulse-dot">?</span>
+    <span class="pnd-pulse-ring"></span>
+    <div class=" description">
+         <p class="pnd-pulse-text"> 
+         La tabella è formata da tre colonne.  </p>
+         <ul class="pnd-pulse-text">
+          <li> Nome del prodotto fitosanitario </li>
+          <li> Descrizione di esso nei miei dettagli </li>
+          <li> Collegamento all'etichetta cartacea del prodotto fitosanitario </li>
+         </ul>
+         <p class="pnd-pulse-text"> 
+         Per altre informazioni più dettagliate consultare la pagina <a href=""> Come Funziona </a> oppure contattare l'assistenza <a href=""> qui </a>.   </p>
+    </div>	
     </div>
-    
+	
 
-    
-  </div>
-		</form>
+					
+	</div>
+	
 </div>
 
-<script>
-	// Get the modal
-	var modal = document.getElementById('id01');
+ -->
 
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
-</script>
+
+
+<div class="titles">
+<div  class="titoloPagina ">
+  <p class="text-center"> ,Prodotti Fitosanitari</p>
+</div>
+<div class="sottoTitolo" class="text-center">
+  <p  class="text-center" class="w3-large">Visualizza l'elenco di tutti i prodotti fitosanitari esistenti e la loro etichetta. </p>
+</div>  
+<div  class="iconHelp "> 	
+   	<div class="pnd-pulse">								
+    <span class="pnd-pulse-dot">?</span>
+    <span class="pnd-pulse-ring"></span>
+    <div class=" description">
+         <p class="pnd-pulse-text"> 
+         La tabella è formata da tre colonne.  </p>
+         <ul class="pnd-pulse-text">
+          <li> Nome del prodotto fitosanitario </li>
+          <li> Descrizione di esso nei miei dettagli </li>
+          <li> Collegamento all'etichetta cartacea del prodotto fitosanitario </li>
+         </ul>
+         <p class="pnd-pulse-text"> 
+         Per altre informazioni più dettagliate consultare la pagina <a href=""> Come Funziona </a> oppure contattare l'assistenza <a href=""> qui </a>.   </p>
+    </div>	
+    </div>
+</div>
+</div> 
+ 
+
 
 
 

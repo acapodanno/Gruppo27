@@ -124,14 +124,21 @@ only screen and (max-width: 1280px)  {
  
 <%@ include file="navbarLaterl.jsp"%>
 
-<div class="w3-container mt-5">
-  <p id="titoloPagina" class="text-center"> ,Scadenze dei Trattamenti Fitosanitari</p>
-  <p id="sottoTitolo" class="text-center" class="w3-large">Visualizza le scadenze dei trattamenti fitosanitari presenti nel tuo registro.  </p>
-	   	<div class="pnd-pulse">
+
+
+<div class="titles">
+<div  class="titoloPagina ">
+  <p id="titoloPagina" class="text-center">  ,Scadenze</p>
+</div>
+<div class="sottoTitolo" class="text-center">
+  <p  id="sottoTitolo" class="text-center" class="w3-large"> Visualizza le scadenze dei trattamenti fitosanitari presenti nel tuo registro. </p>
+</div>  
+<div  class="iconHelp "> 	
+   	<div class="pnd-pulse">								
     <span class="pnd-pulse-dot">?</span>
     <span class="pnd-pulse-ring"></span>
     <div class=" description">
-         <p class="pnd-pulse-text"> 
+       <p class="pnd-pulse-text"> 
          La tabella è formata da cinque colonne.  </p>
          <ul class="pnd-pulse-text">
           <li> Scadenza del trattamento fitosanitario </li>
@@ -142,9 +149,15 @@ only screen and (max-width: 1280px)  {
          </ul>
          <p class="pnd-pulse-text"> 
          Per altre informazioni più dettagliate consultare la pagina <a href=""> Come Funziona </a> oppure contattare l'assistenza <a href=""> qui </a>.   </p>
-    </div>	
+     </div>	
     </div>
 </div>
+</div> 
+
+
+
+
+
 <%  ArrayList<RegistroFitosanitario> lista =(ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro") ;   %>
 
 <!-- Elenco -->

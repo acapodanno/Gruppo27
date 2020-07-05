@@ -40,16 +40,22 @@
 
 <%@ include file="navbarLaterl.jsp"%>
 
-<div class="container-fluid mt-5 ">
+<div class="container-fluid  ">
 
-<div class="w3-container mt-5">
-  <p id="titoloPagina" class="text-center"> ,Traccibilità</p>
-  <p id="sottoTitolo" class="text-center" class="w3-large">Crea, in modo facile e veloce, l'etichetta virtuale per le tue coltivazioni. </p>
-	   	<div class="pnd-pulse">
+
+<div class="titles">
+<div  class="titoloPagina ">
+  <p id="titoloPagina" class="text-center">  ,Traccibilità</p>
+</div>
+<div class="sottoTitolo" class="text-center">
+  <p  id="sottoTitolo" class="text-center" class="w3-large">Crea, in modo facile e veloce, l'etichetta virtuale per le tue coltivazioni. </p>
+</div>  
+<div  class="iconHelp "> 	
+   	<div class="pnd-pulse">								
     <span class="pnd-pulse-dot">?</span>
     <span class="pnd-pulse-ring"></span>
     <div class=" description">
-         <p class="pnd-pulse-text"> 
+       <p class="pnd-pulse-text"> 
          Sono presenti due sezioni.  </p>
          <ul class="pnd-pulse-text">
           <li> Scelta del prodotto per cui si intende creare l'etichetta virtuale </li>
@@ -61,9 +67,15 @@
          
          <p class="pnd-pulse-text"> 
          Per altre informazioni più dettagliate consultare la pagina <a href=""> Come Funziona </a> oppure contattare l'assistenza <a href=""> qui </a>.   </p>
-    </div>	
+   </div>	
     </div>
 </div>
+</div> 
+
+
+
+
+
 	<div class="row justify-content-center mt-5">
 		<div class="col col-lg-3 " style=" height: 500px;">
 			<div class="col col-lg-12 text-center ">

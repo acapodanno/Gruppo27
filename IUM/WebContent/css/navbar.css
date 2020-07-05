@@ -92,13 +92,59 @@ body{
     font-style: normal;
 }
 
-#titoloPagina{  /*titoloi di tutte le pagine*/
+ 
+ /************************************************TITOLI DELLE PAGINE **************************************************/
+ 
+
+.titles {
+	width: 80%;
+	display: grid;
+	grid-template-columns: 98% 2%;
+	grid-template-rows: 55% 25%;
+	height: 180px;
+	margin: auto;
+}
+	
+.titoloPagina {
+	grid-row-start: 1;
+	grid-row-end: 1;
+	width: 100%;
+	/* height: 20%; */
+	margin-top: 50px;
+	/* margin: auto; */
+}
+
+.sottoTitolo {
+	grid-row-start: 2;
+	grid-row-end: 2;
+	font-size: 22px;
+	color: black;
+	margin-top: 40px;
+}
+
+.iconHelp {
+	grid-row-start: 1;
+	grid-row-end: 2;
+	width: 100%;
+	height: 100%;
+	/* text-align: center; */
+	margin: auto;
+}
+ 
+ 
+
+#titoloPagina{  /*titoloi di tutte le pagine */
 	font-size: 52px; 
 	color: black;
 	font-family: 'treeftrregular';
-	margin-top: 15px;
-	margin-bottom: 20px;
-}
+} 
+
+#sottoTitolo{
+	font-size: 22px;
+	color: black;
+	
+} 
+
 
 #titoloHP{  /*titoli Home page loggata*/
 	font-size: 42px; 
@@ -126,11 +172,57 @@ body{
 }
 
 
-#sottoTitolo{
-	font-size: 22px;
-	color: black;
-	margin-top: 15px;
-	margin-bottom: 30px;
+
+
+
+/*GRANDEZZE titoli di tutte le pagine /
+
+
+
+/*medium devices*/
+@media all and (max-width: 991px) and (min-width: 768px) {
+	#titoloPagina{  /*titoloi di tutte le pagine */
+		font-size: 46px; 
+	} 
+
+	#sottoTitolo {
+	font-size: 20px;
+	position: relative;
+	bottom: 20px;
+}
+
+	
+}
+
+/*small devices*/
+@media all and (max-width: 767px) and (min-width: 601px) {
+	#titoloPagina{  /*titoloi di tutte le pagine */
+		font-size: 42px; 
+	} 
+
+	#sottoTitolo {
+	font-size: 18px;
+	position: relative;
+	bottom: 20px;
+} 
+	
+}
+
+/*extra-small devices*/
+@media all and (max-width: 600px) {
+	#titoloPagina {
+	font-size: 36px;
+	margin-top: 10px;
+	}
+
+	#sottoTitolo {
+	font-size: 16px;
+	/* margin-bottom: 20px; */
+	/* margin-bottom: 100px; */
+	position: relative;
+	bottom: 20px;
+}
+	
 }
 
 /*******************************************************HOME PAGE LOGGATA E NON ***************************************************/
@@ -328,11 +420,11 @@ margin-top: 2%
 
  /*extra-small devices*/
 @media all and (max-width: 600px) {
-	
-	#titoloPagina{  /*titoloi di tutte le pagine*/
+/*	
+	#titoloPagina{  /*titoloi di tutte le pagine
 	font-size: 35px; 
 	
-}
+} */
 	
 		#titoloParagrafo2{ /*paragrafi nella homepage LOGGATA*/
 	font-size: 20px;
@@ -1520,12 +1612,7 @@ th, td {	/*anche registro*/
 }
 
 /************************************************* MAGAZZINO ******************************************************************/
-#titoloPagina{
-	font-size: 52px; 
-	color: black;
-	font-family: 'treeftrregular';
-	margin-top: 15px;
-}
+
 	
 	
 .tit {
@@ -1866,11 +1953,11 @@ th, td {	/*anche registro*/
 }
 
 /************************************************* HELP BOXXXX *********************************************************/
-
 .pnd-pulse {
-	position: absolute;
-	right: 150px; 
-	top: 250px;
+	position: relative;
+	/* margin: auto; */
+	/* width: 50%; */
+	margin-top: 80px;
 }
 
 .pnd-pulse .pnd-pulse-dot {
@@ -1923,14 +2010,14 @@ th, td {	/*anche registro*/
 	z-index: 100;
 	position: absolute;
 	top: 0;
-	left: 44px;
+	right: 44px;
 	display: none;
 	transition: all .2s ease-out;
 }
 
 .pnd-pulse .description:after,
 .pnd-pulse .description:before {
-  right: 100%;
+  left: 100%;
   top: 14px;
   border: solid transparent;
   content: " ";
@@ -1942,14 +2029,14 @@ th, td {	/*anche registro*/
 
 .pnd-pulse .description:after {
   border-color: rgba(255, 255, 255, 0);
-  border-right-color: white;
+  border-left-color: white;
   border-width: 7px;
   margin-top: -7px
 }
 
 .pnd-pulse .description:before {
   border-color: transparent;
-  border-right-color: black;
+  border-left-color: black;
   border-width: 10px;
   margin-top: -10px
 }
@@ -2162,47 +2249,5 @@ th, td {	/*anche registro*/
 }	
 
 
-/*GRANDEZZE icon help */
-
-/* EXTRA-LARGE devices*/
-@media only screen and (max-width: 1280px) {
-	.pnd-pulse {
-	position: absolute;
-	right: 100px;
-}
-
-
-	
-}
-
-/*large devices*/
-@media all and (max-width: 1199px) and (min-width: 992px) {
-		.pnd-pulse {
-	position: absolute;
-	right: 150px;
-
-}
-}
-
-/*medium devices*/
-@media all and (max-width: 991px) and (min-width: 768px) {
-			.pnd-pulse {
-	position: absolute;
-	right: 50px;
-	top: 250px;
-	display: block;
-}
-	
-}
-
-/*small devices*/
-@media all and (max-width: 767px) and (min-width: 601px) {
-	
-}
-
-/*extra-small devices*/
-@media all and (max-width: 600px) {
-	
-}
 
 
