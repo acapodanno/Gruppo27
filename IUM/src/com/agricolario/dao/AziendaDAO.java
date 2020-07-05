@@ -121,7 +121,7 @@ public class AziendaDAO {
 					a.setDataFondazione(result.getDate("DataFondazione"));
 					a.setIndirizzo(result.getString("indirizzo"));
 					a.setCap(result.getString("cap"));
-					a.setIdUtente(result.getInt("idutente"));
+					a.setIdUtente(result.getInt("idtitolare"));
 					
 					}
 					

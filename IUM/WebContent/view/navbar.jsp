@@ -11,7 +11,19 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="stylesheet" href="css/navbar.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
 
+$( document ).ready(function() {
+    console.log( "ready!" );
+    showNotifica();
+  
+
+}); 
+
+
+</script>
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
@@ -255,7 +267,26 @@ img{
 }
 
 
+a.notif {
+  position: relative;
 
+  width: 50px;
+
+  text-decoration: none;
+}
+.num {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    color: black;
+    bottom: 8px;
+    right: -12px;
+    text-align: center;
+    background-color: red;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 16px;
+    display:none;
+}
 
 </style>
 	
@@ -308,14 +339,49 @@ img{
      <div id="icone" class="align-baseline icon-bar-vertical">
   	<a class="" href="showHome"><img src="https://img.icons8.com/officel/30/000000/home-page.png"/></a>
   	<a href="showAccount" class=" ml-3" ><img src="https://img.icons8.com/officel/30/000000/gender-neutral-user.png"/></a>
-  	<a href="#" class=" ml-3"><img src="https://img.icons8.com/officel/30/000000/appointment-reminders.png"/></a>
+  	<a href="showNotifiche" class=" ml-3 notif"><img src="https://img.icons8.com/officel/30/000000/appointment-reminders.png"/><span class="num"></span></a>
   	<a href="logout" class=" ml-3" ><img src="https://img.icons8.com/officel/30/000000/exit.png"/></a>
   	
   	
   	
   	
 	</div> 
+    <script type="text/javascript">
+	//notifica
+	//setTimeout(showNotifica(),100);
+
+	//setInterval(showNotifica,100);
+	function showNotifica(){
+	        	 jQuery.noConflict();
+	        	   $.ajax({
+	        		      type:"POST",
+	        		      data:{"nome":this.value},
+	        		      url:"ottieniNotifiche",
+	        		      success : function(data){
+	        		    	 var object= JSON.parse(data);
+	        		    	 console.log(object);
+								 if(object.length>0){
+        						 $( ".num" ).show();
+        						 $( ".num" ).html(object.length);
+								 }else{
+									 $( ".num" ).hide();
+		        							 
+									 
+									 
+								 }
+	        					
+	        		    	}});
+	}
+
+
     
+    
+    
+    
+    
+    
+    
+    </script>
     <%}else{ %>
     <button class="primo" onclick="document.getElementById('id01').style.display='block'"
 		style="width:auto;">
@@ -374,6 +440,7 @@ img{
 			modal.style.display = "none";
 		}
 	}
+
 </script>
 
 

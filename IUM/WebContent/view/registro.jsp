@@ -480,6 +480,7 @@ for(RegistroFitosanitario reg : listaReg ){
         <button class="shadow  buttone-registro" onclick="redirectDelega(<%=idRegistro %>,<%=user.getId()%>)">Delega</button>
         <button class="shadow buttone-registro" id="modifica"  onclick="clickModifica(this)">Modifica</button>
         <button class="shadow buttone-registro" <%if(user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;"  <%}%> onclick="showPop(this.id)" id="elimina-registro" >Elimina</button>
+        <button class="shadow buttone-registro" id="ap"  onclick="clickModifica(this)">Approva Modifiche</button>
         
 </div>
                 
