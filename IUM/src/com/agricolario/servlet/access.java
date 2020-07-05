@@ -40,7 +40,8 @@ public class access extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+		//ok
+		String mannaggia="aMaron";
 		String access= request.getParameter("access");
 		String email,password,nome,cognome,dataNascita,ruolo,nomeAzienda,indirizzo,città,cap,dataFondazione;
 		UtenteDAO userDao = new UtenteDAO();
