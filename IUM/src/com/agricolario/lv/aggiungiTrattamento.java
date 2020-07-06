@@ -63,7 +63,6 @@ public class aggiungiTrattamento extends HttpServlet {
 			
 			new NotificaDAO().insertNotifica(u.getId(), u.getAzienda().getIdUtente(), informazione);
 			
-			System.out.println("ok");
 		}
 		
 		PrintWriter out = response.getWriter();

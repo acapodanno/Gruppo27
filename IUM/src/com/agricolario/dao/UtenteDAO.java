@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.agricolario.bean.Utente;
 import com.agricolario.connessione.Connessione;
@@ -84,7 +85,6 @@ public class UtenteDAO {
 					user.setDataNascita(result.getDate(6));
 					user.setEmail(result.getString(7));
 				}
-				System.out.println("Query andata"+user.getId()+user.getEmail());
 				return user; 
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -93,4 +93,46 @@ public class UtenteDAO {
 			}
 			
     }
+    
+    public ArrayList<Utente> getAllUtenteByStr(String email){
+    	
+    	String sql= "select * from utente where email like ? ;";
+    	Connection con= connessione.getConn();
+    	try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1,"%"+email+"%"  );
+			result=ps.executeQuery();
+			ArrayList<Utente> lista=new ArrayList<Utente>();
+			while(result.next()) {
+				Utente user=new Utente();
+				user.setId(result.getInt(1));
+				user.setRuolo(result.getString(2));
+				user.setNome(result.getString(3));
+				user.setCognome(result.getString(4));
+				user.setPassword(result.getString(5));
+				user.setDataNascita(result.getDate(6));
+				user.setEmail(result.getString(7));
+				lista.add(user);
+			}
+			
+			
+			 return lista;
+			
+			}catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return null;
+			}
+			
+    	
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

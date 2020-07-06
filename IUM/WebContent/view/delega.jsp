@@ -246,16 +246,15 @@ background-color: red;
  
  %>
  
- <input type="hidden" name="idRegistro" value="<%=idreg%>">
- <input type="hidden" name="idutente" value="<%=user.getId()%>">
+ <input type="hidden" name="idRegistro" id="registro" value="<%=idreg%>">
 
   <div style=" width:100%; height: 80%" class="form-delega">
   		<p  id="titoloDelega" class="text-center"> Delega</p>
   		<br>
-   <span style="font-size: 20px;" >Email</span>:<input type="text" id="emailDelegato" class="input-delega" name="email" value="" placeholder="Email del delegato"><br>
-   <span style="font-size: 20px;" for="fname">Nome:</span><input type="text" class="input-delega" name="email" value="" placeholder="Nome del delegato"><br>
-   <span style="font-size: 20px;" for="fname">Cognome:</span><input type="text" class="input-delega" name="email" value="" placeholder="Cognome del delegato"><br><br>
-   <input type="button" id="bottone-delega" class="colore-bottoni" value="Delega" style="margin-left: 15%" onclick="showPop()"> </input>
+   <span style="font-size: 20px;" >Email</span>:<input type="text" id="email" class="input-delega" name="email" value="" placeholder="Email del delegato" list="email_list"><br>
+   <span style="font-size: 20px;" for="fname">Nome:</span><input type="text" id="nome" class="input-delega" name="nome" value="" ><br>
+   <span style="font-size: 20px;" for="fname">Cognome:</span><input type="text" id="cognome" class="input-delega" name="cognome" value=""><br><br>
+   <input type="button" id="bottone-delega" class="colore-bottoni" value="Delega" style="margin-left: 15%" onclick="showPop(this)"> </input>
    <input type="button" id="bottone-delega" class="colore-bottoni" value="Indietro" onclick="history.go(-1)"> </input>
 	 
   </div>
@@ -271,7 +270,7 @@ background-color: red;
 		  
 		   
 		    <div class="bottoni-pop-up" >
-		      <input type="submit" class="colore-bottoni"  id="confermaBottone" id="bottone-popu-conferma"  value="Conferma">
+		      <input type="submit" class="colore-bottoni"   onclick="document.getElementById('delega-pop-up').style.display='none'" id="bottone-popu-conferma"  value="Conferma">
 		 		 <input type="button" id="annullaBottone" value="Annulla" onclick="document.getElementById('delega-pop-up').style.display='none'" class="colore-bottoni">
 		     </div>
 		
@@ -281,7 +280,10 @@ background-color: red;
  </div>
 </form>
    
+<datalist id="email_list">
 
+
+</datalist>
 
 
 
@@ -290,25 +292,56 @@ background-color: red;
 
 <script type="text/javascript">
 jQuery.noConflict();
-$("#emailDelegato").keyup(function() {
-
-console.log("sono chiamato in causa");
-$.ajax({
- type:"POST",
- data:{"nome":this.value},
- url:"addTrattamentoLv",
- success : function(data){
-	 var object= JSON.parse(data);
+$("#email").keyup(function() {
+	console.log("sono chioamsdf")
+	$.ajax({
+		 type:"POST",
+		 data:{"email":this.value},
+		 url:"emailDelegato",
+		 success : function(data){
+			 var object= JSON.parse(data);
+			 for (var i = 0; i < object.length; i++) {
+					
+				 
+				 $("#email_list").html("<option value="+ object[i].email +" onclick='setNC("+object[i].name+","+object[i].cognome+")'>"+ object[i].email +" <option>");
+			     
+			 }
+			 
+			 
+			}});
 	
-	}});
-
+	
+	
+	
+	
 });
+function setNC(nome,cognome){
+	
+	
+	$("#nome").val(nome);
+	$("#cognome").val(cognome); 
+	
+}
 
+function showPop(str){
 
-function showPop(){
+    console.log(str.value)
+    document.getElementById('delega-pop-up').style.display='flex'
+	if(str=="true"){
+		
+		document.getElementById('titolo-pop-up').innerText="Operzione Effettuata";
+	    document.getElementById('pop-text').innerText="Operazione effettuata con successo !";
+		$('.bottoni-pop-up').hide();
+				window.setTimeout("ricaricaPagina()", 2000);
+		}else if(str=="false"){
+			
+			document.getElementById('titolo-pop-up').innerText="Operzione non Effettuata";
+		    document.getElementById('pop-text').innerText="Non è stato è possibile effettuare l'operazione!";
+			$('.bottoni-pop-up').hide();
+			window.setTimeout("ricaricaPagina()", 2000);
 
-//$(".pop-up-delega").show();
-document.getElementById('delega-pop-up').style.display='flex'
+			
+		}
 }
 
 </script>

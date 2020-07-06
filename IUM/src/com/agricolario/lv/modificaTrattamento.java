@@ -8,8 +8,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.agricolario.bean.ProdottoFitosanitario;
+import com.agricolario.bean.Utente;
+import com.agricolario.dao.NotificaDAO;
 import com.agricolario.dao.ProdottoFitosanitarioDAO;
 import com.agricolario.dao.TrattamentoDAO;
 import com.agricolario.functionality.ParseDate;
@@ -63,6 +66,14 @@ public class modificaTrattamento extends HttpServlet {
 		p= new ProdottoFitosanitarioDAO().getProdotto(nomeProdotto);
 		int idProdotto = p.getIdProdottoFitosanitario();
 		boolean modifca = new TrattamentoDAO().updateTrattamento(Integer.parseInt(idregistro), idProdotto, coltura, nomeProdotto,ParseDate.parseDateUtil(dataInizio), Double.parseDouble(superficie), Float.parseFloat(quantita), avversita, note, p.getDose(), Integer.parseInt(idtrattamento));
+		HttpSession ssn = request.getSession();
+		Utente u= (Utente)ssn.getAttribute("user");
+		if(u.getRuolo().equals("delegato")) {
+			String informazione ="Il delgato " + u.getNome()+" " + u.getCognome()+" ha modificato dei trattamenti nel registro! vai nella sezione registro e approva le modifiche!";
+			new NotificaDAO().insertNotifica(u.getId(), u.getAzienda().getIdUtente(), informazione);
+		}
+		
+		
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");

@@ -1,29 +1,29 @@
 package com.agricolario.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.agricolario.bean.Utente;
-import com.agricolario.dao.DelegaDAO;
-import com.agricolario.dao.NotificaDAO;
 import com.agricolario.dao.UtenteDAO;
 
 /**
- * Servlet implementation class delegaRegistro
+ * Servlet implementation class emailDelegato
  */
-@WebServlet("/delegaRegistro")
-public class delegaRegistro extends HttpServlet {
+@WebServlet("/emailDelegato")
+public class emailDelegato extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public delegaRegistro() {
+    public emailDelegato() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,40 +32,42 @@ public class delegaRegistro extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 	
-	String idUtente = request.getParameter("idUtente");//titolare
-
-	String idRegistro = request.getParameter("idregistro");
-
-	String email = request.getParameter("email");
-	Utente delegato = new UtenteDAO().selectUser(email);
-	HttpSession ssn = request.getSession();
-	Utente u= (Utente)ssn.getAttribute("user");
-	
-	if(new DelegaDAO().insertDelegato(u.getId(), delegato.getId(), Integer.parseInt(idRegistro))) {
-
-		String informazione ="Sei stai  delgato  da :" + u.getNome()+" " + u.getCognome();
-		new NotificaDAO().insertNotifica(delegato.getId(), u.getId(), informazione);
-	    getServletContext().getRequestDispatcher("view/registro.jsp").forward(request, response);
 		
-	}else {
-		
-    getServletContext().getRequestDispatcher("view/registro.jsp").forward(request, response);
-
+		String email = request.getParameter("email");
 		
 		
+		   ArrayList<Utente> lista = new UtenteDAO().getAllUtenteByStr(email);
+			
+			PrintWriter out = response.getWriter();
+			response.setContentType("text/html");
+			response.setCharacterEncoding("UTF-8");
+	        out.append("[");
+	        int count=0;
+	    
+			for(Utente u :lista) {
+			count++;
+			out.append("{\"name\":\""+u.getNome()+"\",\"cognome\":\""+u.getCognome()+"\",\"email\":\""+u.getEmail()+"\"}");
+			if(count<=lista.size()-1) {
+				out.append(",");
+			}
+			}
+	        out.append("]");
+
+	        
+	        
+			out.flush();
 		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 	/**
