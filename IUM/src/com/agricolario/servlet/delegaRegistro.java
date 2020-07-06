@@ -51,6 +51,7 @@ public class delegaRegistro extends HttpServlet {
 		new NotificaDAO().insertNotifica( u.getId(),delegato.getId(), informazione);
 	   // getServletContext().getRequestDispatcher("view/registro.jsp").forward(request, response);
 		
+		
 	}
 
 	PrintWriter out = response.getWriter();
