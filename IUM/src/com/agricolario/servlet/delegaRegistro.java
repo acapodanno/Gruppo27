@@ -1,6 +1,8 @@
 package com.agricolario.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -42,22 +44,20 @@ public class delegaRegistro extends HttpServlet {
 	Utente delegato = new UtenteDAO().selectUser(email);
 	HttpSession ssn = request.getSession();
 	Utente u= (Utente)ssn.getAttribute("user");
-	
-	if(new DelegaDAO().insertDelegato(u.getId(), delegato.getId(), Integer.parseInt(idRegistro))) {
+	boolean delega = new DelegaDAO().insertDelegato(u.getId(), delegato.getId(), Integer.parseInt(idRegistro));
+	if(delega) {
 
 		String informazione ="Sei stai  delgato  da :" + u.getNome()+" " + u.getCognome();
-		new NotificaDAO().insertNotifica(delegato.getId(), u.getId(), informazione);
-	    getServletContext().getRequestDispatcher("view/registro.jsp").forward(request, response);
-		
-	}else {
-		
-    getServletContext().getRequestDispatcher("view/registro.jsp").forward(request, response);
-
-		
-		
+		new NotificaDAO().insertNotifica( u.getId(),delegato.getId(), informazione);
+	   // getServletContext().getRequestDispatcher("view/registro.jsp").forward(request, response);
 		
 	}
-	
+
+	PrintWriter out = response.getWriter();
+	response.setContentType("text/html");
+	response.setCharacterEncoding("UTF-8");
+	out.append("{\"delega\":\""+delega+"\"}");
+	out.flush();
 	
 	
 	

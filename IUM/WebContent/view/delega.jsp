@@ -251,10 +251,10 @@ background-color: red;
   <div style=" width:100%; height: 80%" class="form-delega">
   		<p  id="titoloDelega" class="text-center"> Delega</p>
   		<br>
-   <span style="font-size: 20px;" >Email</span>:<input type="text" id="email" class="input-delega" name="email" value="" placeholder="Email del delegato" list="email_list"><br>
+   <span style="font-size: 20px;" >Email</span>:<input type="text" id="email" class="input-delega" name="email" value="" placeholder="Email del delegato" list="email_list" onblur="myFunction()"><br>
    <span style="font-size: 20px;" for="fname">Nome:</span><input type="text" id="nome" class="input-delega" name="nome" value="" ><br>
    <span style="font-size: 20px;" for="fname">Cognome:</span><input type="text" id="cognome" class="input-delega" name="cognome" value=""><br><br>
-   <input type="button" id="bottone-delega" class="colore-bottoni" value="Delega" style="margin-left: 15%" onclick="showPop(this)"> </input>
+   <input type="button" id="bottone-delega" class="colore-bottoni" value="delega" style="margin-left: 15%" onclick="showPop(this.id)"> </input>
    <input type="button" id="bottone-delega" class="colore-bottoni" value="Indietro" onclick="history.go(-1)"> </input>
 	 
   </div>
@@ -270,7 +270,7 @@ background-color: red;
 		  
 		   
 		    <div class="bottoni-pop-up" >
-		      <input type="submit" class="colore-bottoni"   onclick="document.getElementById('delega-pop-up').style.display='none'" id="bottone-popu-conferma"  value="Conferma">
+		      <input type="button" class="colore-bottoni"   onclick="opDelega()" id="bottone-popu-conferma"  value="Conferma">
 		 		 <input type="button" id="annullaBottone" value="Annulla" onclick="document.getElementById('delega-pop-up').style.display='none'" class="colore-bottoni">
 		     </div>
 		
@@ -280,31 +280,33 @@ background-color: red;
  </div>
 </form>
    
+
+
 <datalist id="email_list">
 
 
 </datalist>
 
 
-
-
 </div>
 
 <script type="text/javascript">
 jQuery.noConflict();
-$("#email").input(function() {
+$("#email").keyup(function() {
 	console.log("sono chioamsdf")
+	$("#email_list").html(" ");
 	$.ajax({
 		 type:"POST",
 		 data:{"email":this.value},
 		 url:"emailDelegato",
 		 success : function(data){
 			 var object= JSON.parse(data);
+			 console.log(object);
 			 for (var i = 0; i < object.length; i++) {
-					
-				 
-				 $("#email_list").html("<option value="+ object[i].email +" onclick='setNC("+object[i].name+","+object[i].cognome+">"+ object[i].email +" <option>");
-			     
+				
+				
+				 $("#email_list").append("<option value='"+object[i].email+"'onclick='alert()'>"+ object[i].name +" " + object[i].cognome+"</option>");
+				
 			 }
 			 
 			 
@@ -314,34 +316,83 @@ $("#email").input(function() {
 	function setNC(nome,cognome){
 		console.log("sono chiamata ")
 		
-		$("#nome").val(nome);
-		$("#cognome").val(cognome); 
+		
 		
 	}
 
-	
+
+
+
 	
 });
 
+function myFunction(){
+	
+	console.log("ok");
+	var email= $("#email").val();
+	console.log(email);
+	$.ajax({
+		 type:"POST",
+		 data:{"email":email},
+		 url:"emailDelegato",
+		 success : function(data){
+			 var object= JSON.parse(data);
+			 console.log(object);
+			$("#nome").val(object[0].name);
+			$("#cognome").val(object[0].cognome);
+		    
+		 
+			 
+			 
+			}});
+	
+}
 function showPop(str){
 
     console.log(str.value)
     document.getElementById('delega-pop-up').style.display='flex'
-	if(str=="true"){
+  if(str=="true"){
 		
 		document.getElementById('titolo-pop-up').innerText="Operzione Effettuata";
 	    document.getElementById('pop-text').innerText="Operazione effettuata con successo !";
 		$('.bottoni-pop-up').hide();
-				window.setTimeout("ricaricaPagina()", 2000);
+				window.setTimeout("redirectRegistro()", 2000);
 		}else if(str=="false"){
 			
 			document.getElementById('titolo-pop-up').innerText="Operzione non Effettuata";
 		    document.getElementById('pop-text').innerText="Non è stato è possibile effettuare l'operazione!";
 			$('.bottoni-pop-up').hide();
-			window.setTimeout("ricaricaPagina()", 2000);
+			window.setTimeout("redirectRegistro()", 2000);
 
 			
 		}
+}
+function redirectRegistro() 
+{
+	location.href = "showRegistro";
+}
+function opDelega(){
+	
+	var email= $("#email").val();
+	var idregistro = $("#registro").val();
+	console.log(email);
+	$.ajax({
+		 type:"POST",
+		 data:{"email":email,
+				"idregistro": idregistro	 
+		 },
+		 url:"delegaRegistro",
+		 success : function(data){
+			 var object= JSON.parse(data);
+			 console.log(object);
+			showPop(object.delega)
+		    
+		 
+			 
+			 
+			}});
+	
+	
 }
 
 </script>
