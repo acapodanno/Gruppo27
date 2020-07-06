@@ -365,13 +365,16 @@ Utente user = (Utente) session.getAttribute("user");
 boolean primo= true;
 int idRegistro=0;
 boolean creazione=false;
-if(!listaReg.isEmpty()|| listaReg != null){
+if(!listaReg.isEmpty()){
 for(RegistroFitosanitario reg : listaReg ){ 
+	int anno=0;
+
+	if(reg.getDataCreazione()!= null){
 	Calendar calendar = Calendar.getInstance();
 	calendar.setTime(reg.getDataCreazione());
 	System.out.println();
-	int anno=0;
 	anno=calendar.get(Calendar.YEAR);
+	}
 	if(primo){
 	primo=false;
 	idRegistro= reg.getIdRegistroFitosanitario();
@@ -390,12 +393,14 @@ for(RegistroFitosanitario reg : listaReg ){
 
 
 for(RegistroFitosanitario reg : listaReg ){ 
-	  	
-	    int annoCur= Calendar.getInstance().get(Calendar.YEAR);
+	 int annoCur=0;
+	 int annoRegistro=0;
+	   if(reg.getDataCreazione()!= null){
+	    annoCur= Calendar.getInstance().get(Calendar.YEAR);
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(reg.getDataCreazione());
-	    int annoRegistro=calendar.get(Calendar.YEAR);;
-	  
+	    annoRegistro=calendar.get(Calendar.YEAR);;
+	   }
               %>
 <div id="<%=annoRegistro%>" class="tabcontent tableFixHead">
 <div class="tableFixHead">
@@ -440,10 +445,17 @@ for(RegistroFitosanitario reg : listaReg ){
   <% 
        
       int i=0;
-      
+      if(reg.getTrattamenti().isEmpty() ){
+ 	  %>
+    	  <tr scope="row" class="text-center ultimo">
+      <td colspan="8"><div class="text-center"> non ci sono trattamenti</div></td>
+     </tr>
+    
+    	<%   
+      }else{
       for(Trattamento u : reg.getTrattamenti()){
        
-           
+       
   %>
     <tr scope="row" class="text-center trattamenti" id="<%=u.getIdTrattamento()%>">
       <td  ><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="nomeProdotto<%=u.getIdTrattamento()%>" ></td>
@@ -454,7 +466,7 @@ for(RegistroFitosanitario reg : listaReg ){
       <td><input type="text" value="<%= u.getAvversita() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="avv<%=u.getIdTrattamento()%>"></td>
      <td ><input type="text" value="<%=u.getNote() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="note<%=u.getIdTrattamento()%>"></td>
         <%
-   
+     
         if(annoCur== annoRegistro  ){ 
                 creazione=true;
         %>
@@ -466,7 +478,7 @@ for(RegistroFitosanitario reg : listaReg ){
     <%
     
       i++;
-      } %>
+           } %>
     <%
    
         if(annoCur== annoRegistro  ){ 
@@ -478,7 +490,7 @@ for(RegistroFitosanitario reg : listaReg ){
      </tr>
     
     
-    <%} %>
+    <%}} %>
   </tbody>
 </table>
 </div>
@@ -493,7 +505,7 @@ for(RegistroFitosanitario reg : listaReg ){
         <button class="shadow  buttone-registro" onclick="redirectDelega(<%=idRegistro %>,<%=user.getId()%>)">Delega</button>
         <button class="shadow buttone-registro" id="modifica"  onclick="clickModifica(this)">Modifica</button>
         <button class="shadow buttone-registro" <%if(user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;"  <%}%> onclick="showPop(this.id)" id="elimina-registro" >Elimina</button>
-        <button class="shadow buttone-registro" id="ap"  onclick="clickModifica(this)">Approva Modifiche</button>
+     <%if(user.getRuolo().equals("titolare")){ %>   <button class="shadow buttone-registro" id="ap"  onclick="clickModifica(this)">Approva Modifiche</button><%}%>
         
 </div>
                 
@@ -736,7 +748,7 @@ function visualizzaBottoni(el){
        		  s.concat(el.value);
        		  $(s).prop("disabled", false); 
        	      $('.input-modifica'+el.value).prop("disabled", false); 
-              $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9" class= "text-center"> <button onclick="showPop(this.id)" id="update" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button>    <button class="shadow buttone-modifica" id="eliminaTrattamento" onClick="">Elimina il Trattamento</button></td><tr>')
+              $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9" class= "text-center"> <button onclick="showPop(this.id)" id="update" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button>    <button class="shadow buttone-modifica" id="eliminaTrattamento" onClick="showPop(this.id)">Elimina il Trattamento</button></td><tr>')
  			 
  			 
         	  
@@ -876,6 +888,23 @@ function eliminaRegistro(){
 	
 	
 }
+function eliminaTrattamento(){
+	//
+		   jQuery.noConflict();
+			var id= $("#idregistro").val();
+	  $.ajax({
+	      type:"POST",
+	      data:{"idregistro": id},
+	      url:"EliminaTrattamento",
+	      success : function(data){
+	    	 var object= JSON.parse(data);
+	    	   showPop(object.eliminazione);
+	    	}});
+	
+	
+	
+	
+}
 function showPop(str){
  	
 	//$(".pop-up-delega").show();
@@ -915,6 +944,14 @@ function showPop(str){
 			    document.getElementById('pop-text').innerText="Non è stato è possibile effettuare l'operazione!";
 				$('.bottoni-pop-up').hide();
 				window.setTimeout("ricaricaPagina()", 2000);
+
+				
+			}else if(str=="eliminaTrattamento"){
+				//eliminaTrattamento()
+				document.getElementById('titolo-pop-up').innerText="Conferma"	
+				document.getElementById('pop-text').innerText="Sei sicuro di voler eliminare il registro del ?"
+				document.getElementById('bottone-popu-conferma').setAttribute("onclick","eliminaTrattamento()");
+
 
 				
 			}

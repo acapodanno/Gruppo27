@@ -115,17 +115,15 @@ public class NotificaDAO {
 	 */
 
 	//settare una notifica letta
-    	public boolean	checkNotifica(int idMittente ,int idDestinatario,String informazione){
+    	public boolean	checkNotifica(int idDestinatario){
         	
-        	String sql = "insert into notifiche(data,idmittente,idricevente,informazioni,letta) value(NOW(),?,?,?,0);";
+        	String sql = "UPDATE notifiche set letta=1 where idricevente=?";
     		Connection con= connessione.getConn();
     		 try {
     				
     				PreparedStatement ps = con.prepareStatement(sql);
-    			    ps.setInt(1, idMittente);
-    				ps.setInt(2, idDestinatario);
-    				ps.setString(3, informazione);
-    			    ResultSet result= ps.executeQuery();
+    				ps.setInt(1, idDestinatario);
+    			     ps.executeUpdate();
     				return  true;	
     			} catch (SQLException e) {
     				// TODO Auto-generated catch block

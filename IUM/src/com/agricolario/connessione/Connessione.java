@@ -1,8 +1,5 @@
 package com.agricolario.connessione;
 
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
 import java.sql.*;
 
 public class Connessione {
@@ -42,7 +39,7 @@ public class Connessione {
 
 		System.out.println("Driver  Trovato");
 		try {
-			
+			//connection = (Connection) DriverManager.getConnection("jdbc:mysql://database.czswaxwzhchf.us-east-2.rds.amazonaws.com:3306/agricolario?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","master","OliverTwist1837");
 			connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/agricolario?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","root","root");
 	
 		} catch (SQLException e) {

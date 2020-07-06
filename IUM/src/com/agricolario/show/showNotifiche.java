@@ -38,6 +38,7 @@ public class showNotifiche extends HttpServlet {
 		HttpSession ssn = request.getSession();
 		Utente u= (Utente)ssn.getAttribute("user");
 		ArrayList<Notifica> lista = new NotificaDAO().getAllNotifiche(u.getId());
+		new NotificaDAO().checkNotifica(u.getId());
 		request.setAttribute("lista", lista);
 		getServletContext().getRequestDispatcher("/view/notifica.jsp").forward(request, response);		
 	}

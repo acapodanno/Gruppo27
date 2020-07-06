@@ -51,6 +51,28 @@ public class showRegistro extends HttpServlet {
 			System.out.println(lista.toString());
 			
 		}
+		
+		
+		for (RegistroFitosanitario registroFitosanitario : lista) {
+			
+			System.out.println(registroFitosanitario.toString());
+			if(registroFitosanitario.getTrattamenti().isEmpty()) {
+				
+				System.out.println("Una lista vuota");
+				
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		if(lista==null || lista.isEmpty()) {
 			request.setAttribute("listaRegistro", null);
 			
