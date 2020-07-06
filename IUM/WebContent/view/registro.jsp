@@ -369,18 +369,18 @@ if(!listaReg.isEmpty()|| listaReg != null){
 for(RegistroFitosanitario reg : listaReg ){ 
 	Calendar calendar = Calendar.getInstance();
 	calendar.setTime(reg.getDataCreazione());
-
+	System.out.println();
 	int anno=0;
-	anno= reg.getDataCreazione().getYear();
+	anno=calendar.get(Calendar.YEAR);
 	if(primo){
 	primo=false;
 	idRegistro= reg.getIdRegistroFitosanitario();
 	
 
 %>
-<button class="tablinks" onclick="apriContenuto(event,<%=anno%>)" id="defaultOpen"><%=anno+1900%></button>
+<button class="tablinks" onclick="apriContenuto(event,<%=anno%>)" id="defaultOpen"><%=anno%></button>
 <%}else{ %>
-<button class="tablinks" onclick="apriContenuto(event,<%=anno%>)"><%=anno+1900%></button>
+<button class="tablinks" onclick="apriContenuto(event,<%=anno%>)"><%=anno%></button>
 <% }} %>
 </div>
     
@@ -390,12 +390,14 @@ for(RegistroFitosanitario reg : listaReg ){
 
 
 for(RegistroFitosanitario reg : listaReg ){ 
-	  Date oggi= new Date(System.currentTimeMillis());
-	    int anno= oggi.getYear()+1900;
-	    int annoRegistro= reg.getDataCreazione().getYear()+1900;
+	  	
+	    int annoCur= Calendar.getInstance().get(Calendar.YEAR);
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(reg.getDataCreazione());
+	    int annoRegistro=calendar.get(Calendar.YEAR);;
 	  
               %>
-<div id="<%=anno-1900%>" class="tabcontent tableFixHead">
+<div id="<%=annoRegistro%>" class="tabcontent tableFixHead">
 <div class="tableFixHead">
 <table class="  table-striped">
 <input type="hidden" id="idregistro" value="<%= reg.getIdRegistroFitosanitario()%>">
@@ -409,7 +411,7 @@ for(RegistroFitosanitario reg : listaReg ){
     <col  style="width:10%">
     <col  style="width:25%"> <%
    
-        if(anno== annoRegistro  ){ 
+        if(annoCur== annoRegistro  ){ 
         
         creazione=true;
         %>     <col  style="width:5%"><%} %>
@@ -425,7 +427,7 @@ for(RegistroFitosanitario reg : listaReg ){
       <th scope="col" >Note</th>
        <%
    
-        if(anno== annoRegistro  ){ 
+        if(annoCur== annoRegistro  ){ 
         
         creazione=true;
         %>
@@ -453,7 +455,7 @@ for(RegistroFitosanitario reg : listaReg ){
      <td ><input type="text" value="<%=u.getNote() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="note<%=u.getIdTrattamento()%>"></td>
         <%
    
-        if(anno== annoRegistro  ){ 
+        if(annoCur== annoRegistro  ){ 
         
         creazione=true;
         %>
@@ -468,7 +470,7 @@ for(RegistroFitosanitario reg : listaReg ){
       } %>
     <%
    
-        if(anno== annoRegistro  ){ 
+        if(annoCur== annoRegistro  ){ 
         
         creazione=true;
         %>
