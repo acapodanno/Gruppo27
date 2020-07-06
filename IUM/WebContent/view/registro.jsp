@@ -1,3 +1,4 @@
+<%@page import="java.util.*"%>
 <%@page import="java.util.Date"%>
 <%@page import="com.agricolario.bean.Trattamento"%>
 <%@page import="com.agricolario.bean.RegistroFitosanitario"%>
@@ -363,21 +364,30 @@ font-weight: bold;
 Utente user = (Utente) session.getAttribute("user");
 boolean primo= true;
 int idRegistro=0;
+boolean creazione=false;
+if(!listaReg.isEmpty()|| listaReg != null){
 for(RegistroFitosanitario reg : listaReg ){ 
-if(primo){
+	Calendar calendar = Calendar.getInstance();
+	calendar.setTime(reg.getDataCreazione());
+
+	int anno=0;
+	anno= reg.getDataCreazione().getYear();
+	if(primo){
 	primo=false;
 	idRegistro= reg.getIdRegistroFitosanitario();
+	
+
 %>
-<button class="tablinks" onclick="apriContenuto(event,<%=reg.getDataCreazione().getYear()%>)" id="defaultOpen"><%=reg.getDataCreazione().getYear()+1900%></button>
+<button class="tablinks" onclick="apriContenuto(event,<%=anno%>)" id="defaultOpen"><%=anno+1900%></button>
 <%}else{ %>
-<button class="tablinks" onclick="apriContenuto(event,<%=reg.getDataCreazione().getYear()%>)"><%=reg.getDataCreazione().getYear()+1900%></button>
+<button class="tablinks" onclick="apriContenuto(event,<%=anno%>)"><%=anno+1900%></button>
 <% }} %>
 </div>
     
 <div id="contenuto-registro" >
 <%
 
-boolean creazione=false;
+
 
 for(RegistroFitosanitario reg : listaReg ){ 
 	  Date oggi= new Date(System.currentTimeMillis());
@@ -385,7 +395,7 @@ for(RegistroFitosanitario reg : listaReg ){
 	    int annoRegistro= reg.getDataCreazione().getYear()+1900;
 	  
               %>
-<div id="<%=reg.getDataCreazione().getYear()%>" class="tabcontent tableFixHead">
+<div id="<%=anno-1900%>" class="tabcontent tableFixHead">
 <div class="tableFixHead">
 <table class="  table-striped">
 <input type="hidden" id="idregistro" value="<%= reg.getIdRegistroFitosanitario()%>">
@@ -472,7 +482,9 @@ for(RegistroFitosanitario reg : listaReg ){
 </table>
 </div>
 </div>
-<% } %>
+<% }}else{ %>
+<h4>Non ci sono Trattamenti</h4>
+<%} %>
 </div>
 <div class="opRegistro" >
        
