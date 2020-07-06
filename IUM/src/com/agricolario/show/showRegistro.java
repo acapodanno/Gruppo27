@@ -51,8 +51,13 @@ public class showRegistro extends HttpServlet {
 			System.out.println(lista.toString());
 			
 		}
+		if(lista==null || lista.isEmpty()) {
+			request.setAttribute("listaRegistro", null);
+			
+			
+		}else {
 		request.setAttribute("listaRegistro", lista);
-		
+		}
 		getServletContext().getRequestDispatcher("/view/registro.jsp").forward(request, response);	
 		}else {
 			

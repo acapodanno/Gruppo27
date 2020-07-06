@@ -456,8 +456,7 @@ for(RegistroFitosanitario reg : listaReg ){
         <%
    
         if(annoCur== annoRegistro  ){ 
-        
-        creazione=true;
+                creazione=true;
         %>
      <td scope="col">  <input type="checkbox"  checked="checked" style=" display:none" class="select-prodotto" onclick="visualizzaBottoni(this)" value="<%=u.getIdTrattamento()%>" >  </td>
      
