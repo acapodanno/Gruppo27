@@ -192,12 +192,20 @@ public class RegistroFitosanitarioDAO {
 		    	try {
 					PreparedStatement ps = con.prepareStatement(sql);
 				    ps.setInt(1, id);
+				    result  = ps.executeQuery();
+				    Date data = null; 
+					while(result.next()) {
+						
+					 data= result.getDate("dataCreazione");
+					
+					}
+					return data;
 		    	} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 					return null;
 				}
-		  return null ;
+		 
 		  
 	  }
 	public ArrayList<RegistroFitosanitario> getAllRegistro(int idUtente){

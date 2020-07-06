@@ -444,15 +444,7 @@ for(RegistroFitosanitario reg : listaReg ){
   <tbody >
   <% 
        
-      int i=0;
-      if(reg.getTrattamenti().isEmpty() ){
- 	  %>
-    	  <tr scope="row" class="text-center ultimo">
-      <td colspan="8"><div class="text-center"> non ci sono trattamenti</div></td>
-     </tr>
-    
-    	<%   
-      }else{
+    int i =0;
       for(Trattamento u : reg.getTrattamenti()){
        
        
@@ -490,7 +482,7 @@ for(RegistroFitosanitario reg : listaReg ){
      </tr>
     
     
-    <%}} %>
+    <%}%>
   </tbody>
 </table>
 </div>
