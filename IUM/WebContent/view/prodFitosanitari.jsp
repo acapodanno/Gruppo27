@@ -30,7 +30,14 @@
 
 <script src="https://kit.fontawesome.com/yourcode.js"></script>
 
-
+<script type="text/javascript">
+$( document ).ready(function() {
+$('#srch').on('input', function(){
+	  var page = $(this).val();
+	  window.location.href = "#"+page;
+	});
+});
+</script>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet"
@@ -205,7 +212,7 @@ only screen and (max-width: 1280px)  {
    <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
      </button>
-      <input type="text" class="testoRicerca" class="searchTerm" placeholder="Digita il nome di un prodotto fitosanitario...">
+      <input type="text" class="testoRicerca" class="searchTerm" id="srch" placeholder="Digita il nome di un prodotto fitosanitario..." list="lista">
 
    </div>
 </div>
@@ -248,7 +255,7 @@ only screen and (max-width: 1280px)  {
     for(ProdottoFitosanitario pf : lista)
     {
     %>
-    <tr>
+    <tr id="<%=pf.getNome()%>">
       <td><%=pf.getNome()%></td>
       <td> 
       <strong>Funzione:</strong> <%=pf.getFunzione() %><br>
@@ -289,7 +296,7 @@ only screen and (max-width: 1280px)  {
     for(ProdottoFitosanitario pf : lista)
     {
     %>
-    <tr>
+    <tr id="<%=pf.getIdProdottoFitosanitario()%>">
       <td id="due"><%=pf.getNome()%></td>
    
       <td id="due"> 
@@ -320,7 +327,18 @@ only screen and (max-width: 1280px)  {
  
  
  
+ <datalist id="lista">
+   <%for(ProdottoFitosanitario pf : lista)
+    {
+	   %>
+   <option value="<%=pf.getNome()%>"> <a href="<%=pf.getIdProdottoFitosanitario() %>"><%= pf.getNome() %></a></option>
+    <%
+    }
+  %>
  
+ 
+ 
+ </datalist>
  
  
  

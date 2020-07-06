@@ -172,12 +172,13 @@ for(Trattamento reg : lista.get(0).getTrattamenti()){
  Calendar c = Calendar.getInstance(); 
  c.setTime(dt); 
  c.add(Calendar.DATE, carenza);
- dt = c.getTime();
+ dt = c.getTime();	System.out.println("ok");	
  
  Date oggi= new Date(System.currentTimeMillis());
-if(oggi.after(dt)){
+
+ if(dt.after(oggi)){
 	ok= true;
-	
+	System.out.println("ok");	
 }
 }
 

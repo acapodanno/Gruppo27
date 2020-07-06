@@ -38,6 +38,14 @@
 
 
 </script>
+<script type="text/javascript">
+$( document ).ready(function() {
+$('#srch').on('input', function(){
+	  var page = $(this).val();
+	  window.location.href = "#"+page;
+	});
+});
+</script>
 <link rel="stylesheet" href="css/navbar.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -204,7 +212,7 @@ font-weight: bold;
    <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
      </button>
-      <input type="text" class="testoRicerca" class="searchTerm" placeholder="Digita il nome di un prodotto fitosanitario...">
+      <input type="text" class="testoRicerca" class="searchTerm" placeholder="Digita il nome di un prodotto fitosanitario..." list="lista" id="srch">
       <div id="live-search">Ciao alessia io sono un div  a caso Ciauu</div>
    </div>
 </div>
@@ -272,7 +280,7 @@ font-weight: bold;
     </thead>
  <%for (ProdottoMagazzino pm : lista){ %>
     <!-- Prodotto 1 -->
-	<tr id="prod">
+	<tr id="<%=pm.getProdotto().getNome()%>">
       <th> <%= pm.getProdotto().getNome() %></th>
       <th> <%if(pm.getQuantita()>0){ %> <%= pm.getQuantita() %><%}else{ %>Esaurito<%} %> </th>
       <th> <a href="<%= pm.getProdotto().getEtichetta() %>"> LINK ETICHETTA </a></th>
@@ -284,9 +292,19 @@ font-weight: bold;
  <%} %>
  
  
- <datalist id="browsers">
-   
-  </datalist>
+ 
+ <datalist id="lista">
+   <%for(ProdottoMagazzino   pm : lista)
+    {
+	   %>
+   <option value="<%=pm.getProdotto().getNome()%>"> <a href=""><%= pm.getProdotto().getNome() %></a></option>
+    <%
+    }
+  %>
+ 
+ 
+ 
+ </datalist>
 <script type="text/javascript">
 
 
