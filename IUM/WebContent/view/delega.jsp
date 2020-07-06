@@ -292,7 +292,7 @@ background-color: red;
 
 <script type="text/javascript">
 jQuery.noConflict();
-$("#email").keyup(function() {
+$("#email").input(function() {
 	console.log("sono chioamsdf")
 	$.ajax({
 		 type:"POST",
@@ -303,7 +303,7 @@ $("#email").keyup(function() {
 			 for (var i = 0; i < object.length; i++) {
 					
 				 
-				 $("#email_list").html("<option value="+ object[i].email +" onclick='setNC("+object[i].name+","+object[i].cognome+")'>"+ object[i].email +" <option>");
+				 $("#email_list").html("<option value="+ object[i].email +" onclick='setNC("+object[i].name+","+object[i].cognome+">"+ object[i].email +" <option>");
 			     
 			 }
 			 
@@ -311,17 +311,17 @@ $("#email").keyup(function() {
 			}});
 	
 	
-	
+	function setNC(nome,cognome){
+		console.log("sono chiamata ")
+		
+		$("#nome").val(nome);
+		$("#cognome").val(cognome); 
+		
+	}
+
 	
 	
 });
-function setNC(nome,cognome){
-	
-	
-	$("#nome").val(nome);
-	$("#cognome").val(cognome); 
-	
-}
 
 function showPop(str){
 
