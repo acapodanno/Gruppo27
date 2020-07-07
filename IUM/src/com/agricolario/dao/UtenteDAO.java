@@ -42,15 +42,9 @@ public class UtenteDAO {
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			System.out.println(e.getErrorCode()+"\n"+e.getMessage());
+			System.out.println("Insert Utente"+e.getErrorCode()+"\n"+e.getMessage());
 			return false;
-		}finally {
-			if(connessione!=null) {
-				
-				connessione.closeConn();
-			}
 		}
-    	
     	
     }
     public boolean update(Utente user) {

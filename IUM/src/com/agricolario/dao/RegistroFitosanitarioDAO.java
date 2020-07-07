@@ -22,17 +22,18 @@ public class RegistroFitosanitarioDAO {
 		connessione= new Connessione();
 
 	}
-	public boolean insert(Date dataCreazione,int idUtente) {
+	public boolean insert(int idUtente) {
 		Connection con= connessione.getConn();
 	    
 		//id autogenrato
 		int id= new Random().nextInt(120000000);
-		String insertSql= "insert into registrofitosanitario (dataCreazione,idregistrofitosanitario) value(?,?);";
+		String insertSql= "insert into registrofitosanitario (dataCreazione,idregistrofitosanitario) value(now(),?);";
 	// 	PreparedStatement ps = con.prepareStatement(insertSql);
 		PreparedStatement ps;
 		try {
 			ps = con.prepareStatement(insertSql);
-			ps.setDate(1, ParseDate.parseDateSql(dataCreazione));
+
+
 			ps.setInt(2, id);
 			ps.executeUpdate();
 			insertCompilazione(idUtente, id);
@@ -84,11 +85,6 @@ public class RegistroFitosanitarioDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
-		}finally {
-			if(connessione!=null) {
-				
-				connessione.closeConn();
-			}
 		}
     	 
 		 

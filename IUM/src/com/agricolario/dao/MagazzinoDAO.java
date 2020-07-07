@@ -127,7 +127,6 @@ public class MagazzinoDAO {
 			
 		}
 		public boolean insertProdottoMagazzino(int idprodotto,int idazienda,double quantita) {
-			
 			String sql ="insert into magazzino (idazienda,idprodottofitosanitario,quantitaDisp) values (?,?,?)";
 			Connection con= connessione.getConn();
              ArrayList<ProdottoMagazzino> lista= new ArrayList<ProdottoMagazzino>();
@@ -142,7 +141,7 @@ public class MagazzinoDAO {
 					return true ;	
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
-					System.out.println(e.getErrorCode()+"\n"+e.getMessage());
+					System.out.println("inserimento MAgazzino"+e.getErrorCode()+"\n"+e.getMessage());
 					return false;
 				}finally {
 					if(connessione!=null) {
@@ -152,5 +151,103 @@ public class MagazzinoDAO {
 				}
 			
 		}
+		
+		public boolean updateProdottoMagazzino(int idprodotto,int idazienda,double quantita) {
+			String sql ="update magazzino set quantitaDisp = ? where idazienda = ? AND idprodottofitosanitario = ?;";
+			   double dispQ= getQuantita(idprodotto, idazienda);
+			
+			   
+			   
+			   
+			   
+			   
+			   Connection con= connessione.getConn();
+         
+			 try {
+					
+					PreparedStatement ps = con.prepareStatement(sql);
+					ps.setDouble(1, quantita+dispQ);
+					ps.setInt(2, idazienda);
+					ps.setInt(3, idprodotto);
+					
 
+					int  result= ps.executeUpdate();
+					return true ;	
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					System.out.println(""+e.getErrorCode()+"\n"+e.getMessage());
+					return false;
+				}finally {
+					if(connessione!=null) {
+						
+						connessione.closeConn();
+					}
+				}
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		public boolean isPresent(int idProdotto,int idAzienda) {
+			
+			String sql ="SELECT * FROM magazzino where  idazienda = ? and idprodottofitosanitario= ?;\r\n" + 
+					"";
+			Connection con= connessione.getConn();
+			 try {
+					
+					PreparedStatement ps = con.prepareStatement(sql);
+					ps.setInt(1, idAzienda);
+					ps.setInt(2,idProdotto);
+
+					ResultSet result= ps.executeQuery();
+					int i=-1;
+					while(result.next()){
+						result.getInt("idazienda");
+						 i++;
+						
+					}
+			         if(i>0) { return true; }else {	return false;}
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					System.out.println("isPresent :"+e.getErrorCode()+"\n"+e.getMessage());
+					return false;
+				}
+		    	
+		}
+	public double  getQuantita(int idProdotto,int idAzienda) {
+			
+			String sql ="SELECT * FROM magazzino where idazienda = ? and idprodottofitosanitario= ?;\r\n" + 
+					"";
+			Connection con= connessione.getConn();
+             ArrayList<ProdottoMagazzino> lista= new ArrayList<ProdottoMagazzino>();
+			 try {
+					
+					PreparedStatement ps = con.prepareStatement(sql);
+					ps.setInt(1, idAzienda);
+					ps.setInt(2,idProdotto);
+
+					ResultSet result= ps.executeQuery();
+					while(result.next()){
+						
+						return result.getDouble("quantitaDisp");
+						
+					}
+			    	 
+					return 0;
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					System.out.println(e.getErrorCode()+"\n"+e.getMessage());
+					return 0;
+				}
+		    	
+		}
 }

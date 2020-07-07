@@ -249,47 +249,46 @@ input[type=date]:focus, .select:focus{
     <div class="containerReg">
     	<h1 id="titoloPagina" class="text-center"><b> Registrazione</b></h1><br>
     	
-		<div class="row justify-content-center " >
-		 <form id="form-registrazione" action="access" method="post">
-		
+		<div class="row justify-content-center "id="form-registrazione" >
+		<div id="form-registrazione">
   					<div class="row justify-content-center">
     					<div class="col-4 form-group">
     						<label class="etichette">Nome</label>
-      						<input type="text"  placeholder="Nome" name="nome"  >
+      						<input type="text"  placeholder="Nome" name="nome"  id="nome" required="required" >
     					</div>
     					<div class="col-4 form-group">
     					<label class="etichette">Cognome</label>
-      					<input type="text"  placeholder="Cognome" name="cognome"  >
+      					<input type="text"  placeholder="Cognome" name="cognome" id="cognome"   required="required">
     					</div>
   					</div>
  
   					<div class="row justify-content-center">
   					   <div class="col-8 form-grupo">
   					   		<label  class="etichette">Email</label>
-      						<input type="text"  placeholder="Email" name="email"  >
+      						<input type="text"  placeholder="Email" name="email" id="email" required="required">
    					   </div>
   					</div>
   					
  					 <div class="row justify-content-center mt-3">
     					<div class="col-4 form-goup">
     						<label  class="etichette">Password</label>
-      						<input type="text"  placeholder="Password" name="password"  >
+      						<input type="password"  placeholder="Password" name="password" id="password" required>
     					</div>
     				 	<div class="col-4 form-group">
     				 		<label  class="etichette">Conferma Password</label>
-      				 		<input type="text"  placeholder="Conferma Password"  >
+      				 		<input type="password"  placeholder="Conferma Password" id="confirm_password"  required>
    					 	</div>
   					</div>	
 
    					<div class="row justify-content-center">
 					    <div class="col-4">
 					   	 <label  class="etichette">Data di nascita</label>
-    						<input type="date" placeholder="dd mm yyyy" name="dataNascita"    data-date-format="DD MMMM YYYY"  >
+    						<input type="date" placeholder="dd mm yyyy" name="dataNascita" id="dn"    data-date-format="DD MMMM YYYY"  required="required">
     					</div>
     					
     				<div class="col-4 form-group">
      					<label  class="etichette">Ruolo</label>	
- 							 <select class="select" id="ruolo" name="ruolo">
+ 							 <select class="select" id="ruolo" name="ruolo" required="required"> 
   								 <option selected>---</option>
     						     <option value="titolare">Titolare</option>
    							     <option value="delegato">Delegato</option>
@@ -307,7 +306,7 @@ input[type=date]:focus, .select:focus{
   					</div>
   				
   					<div id="registrazione" class="row  justify-content-center">
-   				    <button type="submit" class="bottoneReg" id="bottone-registrazione">Registrati</button>   
+   				    <button type="submit" class="bottoneReg" >Registrati</button>   
   					</div>
   
    				    	<div class= "riga" class="hr"></div>
@@ -315,52 +314,52 @@ input[type=date]:focus, .select:focus{
 								<a style="color: white"> Torna alla </a> <a href="#" style="color: white; font-style: italic; font-weight: bold">Home Page.</a>
 							</div>
     				
-  	</form>	
+  
   	</div>   
   </div>
    </div>
-  
-  <div class="shadow registration" id="azienda"  style="display: none; ">
+  </div>
+  <div class="shadow registration" id="azienda" >
   
 	<div class="containerReg">
     	<h1 id="titoloPagina" class="text-center"><b> Registra la tua azienda</b></h1><br>
     	
-			<div class="row justify-content-center " >
-		 				<form id="form-registrazione" action="access" method="post">
+			<div class="row justify-content-center "  id="form-registrazione" >
+		 		<div  id="form-registrazione">		
 		 				
   					<div class="row justify-content-center">
     					<div class="col-8 form-group">
     						<label  class="etichette">Nome azienda</label>
-      						<input type="text"  placeholder="Nome Azienda" name="azienda">
+      						<input type="text"  placeholder="Nome Azienda" name="azienda" id="nomea" required="required">
     					</div>
     					
   					</div>
   					<div class="row justify-content-center">
   					   <div class="col-8">
   					   		<label  class="etichette">Email azienda</label>
-      						<input type="text"  placeholder="Email Azienda" name="email">
+      						<input type="text"  placeholder="Email Azienda" name="email" id="emaila"required="required">
    					   </div>
   					</div>
  					 <div class="row justify-content-center">
     					<div class="col-6">
     						<label  class="etichette">Indirizzo</label>
-      						<input type="text"  placeholder="Indirizzo" name="indirizzo">
+      						<input type="text"  placeholder="Indirizzo" name="indirizzo" id="indirizzo"required="required">
     					</div>
     					<div class="col-2">
     						<label  class="etichette">N°Civico</label>
-      						<input type="text" placeholder="n°" name="numeroCivico">
+      						<input type="text" placeholder="n°" name="numeroCivico" id="numero" required="required">
     					</div>
     				 	
     				 
   					</div>	
-  					<div class="row justify-content-center ">
+  					<div class="row justify-content-center " >
   						<div class="col-6">
   							<label  class="etichette">Città</label>
-      				 		<input type="text"  placeholder="Città" name="citta">
+      				 		<input type="text"  placeholder="Città" name="citta" id="citta" required="required">
    					 	</div>
    					 	<div class="col-2">
    					 		<label  class="etichette">CAP</label>
-      				 		<input type="text" placeholder="Cap" name=" cap">
+      				 		<input type="text" placeholder="Cap" name=" cap" id="cap" required="required">
    					 	</div>
   					
   					
@@ -369,41 +368,48 @@ input[type=date]:focus, .select:focus{
    					<div class="row justify-content-center">
 					    <div class="col-8 form-group">
 					    	<label  class="etichette">Data Fondazione:</label>
-    						<input type="date" placeholder="Data Fondazione" name="dataFondazione" >
+    						<input type="date" placeholder="Data Fondazione" name="dataFondazione" id="df" required="required">
     					</div>
     				
  				   </div>
    				
   					<div id="registrazione" class="row  justify-content-center">
-   				    <button type="submit" class="bottoneReg">Registrati</button>   
+   				    <button type="submit" class="bottoneReg" onclick="registrazioneTitolare()">Registrati</button>   
   					</div>
  	
- 
+ 				
  					    	<div class= "riga" class="hr"></div>
-							<div class="scritta" class="foot-lnk">
-							 <a href="#" style="color: white; font-style: italic; font-weight: bold">Indietro</a>
+							<div class="scritta foot-lnk">
+							 <a href="#" style="color: white; font-style: italic; font-weight: bold" onclick="tornaIndietro()">Indietro</a>
 							</div>
  					
-			</form>
 		</div>
-	
-  
+	</div>
+  </div>
   </div>
   
   
   
   
   
-</div>
+
 
 </div>
 <script >
+$("#azienda").hide();
+function tornaIndietro(){
+	
+	$("#azienda").hide();
+	$("#utente").show();
+	
+}
+
 $( "#ruolo").on('change', function () {
 	  //ways to retrieve selected option and text outside handler
 	  if(this.value=='titolare'){
     $("#registrazione").html('<button class="bottoneReg" type="button" id="bottone-registrazione">Avanti</button>  ');
 	  }else{
-		    $("#registrazione").html('<button class="bottoneReg" type="submit" id="bottone-avanti">Registrati</button>  ');
+		    $("#registrazione").html('<button class="bottoneReg" type="submit" id="bottone-avanti" onclick="registrazioneDelegato()">Registrati</button>  ');
 		  
 	  }
 	  });
@@ -423,7 +429,99 @@ setTimeout(function(){
 	
 } );
 		
+
+var password = document.getElementById("password");
+var confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+if(password.value != confirm_password.value) {
+	console.log("password non valida");
+    confirm_password.setCustomValidity("La password non corrisponde");
+    $("#confirm_password,#password").css("border-bottom-color","red");
+} else {
+  confirm_password.setCustomValidity('');
+  $("#confirm_password,#password").css("border-bottom-color","green");
+
+} 
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+
+function registrazioneDelegato(){
 	
+
+	
+	  $.ajax({
+	      type:"POST",
+	      data:{
+	    "nome":$("#nome").val(),
+	  	"cognome":$("#cognome").val(),
+	  	"email":$("#email").val(),
+	  	"password":$("#password").val(),
+	  	"dataNascita":$("#dn").val(),
+		"ruolo":$("#ruolo").val()
+		 },
+	      url:"registrazione",
+	      success : function(data){
+	    	 var object= JSON.parse(data);
+	    	 
+	    	 console.log(object);
+	    	
+			if(object.reg=="true"){
+				
+				alert("registrazione avvenuta con successo");
+				
+			}else{
+				
+				alert("Errore");
+					
+			}
+	    	 
+	    	 
+	    	 
+	    	}});
+}
+
+function registrazioneTitolare(){
+	
+
+	
+	  $.ajax({
+	      type:"POST",
+	      data:{
+	    "nome":$("#nome").val(),
+	  	"cognome":$("#cognome").val(),
+	  	"email":$("#email").val(),
+	  	"password":$("#password").val(),
+	  	"dataNascita":$("#dn").val(),
+		"ruolo":$("#ruolo").val(),
+		"azienda":$("#nomea").val(),
+	  	"cap":$("#cap").val(),
+	  	"indirizzo":$("#indirizzo").val(),
+	  	"città":$("#citta").val(),
+	  	"dataFondazione":$("#df").val()		 },
+	      url:"registrazione",
+	      success : function(data){
+	    	 var object= JSON.parse(data);
+	    	 
+	    	 console.log(object);
+	    	  	
+				if(object.reg=="true"){
+					
+					alert("registrazione avvenuta con successo");
+					
+				}else{
+					
+					alert("Errore");
+						
+				}
+		    	 
+	    	 
+	    	}});
+}
+
+
 
 
 </script>			

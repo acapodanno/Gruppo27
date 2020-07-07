@@ -45,9 +45,16 @@ public class addProdottoMagazzino extends HttpServlet {
 		
 		ProdottoFitosanitario p = new ProdottoFitosanitarioDAO().getProdotto(nomeProdotto);
 		
+		boolean presente= new MagazzinoDAO().isPresent(p.getIdProdottoFitosanitario(), u.getId());
+		boolean inserimento=false;
+		if(presente) {
+			 inserimento = new MagazzinoDAO().updateProdottoMagazzino(p.getIdProdottoFitosanitario(), u.getAzienda().getId(),Double.parseDouble(quantita));
+					
+		}else {
 		
 		
-		boolean inserimento = new MagazzinoDAO().insertProdottoMagazzino(p.getIdProdottoFitosanitario(), u.getAzienda().getId(),Double.parseDouble(quantita));
+	    inserimento = new MagazzinoDAO().insertProdottoMagazzino(p.getIdProdottoFitosanitario(), u.getAzienda().getId(),Double.parseDouble(quantita));
+		}
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");

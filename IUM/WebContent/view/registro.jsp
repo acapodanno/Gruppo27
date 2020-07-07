@@ -358,14 +358,21 @@ font-weight: bold;
 
 
 <div id="grid-registro" class="mt-5">
-<div id="tab-registro"  class="tab-registro">
-<%ArrayList<RegistroFitosanitario> listaReg = (ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro");%>
-<%
+<%ArrayList<RegistroFitosanitario> listaReg = (ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro");
+
 Utente user = (Utente) session.getAttribute("user");
 boolean primo= true;
 int idRegistro=0;
 boolean creazione=false;
-if(!listaReg.isEmpty()){
+if(user!=null ){
+	if(!listaReg.isEmpty()){
+%>
+<div id="tab-registro"  class="tab-registro">
+
+
+<%
+
+
 for(RegistroFitosanitario reg : listaReg ){ 
 	int anno=0;
 
@@ -487,15 +494,26 @@ for(RegistroFitosanitario reg : listaReg ){
 </table>
 </div>
 </div>
-<% }}else{ %>
-<h4>Non ci sono Trattamenti</h4>
-<%} %>
+
+<% }%>
+
 </div>
+
+<% }else{ %>
+<div class="text-center">
+</div>
+<div class="text-center">
+<h4>Non ci sono Trattamenti</h4>
+</div>
+
+<%} %>
+
 <div class="opRegistro" >
        
-        <button class=" shadow  buttone-registro" <%if(creazione || user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;"  onclick="showPop(this.id)" id="crea-registro"<%}%> >Crea  </button>
-        <button class="shadow  buttone-registro" onclick="redirectDelega(<%=idRegistro %>,<%=user.getId()%>)">Delega</button>
-        <button class="shadow buttone-registro" id="modifica"  onclick="clickModifica(this)">Modifica</button>
+        
+         <%if(user.getRuolo().equals("titolare")){ %>  <button class=" shadow  buttone-registro" <%if(creazione ){%>  disabled="disabled" style="background-color: gray;"  onclick="showPop(this.id)" id="crea-registro"<%}%> >Crea  </button><%} %>
+      <%if(user.getRuolo().equals("titolare")){ %>       <button class="shadow  buttone-registro" onclick="redirectDelega(<%=idRegistro %>,<%=user.getId()%>)">Delega</button><%} %>
+        <button class="shadow buttone-registro" id="modifica"  onclick="clickModifica(this)" <%if(listaReg.isEmpty()){ %> disabled="disabled" style="background-color: gray;"<%}  %>>Modifica</button>
         <button class="shadow buttone-registro" <%if(user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;"  <%}%> onclick="showPop(this.id)" id="elimina-registro" >Elimina</button>
      <%if(user.getRuolo().equals("titolare")){ %>   <button class="shadow buttone-registro" id="ap"  onclick="clickModifica(this)">Approva Modifiche</button><%}%>
         
@@ -506,7 +524,7 @@ for(RegistroFitosanitario reg : listaReg ){
 
       </div> 
       
-      
+      <%} %>
       <div class="contenitore-delega" id="delega-pop-up">
 		 <div id="blocco-delega" class="animazione-login">
 		     <span class ="close-delegato" style="color: black"><i class=" fa fa-close" onclick="document.getElementById('delega-pop-up').style.display='none'"></i></span>

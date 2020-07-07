@@ -74,7 +74,10 @@ public class showRegistro extends HttpServlet {
 		
 		
 		if(lista==null || lista.isEmpty()) {
-			request.setAttribute("listaRegistro", null);
+			System.out.println("Una lista vuota");
+			System.out.println("Una lista vuota");
+
+			request.setAttribute("listaRegistro", new ArrayList<RegistroFitosanitario>());
 			
 			
 		}else {

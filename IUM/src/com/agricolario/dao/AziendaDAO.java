@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Random;
 
 import com.agricolario.bean.Azienda;
 import com.agricolario.bean.Utente;
@@ -26,15 +27,15 @@ public class AziendaDAO {
 			try {
 				
 				//bisogna aggiustare il nomi nomeAzienda in nome e DataFondazione tutto in minuscolo
-		    	insertSql="insert into azienda (nomeAzienda,indirizzo,DataFondazione,città,cap,idazienda)  value(?,?,?,?,?,?);";
+		    	insertSql="insert into azienda (nomeAzienda,indirizzo,DataFondazione,città,cap,idazienda,idutente)  value(?,?,?,?,?,?,?);";
 		    	PreparedStatement ps = con.prepareStatement(insertSql);
 				ps.setString(1, azienda.getNomeAzienda());
 				ps.setString(2, azienda.getIndirizzo());
 				ps.setDate(3, ParseDate.parseDateSql(azienda.getDataFondazione()));
 				ps.setString(4, azienda.getCittà());
 				ps.setString(5, azienda.getCap());
-				ps.setInt(6, 1);
-				
+				ps.setInt(6, new Random().nextInt(120000000));
+				ps.setInt(7, azienda.getIdUtente());
 				ps.executeUpdate();
 		    	 return true;	
 			} catch (SQLException e) {

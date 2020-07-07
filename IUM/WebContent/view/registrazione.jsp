@@ -150,10 +150,10 @@ width:60%;
   		<br>
     <div class="div-due">
     <div>
-   <span for="fname">Nome:</span><input type="text" class="input-form" name="email" value="" placeholder="Nome del delegato">
+   <span for="fname">Nome:</span><input type="text" class="input-form" name="email" value="" placeholder="Nome del delegato" required="required">
    </div>
    <div>
-   <span for="fname">Cognome:</span><input type="text" class="input-form" name="email" value="" placeholder="Cognome del delegato">
+   <span for="fname">Cognome:</span><input type="text" class="input-form" name="email" value="" placeholder="Cognome del delegato" required="required">
     </div>
    </div>
     <div class="div-uno">
@@ -161,21 +161,21 @@ width:60%;
  	 <span>Email:</span>
  	 </div>
  	 <div>
- 	 <input type="text" id="emailDelegato" class="input-delega" name="email" value="" placeholder="Email del delegato">
+ 	 <input type="text" id="emailDelegato" class="input-delega" name="email" value="" placeholder="Email del delegato" required="required">
     </div>
     </div>
     
     <div class="div-due">
     <div>
-   <span for="fname">Password:</span><input type="password" class="input-form" name="email" value="" placeholder="Nome del delegato">
+   <span for="fname">Password:</span><input type="password" class="input-form" name="email" value="" placeholder="Nome del delegato" required="required">
    </div>
    <div>
-   <span for="fname">Conferma Password:</span><input type="password" class="input-form" name="email" value="" placeholder="Cognome del delegato">
+   <span for="fname">Conferma Password:</span><input type="password" class="input-form" name="email" value="" placeholder="Cognome del delegato" required="required">
     </div>
    </div>
     <div class="div-due">
     <div>
-   <span for="fname">Data di Nascita:</span><input type="date" class="input-form" name="email" value="" placeholder="Nome del delegato">
+   <span for="fname">Data di Nascita:</span><input type="date" class="input-form" name="email" value="" placeholder="Nome del delegato" required="required">
    </div>
    <div>
    <span for="fname">Ruolo:</span><br>

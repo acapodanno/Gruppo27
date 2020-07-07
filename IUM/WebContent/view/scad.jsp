@@ -165,7 +165,7 @@ only screen and (max-width: 1280px)  {
  <div class="tableFixHead">
 <%        
 boolean ok=false;
-
+if(!lista.isEmpty()){
 for(Trattamento reg : lista.get(0).getTrattamenti()){ 
  int carenza = new ProdottoFitosanitarioDAO().getTempoCarenza(reg.getNomeProdotto());
 	 Date dt = reg.getDatInzio(); 
@@ -241,99 +241,14 @@ if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
 	
   <h5 class="text-center" class="w3-large">Non ci sono scadenze </h5>
 </div>
+  <%}}else{ %>
+  <div class="col col-lg-12 text-center ">
+	
+  <h5 class="text-center" class="w3-large">Non ci sono scadenze </h5>
+</div>
   <%} %>
 </div> 
 </div>  
-
-<!-- 
-<div class="pagination">
-  <a href="#">&laquo;</a>
- <%
-  int numTrattamenti = lista.get(0).getTrattamenti().size();
- int quoziente = numTrattamenti/4;
- 
- 
- for(int i =0;i<quoziente ; i++ ){
-	 %>
-  <a href="#"><%=i+1 %></a>
- <%  }%>
- 
-  <a href="#">&raquo;</a>  
-</div>   
--->
-<%@ include file="footer.jsp"%>
- 
-<!-- 
- <div class="scad" style="overflow-x:auto;">
-  <table>
-    <tr id="intest">
-      <th> Scadenza del trattamento</th>
-      <th> Fitofarmaco</th>
-       <th>Scopo</th>
-      <th> Colutra</th>
-      <th> Riferimento</th>
-    </tr>
-    
-    <tr>
-      <td>23/05/2020</td>
-  	  <td>Antarktis</td>
-  	  <td>Curare la salmonella</td>
-      <td>Orzo</td>
-       <td>Vai al Registro</td>
-    </tr>
-    
-      
-   <tr>
-      <td>23/05/2020</td>
-  	  <td>Antarktis</td>
-  	  <td>Curare la salmonella</td>
-      <td>Orzo</td>
-       <td>Vai al Registro</td>
-    </tr>
-    
-      
-    <tr>
-      <td>23/05/2020</td>
-  	  <td>Antarktis</td>
-  	  <td>Curare la salmonella</td>
-      <td>Orzo</td>
-       <td>Vai al Registro</td>
-    </tr>
-    
-      
-    <tr>
-      <td>23/05/2020</td>
-  	  <td>Antarktis</td>
-  	  <td>Curare la salmonella</td>
-      <td>Orzo</td>
-       <td>Vai al Registro</td>
-    </tr>
-    
-      
-  <tr>
-      <td>23/05/2020</td>
-  	  <td>Antarktis</td>
-  	  <td>Curare la salmonella</td>
-      <td>Orzo</td>
-       <td>Vai al Registro</td>
-    </tr>
-      </table>
-</div>   
-
-
-<div class="pagination">
-  <a href="#">&laquo;</a>
-  <a href="#">1</a>
-  <a href="#" class="active">2</a>
-  <a href="#">3</a>
-  <a href="#">4</a>
-  <a href="#">5</a>
-  <a href="#">6</a>
-  <a href="#">&raquo;</a>  
-</div>   
-
-
- -->
 
 </body>
 </html>

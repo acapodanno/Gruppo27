@@ -1,11 +1,14 @@
 package com.agricolario.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.agricolario.bean.Azienda;
 import com.agricolario.bean.Utente;
@@ -44,8 +47,11 @@ public class registrazione extends HttpServlet {
 		  boolean insertAzienda =  false;
 		  boolean insertuser  = false;
 		  UtenteDAO userDao = new UtenteDAO();
-			Utente user= new Utente();
-	 if(ruolo=="titolare"){
+		  Utente user= new Utente();
+		  PrintWriter out = response.getWriter();
+		  response.setContentType("text/html");
+		 response.setCharacterEncoding("UTF-8");
+	 if(ruolo.equals("titolare")){
 		  nomeAzienda = request.getParameter("azienda");
 		  cap	=	request.getParameter("cap");
 		  città	=request.getParameter("città");
@@ -53,20 +59,28 @@ public class registrazione extends HttpServlet {
 		  dataFondazione = request.getParameter("dataFondazione");
 		  user = new Utente(nome, cognome, email, password, ruolo, ParseDate.parseDateUtil(dataNascita));
 		  insertuser = userDao.insert(user);
-		  user.setId(userDao.selectUser(email).getId());  
+		  user.setId(userDao.selectUser(email).getId());
+		  System.out.println(user.getId());
 		  Azienda azienda= new Azienda(nomeAzienda, indirizzo, città, cap, ParseDate.parseDateUtil(dataFondazione),user.getId());
-		  insertAzienda=new AziendaDAO().insert(azienda);  
+		  insertAzienda=new AziendaDAO().insert(azienda); 
+		  
 
 	 }else if(ruolo.equals("delegato")) {
 		  Azienda azienda = new Azienda();
 		  user = new Utente(nome, cognome, email, password, ruolo, ParseDate.parseDateUtil(dataNascita));
-		  userDao.insert(user);
-		  System.out.println("ok inserito");
+		  insertuser = userDao.insert(user);
+		  user.setId(userDao.selectUser(email).getId());  
+
 	 }	else {
 		 
 		 System.out.println("Errore");		 }
-		
-		
+	 
+	 	HttpSession ssn= request.getSession();
+		ssn.setAttribute("user",user);
+		ssn.setAttribute("loggato",true);
+
+		out.append("{\"reg\":\""+insertuser+"\"}");
+		out.flush();
 		
 	}
 
