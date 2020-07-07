@@ -34,7 +34,7 @@ public class RegistroFitosanitarioDAO {
 			ps = con.prepareStatement(insertSql);
 
 
-			ps.setInt(2, id);
+			ps.setInt(1, id);
 			ps.executeUpdate();
 			insertCompilazione(idUtente, id);
 			

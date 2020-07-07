@@ -108,4 +108,27 @@ public class TrattamentoDAO {
 		}
 			
 	}
+public boolean deleteTrattamentoById(int idregistro) {
+		
+		//delete from trattamento where idregistro = 5;
+		String sql="delete from trattamento where idtrattamento = ? ;";
+		Connection con= connessione.getConn();
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, idregistro);
+			ps.executeUpdate();
+			return true;
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}finally {
+			if(connessione!=null) {
+				
+				connessione.closeConn();
+			}
+		}
+			
+	}
 }

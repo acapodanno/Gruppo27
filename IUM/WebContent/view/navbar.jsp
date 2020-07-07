@@ -410,7 +410,7 @@ a.notif {
       <input  style="color: white;" type="text" placeholder="Email" name="email" required>
 
       <label class="etichetteAccedi"><b>Inserisci qui la tua password</b></label>
-      <input  style="color: white;" type="password" placeholder="Password" name="password"required> 
+      <input  style="color: white;" type="password" placeholder="Password" name="password" required> 
         
      
       <div class="gruppo">

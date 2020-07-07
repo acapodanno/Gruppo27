@@ -511,11 +511,11 @@ for(RegistroFitosanitario reg : listaReg ){
 <div class="opRegistro" >
        
         
-         <%if(user.getRuolo().equals("titolare")){ %>  <button class=" shadow  buttone-registro" <%if(creazione ){%>  disabled="disabled" style="background-color: gray;"  onclick="showPop(this.id)" id="crea-registro"<%}%> >Crea  </button><%} %>
+         <%if(user.getRuolo().equals("titolare")){ %>  <button class=" shadow  buttone-registro" <%if(creazione ){%>  disabled="disabled" style="background-color: gray;"  <%}%>onclick="showPop(this.id)" id="crea-registro" >Crea  </button><%} %>
       <%if(user.getRuolo().equals("titolare")){ %>       <button class="shadow  buttone-registro" onclick="redirectDelega(<%=idRegistro %>,<%=user.getId()%>)">Delega</button><%} %>
         <button class="shadow buttone-registro" id="modifica"  onclick="clickModifica(this)" <%if(listaReg.isEmpty()){ %> disabled="disabled" style="background-color: gray;"<%}  %>>Modifica</button>
         <button class="shadow buttone-registro" <%if(user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;"  <%}%> onclick="showPop(this.id)" id="elimina-registro" >Elimina</button>
-     <%if(user.getRuolo().equals("titolare")){ %>   <button class="shadow buttone-registro" id="ap"  onclick="clickModifica(this)">Approva Modifiche</button><%}%>
+     <%if(user.getRuolo().equals("titolare")){ %>   <button class="shadow buttone-registro"   onclick="showPop(this.id)" id="approva">Approva Modifiche</button><%}%>
         
 </div>
                 
@@ -900,15 +900,55 @@ function eliminaRegistro(){
 }
 function eliminaTrattamento(){
 	//
+		var idTrattamento = 0; 
+
+	var array = document.getElementsByTagName("input");
+
+
+	for(var ii = 0; ii < array.length; ii++)
+	{
+
+	   if(array[ii].type == "checkbox")
+	   {
+	      if(array[ii].className == 'select-prodotto')
+	       {
+	       if( array[ii].checked){
+	    	   
+	    	  idTrattamento = array[ii].value;
+	    	   
+	       }
+
+	       }
+
+
+	   }
+	}
+		   jQuery.noConflict();
+		
+	  $.ajax({
+	      type:"POST",
+	      data:{"idtrattamento": idTrattamento},
+	      url:"EliminaTrattamento",
+	      success : function(data){
+	    	 var object= JSON.parse(data);
+	    	   showPop(object.eliminazione);
+	    	}});
+	
+	
+	
+	
+}
+function creaRegistro(){
+	//
 		   jQuery.noConflict();
 			var id= $("#idregistro").val();
 	  $.ajax({
 	      type:"POST",
 	      data:{"idregistro": id},
-	      url:"EliminaTrattamento",
+	      url:"creaRegistro",
 	      success : function(data){
 	    	 var object= JSON.parse(data);
-	    	   showPop(object.eliminazione);
+	    	   showPop(object.creazione);
 	    	}});
 	
 	
@@ -940,7 +980,7 @@ function showPop(str){
 	 	}else if(str=="crea-registro"){
 	 		document.getElementById('titolo-pop-up').innerText="Conferma"	
 				document.getElementById('pop-text').innerText="Sei sicuro di voler creare un nuovo registro?"
-					document.getElementById('bottone-popu-conferma').setAttribute("onclick","sonoPremuto()");
+					document.getElementById('bottone-popu-conferma').setAttribute("onclick","creaRegistro()");
 
 		}else  if(str=="true"){
 			
@@ -961,6 +1001,14 @@ function showPop(str){
 				document.getElementById('titolo-pop-up').innerText="Conferma"	
 				document.getElementById('pop-text').innerText="Sei sicuro di voler eliminare il registro del ?"
 				document.getElementById('bottone-popu-conferma').setAttribute("onclick","eliminaTrattamento()");
+
+
+				
+			}else if(str=="approva"){
+				//eliminaTrattamento()
+				document.getElementById('titolo-pop-up').innerText="Conferma"	
+				document.getElementById('pop-text').innerText="Sei sicuro di voler approvare le modifiche?"
+				document.getElementById('bottone-popu-conferma').setAttribute("onclick","showPop('true')");
 
 
 				

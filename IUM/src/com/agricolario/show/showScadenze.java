@@ -1,6 +1,7 @@
 package com.agricolario.show;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -11,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.agricolario.bean.RegistroFitosanitario;
+import com.agricolario.bean.Trattamento;
 import com.agricolario.bean.Utente;
+import com.agricolario.dao.NotificaDAO;
 import com.agricolario.dao.RegistroFitosanitarioDAO;
 
 /**
@@ -38,13 +41,45 @@ public class showScadenze extends HttpServlet {
 		
 		HttpSession ssn = request.getSession();
 		Utente u= (Utente)ssn.getAttribute("user");
+		
+		
+		RegistroFitosanitarioDAO dao= new RegistroFitosanitarioDAO();
+		System.out.println(u.toString());
+		ArrayList<RegistroFitosanitario> lista = new ArrayList<RegistroFitosanitario>();
+		if(u.getRuolo().equals("titolare")) {
+			 lista = dao.getAllRegistro(u.getId());
+		}
+		if(!lista.isEmpty()) {
+			 Date oggi= new Date(System.currentTimeMillis());
+
+			for(Trattamento  reg : lista.get(0).getTrattamenti()) {
+				int giorni= reg.getDatInzio().getDate()-oggi.getDate();
+				if(giorni<=3) {
+				
+				String informazione ="Il seguente trattamento"+reg.getNomeProdotto()+"eseguito in data:"+reg.getDatInzio()+" sta per scadere tra " + giorni+" giorni!";
+				new NotificaDAO().insertNotifica(0,u.getId(), informazione);
+				
+				}
+			}
+
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		if(u!=null) {
 			
 			
 
-			RegistroFitosanitarioDAO dao= new RegistroFitosanitarioDAO();
 			System.out.println(u.toString());
-			ArrayList<RegistroFitosanitario> lista = new ArrayList<RegistroFitosanitario>();
+			
 			if(u.getRuolo().equals("titolare")) {
 				 lista = dao.getAllRegistro(u.getId());
 				}else {

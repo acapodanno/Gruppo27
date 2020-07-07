@@ -2,6 +2,7 @@ package com.agricolario.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -12,8 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.agricolario.bean.Notifica;
+import com.agricolario.bean.RegistroFitosanitario;
+import com.agricolario.bean.Trattamento;
 import com.agricolario.bean.Utente;
 import com.agricolario.dao.NotificaDAO;
+import com.agricolario.dao.RegistroFitosanitarioDAO;
 
 /**
  * Servlet implementation class ottieniNotifiche
@@ -21,15 +25,15 @@ import com.agricolario.dao.NotificaDAO;
 @WebServlet("/ottieniNotifiche")
 public class ottieniNotifiche extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
     /**
      * @see HttpServlet#HttpServlet()
      */
     public ottieniNotifiche() {
         super();
         // TODO Auto-generated constructor stub
+        
     }
-
+    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -38,7 +42,15 @@ public class ottieniNotifiche extends HttpServlet {
 		// TODO Auto-generated method stub
 				HttpSession ssn = request.getSession();
 				Utente u= (Utente)ssn.getAttribute("user");
+				
+				
+				
+			
+				
 				ArrayList<Notifica> notifica= new NotificaDAO().getAllNotificheNonLette(u.getId());
+	
+				
+				
 				PrintWriter out = response.getWriter();
 				response.setContentType("text/html");
 				response.setCharacterEncoding("UTF-8");

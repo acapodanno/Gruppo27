@@ -1,11 +1,17 @@
 package com.agricolario.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.agricolario.bean.Utente;
+import com.agricolario.dao.RegistroFitosanitarioDAO;
 
 /**
  * Servlet implementation class creaRegistro
@@ -26,8 +32,17 @@ public class creaRegistro extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	    HttpSession ssn= request.getSession();
+	    Utente u= (Utente)ssn.getAttribute("user");
+		boolean creazione = new RegistroFitosanitarioDAO().insert(u.getId());
+		  PrintWriter out = response.getWriter();
+		  response.setContentType("text/html");
+		 response.setCharacterEncoding("UTF-8");
+		 out.append("{\"creazione\":\""+creazione+"\"}");
+		 out.flush();
+		
+		
+		
 	}
 
 	/**

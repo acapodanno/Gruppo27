@@ -34,9 +34,10 @@ public class EliminaTrattamento extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-			String id = request.getParameter("idregistro");
+			String id = request.getParameter("idtrattamento");
 			int idregistro = Integer.parseInt(id);
-			boolean elimina = new TrattamentoDAO().deleteTrattamentoByIdRegistro(idregistro);
+			boolean elimina = new TrattamentoDAO().deleteTrattamentoById(idregistro);//E' id trattamento 
+			System.out.println(id);
 			HttpSession ssn = request.getSession();
 			Utente u= (Utente)ssn.getAttribute("user");
 			

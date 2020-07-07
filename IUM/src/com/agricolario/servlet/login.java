@@ -38,8 +38,9 @@ public class login extends HttpServlet {
 		 email= request.getParameter("email");
 		 password= request.getParameter("password");
 		 UtenteDAO userDao = new UtenteDAO();
+		 System.out.println(password);
 			Utente user=userDao.selectUser(email);
-			if(user!=null) {
+			if(user!=null && user.getPassword().equals(password)) {
 				
 				Azienda azienda = new Azienda();
 				if(user.getRuolo().equals("titolare")) {
