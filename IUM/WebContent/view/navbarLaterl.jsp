@@ -52,10 +52,11 @@ border: 1px solid white;
 .icon-bar a:hover {
   background-color: white; 
   color: #23a9d8 ;
-  
-
 }
-
+.icon-bar a:not(.nohover):hover {  
+    background-color: #23a9d8; 
+    cursor:pointer;
+}
 
 .icon-bar-text{
 	visibility: hidden;
@@ -67,6 +68,7 @@ border: 1px solid white;
 	
 }
 
+/* Box di testo delle icone della barra aperta */
 .icon-bar a:hover > .icon-bar-text{
      visibility: visible;
 	text-align: center;
@@ -74,7 +76,7 @@ border: 1px solid white;
 	background-color: #23a9d8;
 	width: 180px;
 	height: 70px;
-	margin-left:30px;
+	margin-left:20px;
 	animation: fadeIn;
 	animation-duration: 1s;
 	align-content: center;
@@ -82,7 +84,7 @@ border: 1px solid white;
 }
 
 
-
+/* Box di testo dell'icona del menu rimpicciolita */
 .w3-teal a:hover > .icon-bar-text {
 	visibility: visible;
 	text-align: center;
@@ -124,14 +126,14 @@ border: 1px solid white;
 	float: inline-end;
 	outline: 0;
 	position: relative;
-	margin-top: 105px;
+	margin-top: 5px;
 	/* width: ; */
 }
 .w3-teal {
 	display: flex;
 	color: white !important;
 	background-color: #23a9d8 !important;
-	width: 5%;
+	width: 70px;
 }
 
 #prova{
@@ -141,6 +143,35 @@ animation: fadeInLeft;
  transition: all 0.3s ease; 
  display: block;
  font-size: 18px;
+}
+
+/* icona frecce per menù a scomparsa */
+.arrow-style {
+  color: white;
+  margin-left:-24px;
+}
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  20% {
+  	opacity:1;
+  }100% {
+    opacity: 1;
+  }
+}
+
+.uno {
+  -webkit-animation: load 5s 4 0.5s;
+  animation: load 5s 4 0.5s;
+}
+.due {
+  -webkit-animation: load 5s 4 0.6s;
+  animation: load 5s 4 0.6s;
+}
+.tre {
+  -webkit-animation: load 5s 4 0.7s;
+  animation: load 5s 4 0.7s;
 }
 </style>
 <title>Insert title here</title>
@@ -159,16 +190,22 @@ animation: fadeInLeft;
  <div class=" w3-sidebar w3-bar-block " style="display:block" id="mySidebar">
  
  <div class="icon-bar shadow">
-  <a onclick="w3_close()" style="font-size: 18px"> <<< <span class="icon-bar-text shadow"> Chiudi il Menù</span></a>
-  <a href="showRegistro"><img src=" https://img.icons8.com/bubbles/80/000000/literature.png"/><span class="icon-bar-text shadow">Registro dei Trattamenti Fitosanitari</span></a>
-  <a href="showProdottiFitosanitari"><img srcset="https://img.icons8.com/bubbles/80/000000/search.png"/><span class="icon-bar-text shadow">Prodotti Fitosanitari</span></a>
-  <a href="showScadenze"> <img srcset="https://img.icons8.com/bubbles/80/000000/overtime.png "/><span class="icon-bar-text shadow">Scadenze dei Trattamenti Fitosanitari</span></a>
-  <a href="showTracciabilita"><img srcset="https://img.icons8.com/bubbles/80/000000/qr-code.png "/><span class="icon-bar-text shadow">Tracciabilità</span></a>
+  <a onclick="w3_close()" style="font-size: 18px"> <img class="tre" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAaklEQVRIie3UsQmAQAxG4UOstdWRdAad9yztXObgWYlHGkW5aPG/BT4SQkJQSv0hoAXGL9AIJGD2RBfOVqD2QGOGbkAnVKitumO/RR4HNO6rvsB74aVxe+nlX2aGH5MnYHJBDT64okop2w4gjRheP8Dm7QAAAABJRU5ErkJggg=="/>
+    <img class="due arrow-style" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAaklEQVRIie3UsQmAQAxG4UOstdWRdAad9yztXObgWYlHGkW5aPG/BT4SQkJQSv0hoAXGL9AIJGD2RBfOVqD2QGOGbkAnVKitumO/RR4HNO6rvsB74aVxe+nlX2aGH5MnYHJBDT64okop2w4gjRheP8Dm7QAAAABJRU5ErkJggg=="/>
+    <img class="uno arrow-style" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAaklEQVRIie3UsQmAQAxG4UOstdWRdAad9yztXObgWYlHGkW5aPG/BT4SQkJQSv0hoAXGL9AIJGD2RBfOVqD2QGOGbkAnVKitumO/RR4HNO6rvsB74aVxe+nlX2aGH5MnYHJBDT64okop2w4gjRheP8Dm7QAAAABJRU5ErkJggg=="/> <span class="icon-bar-text shadow" style="margin-left:35px;"> Chiudi il Menù</span></a>
+  <a class="nohover" href="showRegistro"><img srcset=" https://img.icons8.com/bubbles/80/000000/literature.png"/><span class="icon-bar-text shadow">Registro dei Trattamenti Fitosanitari</span></a>
+  <a class="nohover" href="showProdottiFitosanitari"><img srcset="https://img.icons8.com/bubbles/80/000000/search.png"/><span class="icon-bar-text shadow">Prodotti Fitosanitari</span></a>
+  <a class="nohover" href="showScadenze"> <img srcset="https://img.icons8.com/bubbles/80/000000/overtime.png "/><span class="icon-bar-text shadow">Scadenze dei Trattamenti Fitosanitari</span></a>
+  <a class="nohover" href="showTracciabilita"><img srcset="https://img.icons8.com/bubbles/80/000000/qr-code.png "/><span class="icon-bar-text shadow">Tracciabilità</span></a>
 </div>
 </div>
 
 <div class="w3-teal">
-  <a><button class="apri w3-teal" style="display:none"  id=prova onclick="w3_open()"> >>> </button> <span class="icon-bar-text shadow"> Apri il Menù</span></a>
+  <a><button class="apri w3-teal" style="display:none;"  id=prova onclick="w3_open()"> 
+  <img class="uno" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAaUlEQVRIie3Vuw2AMBAEUZtWXAK9QF8gEopEUMEQOMABggT2kn0NjO7kT0pmFgHIwAhkdXSmWoFOFS7AzmWRTQ70wNbEpZPfxUMnd/yR5mB8KWTVjv4dLcAhfzKpn8Qkv7NNfJBGzezNCeLiIwNs96qWAAAAAElFTkSuQmCC"/>
+    <img class="due arrow-style" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAaUlEQVRIie3Vuw2AMBAEUZtWXAK9QF8gEopEUMEQOMABggT2kn0NjO7kT0pmFgHIwAhkdXSmWoFOFS7AzmWRTQ70wNbEpZPfxUMnd/yR5mB8KWTVjv4dLcAhfzKpn8Qkv7NNfJBGzezNCeLiIwNs96qWAAAAAElFTkSuQmCC"/>
+    <img class="tre arrow-style" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAaUlEQVRIie3Vuw2AMBAEUZtWXAK9QF8gEopEUMEQOMABggT2kn0NjO7kT0pmFgHIwAhkdXSmWoFOFS7AzmWRTQ70wNbEpZPfxUMnd/yR5mB8KWTVjv4dLcAhfzKpn8Qkv7NNfJBGzezNCeLiIwNs96qWAAAAAElFTkSuQmCC"/>
+     </button> <span class="icon-bar-text shadow"> Apri il Menù</span></a>
 </div>
 
 <script>
