@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
@@ -83,6 +83,106 @@ html {
 .accordionText {
 	font-size: 18px;
 }
+
+
+
+/* da qui in poi css per tabella comparison finale */ 
+.tabellaComp {
+	display: table;
+	text-align: center;
+	border-collapse: collapse;
+	margin: 0 auto;
+	border-radius: 20px;
+	background-color: #f9f9f9;
+}
+
+.flex-riga {
+	display: table-row;
+	vertical-align: middle;
+	text-align: center;
+
+}
+
+.flex-cella {
+	display: table-cell;
+	vertical-align: middle;
+  padding: 1em;
+}
+
+.flex-riga:nth-child(n+3):not(:nth-child(n+16)) {
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.flex-row:last-child > * {
+	padding-top: 2em;
+  padding-bottom: 0;
+}
+
+.t-col:nth-child(1) {
+	max-width: 700px;
+
+}
+
+.t-col:nth-child(2) {
+	border-right: 1px solid #23a9d8;
+}
+
+
+.titoloComp {
+	font-size: 1.5em;
+	font-weight: 300;
+  color: #23a9d8;
+  text-transform: uppercase;
+}
+
+.feature p {
+	text-align: left;
+	font-weight: 300;
+	font-size: 1.4em;
+	color: black;
+	
+}
+
+.borderless {
+	border: none !important;
+}
+
+.alt-txt {
+	display: none;
+}
+
+
+@media screen and (max-width: 480px) {
+  
+  .tabellaComp {
+		display: relative;
+		min-width: 300px;
+		max-width: 100%;
+		padding: 1em;
+		border-radius:0;
+	}
+
+	.flex-riga {
+		display: block;
+		width: 100%;
+    height: auto;
+		padding: 0 0 1em 0;
+	}
+
+	.flex-cella {
+		display: inline;
+		border: none;
+		height: auto;
+		border-right: none !important;
+	}
+  
+	.t-col:nth-child(1) {
+		width: 100%;
+	}
+
+	.feature p {
+    text-align: center;
+	}
 </style>
 </head>
 <body>
@@ -779,6 +879,244 @@ In questo modo c'è possibilità di rendere l'utente fruitore attivo delle informa
 	</div>
 <hr class="riga">
 
+<div id="sezReg" class="container text-center justify-content-center">
+		
+		<h2 class="titoloFunzionalità">SUDDIVISIONE DELLE MANSIONI PER RUOLO</h2>
+		<h5 class="p-2 mb-4">
+			Di seguito è mostrata una tabella riassuntiva delle mansioni che puoi svolgere 
+			in Agricolàrio, in base al ruolo che svolgi. 
+		</h5>
+</div>
+<!-- Comparison Table -->
+
+  <div class="tabellaComp">
+   <div class="flex-riga">
+      <div class="flex-cella t-col borderless empty"></div>
+      <div class="flex-cella t-col borderless empty">
+        
+      </div>
+      <div class="flex-cella t-col borderless empty">
+        
+      </div>
+    </div>
+
+    <!-- Column Names -->
+    <div class="flex-riga">
+      <div class="flex-cella t-col borderless empty"></div>
+      <div class="flex-cella t-col borderless titoloComp">
+        Delegato
+      </div>
+      <div class="flex-cella t-col borderless titoloComp">
+        Titolare
+      </div>
+    </div>
+    <!-- Feature Rows -->
+    <div class="flex-riga">
+      <div class="flex-cella t-col feature">
+        <p><b>Accesso alle Notifiche* </b></p>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+    </div>
+    <div class="flex-riga">
+      <div class="flex-cella t-col feature">
+        <p><b>Visualizza Prodotti Fitosanitari presenti in Magazzino</b></p>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+    </div>
+    <div class="flex-riga">
+      <div class="flex-cella t-col feature">
+        <p><b>Aggiungi un Prodotto Fitosanitario nel Magazzino</b></p>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">NO</span>
+        <i class="fa fa-times-circle-o" aria-hidden="true" style="color:red; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+    </div>
+    <div class="flex-riga">
+      <div class="flex-cella t-col feature">
+        <p><b>Visualizza Tabella del Registro Fitosanitario</b></p>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+    </div>
+    <div class="flex-riga">
+      <div class="flex-cella t-col feature">
+        <p><b>Crea Tabella del Registro Fitosanitario</b></p>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">NO</span>
+        <i class="fa fa-times-circle-o" aria-hidden="true" style="color:red; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+    </div>
+    <div class="flex-riga">
+      <div class="flex-cella t-col feature">
+        <p><b>Aggiungi un Trattamento al Registro Fitosanitario</b></p>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+</div>
+<div class="flex-riga">
+  <div class="flex-cella t-col feature">
+    <p><b>Modifica una cella di una riga del Registro Fitosanitario</b></p>
+  </div>
+  <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+</div>
+<div class="flex-riga">
+  <div class="flex-cella t-col feature">
+    <p><b>Elimina un Trattamento dal Registro Fitosanitario</b></p>
+  </div>
+  <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+</div>
+<div class="flex-riga">
+  <div class="flex-cella t-col feature">
+    <p><b>Delega la compilazione del Registro Fitosanitario </b></p>
+  </div>
+  <div class="flex-cella t-col">
+        <span class="alt-txt">NO</span>
+        <i class="fa fa-times-circle-o" aria-hidden="true" style="color:red; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+</div>
+<div class="flex-riga">
+  <div class="flex-cella t-col feature">
+    <p><b>Approva Modifiche del Delegato sul Registro Fitosanitario</b></p>
+  </div>
+  <div class="flex-cella t-col">
+        <span class="alt-txt">NO</span>
+        <i class="fa fa-times-circle-o" aria-hidden="true" style="color:red; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+</div>
+<div class="flex-riga">
+  <div class="flex-cella t-col feature">
+    <p><b>Elimina un Registro Fitosanitario</b></p>
+  </div>
+  <div class="flex-cella t-col">
+        <span class="alt-txt">NO</span>
+        <i class="fa fa-times-circle-o" aria-hidden="true" style="color:red; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+</div>
+<div class="flex-riga">
+  <div class="flex-cella t-col feature">
+    <p><b>Stampa un Registro Fitosanitario</b></p>
+  </div>
+  <div class="flex-cella t-col">
+        <span class="alt-txt">NO</span>
+        <i class="fa fa-times-circle-o" aria-hidden="true" style="color:red; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+</div>
+<div class="flex-riga">
+  <div class="flex-cella t-col feature">
+    <p><b>Visualizzazione Scadenze dei Trattamenti Fitosanitari</b></p>
+  </div>
+  <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+</div>
+<div class="flex-riga">
+  <div class="flex-cella t-col feature">
+    <p><b>Creazione di un Etichetta Virtuale</b></p>
+  </div>
+  <div class="flex-cella t-col">
+        <span class="alt-txt">NO</span>
+        <i class="fa fa-times-circle-o" aria-hidden="true" style="color:red; font-size: 32px;"></i>
+      </div>
+      <div class="flex-cella t-col">
+        <span class="alt-txt">YES</span>
+        <i class="fa fa-check-circle-o" aria-hidden="true" style="color:green; font-size: 32px;"></i>
+      </div>
+</div>
+ <div class="flex-riga">
+      <div class="flex-cella t-col borderless empty"></div>
+      <div class="flex-cella t-col borderless empty">
+        
+      </div>
+      <div class="flex-cella t-col borderless empty">
+        
+      </div>
+    </div>
+    
+     <div class="flex-riga">
+      <div class="flex-cella t-col borderless empty"></div>
+      <div class="flex-cella t-col borderless empty">
+        
+      </div>
+      <div class="flex-cella t-col borderless empty">
+        
+      </div>
+    </div>
+
+</div>
+<h6 class=" text-center p-2 mb-4">
+			*delegati e titolari riceveranno notifiche in base al ruolo ricoperto
+		</h6>
 	<%@ include file="../view/footer.jsp"%>
 
 
