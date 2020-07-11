@@ -356,7 +356,7 @@ html {
 			<div class="card card-body rounded-0 border-0 h-100"
 				style="background:#e6edb7">
 				<img class="img-fluid my-auto" style="width: auto"
-					src="../image/macbookvector.png" />
+					src="../image/registromacvec.gif" />
 			</div>
 
 		</div>
@@ -551,7 +551,7 @@ html {
 			<div class="card card-body rounded-0 border-0 h-100"
 				style="background: #e6edb7">
 				<img class="img-fluid my-auto" style="width: auto"
-					src="../image/macbookvector.png" />
+					src="../image/magazzinomacvec.gif" />
 			</div>
 		</div>
 
@@ -713,7 +713,7 @@ illeggibile. È per questo motivo che le aziende più influenti del settore hanno
 introdotto l'utilizzo dell'etichetta virtuale onde evitare che le etichette 
 cartacee dei prodotti alimentari andassero addirittura perse.</p>
 <p class="accordionText">
-In questo modo tramite la scannerizzazione di un <b>QR-CODE</b> fatta direttamente dal 
+In questo modo tramite la scannerizzazione di un <b style="color:#289605">QR-CODE</b> fatta direttamente dal 
 proprio smartphone, consente di visualizzare l'insieme delle informazioni 
 citate sopra. Nessuna di esse in questo modo andrà persa ma saranno ben leggibili 
 e disposte in modo ordinato. </p>
@@ -728,7 +728,7 @@ e disposte in modo ordinato. </p>
           </div>
           <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
             <div class="card-body p-5">
-              <p class="accordionText">Le informazioni sono <b>DIGITALIZZATE</b>, </p>
+              <p class="accordionText">Le informazioni sono <b style="color:#289605">DIGITALIZZATE</b>, </p>
               <p class="accordionText">ciò significa che il nostro sistema
    si occupa di conservarle per te in maniera quasi permanente, 
    per tutto il tempo che il tuo prodotto resterà in commercio. </p>
@@ -780,11 +780,23 @@ a cui esse si riferiscono sono:</p>
               <p class="accordionText">È molto semplice!</p>
 			<p class="accordionText">Generare un etichetta virtuale significa generare un codice QR-code. 
 Per farlo basta eseguire questi pochi e semplici passi: </p>
-	 <ol class="accordionText pb-0">
-	<li>Seleziona un prodotto che hai coltivato e di cui intendi creare l'etichetta virtuale 
-	<li>Visualizza e/o modifica le informazioni che il sistema genera automaticamente
-	<li>Genera il codice Qr (potrai anche stamparlo e/o salvarlo in pdf se lo riterrai necessario)
+<div class="row row-cols-1 row-cols-md-3 m-2">
+	 <div class="col justify-content-center">
+	 <ol>
+	 <li value="1" class="accordionText text-uppercase"><b style="color:#289605">Seleziona un prodotto</b> che hai coltivato e di cui intendi creare l'etichetta virtuale 
 	</ol>
+	</div>
+	<div class="col justify-content-center">
+	<ol>
+	<li value="2" class="accordionText text-uppercase"><b style="color:#289605">Visualizza e/o modifica le informazioni</b> che il sistema genera automaticamente
+	</ol>
+	</div>
+	<div class="col justify-content-center">
+	<ol>
+	<li value="3" class="accordionText text-uppercase"><b style="color:#289605">Genera il codice Qr</b> (potrai anche stamparlo e/o salvarlo in pdf se lo riterrai necessario)
+	</ol>
+	</div>
+ </div>
             </div>
           </div>
         </div>
@@ -798,7 +810,7 @@ Per farlo basta eseguire questi pochi e semplici passi: </p>
             <div class="card-body p-5">
             <div class="row">
               <p class="accordionText">
-              Un <b>CODICE QR</b> è un <b>codice a barre bidimensionale</b> di forma quadrata 
+              Un <b style="color:#289605">CODICE QR</b> è un <b>codice a barre bidimensionale</b> di forma quadrata 
   composto da diversi moduli di colore nero inseriti all'interno di uno schema 
   a sfondo bianco, impiegato tipicamente per memorizzare informazioni generalmente destinate a 
   essere lette tramite uno smartphone. </p>
@@ -862,14 +874,15 @@ scannerizzazione il codice QR, permettendo così l'accesso alle informazioni.</p>
           <div id="collapseSeven" aria-labelledby="headingSeven" data-parent="#accordionExample" class="collapse">
             <div class="card-body p-5">
               <p class="accordionText">I vantaggi che presenta l'utilizzo di questo meccanismo sono diversi:</p>
-<ol class="accordionText pb-0">
-<li>Le informazioni importanti di OGNI SINGOLO PRODOTTO da te coltivato sono ben conservate.
-<li>L'etichetta virtuale, per chi acquista, rappresenta un marchio di genuinità e freschezza dei prodotti. 
-<li>	Le informazioni di ogni singolo prodotto non solo sono accessibili a te ma anche ai consumatori che acquisteranno i tuoi prodotti. 
-In questo modo c'è possibilità di rendere l'utente fruitore attivo delle informazioni, ciò significa che il consumatore non subisce in modo passivo la comunicazione, bensì partecipa attivamente al processo informativo, inquadrando il codice QR e visualizzando le informazioni che gli interessano.
-<li>	Dato che tutte le informazioni sono visibili ed il processo di coltivazione è totalmente trasparente, in questo modo il consumatore può verificare autonomamente come un prodotto agro alimentare è stato coltivato, quanti trattamenti esso ha subito, in che quantità, in che periodo, dove è stato coltivato e soprattutto chi è il produttore/coltivatore. 
-<li>	Una buona etichetta virtuale rappresenta anche un mezzo pubblicitario per la tua azienda agroalimentare perché spinge sempre più consumatori ad acquistare prodotti coltivati nella TUA azienda, scaturendo in essi una sensazione di fiducia sapendo che i prodotti vengono coltivati in maniera del tutto salutare e legale. 
-  </ol>
+<ul class="foglie accordionText">
+<li class="mb-2">
+Le <b>informazioni</b> importanti di ogni singolo prodotto da te coltivato sono <b>ben conservate</b>.
+<li class="mb-2">L'etichetta virtuale, per chi acquista, rappresenta un <b>marchio di genuinità e freschezza dei prodotti</b>. 
+<li class="mb-2">Le informazioni di ogni singolo prodotto non solo sono accessibili a te ma anche ai consumatori che acquisteranno i tuoi prodotti. 
+In questo modo c'è possibilità di rendere l'utente fruitore attivo delle informazioni, ciò significa che <b>il consumatore</b> non subisce in modo passivo la comunicazione, bensì <b>partecipa attivamente al processo informativo</b>, inquadrando il codice QR e visualizzando le informazioni che gli interessano.
+<li class="mb-2">Dato che tutte le informazioni sono visibili ed il <b>processo di coltivazione</b> è <b>totalmente trasparente</b>, in questo modo il consumatore può verificare autonomamente come un prodotto agro alimentare è stato coltivato, quanti trattamenti esso ha subito, in che quantità, in che periodo, dove è stato coltivato e soprattutto chi è il produttore/coltivatore. 
+<li>Una buona etichetta virtuale rappresenta anche <b>un mezzo pubblicitario per la tua azienda agroalimentare</b> perché spinge sempre più consumatori ad acquistare prodotti coltivati nella tua azienda, scaturendo in essi una sensazione di <b>fiducia</b> sapendo che i prodotti vengono coltivati in maniera del tutto salutare e legale. 
+  </ul>
             </div>
           </div>
         </div>
