@@ -138,7 +138,7 @@ html {
 .feature p {
 	text-align: left;
 	font-weight: 300;
-	font-size: 1.4em;
+	font-size: 1.3em;
 	color: black;
 	
 }
@@ -182,6 +182,7 @@ html {
 
 	.feature p {
     text-align: center;
+    padding: 20px;
 	}
 </style>
 </head>
@@ -213,7 +214,7 @@ html {
 		<h5 class="corpoParagrafo pt-4 pb-2">
 			<b>SCOPRI TUTTE LE FUNZIONALITÀ</b>
 		</h5>
-		<div class="row text-center px-5 mx-5">
+		<div class="row text-center px-5">
 			<div class="col-md-3">
 				<a href="#sezReg"><img
 					src=" https://img.icons8.com/bubbles/100/000000/literature.png" />
@@ -230,7 +231,7 @@ html {
 			<div class="col-md-3">
 				<a href="#sezScad"><img
 					src=" https://img.icons8.com/bubbles/100/000000/overtime.png" /> <br>SCADENZE</a><br>
-					 <hr class="mx-5"><a href="#sezNot"><img src="https://img.icons8.com/bubbles/50/000000/alarm.png" /><br>
+					 <hr class="mx-5"><a href="#sezNot"><img src="data:image/png;base64,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" /><br>
 				NOTIFICHE</a>
 			</div>
 			<div class="col-md-3">
@@ -353,7 +354,7 @@ html {
 
 		<div class="col justify-content-center p-4">
 			<div class="card card-body rounded-0 border-0 h-100"
-				style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))">
+				style="background:#e6edb7">
 				<img class="img-fluid my-auto" style="width: auto"
 					src="../image/macbookvector.png" />
 			</div>
@@ -548,7 +549,7 @@ html {
 		</div>
 		<div class="col justify-content-center p-4">
 			<div class="card card-body rounded-0 border-0 h-100"
-				style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))">
+				style="background: #e6edb7">
 				<img class="img-fluid my-auto" style="width: auto"
 					src="../image/macbookvector.png" />
 			</div>
@@ -666,7 +667,7 @@ html {
 		</div>
 		</div>		
 <hr class="riga">
-	<div id="sezScad" class="container text-center justify-content-center">
+	<div id="sezTracc" class="container text-center justify-content-center">
 		<img src=" https://img.icons8.com/bubbles/180/000000/qr-code.png" />
 		<h2 class="titoloFunzionalità">TRACCIABILITÀ</h2>
 		<h5 class="p-2">
@@ -889,7 +890,7 @@ In questo modo c'è possibilità di rendere l'utente fruitore attivo delle informa
 </div>
 <!-- Comparison Table -->
 
-  <div class="tabellaComp">
+  <div class="tabellaComp shadow">
    <div class="flex-riga">
       <div class="flex-cella t-col borderless empty"></div>
       <div class="flex-cella t-col borderless empty">

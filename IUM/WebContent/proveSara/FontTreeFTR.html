@@ -2,30 +2,133 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-  <link rel="stylesheet" href="stylesheet.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <link rel="stylesheet" href="stylesheet.css">
 <title>Insert title here</title>
+<style>/* Page Styles */
+
+button {
+    display: block;
+    padding: 1em 2em;
+    outline: none;
+    font-weight: 600;
+    border: none;
+    color: #fff;
+    background-color: #3498db;
+    border: 1px solid #1f74ac;
+    border-radius: 0.3em;
+    margin-top: 4em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2487c9;
+}
+
+/* Notifications */
+
+.notification {
+    display: inline-block;
+    position: relative;
+    padding: 0.6em;
+    font-size: 2em; 
+    color: black;
+    transition: 0.4s;
+    
+}
+
+.notification::before, 
+.notification::after {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.notification:hover {
+	cursor: pointer;
+ }
+
+
+.notification::before {
+    display: block;
+    content: url("https://img.icons8.com/officel/30/000000/appointment-reminders.png");
+    font-family: "FontAwesome";
+    transform-origin: top center;
+}
+
+.notification::after {
+font-family: "Tahoma";
+  color: gray;
+    font-size: 0.4em;
+    font-weight: 700;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 8px;
+    line-height: 100%;
+    border-radius: 60px;
+    background: #e6edb7;
+    opacity: 0;
+    content: attr(data-count);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.notification.notify::before {
+    animation: ring 1.5s ease;
+}
+
+.notification.show-count::after {
+    transform: scale(1);
+    opacity: 1;
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(35deg);
+    }
+    12.5% {
+        transform: rotate(-30deg);
+    }
+    25% {
+        transform: rotate(25deg);
+    }
+    37.5% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    62.5% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}</style>
 </head>
 <body>
-<div align="center"><h1>Azuz Azuz</h1>
-<h2>Questa è la maxi-storia di come la mia vita cambiata, capovolta, 
-sottosopra sia finita seduto su due piedi qui con te ti parlerò di Willy 
-superfico di Bel Air, </h2>
-<h3>Giocando a basket con gli amici sono cresciuto me la sono spassata, 
-wow che fissa ogni minuto le mie toste giornate filavano così tra un megatiro a 
-canestro e un film di Spike Lee; <br>
-Poi la mia palla lanciata un po' più in su andò proprio sulla testa di quei vichinghi 
-laggiù il più duro si imballò, fece una trottola di me e la mia mamma preoccupata disse
- <b>"Vattene a Bel Air"</b>; 
- <h2>L'ho pregata scongiurata ma dallo zio vuole che vada lei mi ha fatto le valige e ha 
- detto <b>"Va' per la tua strada"</b> dopo avermi dato un bacio e un biglietto per 
- partire con lo stereo nelle orecchie ho detto "Qua meglio sgommare" ; </h2>
- <h3>Prima classe, ma è uno sballo spremute d'arancia in bicchieri di cristallo <i>se questa 
- è la vita che fanno a Bel Air per me poi tanto male non è;</i> </h3>
- <h3>Ho chiamato un taxi giallo col mio fischio collaudato come in formula 1 mi sentivo 
- gasato una vita tutta nuova sta esplodendo per me avanti a tutta forza portami a Bel Air;<br>
- Oh che sventola di casa, mi sento già straricco la vita di prima mi puzza di vecchio guardate 
- adesso gente in pista chi c'è </h3>
- <h2><u>il principe Willy lo svitato di Bel Air.</u></h2>
+<div align="center"><div class="container">
+    <div class="notification"></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button>Increment Notifications</button>
+</div>
  </div>
+ 
+ <script>var el = document.querySelector('.notification');
+
+ document.querySelector('button').addEventListener('click', function(){
+     var count = Number(el.getAttribute('data-count')) || 0;
+     el.setAttribute('data-count', count + 1);
+     el.classList.remove('notify');
+     el.offsetWidth = el.offsetWidth;
+     el.classList.add('notify');
+     if(count === 0){
+         el.classList.add('show-count');
+     }
+ }, false);</script>
 </body>
 </html>
