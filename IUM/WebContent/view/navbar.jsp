@@ -304,14 +304,14 @@ a.notif {
     <ul class="navbar-nav justify-content-center ">
       <li class="nav-item active mr-5  dropdown ">
      
-        <a class=" nav-link navbar-element" href="showFunzionalita?funzionalita=comefunziona" role="button" data-toggle="dropdown"  data-hover="dropdown">COME FUNZIONA</a>
-        <div class="dropdown-menu dropdown-menu-animation" >
-   			 	 <a class="dropdown-item" href="#">Registro Fitosanitario</a>
+        <a class=" nav-link navbar-element" href="showFunzionalita?funzionalita=comefunziona" ><!--  role="button" data-toggle="dropdown"  data-hover="dropdown" -->COME FUNZIONA</a>
+     <!--    <div class="dropdown-menu dropdown-menu-animation" >
+   			 	 <a class="dropdown-item" href="">Registro Fitosanitario</a>
    				 <a class="dropdown-item" href="#">Prodotti Fitosanitario</a>
     			 <a class="dropdown-item" href="#">Scadenze</a>
  				 <a class="dropdown-item" href="#">Tracciabilità</a>
  	
- 		</div>
+ 		</div> -->
       </li>
       <li class="nav-item active mr-5 navbar-element">
         <a class="nav-link navbar-element" href="showFunzionalita?funzionalita=vantaggi">VANTAGGI</a>
