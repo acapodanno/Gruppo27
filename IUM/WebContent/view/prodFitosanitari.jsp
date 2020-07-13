@@ -189,12 +189,13 @@ only screen and (max-width: 1280px)  {
     <span class="pnd-pulse-ring"></span>
     <div class=" description">
          <p class="pnd-pulse-text"> 
-         La tabella è formata da tre colonne.  </p>
-         <ul class="pnd-pulse-text">
-          <li> Nome del prodotto fitosanitario </li>
-          <li> Descrizione di esso nei miei dettagli </li>
-          <li> Collegamento all'etichetta cartacea del prodotto fitosanitario </li>
-         </ul>
+         La tabella è formata da tre colonne: una per il nome del prodotto, 
+         una per la descrizione di esso nei minimi dettagli e una con collegamento 
+         all'etichetta cartacea completa del prodotto fitosanitario. <br>
+         Puoi consultare la <a href="image/pericoli.pdf"> Lista dei pericoli </a> delle sostanze chimiche.
+         <br>
+         </p>
+         
          <p class="pnd-pulse-text"> 
          Per altre informazioni più dettagliate consultare la pagina <a href=""> Come Funziona </a> oppure contattare l'assistenza <a href=""> qui </a>.   </p>
     </div>	

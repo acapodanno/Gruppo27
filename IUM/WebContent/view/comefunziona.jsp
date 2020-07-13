@@ -15,6 +15,7 @@
 
 <link rel="stylesheet" href="css/stylesheet.css">
 
+
 <meta charset="ISO-8859-1">
 
 <title>Come Funziona</title>
