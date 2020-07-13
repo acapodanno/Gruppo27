@@ -265,16 +265,16 @@ font-weight: bold;
  <div class="prodFit" >
   <table class="fixed_header">
   <colgroup>
-    <col style="width:10%">
-    <col  style="width:70%">
-    <col  style="width:15%">
+    <col style="width:20%">
+    <col  style="width:20%">
+    <col  style="width:10%">
     </colgroup>
   
 	<!-- Intestazione -->  
 	<thead class="head-tabella">
     <tr id="intest">
       <th> Nome</th>
-      <th> Descrizione</th>
+      <th> Quantità</th>
       <th> Link</th>
     </tr>
     </thead>
@@ -283,7 +283,7 @@ font-weight: bold;
 	<tr id="<%=pm.getProdotto().getNome()%>">
       <th> <%= pm.getProdotto().getNome() %></th>
       <th> <%if(pm.getQuantita()>0){ %> <%= pm.getQuantita() %><%}else{ %>Esaurito<%} %> </th>
-      <th> <a href="<%= pm.getProdotto().getEtichetta() %>"> LINK ETICHETTA </a></th>
+      <th> <a href="<%= pm.getProdotto().getEtichetta() %>">Link Etichetta</a></th>
     </tr>
     
   <%} %>

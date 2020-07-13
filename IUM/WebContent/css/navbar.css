@@ -1659,17 +1659,18 @@ th, td {	/*anche registro*/
 #theFormDiv {
 	display: block;
 	position: relative;
-	width: 80%;
+	width: 90%;
 	margin: auto;
 	font-size: 20px;
 }
 
-
-#label-first{
+#label-first {
 	font-size: 18px;
 	color: black;
 	font-weight: bold;
-	padding: 5px;
+	/* padding: 10px; */
+	margin: 20px;
+	margin-top: 12px;
 }
 
 #label-f {
@@ -1693,9 +1694,9 @@ th, td {	/*anche registro*/
 
 
 
-.formAgg{
+.formAgg {
 	border: 1px solid gainsboro;
-	width: 70%;
+	width: 80%;
 	margin: auto;
 }
 
@@ -1709,14 +1710,15 @@ th, td {	/*anche registro*/
 	color: white;
 	border: none;
 	cursor: pointer;
-	width: 20%;
+	width: 30%;
 	padding: 1px 1px;
 	border-radius: 5px;
 	font-size: 18px;
 	text-transform: uppercase;
 	text-align: center;
+	margin: 8px;
+	margin-left: 50px;
 }
-
 #addBottone:hover {
 	 background-color: RoyalBlue;
 	
@@ -1938,6 +1940,25 @@ th, td {	/*anche registro*/
 	margin: 20px;
 }
 
+#avviso{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 50px;
+	font-size: 10px;
+	font-weight: bold;
+	font-style: italic;
+	color:red;
+	opacity: 0.6;
+	width: 80%;
+	border: 1px solid #ff8080;
+}
+
+.prodFit{
+	margin-left: 50px;
+	width: 80%;
+}
+
+
 }
 #live-search{
  z-index: 1; 
@@ -1951,6 +1972,7 @@ th, td {	/*anche registro*/
  overflow-x:auto;
  background-color: white;
 }
+
 
 /************************************************* HELP BOXXXX *********************************************************/
 .pnd-pulse {
