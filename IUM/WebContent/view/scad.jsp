@@ -106,7 +106,7 @@ only screen and (max-width: 1280px)  {
 
 
 </style>
-<title>Agrocolàrio - Scadenze </title>
+<title>Agricolàrio - Scadenze </title>
 </head>
 <body >
 

@@ -530,7 +530,7 @@ html {
 
 		<div class="col justify-content-center corpoParagrafo">
 			<ul class="foglie">
-				<li style="list-style-image: url('../image/foglia3.png');"><b>CERCA
+				<li style="list-style-image: url('image/foglia3.png');"><b>CERCA
 						UN PRODOTTO FITOSANITARIO</b><br> Si può cercare uno specifico
 					prodotto tramite una barra di ricerca facilitata che, mentre
 					trascrivi l'identificativo del prodotto, visualizza già dei
@@ -540,7 +540,7 @@ html {
 
 		<div class="col justify-content-center corpoParagrafo">
 			<ul class="foglie">
-				<li style="list-style-image: url('../image/foglia1.png');"><b>VISUALIZZA
+				<li style="list-style-image: url('image/foglia1.png');"><b>VISUALIZZA
 						I PRODOTTI FITOSANITARI PRESENTI IN AZIENDA</b><br> Cliccando
 					sull'apposito pulsante si viene reindirizzati alla lista contenente
 					solo i prodotti presenti nel magazzino aziendale che hai aggiunto
