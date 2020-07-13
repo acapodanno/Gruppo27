@@ -259,11 +259,12 @@ only screen and (max-width: 1280px)  {
       <td><%=pf.getNome()%></td>
       <td> 
       <strong>Funzione:</strong> <%=pf.getFunzione() %><br>
-      <strong>Avversita:</strong> <%=pf.getAvversita() %><br>
-     <strong>Tempo Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
-     <strong>Tempo carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
-     <strong>Dose :</strong> <%=pf.getDose() %>  <br>
-     <strong>Quantita :</strong> <%=pf.getQuantita() %> <br>
+      <strong>Avversità:</strong> <%=pf.getAvversita() %><br>
+     <strong>Tempo di Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
+     <strong>Tempo di Carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
+     <strong>Dose:</strong> <%=pf.getDose() %>  <br>
+     <strong>Quantità:</strong> <%=pf.getQuantita() %> <br>
+     <strong>Indicazioni di pericolo:</strong> <%=pf.getPericolo() %> <br>
      	
       
       </td>
@@ -300,11 +301,12 @@ only screen and (max-width: 1280px)  {
    
       <td id="due"> 
       <strong>Funzione:</strong> <%=pf.getFunzione() %><br>
-      <strong>Avversita:</strong> <%=pf.getAvversita() %><br>
-     <strong>Tempo Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
-     <strong>Tempo carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
-     <strong>Dose :</strong> <%=pf.getDose() %>  <br>
-     <strong>Quantita :</strong> <%=pf.getQuantita() %> <br>
+      <strong>Avversità:</strong> <%=pf.getAvversita() %><br>
+     <strong>Tempo di Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
+     <strong>Tempo di Carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
+     <strong>Dose:</strong> <%=pf.getDose() %>  <br>
+     <strong>Quantità:</strong> <%=pf.getQuantita() %> <br>
+     <strong>Indicazioni di pericolo:</strong> <%=pf.getPericolo() %> <br>
      <a href="<%= pf.getEtichetta() %>">Link Etichetta</a>
      </td>	
       
