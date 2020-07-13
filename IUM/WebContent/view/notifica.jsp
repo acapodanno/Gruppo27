@@ -29,7 +29,7 @@
     <span class="pnd-pulse-ring"></span>
     <div class=" description">
         <p class="pnd-pulse-text"> 
-         I pulsanti a destra della tabella ti permettono di effettuare operazioni di Creazione, Modifica, Eliminazione e Delega del registro. Le taghette a sinistra della tabella, qualora ce ne fossero, indicano i registri degli anni precedenti e per visualizzarli basta cliccarci sopra.Per aggiungere un trattamento è necessario cliccare sul pulsante "Aggiungi trattamento" presente al centro della riga vuota nella tabella.  </p>
+        Visualizza le notifiche ricevute. Se si tratta di notifiche relative alle scadenze di trattamenti, ricevi il numero di giorni mancanti alla fine del trattamento. Se un delegato esegue delle modifiche, ricevi un avviso in cui sarà presente il nome del delegato e l'indicazione delle modifiche effettuate da esso. Se la notifica riguarda lo stoccaggio dei prodotti fitosanitari, viene indicato il numero di prodotti rimanenti.
          <p class="pnd-pulse-text"> 
          Per altre informazioni più dettagliate consultare la pagina <a href=""> Come Funziona </a> oppure contattare l'assistenza <a href=""> qui </a>.   </p>
     </div>	
@@ -48,8 +48,9 @@
 					   <% 
 					   }else{
 					   for(Notifica n : lista){
-					   %>
-						<p><%=n.getDataNotifica() %>  ,  <%=n.getInformazioni() %> </p>
+					   %><div class="container justify-content-center">
+						<div class="card border-0 mx-5 my-3" style="background:#e6edb7">
+    <div class="card-body"> <%=n.getDataNotifica() %>  ,  <%=n.getInformazioni() %> </div></div></div>
 						<%}}%>
 		</div>
 

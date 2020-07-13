@@ -260,7 +260,6 @@ only screen and (max-width: 1280px)  {
       <td> 
       <strong>Funzione:</strong> <%=pf.getFunzione() %><br>
       <strong>Avversita:</strong> <%=pf.getAvversita() %><br>
-     <strong>Tempo carenza:</strong> <%=pf.getAvversita() %><br>
      <strong>Tempo Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
      <strong>Tempo carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
      <strong>Dose :</strong> <%=pf.getDose() %>  <br>
@@ -302,7 +301,6 @@ only screen and (max-width: 1280px)  {
       <td id="due"> 
       <strong>Funzione:</strong> <%=pf.getFunzione() %><br>
       <strong>Avversita:</strong> <%=pf.getAvversita() %><br>
-     <strong>Tempo carenza:</strong> <%=pf.getAvversita() %><br>
      <strong>Tempo Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
      <strong>Tempo carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
      <strong>Dose :</strong> <%=pf.getDose() %>  <br>
