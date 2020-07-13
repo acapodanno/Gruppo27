@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Agricolàario - Notifiche</title>
+<title>Agricolàrio - Notifiche</title>
 </head>
 <body>
 
