@@ -56,7 +56,7 @@ public class showScadenze extends HttpServlet {
 				int giorni= reg.getDatInzio().getDate()-oggi.getDate();
 				if(giorni<=3) {
 				
-				String informazione ="Il seguente trattamento"+reg.getNomeProdotto()+"eseguito in data:"+reg.getDatInzio()+" sta per scadere tra " + giorni+" giorni!";
+				String informazione ="Il seguente trattamento "+reg.getNomeProdotto()+" eseguito in data "+reg.getDatInzio()+" sta per scadere tra " + giorni+" giorni!";
 				new NotificaDAO().insertNotifica(0,u.getId(), informazione);
 				
 				}

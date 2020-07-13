@@ -50,7 +50,7 @@
 					   for(Notifica n : lista){
 					   %><div class="container justify-content-center">
 						<div class="card border-0 mx-5 my-3" style="background:#e6edb7">
-    <div class="card-body"> <a style="font-size: 18px; font-weight:bold"> <%=n.getDataNotifica() %> </a> , <%=n.getInformazioni() %> </div></div></div>
+    <div class="card-body"> <a style="font-size: 18px; font-weight:bold; padding-right: 10px;"> <%=n.getDataNotifica() %> </a> <%=n.getInformazioni() %> </div></div></div>
 						<%}}%>
 		</div>
 
