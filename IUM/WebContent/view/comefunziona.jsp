@@ -13,7 +13,7 @@
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="css/stylesheet.css">
 
 <meta charset="ISO-8859-1">
 
@@ -188,7 +188,7 @@ html {
 </head>
 <body>
 
-	<%@ include file="../view/navbar.jsp"%>
+	<%@ include file="navbar.jsp"%>
 
 	<div class="container text-center justify-content-center mt-5">
 		<h2 class="title" style="color: #289605;">COME FUNZIONA</h2>
@@ -1131,7 +1131,7 @@ In questo modo c'è possibilità di rendere l'utente fruitore attivo delle informa
 <h6 class=" text-center p-2 mb-4">
 			*delegati e titolari riceveranno notifiche in base al ruolo ricoperto
 		</h6>
-	<%@ include file="../view/footer.jsp"%>
+	<%@ include file="footer.jsp"%>
 
 
 <script>

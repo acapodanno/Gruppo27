@@ -30,18 +30,18 @@ public class showFunzionalita extends HttpServlet {
 			String f= request.getParameter("funzionalita");
 			
 			if(f.equals("assistenza")) {
-				getServletContext().getRequestDispatcher("/proveSara/assistenza.jsp").forward(request, response);
+				getServletContext().getRequestDispatcher("/view/assistenza.jsp").forward(request, response);
 
 				
 			}else if(f.equals("comefunziona")) {
-				getServletContext().getRequestDispatcher("/proveSara/comefunziona.jsp").forward(request, response);
+				getServletContext().getRequestDispatcher("/view/comefunziona.jsp").forward(request, response);
 
 				
 			}else if(f.equals("vantaggi")) {
-				getServletContext().getRequestDispatcher("/proveSara/vantaggi.jsp").forward(request, response);
+				getServletContext().getRequestDispatcher("/view/vantaggi.jsp").forward(request, response);
 
 			}else if(f.equals("chisiamo")) {
-				getServletContext().getRequestDispatcher("/proveSara/chisiamo.jsp").forward(request, response);
+				getServletContext().getRequestDispatcher("/view/chisiamo.jsp").forward(request, response);
 
 			}
 	
