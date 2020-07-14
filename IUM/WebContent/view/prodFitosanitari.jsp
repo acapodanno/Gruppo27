@@ -262,8 +262,8 @@ only screen and (max-width: 1280px)  {
       <td> 
       <span style="font-size:20px;"><strong>Stato:</strong> <span class="text-uppercase"><%=pf.getStato() %></span> </span>(come stabilito da: Ministero della Salute)<br>
       <strong>Impresa produttrice:</strong> <%=pf.getImpresa() %><br>
-      <strong>Funzione espletata:</strong> <%=pf.getFunzione() %><br>
-      <strong>Avversità combattuta:</strong> <%=pf.getAvversita() %><br>
+      <strong>Funzione espletata:</strong> <span class="text-capitalize"><%=pf.getFunzione() %></span><br>
+      <strong>Avversità combattute:</strong> <span class="text-capitalize"><%=pf.getAvversita() %></span><br>
      <strong>Tempo di Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
      <strong>Tempo di Carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
      <strong>Quantità per confezione:</strong> <%=pf.getQuantita() %> <br>
@@ -305,8 +305,8 @@ only screen and (max-width: 1280px)  {
       <td id="due"> 
       <span style="font-size:20px;"><strong>Stato:</strong> <span class="text-uppercase"><%=pf.getStato() %></span> </span>(come stabilito da: Ministero della Salute)<br>
       <strong>Impresa produttrice:</strong> <%=pf.getImpresa() %><br>
-      <strong>Funzione espletata:</strong> <%=pf.getFunzione() %><br>
-      <strong>Avversità combattuta:</strong> <%=pf.getAvversita() %><br>
+      <strong>Funzione espletata:</strong> <span class="text-capitalize"><%=pf.getFunzione() %></span><br>
+      <strong>Avversità combattute:</strong> <span class="text-capitalize"><%=pf.getAvversita() %></span><br>
      <strong>Tempo di Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
      <strong>Tempo di Carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
          <strong>Quantità per confezione:</strong> <%=pf.getQuantita() %> <br> 
