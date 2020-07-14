@@ -10,7 +10,8 @@ public class ProdottoFitosanitario {
 	
 
 public ProdottoFitosanitario(int idProdottoFitosanitario, String etichetta, String nome, double quantita,
-			String forma, int temporientro, String dose, String funzione, String avversita, int tempocarenza, String pericolo) {
+			String forma, int temporientro, String dose, String funzione, String avversita, int tempocarenza, 
+			String pericolo, String stato, String impresa) {
 		super();
 		this.idProdottoFitosanitario = idProdottoFitosanitario;
 		this.etichetta = etichetta;
@@ -23,6 +24,8 @@ public ProdottoFitosanitario(int idProdottoFitosanitario, String etichetta, Stri
 		this.avversita = avversita;
 		this.tempocarenza = tempocarenza;
 		this.pericolo = pericolo;
+		this.stato = stato;
+		this.impresa = impresa;
 	}
 
 
@@ -101,8 +104,27 @@ public void setColtura(ArrayList<String> coltura) {
 public String getPericolo() {
 	return pericolo;
 }
+
 public void setPericolo(String pericolo) {
 	this.pericolo = pericolo;
+}
+
+public String getStato() {
+	return stato;
+}
+
+
+public void setStato(String stato) {
+	this.stato = stato;
+}
+
+public String getImpresa() {
+	return impresa;
+}
+
+
+public void setImpresa(String impresa) {
+	this.impresa = impresa;
 }
 
 private int idProdottoFitosanitario;
@@ -113,10 +135,9 @@ private String forma;
 private int 	temporientro;
 private String dose;
 private String funzione;
-private String avversita;
+private String avversita, pericolo, stato, impresa;
 private int tempocarenza;
 private ArrayList<String> coltura;
-private String pericolo;
 
 
 

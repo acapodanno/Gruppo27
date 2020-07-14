@@ -109,6 +109,8 @@ public class ProdottoFitosanitarioDAO {
 	            	   p.setEtichetta(result.getString("etichetta"));
 	            	   p.setFunzione(result.getString("funzione")); 
 	            	   p.setPericolo(result.getString("pericolo")); 
+	            	   p.setStato(result.getString("stato")); 
+	            	   p.setImpresa(result.getString("impresa")); 
                 }
 			
 				System.out.println(p.toString());
@@ -188,6 +190,8 @@ public class ProdottoFitosanitarioDAO {
             	   p.setEtichetta(result.getString("etichetta"));
             	   p.setFunzione(result.getString("funzione"));
             	   p.setPericolo(result.getString("pericolo")); 
+            	   p.setStato(result.getString("stato")); 
+            	   p.setImpresa(result.getString("impresa")); 
             	   lista.add(p);
 				}
 			

@@ -253,23 +253,26 @@ only screen and (max-width: 1280px)  {
     <tbody>
     <!-- Prodotti -->
     <%ArrayList<ProdottoFitosanitario> lista =(ArrayList<ProdottoFitosanitario>) request.getAttribute("pf");
+   
     for(ProdottoFitosanitario pf : lista)
     {
     %>
     <tr id="<%=pf.getNome()%>">
-      <td><%=pf.getNome()%></td>
+      <td><span style="font-size:22px;font-weight:bold;"> <%=pf.getNome()%></span></td>
       <td> 
-      <strong>Funzione:</strong> <%=pf.getFunzione() %><br>
-      <strong>Avversità:</strong> <%=pf.getAvversita() %><br>
+      <span style="font-size:20px;"><strong>Stato:</strong> <span class="text-uppercase"><%=pf.getStato() %></span> </span>(come stabilito da: Ministero della Salute)<br>
+      <strong>Impresa produttrice:</strong> <%=pf.getImpresa() %><br>
+      <strong>Funzione espletata:</strong> <%=pf.getFunzione() %><br>
+      <strong>Avversità combattuta:</strong> <%=pf.getAvversita() %><br>
      <strong>Tempo di Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
      <strong>Tempo di Carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
-     <strong>Dose:</strong> <%=pf.getDose() %>  <br>
-     <strong>Quantità:</strong> <%=pf.getQuantita() %> <br>
+     <strong>Quantità per confezione:</strong> <%=pf.getDose() %>  <br>
+     <strong>Quantità (?):</strong> <%=pf.getQuantita() %> <br>
      <strong>Indicazioni di pericolo:</strong> <%=pf.getPericolo() %> <br>
      	
       
       </td>
-      <td> <a href="<%= pf.getEtichetta() %>">Link Etichetta</a></td>
+      <td> <a href="<%= pf.getEtichetta() %>"><span class="text-uppercase" style="font-size: 20px;">Link Etichetta</span></a></td>
     </tr>
     <%} %>
     </tbody>
@@ -298,17 +301,19 @@ only screen and (max-width: 1280px)  {
     {
     %>
     <tr id="<%=pf.getIdProdottoFitosanitario()%>">
-      <td id="due"><%=pf.getNome()%></td>
+      <td id="due"><span style="font-size:22px;font-weight:bold;"> <%=pf.getNome()%></span></td>
    
       <td id="due"> 
-      <strong>Funzione:</strong> <%=pf.getFunzione() %><br>
-      <strong>Avversità:</strong> <%=pf.getAvversita() %><br>
+      <span style="font-size:20px;"><strong>Stato:</strong> <span class="text-uppercase"><%=pf.getStato() %></span> </span>(come stabilito da: Ministero della Salute)<br>
+      <strong>Impresa produttrice:</strong> <%=pf.getImpresa() %><br>
+      <strong>Funzione espletata:</strong> <%=pf.getFunzione() %><br>
+      <strong>Avversità combattuta:</strong> <%=pf.getAvversita() %><br>
      <strong>Tempo di Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
      <strong>Tempo di Carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
-     <strong>Dose:</strong> <%=pf.getDose() %>  <br>
-     <strong>Quantità:</strong> <%=pf.getQuantita() %> <br>
+     <strong>Quantità per confezione:</strong> <%=pf.getDose() %>  <br>
+     <strong>Quantità (?):</strong> <%=pf.getQuantita() %> <br>
      <strong>Indicazioni di pericolo:</strong> <%=pf.getPericolo() %> <br>
-     <a href="<%= pf.getEtichetta() %>">Link Etichetta</a>
+     <a href="<%= pf.getEtichetta() %>"><span class="text-uppercase" style="font-size: 20px;">Link Etichetta</span></a>
      </td>	
       
     </tr>
