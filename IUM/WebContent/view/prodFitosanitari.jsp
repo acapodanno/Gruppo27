@@ -266,8 +266,7 @@ only screen and (max-width: 1280px)  {
       <strong>Avversità combattuta:</strong> <%=pf.getAvversita() %><br>
      <strong>Tempo di Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
      <strong>Tempo di Carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
-     <strong>Quantità per confezione:</strong> <%=pf.getDose() %>  <br>
-     <strong>Quantità (?):</strong> <%=pf.getQuantita() %> <br>
+     <strong>Quantità per confezione:</strong> <%=pf.getQuantita() %> <br>
      <strong>Indicazioni di pericolo:</strong> <%=pf.getPericolo() %> <br>
      	
       
@@ -310,9 +309,8 @@ only screen and (max-width: 1280px)  {
       <strong>Avversità combattuta:</strong> <%=pf.getAvversita() %><br>
      <strong>Tempo di Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
      <strong>Tempo di Carenza:</strong> <%=pf.getTempocarenza() %> giorni <br>
-     <strong>Quantità per confezione:</strong> <%=pf.getDose() %>  <br>
-     <strong>Quantità (?):</strong> <%=pf.getQuantita() %> <br>
-     <strong>Indicazioni di pericolo:</strong> <%=pf.getPericolo() %> <br>
+         <strong>Quantità per confezione:</strong> <%=pf.getQuantita() %> <br> 
+         <strong>Indicazioni di pericolo:</strong> <%=pf.getPericolo() %> <br>
      <a href="<%= pf.getEtichetta() %>"><span class="text-uppercase" style="font-size: 20px;">Link Etichetta</span></a>
      </td>	
       

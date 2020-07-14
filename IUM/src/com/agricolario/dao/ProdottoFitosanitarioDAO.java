@@ -101,7 +101,7 @@ public class ProdottoFitosanitarioDAO {
 	            	   
 			    	   p.setIdProdottoFitosanitario(result.getInt(1));
 	            	   p.setAvversita(result.getString("avversita"));
-	            	   p.setDose(result.getString("quantita"));
+	            	   p.setQuantita(result.getString("quantita"));
 	            	   p.setNome(result.getString("nome"));
 	            	   p.setTempocarenza(result.getInt("tempocarenza"));
 	            	   p.setTemporientro(result.getInt("temporientro"));
@@ -182,7 +182,7 @@ public class ProdottoFitosanitarioDAO {
             	   
             	   p.setIdProdottoFitosanitario(result.getInt("idprodottofitosanitario"));
             	   p.setAvversita(result.getString("avversita"));
-            	   p.setDose(result.getString("quantita"));
+            	   p.setQuantita(result.getString("quantita"));
             	   p.setNome(result.getString("nome"));
             	   p.setTempocarenza(result.getInt("tempocarenza"));
             	   p.setTemporientro(result.getInt("temporientro"));

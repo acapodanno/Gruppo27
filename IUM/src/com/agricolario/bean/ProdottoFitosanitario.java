@@ -9,7 +9,7 @@ public class ProdottoFitosanitario {
 	}
 	
 
-public ProdottoFitosanitario(int idProdottoFitosanitario, String etichetta, String nome, double quantita,
+public ProdottoFitosanitario(int idProdottoFitosanitario, String etichetta, String nome, String quantita,
 			String forma, int temporientro, String dose, String funzione, String avversita, int tempocarenza, 
 			String pericolo, String stato, String impresa) {
 		super();
@@ -47,10 +47,10 @@ public String getNome() {
 public void setNome(String nome) {
 	this.nome = nome;
 }
-public double getQuantita() {
+public String getQuantita() {
 	return quantita;
 }
-public void setQuantita(double quantita) {
+public void setQuantita(String quantita) {
 	this.quantita = quantita;
 }
 public String getForma() {
@@ -130,7 +130,7 @@ public void setImpresa(String impresa) {
 private int idProdottoFitosanitario;
 private String	etichetta;
 private String nome;
-private double quantita;
+private String quantita;
 private String forma;
 private int 	temporientro;
 private String dose;
