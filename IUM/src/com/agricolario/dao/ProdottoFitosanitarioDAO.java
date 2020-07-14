@@ -110,6 +110,7 @@ public class ProdottoFitosanitarioDAO {
 	            	   p.setFunzione(result.getString("funzione")); 
 	            	   p.setPericolo(result.getString("pericolo")); 
 	            	   p.setStato(result.getString("stato")); 
+	            	   p.setScadenza(result.getDate("scadenza")); 
 	            	   p.setImpresa(result.getString("impresa")); 
                 }
 			
@@ -191,6 +192,7 @@ public class ProdottoFitosanitarioDAO {
             	   p.setFunzione(result.getString("funzione"));
             	   p.setPericolo(result.getString("pericolo")); 
             	   p.setStato(result.getString("stato")); 
+            	   p.setScadenza(result.getDate("scadenza")); 
             	   p.setImpresa(result.getString("impresa")); 
             	   lista.add(p);
 				}

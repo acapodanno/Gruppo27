@@ -1,6 +1,7 @@
 package com.agricolario.bean;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ProdottoFitosanitario {
 
@@ -11,7 +12,7 @@ public class ProdottoFitosanitario {
 
 public ProdottoFitosanitario(int idProdottoFitosanitario, String etichetta, String nome, String quantita,
 			String forma, int temporientro, String dose, String funzione, String avversita, int tempocarenza, 
-			String pericolo, String stato, String impresa) {
+			String pericolo, String stato, String impresa, Date scadenza) {
 		super();
 		this.idProdottoFitosanitario = idProdottoFitosanitario;
 		this.etichetta = etichetta;
@@ -26,6 +27,7 @@ public ProdottoFitosanitario(int idProdottoFitosanitario, String etichetta, Stri
 		this.pericolo = pericolo;
 		this.stato = stato;
 		this.impresa = impresa;
+		this.scadenza = scadenza;
 	}
 
 
@@ -127,17 +129,27 @@ public void setImpresa(String impresa) {
 	this.impresa = impresa;
 }
 
+public Date getScadenza() {
+	return scadenza;
+}
+
+
+public void setScadenza(Date scadenza) {
+	this.scadenza = scadenza;
+}
+
 private int idProdottoFitosanitario;
 private String	etichetta;
 private String nome;
 private String quantita;
 private String forma;
-private int 	temporientro;
+private int temporientro;
 private String dose;
 private String funzione;
 private String avversita, pericolo, stato, impresa;
 private int tempocarenza;
 private ArrayList<String> coltura;
+private Date scadenza;
 
 
 
@@ -146,7 +158,7 @@ public String toString() {
 	return "ProdottoFitosanitario [idProdottoFitosanitario=" + idProdottoFitosanitario + ", etichetta=" + etichetta
 			+ ", nome=" + nome + ", quantita=" + quantita + ", forma=" + forma + ", temporientro=" + temporientro
 			+ ", dose=" + dose + ", funzione=" + funzione + ", avversita=" + avversita + ", tempocarenza="
-			+ tempocarenza + ", pericolo=" + pericolo + "]";
+			+ tempocarenza + ", pericolo=" + pericolo + ", stato=" + stato + ", impresa=" + impresa + ", scadenza=" + scadenza + "]";
 }
 
 

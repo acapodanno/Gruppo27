@@ -116,7 +116,6 @@ only screen and (max-width: 1280px)  {
 	visibility: visible;
 }
 
-
 /*
 
     .head-tabella{
@@ -189,8 +188,8 @@ only screen and (max-width: 1280px)  {
     <span class="pnd-pulse-ring"></span>
     <div class=" description">
          <p class="pnd-pulse-text"> 
-         La tabella è formata da tre colonne: una per il nome del prodotto, 
-         una per la descrizione di esso nei minimi dettagli e una con collegamento 
+         La tabella è formata da tre colonne: una per le informazioni generali del prodotto, 
+         una per le specifiche di esso nei minimi dettagli e una con collegamento 
          all'etichetta cartacea completa del prodotto fitosanitario. <br>
          Puoi consultare la <a href="image/pericoli.pdf"> Lista dei pericoli </a> delle sostanze chimiche.
          <br>
@@ -237,17 +236,17 @@ only screen and (max-width: 1280px)  {
  
   <table >
   <colgroup>
-    <col style="width:10%">
-    <col  style="width:70%">
+    <col style="width:25%">
+    <col  style="width:50%">
     <col  style="width:15%">
     </colgroup>
   
 	<!-- Intestazione -->  
 	<thead class="head-tabella">
-    <tr >
-      <th> Nome</th>
-      <th> Descrizione</th>
-      <th> Link</th>
+    <tr>
+      <th style="font-size:20px; padding:10px; padding-left: 20px;"> Info</th>
+      <th style="font-size:20px; padding:10px;"> Specifiche</th>
+      <th style="font-size:20px; padding:10px;"> Link</th>
     </tr>
     </thead>
     <tbody>
@@ -258,10 +257,14 @@ only screen and (max-width: 1280px)  {
     {
     %>
     <tr id="<%=pf.getNome()%>">
-      <td><span style="font-size:22px;font-weight:bold;"> <%=pf.getNome()%></span></td>
-      <td> 
-      <span style="font-size:20px;"><strong>Stato:</strong> <span class="text-uppercase"><%=pf.getStato() %></span> </span>(come stabilito da: Ministero della Salute)<br>
-      <strong>Impresa produttrice:</strong> <%=pf.getImpresa() %><br>
+      <td style="padding:10px;padding-left: 20px;"><span style="font-size:22px;font-weight:bold;"> <%=pf.getNome()%></span><br>
+      <%=pf.getImpresa() %><br>
+       <span style="font-size:20px;"><strong>Stato:</strong> <span class="text-uppercase"><%=pf.getStato() %></span> </span><br>
+      Scade il <span class="text-uppercase"><%= pf.getScadenza().getDate()+"/"+((pf.getScadenza().getMonth())+1)+"/"+((pf.getScadenza().getYear())+1900) %></span>
+      </td>
+      
+      <td style="padding:10px;"> 
+      
       <strong>Funzione espletata:</strong> <span class="text-capitalize"><%=pf.getFunzione() %></span><br>
       <strong>Avversità combattute:</strong> <span class="text-capitalize"><%=pf.getAvversita() %></span><br>
      <strong>Tempo di Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
@@ -271,7 +274,7 @@ only screen and (max-width: 1280px)  {
      	
       
       </td>
-      <td> <a href="<%= pf.getEtichetta() %>"><span class="text-uppercase" style="font-size: 20px;">Link Etichetta</span></a></td>
+      <td style="padding:10px"> <a href="<%= pf.getEtichetta() %>"><span class="text-uppercase" style="font-size: 20px;">Link Etichetta</span></a></td>
     </tr>
     <%} %>
     </tbody>
@@ -281,15 +284,15 @@ only screen and (max-width: 1280px)  {
 <div class="dueColonne">
   <table >
   <colgroup>
-    <col style="width:25%">
-    <col  style="width:75%">
+    <col style="width:35%">
+    <col  style="width:65%">
     </colgroup>
     
    	<!-- Intestazione -->  
 	<thead class="head-tabella2">
     <tr >
-      <th id="due"> Nome</th>
-      <th id="due"> Descrizione</th>
+      <th style="font-size:20px; padding:10px; padding-left: 20px;" id="due"> Info</th>
+      <th style="font-size:20px; padding:10px;"id="due"> Specifiche</th>
     </tr>
     </thead>
 <tbody>
@@ -300,11 +303,12 @@ only screen and (max-width: 1280px)  {
     {
     %>
     <tr id="<%=pf.getIdProdottoFitosanitario()%>">
-      <td id="due"><span style="font-size:22px;font-weight:bold;"> <%=pf.getNome()%></span></td>
-   
-      <td id="due"> 
-      <span style="font-size:20px;"><strong>Stato:</strong> <span class="text-uppercase"><%=pf.getStato() %></span> </span>(come stabilito da: Ministero della Salute)<br>
-      <strong>Impresa produttrice:</strong> <%=pf.getImpresa() %><br>
+      <td style="padding:10px; padding-left: 20px;" id="due"><span style="font-size:22px;font-weight:bold;"> <%=pf.getNome()%></span><br>
+      <%=pf.getImpresa() %><br>
+       <span style="font-size:20px;"><strong>Stato:</strong> <span class="text-uppercase"><%=pf.getStato() %></span> </span><br>
+      Scade il <span class="text-uppercase"><%= pf.getScadenza().getDate()+"/"+((pf.getScadenza().getMonth())+1)+"/"+((pf.getScadenza().getYear())+1900) %></span>
+      </td>
+      <td style="padding:10px" id="due"> 
       <strong>Funzione espletata:</strong> <span class="text-capitalize"><%=pf.getFunzione() %></span><br>
       <strong>Avversità combattute:</strong> <span class="text-capitalize"><%=pf.getAvversita() %></span><br>
      <strong>Tempo di Rientro:</strong> <%=pf.getTemporientro()%> giorni.<br>
