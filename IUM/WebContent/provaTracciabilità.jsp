@@ -132,14 +132,14 @@ color: white;
     text-align: center;
     color: #fff;
     padding-top: 7px;
-    font-size: 20px
+    font-size: 20px;
 }
 
 #employer-post-new-job .res-steps-container .res-steps .res-progress-title {
     text-align: center;
     font-size: 18px;
     padding-top: 10px;
-    display: block
+    display: block;
 }
 
 #employer-post-new-job .res-steps-container .res-steps .res-progress-bar {
@@ -157,7 +157,7 @@ color: white;
 
 #employer-post-new-job .res-steps-container .res-step-four .res-progress-bar {
     width: 50%;
-    margin-right: 50%
+    margin-right: 50%;
 }
 
 #employer-post-new-job .res-step-form {
