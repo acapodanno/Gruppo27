@@ -15,42 +15,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="stylesheet" href="css/navbar.css">
 
-<script type="text/javascript" src="js/jquery.js">
-
-<!-- Prove tecniche-->
-
-
-
-
-</script>
-<script type="text/javascript" src="js/jquery.min.js">
-
-
-
-</script>
 <script type="text/javascript">
-
-
 
 $( window ).ready(function() {
     
-	
-	
-	
-	
 	  function myFunction( el){
 		  var value=el.value;
-		  console.log(value);
-		  
+		  console.log(value);		  
 	  }
-	
-	
-	
-	
-	
-	
-	
-	
 	
 });
 
@@ -128,9 +100,10 @@ only screen and (max-width: 1280px)  {
 	td:nth-of-type(1):before { content: "Prodotto"; }
 	td:nth-of-type(2):before { content: "Coltura"; }
 	td:nth-of-type(3):before { content: "Data Inizio"; }
-	td:nth-of-type(4):before { content: "Quantita utilizzata"; }
-	td:nth-of-type(5):before { content: "Avversita"; }
-	td:nth-of-type(6):before { content: "Note"; }
+	td:nth-of-type(4):before { content: "Superficie"; }
+	td:nth-of-type(5):before { content: "Quantita utilizzata"; }
+	td:nth-of-type(6):before { content: "Avversità"; }
+	td:nth-of-type(7):before { content: "Note"; }
 }
 
 
@@ -415,13 +388,13 @@ for(RegistroFitosanitario reg : listaReg ){
 <input type="hidden" id="idregistro" value="<%= reg.getIdRegistroFitosanitario()%>">
 
 <colgroup>
-    <col style="width:15%">
+    <col style="width:16%">
     <col  style="width:10%">
-    <col  style="width:15%">
-    <col style="width:8%">
-    <col style="width:15%">
+    <col  style="width:14%">
+    <col style="width:10%">
+    <col style="width:18%">
     <col  style="width:10%">
-    <col  style="width:25%"> <%
+    <col  style="width:22%"> <%
    
         if(annoCur== annoRegistro  ){ 
         
@@ -430,13 +403,13 @@ for(RegistroFitosanitario reg : listaReg ){
   </colgroup>
   <thead class="head-tabella">
     <tr class="text-center" style=" height:50px;">
-      <th scope="col"  > Prodotto</th>
-      <th scope="col" >Coltura</th>
-      <th scope="col" >Data inizio</th>
-      <th scope="col" >Superficie</th>
-       <th scope="col">Quantita utilizzata</th>
-      <th scope="col" >Avversita</th>
-      <th scope="col" >Note</th>
+      <th scope="col" style="font-size:20px; padding: 10px;">Prodotto</th>
+      <th scope="col" style="font-size:20px">Coltura</th>
+      <th scope="col" style="font-size:20px">Data inizio</th>
+      <th scope="col" style="font-size:20px">Superficie</th>
+       <th scope="col" style="font-size:20px">Quantita utilizzata</th>
+      <th scope="col" style="font-size:20px">Avversita</th>
+      <th scope="col" style="font-size:20px">Note</th>
        <%
    
         if(annoCur== annoRegistro  ){ 
@@ -457,7 +430,7 @@ for(RegistroFitosanitario reg : listaReg ){
        
   %>
     <tr scope="row" class="text-center trattamenti" id="<%=u.getIdTrattamento()%>">
-      <td  ><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="nomeProdotto<%=u.getIdTrattamento()%>" ></td>
+      <td><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="nomeProdotto<%=u.getIdTrattamento()%>" ></td>
       <td><input type="text" value="<%=u.getColtura() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="coltura<%=u.getIdTrattamento()%>"></td>
       <td><input type="date" value="<%= u.getDatInzio() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"  id="data<%=u.getIdTrattamento()%>"></td>
       <td><input type="text" value="<%= u.getSuperficie() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" oninput="soloNumeri(this)" id="sup<%=u.getIdTrattamento()%>" ></td>
