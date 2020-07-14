@@ -287,20 +287,64 @@ a.notif {
     font-size: 16px;
     display:none;
 }
+@media 
+only screen and (max-width: 988px)  {
+.navbar-brand{
 
+margin-right: 45%!important;
+
+}
+}
 </style>
 	
 </head>
+<script type="text/javascript">
+$( document ).ready( resizeNavBar() );
+
+function resizeNavBar(){
+
+	var width= $(window).width();
+	console.log(width);
+	if(width<=988){
+		$("#logo").remove()
+	}
+
+$(window).resize(function(){
+	var width= $(window).width();
+	console.log(width);
+	if(width<=988){
+		
+		
+		$("#logo").hide()
+		$("#logoResponsive").show()
+
+	}else{
+		
+		$("#logo").show()
+		
+		
+		$("#logoResponsive").hide()
+		
+		
+	}
+});
+}
+
+</script>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
-  <a class="navbar-brand ml-7" href="showHome">
-  	<img alt="" src="image/LOGO.png" width="100" height="75" class="d-inline-block align-top">
-  </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow " id="navbar">
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <a class="navbar-brand " href="showHome" id="logoResponsive" style="display:none;">
+  	<img alt="" src="image/LOGO.png" width="100" height="75" class="d-inline-block align-top">
+  </a>
   <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+  <a class="navbar-brand mr-5" href="showHome" id="logo">
+  	<img alt="" src="image/LOGO.png" width="100" height="75" class="d-inline-block align-top">
+  </a>
     <ul class="navbar-nav justify-content-center ">
       <li class="nav-item active mr-5  dropdown ">
      
@@ -351,6 +395,7 @@ a.notif {
 	//setTimeout(showNotifica(),100);
 
 	//setInterval(showNotifica,100);
+
 	function showNotifica(){
 	        	 jQuery.noConflict();
 	        	   $.ajax({
