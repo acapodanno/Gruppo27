@@ -227,7 +227,7 @@ $("#bottone-generaQR").click(function(){
 		text: informazioni, 
 		width: 200,
 		height: 200,
-		colorDark : "#009e0f",
+		colorDark : "black",
 		colorLight : "#ffffff",
 		correctLevel : QRCode.CorrectLevel.H
 	});
