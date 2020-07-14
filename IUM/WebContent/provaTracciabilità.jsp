@@ -1,3 +1,4 @@
+<%@page import="com.agricolario.bean.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -28,7 +29,264 @@
 	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
 	  overflow-x: hidden;
 	}
+	.hr {
+	height: 2px;
+	margin: 60px 0 50px 0;
+	background: rgba(255,255,255,.2);
+}
+
+.foot-lnk {
+    text-align: center;
+}
+
+
+
+
+/* Caselle di input */
+
+input[type="text"], input[type="password"] {
+	width: 100%;
+	/* margin: 16px; */
+	display: inline-block;
+	border: none;
+	box-sizing: border-box;
+	background: transparent;
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	color: white;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
+#text, #psw{
+	margin-top: 36px;
+}	
+
+input[type=text]:focus, input[type=password]:focus{
+	-webkit-transition: 0.2s;
+ 	 transition: 0.2s;
+ 	 border-bottom: 2px solid white;
+ 	 
+}
+
+/* Checkbox di 'Ricordami' quando cliccata */
+input[type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
+	color:white;
+}
+
+/* Checkbox disposizione */
+.checkbox{
+display: inline-block;
+}
+
+
+/* Cambia forma il puntatore quando passi sulla checkbox*/
+.form-check-input:hover{
+	cursor: pointer;
+}
+
+/*Grandezza di ricordami*/
+.white-text{
+	font-size: 20px;
+}
+
+/* Caratteristiche del titolo 'Accedi'  */
+.titolo {
+	margin: auto;
+	width: 50%;
+	font-size: 35px;
+	color: white;
+}
+
+/* Primo pulsante accedi "esterno"*/   
+.primo{
+	background: #00BB2D;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 20%;
+	border-radius: 5px;
+}
+
+/* Secondo pulsante accedi per confermare email e pasw */
+.secondo {
+	background: #1161ee;
+	padding: 15px 20px;
+	border-radius: 25px;
+	width: 100%;
+	color: white;
+	display: block;
+	text-transform: uppercase;
+	box-sizing: border-box;
+	cursor: pointer;
+	position: relative;
+	border: none;
+	margin-top: 50px;
+}
+
+.gruppo{
+ margin-bottom: 30px;
+}
+
+/* Ogni bottone diventa opaco quando ci passi sopra  */
+button:hover {
+	opacity: 1;
+}
+
+/* Caratteristiche di tutte le label(etichette degli input) nel form  */
+.etichetteAccedi{
+	font-size: 1.5em;
+	color: white;
+	padding-bottom: 16px;
+}
+
+
+
+/* Bordi arrotondati per l'immagine sfondo */
+img{
+	border-radius: 5px;
+}
+
+
+/* Caratteristiche contenitore in cui si trova il form e tutto il resto*/
+
+.contenitore {
+	/* position: absolute; */
+	/* width: 100%; */
+	/* height: 100%; */
+	background: rgba(0,100,50,0.4);
+	padding: 90px 70px 50px 70px;
+	z-index: 5000000000000000000000;
+}
+
+		
+
+
+/* Caratteristiche secondo contenitore in cui si trova il "registrati qui" (prima c'era anche un tasto annulla ma l'ho tolto) */
+.contenitore2{
+	background-color: transparent;
+	margin: auto;
+  	width: 50%;
+  	z-index: 5000000000000000000000;
+} /* si deve aggiustare*/
+
+
+
+
+/* The modale (background) */ /* Cose che non ho toccato */
+.modale {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
 	
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	padding-top: 60px;
+	z-index: 5000000000000000000000;
+	
+}
+
+
+
+/* modale Content/Box */
+.login {
+	/* width: 100%; */
+	margin: auto;
+	max-width: 520px;
+	/* min-height: 660px; */
+	position: relative;
+	background: url(https://images.vanityfair.it/wp-content/uploads/2019/04/19133507/P29-850x1360.jpg) no-repeat center;
+	box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+
+
+/* Bottone chiusura (x) */
+.close {
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: white;
+	font-size: 35px;
+	font-weight: bold;
+	opacity: 1;
+	z-index: 1; /* Sit on top */
+}
+
+/* Se ci passi sopra diventa rosso e il puntatore cambia (x) */
+.close:hover, .close:focus {
+	color: red;
+	cursor: pointer;
+}
+
+
+/* Add Zoom Animation */   /*  funziona */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+	
+	span.reg {
+ 
+	}
+	
+	h1 {
+		width: 100%;
+	}
+}
+
+
+a.notif {
+  position: relative;
+
+  width: 50px;
+
+  text-decoration: none;
+}
+.num {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    color: black;
+    bottom: 8px;
+    right: -12px;
+    text-align: center;
+    background-color: red;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 16px;
+    display:none;
+}
+@media 
+only screen and (max-width: 988px)  {
+.navbar-brand{
+
+margin-right: 45%!important;
+
+}
+
+/*QUI**********************************************/
+}
 .stepBar {
 	display: -ms-flexbox;
 	/* display: flex; */
@@ -48,7 +306,7 @@
     width: 25%;
     text-align: center;
     float: left;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .botton {
@@ -164,30 +422,30 @@ color: white;
 	border: 1px solid #d2d2d2;
 	box-shadow: 0px 6px 4px -2px silver;
 	position: absolute;
-	height: 400px;
+	/* height: 400px; */
 	width: 100%;
 	margin: auto;
-	left: 160px;
-	right: 0; 
-	top: 185px;
+	left: 150px;
+	/* top: 2px; */
+	margin-left: 225px;
 }
 
 #employer-post-new-job .res-step-form h3 {
     margin: 10px 0;
     color: #d2d2d2;
-    font-size: 18px
+    font-size: 18px;
 }
 
 #employer-post-new-job .res-step-form .form-horizontal label {
-    font-weight: normal
+    font-weight: normal;
 }
 
 #employer-post-new-job .res-form-two, #employer-post-new-job .res-form-three {
-    left: 150%
+    left: 150%;
 }
 
 #employer-post-new-job .active .res-step-bar {
-    background: #4CAF50 !important
+    background: #4CAF50 !important;
 }
 
 #employer-post-new-job .active .res-progress-title {
@@ -204,6 +462,12 @@ color: white;
 	margin-top: 60px;
 }
   
+ .divS{
+ position:relative;
+ width: 100%;
+ height: 500px;
+ 
+ }
   </style>
   
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -211,10 +475,111 @@ color: white;
 <title> Agricolàrio - Traccibilità </title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow " id="navbar">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand " href="showHome" id="logoResponsive" style="display:none;">
+  	<img alt="" src="image/LOGO.png" width="100" height="75" class="d-inline-block align-top">
+  </a>
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+  <a class="navbar-brand mr-5" href="showHome" id="logo">
+  	<img alt="" src="image/LOGO.png" width="100" height="75" class="d-inline-block align-top">
+  </a>
+    <ul class="navbar-nav justify-content-center ">
+      <li class="nav-item active mr-5  dropdown ">
+     
+        <a class=" nav-link navbar-element" href="showFunzionalita?funzionalita=comefunziona" ><!--  role="button" data-toggle="dropdown"  data-hover="dropdown" -->COME FUNZIONA</a>
+     <!--    <div class="dropdown-menu dropdown-menu-animation" >
+   			 	 <a class="dropdown-item" href="">Registro Fitosanitario</a>
+   				 <a class="dropdown-item" href="#">Prodotti Fitosanitario</a>
+    			 <a class="dropdown-item" href="#">Scadenze</a>
+ 				 <a class="dropdown-item" href="#">Tracciabilità</a>
+ 	
+ 		</div> -->
+      </li>
+      <li class="nav-item active mr-5 navbar-element">
+        <a class="nav-link navbar-element" href="showFunzionalita?funzionalita=vantaggi">VANTAGGI</a>
+      </li>
+      <li class="nav-item active mr-5 ">
+        <a class="nav-link active navbar-element" href="showFunzionalita?funzionalita=chisiamo">CHI SIAMO</a>
+      </li>
+      <li class="nav-item active mr-5">
+        <a class="nav-link navbar-element" href="showFunzionalita?funzionalita=assistenza">ASSISTENZA</a>
+      </li>
+    </ul>
+    <%  
+    
+    boolean loggato=false;
+    if(session.getAttribute("loggato")==null){
+		loggato=false;
+		
+	}else{
+	loggato=(boolean)session.getAttribute("loggato");
+	}
+   System.out.println(loggato);
+    if(loggato){
+     Utente user =(Utente) session.getAttribute("utente");
+    %>
+     <div id="icone" class="align-baseline icon-bar-vertical">
+  	<a class="" href="showHome"><img src="https://img.icons8.com/officel/30/000000/home-page.png"/></a>
+  	<a href="showAccount" class=" ml-3" ><img src="https://img.icons8.com/officel/30/000000/gender-neutral-user.png"/></a>
+  	<a href="showNotifiche" class=" ml-3 notif"><img src="https://img.icons8.com/officel/30/000000/appointment-reminders.png"/><span class="num"></span></a>
+  	<a href="logout" class=" ml-3" ><img src="https://img.icons8.com/officel/30/000000/exit.png"/></a>
+  	
+  	
+  	
+  	
+	</div> 
+    <script type="text/javascript">
+	//notifica
+	//setTimeout(showNotifica(),100);
+
+	//setInterval(showNotifica,100);
+
+	function showNotifica(){
+	        	 jQuery.noConflict();
+	        	   $.ajax({
+	        		      type:"POST",
+	        		      data:{"nome":this.value},
+	        		      url:"ottieniNotifiche",
+	        		      success : function(data){
+	        		    	 var object= JSON.parse(data);
+	        		    	 console.log(object);
+								 if(object.length>0){
+        						 $( ".num" ).show();
+        						 $( ".num" ).html(object.length);
+								 }else{
+									 $( ".num" ).hide();
+		        							 
+									 
+									 
+								 }
+	        					
+	        		    	}});
+	}
+
+
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    <%}else{ %>
+    <button class="primo" onclick="document.getElementById('id01').style.display='block'"
+		style="width:auto;">
+	ACCEDI
+	</button>
+	
+	<%} %>	
+</nav>
 
 
 
-<div class="container-fluid  ">
 
 
 <div class="titles">
@@ -247,14 +612,11 @@ color: white;
 </div> 
 
 
-
-
-<section id="employer-post-new-job">
-	
-		<div class="container">
-	    	<div class="stepBar">
-            
-							<div class="col-xs-10 col-xs-offset-1" id="container">
+<div class="divS">
+<div id="employer-post-new-job">
+	<div class="container">
+	    <div class="stepBar">
+			<div class="col-xs-10 col-xs-offset-1" id="container">
 								<div class="res-steps-container">
 									<div class="res-steps res-step-one active" data-class=".res-form-one">
 										<div class="res-step-bar">1</div>
@@ -273,9 +635,10 @@ color: white;
 									</div>
 								
 								</div>
-							
-<!-- SCELTA TRATTAMENTO / COLTURA -->
-								<div class="res-step-form col-md-8 col-md-offset-2 res-form-one" style="left:0%;">
+			</div>
+			
+			
+			<div class="res-step-form col-md-8 col-md-offset-2 res-form-one" style="left:0%;">
 									<form class="form-horizontal">
 									  
 									  <div class="areaInfo form-group">
@@ -294,18 +657,16 @@ color: white;
 								  				 <option selected>...</option>    
 								  			 </select>
 										</div>
-								
+								</div>
 								<div class="form-group">
 									  <div class="text-center">
 												<button type="button" class="botton btnGo1   col-xs-offset-1 btn botton-orange" data-class=".res-form-one">Avanti</button>
 									   </div>
 									  </div>
 									</form>
-								</div>
-</div>
-
-<!-- VISUALIZZA INFORMAZIONI -->
-	<div class="res-step-form col-md-8 col-md-offset-2 res-form-two">
+			</div>
+			
+			<div class="res-step-form col-md-8 col-md-offset-2 res-form-two">
 									<form class="form-horizontal">
 									  <div class="form-group">
 										<div class="areaInfo col col-lg-12" >
@@ -327,10 +688,11 @@ color: white;
 									    </div>
 									  </div>
 									</form>
-								</div>
+				</div>
 								
 
-								<div class="res-step-form col-md-8 col-md-offset-2 res-form-three">
+				<div class="res-step-form col-md-8 col-md-offset-2 res-form-three">
+				<form class="form-horizontal">
 									<div class="areaInfo col col-lg-12" >
 											<div class="col col-lg-12 text-center ">
 												<p class="sceltaTit" > Stampa o Genera la tua etichetta</p>
@@ -342,17 +704,47 @@ color: white;
 												<button type="button" class="botton btnQr" >Genera Qr Code</button>
 									    </div>
 									  </div>
-									</form>
+									
 								</div>
 
-								
-							</div>
+					</form>			
+				</div>
 	        </div>
 	    </div>
 	</div>
-</section>
+</div>
+</div>
+</div>
 </div>
 
+<div class="footer mt-5"  style="width: 100%; background-color: #4CAF50">
+<div class="row" style="margin-top:50; ">
+ 	<div class=" col col-md-2 offset-md-2"  >
+    <h5 class="border-bottom">CHI SIAMO</h5>
+    <p>Siamo Alessandro,
+	Alessia e Sara
+	e sviluppiamo cose.
+	Almeno crediamo
+    </p>
+   </div><div class=" col col-md-2 offset-md-1"  >
+    <h5 class="border-bottom">INFORMAZIONI </h5>
+    <ul>
+    <li>Come funziona</li>
+    <li>Vantaggi</li>
+    </ul>
+    
+    
+   </div>
+	<div class=" col col-md-2 offset-md-1"  >
+    <h5 class="border-bottom">ASSISTENZA</h5>
+     <ul>
+    <li>Chiamaci</li>
+    <li>Scrivici</li>
+    </ul>
+   </div>
+   
+  </div>
+	</div>
 <script type="text/javascript">
 $(document).ready(function(){
 	var steps = ['.res-step-one','.res-step-two','.res-step-three','.res-step-four'];
@@ -457,3 +849,5 @@ $(document).ready(function(){
 		});
 	});
 </script>
+</body>
+</html>
