@@ -40,10 +40,11 @@ public class aggiungiTrattamento extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String idregistro = request.getParameter("idregistro");
-		System.out.println(idregistro);
 		String nomeProdotto= request.getParameter("nomeProdotto");
 		String coltura= request.getParameter("coltura");
 		String dataInizio = request.getParameter("dataInizio");
+		System.out.println(dataInizio);
+
 		String quantita = request.getParameter("quantita");
 		String superficie = request.getParameter("superficie");
 		String avversita = request.getParameter("avversita");

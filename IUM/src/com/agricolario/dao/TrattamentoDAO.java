@@ -20,7 +20,8 @@ public class TrattamentoDAO {
 	public boolean addTrattamento(int idregistro,int idProdotto,String coltura,String nome,Date dataInizio,double superficie,float quantita,String avversità,String note,String unita) {
 		String sql="INSERT INTO `trattamento`(`idprodotto`,`idregistro`,`coltura`,`dataInizio`,`superficieInEttari`,`nomeprodotto`,`quantitaProdotto`,`unitaDiMisuraProdotto`,`avversita`,`note`)\r\n" + 
 				"VALUES(?,?,?,?,?,?,?,?,?,?);";
-		
+		System.out.println(ParseDate.parseDateSql(dataInizio).toString());
+		dataInizio.setDate(dataInizio.getDate()+1);   //
 		 Connection con= connessione.getConn();
 		 try {
 				
