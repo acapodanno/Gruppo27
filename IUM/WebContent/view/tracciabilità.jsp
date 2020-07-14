@@ -83,7 +83,7 @@
 	<div class="row justify-content-center mt-5">
 		<div class="col col-lg-3 " style=" height: 500px;">
 			<div class="col col-lg-12 text-center ">
-			<p class="sceltaTit" >SCEGLI IL PRODOTTO</p>
+			<p class="sceltaTit" >SCEGLI IL REGISTRO</p>
 			</div>
 						<div class="col col-lg-12 text-center mt-3 ">
 			
@@ -94,6 +94,8 @@
   				    <%} %>
     			   
   			 </select>
+  			 
+			<p class="sceltaTit" >SCEGLI IL TRATTAMENTO</p>
 			<select class="custom-select col col-lg-9" id="trattamento"  onchange="trattamentoScelto()">
   				    <option selected>...</option>
     			    
