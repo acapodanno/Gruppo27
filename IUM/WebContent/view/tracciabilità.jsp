@@ -192,7 +192,7 @@ function trattamentoScelto() {
 	    							  "Quantità utilizzata:"+ object.quantita+".\n"+
 	    							  "Superficie trattata:"+ object.superficie+".\n"+
 	    							  "Data trattamento:"+ object.data+".\n"+
-	    							  "Avversità:"+ object.data+".\n");
+	    							  "Avversità:"+ object.avversita+".\n");
 				
 			
 	      }	    	 
