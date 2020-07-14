@@ -150,7 +150,7 @@ Generando un semplice codice QR potrai visualizzare tutte le informazioni suoi t
 <div class="uff">
 
    
-<div class="text-center" id="rigaVantaggi"> <img src="https://img.icons8.com/bubbles/100/000000/services.png"/><h5 id="titoloParagrafo" id="listaCategiorie"> ,COME FUNZIONA</h5></div>
+<div class="text-center" id="rigaVantaggi"> <img src="https://img.icons8.com/bubbles/90/000000/services.png"/><h5 id="titoloParagrafo" id="listaCategiorie"> COME FUNZIONA</h5></div>
 
    <div  class="gruppodescr" >
     <p ><h1 style="color:black; font-size: 22px;" >Ogni sezione del sito svolge un'azione differente e ognuna molto importante per chi gestisce un'azienda agricola. 
@@ -173,7 +173,7 @@ rendendo semplici tutte quelle azioni che prima sembravano impossibili effettuat
 <div class="row justify-content-center mt-5" >
 <div class="uff" >
 
-<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/100/000000/checked.png"/><h5 id="titoloParagrafo" id="listaCategiorie"> ,VANTAGGI</h5></div>
+<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/90/000000/checked.png"/><h5 id="titoloParagrafo" id="listaCategiorie"> VANTAGGI</h5></div>
 
     
    <div  class="gruppodescr" >
@@ -203,38 +203,41 @@ più efficiente di un qualsiasi strumento di registrazione alternativo. Scopri i 
 <div class="row justify-content-center mt-5" >
 <div class="uff" class="text-center">
   
-  <div class="text-center" id="rigaVantaggi">  <img src="https://img.icons8.com/bubbles/100/000000/group.png"/><h5 id="titoloParagrafo" id="listaCategiorie"> ,CHI SIAMO</h5></div>
+  <div class="text-center" id="rigaVantaggi">  <img src="https://img.icons8.com/bubbles/90/000000/group.png"/><h5 id="titoloParagrafo" id="listaCategiorie"> CHI SIAMO</h5></div>
   
 
-<div class="row justify-content-center " >
- 		<div class=" col col-lg-3 " >
- 			<div class="card divPresentazione shadow" >
-  				<img src="image/profile3.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
-  				<div class="card-body">
-    			<h5 class="card-title" style="text-align: center">Alessandro Capodanno</h5>
-   				</div>
-   			</div>	
-    	</div>
- 		<div class=" col col-lg-3 " >
- 			<div class="card divPresentazione shadow" class="cazzarielli-testo">
-  				<img src="image/profile2.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
-  				<div class="card-body">
-    			<h5 class="card-title" style="text-align: center">Alessia Crispo</h5>
-   				</div>
-   			</div>	
-    	</div>
- 		<div class=" col col-lg-3 " >
- 			<div class="card divPresentazione shadow">
-  				<img src="image/profile.jpg" class="card-img-top rounded-circle img-fluid" alt="...">
-  				<div class="card-body">
-    			<h5 class="card-title" style="text-align: center">Sara Patierno</h5>
-   				</div>
-   			</div>	
-    	</div>
- 		 
  	
- 	
- 	</div>
+<div class="container-fluid py-4">
+  <div class="row row-cols-1 row-cols-md-3">
+   <div class="col mb-4">
+    <div class="card shadow h-100">
+    <img class="card-img-top rounded-circle img-fluid" src="image/alessandro.png" alt="Card image" style="width:100%">
+      <div class="card-body text-center">
+      	<h4 class="titoloParagrafo">Alessandro Capodanno</h4>
+        <p class="corpoParagrafo">Io non scrivo codice. <br>Io implemento forte. Troppo forte.</p>
+      </div>
+    </div>
+    </div>
+    <div class="col mb-4">
+    <div class="card shadow h-100">
+    <img class="card-img-top rounded-circle img-fluid" src="image/alessia.png" alt="Card image" style="width:100%">
+      <div class="card-body text-center">
+       	<h4 class="titoloParagrafo">Alessia Crispo</h4>
+       	<p class="corpoParagrafo">Mi sveglio presto la mattina <br>per fare più pause studio.</p>
+      </div>
+    </div>
+    </div>
+    <div class="col mb-4">
+    <div class="card shadow h-100">
+    <img class="card-img-top rounded-circle img-fluid" src="image/sara.png" alt="Card image" style="width:100%">
+      <div class="card-body text-center">
+      	<h4 class="titoloParagrafo">Sara Patierno</h4>
+        <p class="corpoParagrafo">Faccio i capricci, <br>ma per il bene dell'universo.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
 
     </div>
      <br>
