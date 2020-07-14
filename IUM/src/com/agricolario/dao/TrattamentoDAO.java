@@ -2,9 +2,11 @@ package com.agricolario.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
+import com.agricolario.bean.Trattamento;
 import com.agricolario.connessione.Connessione;
 import com.agricolario.functionality.ParseDate;
 
@@ -132,4 +134,65 @@ public boolean deleteTrattamentoById(int idregistro) {
 		}
 			
 	}
+
+//ottenere il trattamento tramite id 
+public Trattamento selectTrattamentoById(int idtrattamento) {
+	
+	//delete from trattamento where idregistro = 5;
+	String sql="select * from trattamento where idtrattamento = ? ;";
+	Connection con= connessione.getConn();
+	try {
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setInt(1, idtrattamento);
+		ResultSet res=ps.executeQuery();
+		
+		Trattamento t= new Trattamento();
+		while(res.next()) {
+			t.setNomeProdotto(res.getString("NomeProdotto"));
+			t.setColtura(res.getString("coltura"));
+			t.setDatInzio(res.getDate("dataInizio"));
+			t.setAvversita(res.getString("avversita"));
+			t.setQuantita(res.getFloat("quantitaProdotto"));
+			t.setSuperficie(res.getDouble("superficieInEttari"));
+			t.setColtura(res.getString("coltura"));
+
+			
+		}
+		
+		
+		
+		return t;
+
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		return null;
+	}finally {
+		if(connessione!=null) {
+			
+			connessione.closeConn();
+		}
+	}
+		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

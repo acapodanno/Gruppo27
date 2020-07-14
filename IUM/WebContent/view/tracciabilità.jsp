@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.agricolario.bean.RegistroFitosanitario"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -11,7 +13,6 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 <script src="https://kit.fontawesome.com/yourcode.js"></script>
 <script type="text/javascript" src="js/qrcode.js"></script>
-<script type="text/javascript" src="js/qrcode.min.js"></script>
 
 <script src="https://kit.fontawesome.com/yourcode.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -71,6 +72,9 @@
     </div>
 </div>
 </div> 
+<%ArrayList<RegistroFitosanitario> listaReg = (ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro");
+
+ %>
 
 
 
@@ -83,13 +87,17 @@
 			</div>
 						<div class="col col-lg-12 text-center mt-3 ">
 			
-		      <select class="custom-select col col-lg-9" id="inputGroupSelect01">
-  				    <option selected>Choose...</option>
-    			    <option value="1">Albiccoche</option>
-   				    <option value="2">Mele</option>
-    				<option value="3">Arancie</option>
+		      <select class="custom-select col col-lg-9" id="selezioneRegistro" onchange="registroScelto()">
+  				    <option selected>...</option>
+  				    <% for(RegistroFitosanitario reg : listaReg ){  %>
+  				      				    <option value="<%=reg.getIdRegistroFitosanitario()%>"><%=reg.getDataCreazione().getYear()+1900 %></option>
+  				    <%} %>
+    			   
   			 </select>
-
+			<select class="custom-select col col-lg-9" id="trattamento"  onchange="trattamentoScelto()">
+  				    <option selected>...</option>
+    			    
+  			 </select>
 				</div>  
 				<div class="col col-lg-12  text-center mt-5">
  					
@@ -109,7 +117,7 @@
 			<p class="sceltaTit" > INFORMAZIONI </p>
 			</div>
 			<div class="form-group textarea" >
-  				<textarea class="form-control z-depth-1  " id="informazioni" rows="7"  ></textarea>
+  				<textarea class="form-control z-depth-1  " id="informazioni" rows="7"></textarea>
 			</div>
 			<div  class="bottoneQr">
 			<button class="shadow"  id="bottone-generaQR" >Genera QR</button>
@@ -118,10 +126,80 @@
 		</div>
 		
 </div>
+
+
+
+
 <script >
 
+function registroScelto() {
+    //Getting Value
+    
+    // METHOD 1
+    var selValue = document.getElementById("selezioneRegistro").value;
+    
+    //METHOD 2
+    var selObj = document.getElementById("selezioneRegistro");
+    var selValue = selObj.options[selObj.selectedIndex].value;
+    console.log(selValue)
+    //Setting Value
+    $.ajax({
+	      type:"POST",
+	      data:{
+	    	  "id" : selValue
+	      },
+	      url:"ottieniTrattamento",
+	      success : function(data){
+	    	 var object= JSON.parse(data);
+	    	 $( "#trattamento" ).html("<option select>...</option>");
+	 		
+	    	 for (var i = 0; i < object.length; i++) {
+					
+	    		 $( "#trattamento" ).append("<option value='"+object[i].id +"'>"+object[i].id +"</option>");
+			}
+	    	
+	      }	    	 
+	    	 
+	    	 
+	    	});
+}
 
+function trattamentoScelto() {
+    //Getting Value
+    
+    // METHOD 1
+    var selValue = document.getElementById("trattamento").value;
+    
+    //METHOD 2
+    var selObj = document.getElementById("trattamento");
+    var selValue = selObj.options[selObj.selectedIndex].value;
+    console.log(selValue)
+    	    	 $("#informazioni").html("");
 
+    //Setting Value
+    $.ajax({
+	      type:"POST",
+	      data:{
+	    	  "id" : selValue
+	      },
+	      url:"getTrattamento",
+	      success : function(data){
+	    	 var object= JSON.parse(data);
+	    	 $("#informazioni").html("");
+	    	 
+	    	$("#informazioni").append("Nome Trattamento: "+ object.nome+".\n"+
+	    							  "Coltura:"+ object.coltura+".\n"+
+	    							  "Quantità utilizzata:"+ object.quantita+".\n"+
+	    							  "Superficie trattata:"+ object.superficie+".\n"+
+	    							  "Data trattamento:"+ object.data+".\n"+
+	    							  "Avversità:"+ object.data+".\n");
+				
+			
+	      }	    	 
+	    	 
+	    	 
+	    	});
+}
 
 
 
@@ -154,30 +232,6 @@ $("#bottone-generaQR").click(function(){
 
       
 });
-</script>
-<script type="text/javascript" src="jquery.qrcode.js">
-
-
-
-$("#bottone-generaQR").click(function(){
-	
-	
-	
-	
-		alert("esco Entro spacco ciao")
-       /*     var xhttp = new XMLHttpRequest();
-
-	    	xhttp.onreadystatechange = function() {
-			  if (this.readyState == 4 && this.status == 200) {
-
-			  }
-			};
-			xhttp.open("POST", "operazioneTracciabilita", true);
-			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-			xhttp.send("text=ciaoAlessandro");
-		*/
-});
-
 </script>
 
 
