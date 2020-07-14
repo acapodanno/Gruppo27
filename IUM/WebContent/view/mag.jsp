@@ -247,7 +247,7 @@ font-weight: bold;
 
 <!-- Label -->
 <div class="">
-<p  class="tit">I miei prodotti: </p>
+<p  class="tit text-center pt-3">I miei prodotti: </p>
 </div>
 
 <!-- Avvertenze -->
@@ -262,28 +262,28 @@ font-weight: bold;
 
 
 <!-- Elenco -->
- <div class="prodFit" >
-  <table class="fixed_header">
+ <div class="prodFit tableFixHead" >
+  <table >
   <colgroup>
-    <col style="width:20%">
+    <col style="width:40%">
+    <col  style="width:40%">
     <col  style="width:20%">
-    <col  style="width:10%">
     </colgroup>
   
 	<!-- Intestazione -->  
 	<thead class="head-tabella">
     <tr id="intest">
-      <th> Nome</th>
-      <th> Quantità</th>
-      <th> Link</th>
+      <th style="font-size:20px; padding:10px; padding-left: 20px"> Nome</th>
+      <th style="font-size:20px; padding:10px"> Quantità</th>
+      <th style="font-size:20px; padding:10px"> Link</th>
     </tr>
     </thead>
  <%for (ProdottoMagazzino pm : lista){ %>
     <!-- Prodotto 1 -->
 	<tr id="<%=pm.getProdotto().getNome()%>">
-      <th> <%= pm.getProdotto().getNome() %></th>
-      <th> <%if(pm.getQuantita()>0){ %> <%= pm.getQuantita() %><%}else{ %>Esaurito<%} %> </th>
-      <th> <a href="<%= pm.getProdotto().getEtichetta() %>">Link Etichetta</a></th>
+      <th style="padding:10px;padding-left:20px;"> <%= pm.getProdotto().getNome() %></th>
+      <th style="padding:10px;"> <%if(pm.getQuantita()>0){ %> <%= pm.getQuantita() %><%}else{ %>Esaurito<%} %> </th>
+      <th class="text-uppercase" style="padding:10px;"> <a href="<%= pm.getProdotto().getEtichetta() %>">Link Etichetta</a></th>
     </tr>
     
   <%} %>
@@ -391,13 +391,13 @@ function showPop(str){
 	if(str=="true"){
 			
 			document.getElementById('titolo-pop-up').innerText="Operzione Effettuata";
-		    document.getElementById('pop-text').innerText="Il prodotto è stato inserito!!";
+		    document.getElementById('pop-text').innerText="Il prodotto è stato inserito!";
 			$('.bottoni-pop-up').hide();
 					window.setTimeout("ricaricaPagina()", 2000);
 			}else if(str=="false"){
 				document.getElementById('titolo-pop-up').innerText="Operzione NON Effettuata";
 
-			 document.getElementById('pop-text').innerText="Il prodotto non  è stato inserito!!";
+			 document.getElementById('pop-text').innerText="Il prodotto non  è stato inserito.";
 							
 				$('.bottoni-pop-up').hide();
 				window.setTimeout("ricaricaPagina()", 2000);
