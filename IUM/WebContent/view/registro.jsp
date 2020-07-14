@@ -311,7 +311,7 @@ background-color: red;
 font-size: 28px;
 font-weight: bold; 
  margin: auto;
- width: 30%;
+ width: 70%;
 }
 
 #pop-text {
@@ -528,7 +528,7 @@ for(RegistroFitosanitario reg : listaReg ){
       <div class="contenitore-delega" id="delega-pop-up">
 		 <div id="blocco-delega" class="animazione-login">
 		     <span class ="close-delegato" style="color: black"><i class=" fa fa-close" onclick="document.getElementById('delega-pop-up').style.display='none'"></i></span>
-		    <p id="titolo-pop-up">Conferma </p>
+		    <p id="titolo-pop-up" class="text-center">Conferma </p>
 		    <div >
 		    
 		    <p id="pop-text"></p>
@@ -973,7 +973,7 @@ function showPop(str){
 			 		
 	 	}else if(str=="elimina-registro"){
 	 		document.getElementById('titolo-pop-up').innerText="Conferma"	
-			document.getElementById('pop-text').innerText="Sei sicuro di voler eliminare il registro del ?"
+			document.getElementById('pop-text').innerText="Sei sicuro di voler eliminare il registro?"
 					
 				document.getElementById('bottone-popu-conferma').setAttribute("onclick","eliminaRegistro()");
 
@@ -985,7 +985,7 @@ function showPop(str){
 		}else  if(str=="true"){
 			
 			document.getElementById('titolo-pop-up').innerText="Operzione Effettuata";
-		    document.getElementById('pop-text').innerText="Operazione effettuata con successo !";
+		    document.getElementById('pop-text').innerText="Operazione effettuata con successo!";
 			$('.bottoni-pop-up').hide();
 					window.setTimeout("ricaricaPagina()", 2000);
 			}else if(str=="false"){
@@ -999,7 +999,7 @@ function showPop(str){
 			}else if(str=="eliminaTrattamento"){
 				//eliminaTrattamento()
 				document.getElementById('titolo-pop-up').innerText="Conferma"	
-				document.getElementById('pop-text').innerText="Sei sicuro di voler eliminare il registro del ?"
+				document.getElementById('pop-text').innerText="Sei sicuro di voler eliminare il registro?"
 				document.getElementById('bottone-popu-conferma').setAttribute("onclick","eliminaTrattamento()");
 
 

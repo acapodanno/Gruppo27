@@ -2032,7 +2032,7 @@ th, td {	/*anche registro*/
 	z-index: 100;
 	position: absolute;
 	top: 0;
-	right: 44px;
+	right: 25px;
 	display: none;
 	transition: all .2s ease-out;
 }
@@ -2071,7 +2071,9 @@ th, td {	/*anche registro*/
   text-transform: none
 }
 
-
+.pnd-pulse-text:hover{
+	display: block;
+}
 .pnd-pulse:hover .description {
   display: block;
   

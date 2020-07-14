@@ -262,7 +262,7 @@ background-color: red;
 <div class="contenitore-delega" id="delega-pop-up">
 		 <div id="blocco-delega" class="animazione-login">
 		     <span class ="close-delegato" style="color: black"><i class=" fa fa-close" onclick="document.getElementById('delega-pop-up').style.display='none'"></i></span>
-		    <p id="titolo-pop-up">Conferma delega</p>
+		    <p  id="titolo-pop-up" class="text-center">Conferma delega</p>
 		    <div >
 		    
 		    <p id="pop-text">Sei sicuro di voler delgare il seguente utente?</p>
@@ -354,7 +354,7 @@ function showPop(str){
   if(str=="true"){
 		
 		document.getElementById('titolo-pop-up').innerText="Operzione Effettuata";
-	    document.getElementById('pop-text').innerText="Operazione effettuata con successo !";
+	    document.getElementById('pop-text').innerText="Operazione effettuata con successo!";
 		$('.bottoni-pop-up').hide();
 				window.setTimeout("redirectRegistro()", 2000);
 		}else if(str=="false"){
