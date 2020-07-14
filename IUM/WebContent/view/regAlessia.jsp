@@ -508,12 +508,12 @@ function registrazioneTitolare(){
 	    	 console.log(object);
 	    	  	
 				if(object.reg=="true"){
-					
-					alert("registrazione avvenuta con successo");
+					location.href = "showPagine?valore=true";
 					
 				}else{
 					
-					alert("Errore");
+					location.href = "showPagine?valore=false";
+					
 						
 				}
 		    	 

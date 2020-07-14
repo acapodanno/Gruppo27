@@ -1,6 +1,8 @@
 package com.agricolario.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -39,8 +41,10 @@ public class login extends HttpServlet {
 		 password= request.getParameter("password");
 		 UtenteDAO userDao = new UtenteDAO();
 		 System.out.println(password);
-			Utente user=userDao.selectUser(email);
-			if(user!=null && user.getPassword().equals(password)) {
+		Utente user=userDao.selectUser(email);
+			if (user!=null && user.getEmail()!=null) {
+			
+			if(user.getPassword().equals(password)) {
 				
 				Azienda azienda = new Azienda();
 				if(user.getRuolo().equals("titolare")) {
@@ -60,7 +64,18 @@ public class login extends HttpServlet {
 				getServletContext().getRequestDispatcher("/view/HomePage.jsp").forward(request, response);
 			}else {
 				
-				//pagina di errore o messaggio di errore
+
+			
+				
+				getServletContext().getRequestDispatcher("/view/Errore.jsp").forward(request, response);
+
+			
+			
+			}
+			}else {
+				
+				getServletContext().getRequestDispatcher("/view/Errore.jsp").forward(request, response);
+
 			}
 			
 	//	response.getWriter().append("Served at: ").append(request.getContextPath());
