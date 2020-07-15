@@ -808,6 +808,14 @@ color: white;
 	margin-right: 20px;
 }
 
+.btnPunto{
+	/* position: absolute; */
+	/* bottom: 15px; */
+	width: 20%;
+	margin: auto;
+	margin-right: 20px;
+}
+
 .btnGo {
 	/* position: absolute; */
 	/* bottom: 15px; */
