@@ -132,7 +132,7 @@ Generando un semplice codice QR potrai visualizzare tutte le informazioni suoi t
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="image/fotoHP3.jpeg" alt="Third slide" width=auto height="650px">
-    </div>
+    </div> 
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
