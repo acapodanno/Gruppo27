@@ -125,13 +125,13 @@ Generando un semplice codice QR potrai visualizzare tutte le informazioni suoi t
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="image/PROVA4.jpg" alt="First slide" width=auto height="525px">
+      <img class="d-block w-100" src="image/fotoHP1.jpeg" alt="First slide" width=auto height="650px">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="image/PROVA7.jpg" alt="Second slide" width=auto height="525px">
+      <img class="d-block w-100" src="image/fotoHP2.jpg" alt="Second slide" width=auto height="650px">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="image/PROVA8.jpg" alt="Third slide" width=auto height="525px">
+      <img class="d-block w-100" src="image/fotoHP3.jpeg" alt="Third slide" width=auto height="650px">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
