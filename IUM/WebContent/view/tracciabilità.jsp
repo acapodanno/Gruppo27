@@ -33,7 +33,7 @@
   
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta charset="ISO-8859-1">
-<title> Agricolàrio - Traccibilità </title>
+<title> Agricolàrio - Tracciabilità </title>
 </head>
 <body>
 
@@ -46,7 +46,7 @@
 
 <div class="titles">
 <div  class="titoloPagina ">
-  <p id="titoloPagina" class="text-center">  ,Traccibilità</p>
+  <p id="titoloPagina" class="text-center">  ,Tracciabilità</p>
 </div>
 <div class="sottoTitolo" class="text-center">
   <p  id="sottoTitolo" class="text-center" class="w3-large">Crea, in modo facile e veloce, l'etichetta virtuale per le tue coltivazioni. </p>
@@ -72,65 +72,218 @@
     </div>
 </div>
 </div> 
-<%ArrayList<RegistroFitosanitario> listaReg = (ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro");
+<%ArrayList<RegistroFitosanitario> listaReg = (ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro");%>
 
- %>
-
-
-
-
-
-	<div class="row justify-content-center mt-5">
-		<div class="col col-lg-3 " style=" height: 500px;">
-			<div class="col col-lg-12 text-center ">
-			<p class="sceltaTit" >SCEGLI IL REGISTRO</p>
+<div class="divS">
+<div id="employer-post-new-job">
+	<div class="container">
+	    <div class="stepBar">
+			<div class="col-xs-10 col-xs-offset-1" id="container">
+								<div class="res-steps-container">
+									<div class="res-steps res-step-one active" data-class=".res-form-one">
+										<div class="res-step-bar">1</div>
+										<div class="res-progress-bar"></div>
+										<div class="res-progress-title">Scegli un prodotto</div>
+									</div>
+									<div class="res-steps res-step-two" data-class=".res-form-two">
+										<div class="res-step-bar">2</div>
+										<div class="res-progress-bar"></div>
+										<div class="res-progress-title">Informazioni</div>
+									</div>
+									<div class="res-steps res-step-three" data-class=".res-form-three">
+										<div class="res-step-bar">3</div>
+										<div class=""></div>
+										<div class="res-progress-title">Stampa o Genera Etichetta</div>
+									</div>
+								
+								</div>
 			</div>
-						<div class="col col-lg-12 text-center mt-3 ">
 			
-		      <select class="custom-select col col-lg-9" id="selezioneRegistro" onchange="registroScelto()">
-  				    <option selected>...</option>
-  				    <% for(RegistroFitosanitario reg : listaReg ){  %>
-  				      				    <option value="<%=reg.getIdRegistroFitosanitario()%>"><%=reg.getDataCreazione().getYear()+1900 %></option>
-  				    <%} %>
-    			   
-  			 </select>
-  			 
-			<p class="sceltaTit" >SCEGLI IL TRATTAMENTO</p>
-			<select class="custom-select col col-lg-9" id="trattamento"  onchange="trattamentoScelto()">
-  				    <option selected>...</option>
-    			    
-  			 </select>
-				</div>  
-				<div class="col col-lg-12  text-center mt-5">
- 					
- 					<div class="" style="height:200px; width: 200px; display: inline-block;"  id="qrcode">
- 					
- 					
- 					</div>
- 					
- 								
+			
+			<div class="res-step-form col-md-8 col-md-offset-2 res-form-one" style="left:0%;">
+									<form class="form-horizontal">
+									  
+									  <div class="areaInfo form-group">
+										  		
+										<div class="col col-lg-12 text-center ">
+											<p class="sceltaTit2" >Anno di Coltivazione:</p>
+										</div>
+										
+										<div class="col col-lg-12 text-center mt-3 ">
+											 <select class="custom-select col col-lg-9" id="selezioneRegistro" onchange="registroScelto()">
+  				   								 <option selected>...</option>
+  				    							<% for(RegistroFitosanitario reg : listaReg ){  %>
+  				      				    		<option value="<%=reg.getIdRegistroFitosanitario()%>"><%=reg.getDataCreazione().getYear()+1900 %></option>
+  				    							<%} %>
+    			   							 </select>
+    			   							 
+											<p class="sceltaTit2" >Coltura di cui creare l'etichetta:</p>
+											<select class="custom-select col col-lg-9" id="trattamento"  onchange="trattamentoScelto()">
+								  				 <option selected>...</option>    
+								  			 </select>
+										</div>
+								</div>
+								<div class="form-group">
+									  <div class="text-center">
+												<button type="button" class="botton btnGo1   col-xs-offset-1 btn botton-orange" data-class=".res-form-one">Avanti</button>
+									   </div>
+									  </div>
+									</form>
+			</div>
+			
+			<div class="res-step-form col-md-8 col-md-offset-2 res-form-two">
+									<form class="form-horizontal">
+									  <div class="form-group">
+										<div class="areaInfo col col-lg-12" >
+											<div class="col col-lg-12 text-center ">
+												<p class="sceltaTit" >Informazioni sul prodotto: </p>
+											</div>
+											<div class="form-group textarea" >
+									  			<textarea class="form-control z-depth-1  " id="informazioni" rows="7"></textarea>
+											</div>
+											
+										</div>								    
+									  </div>
+									 
+									  
+									  <div class="form-group">
+									    <div class="text-center">
+												<button type="button" class="botton btnBack botton   btn botton-gray" data-class=".res-form-two">Indietro</button>
+												<button type="button" class="botton btnGo   col-xs-offset-1 btn botton-orange" data-class=".res-form-two">Avanti</button>
+									    </div>
+									  </div>
+									</form>
+				</div>
+								
 
-				</div>  
-							 
-		</div>
-		
-		<div class=" col col-lg-5 " >
-		<div class="col col-lg-12 text-center ">
-			<p class="sceltaTit" > INFORMAZIONI </p>
-			</div>
-			<div class="form-group textarea" >
-  				<textarea class="form-control z-depth-1  " id="informazioni" rows="7"></textarea>
-			</div>
-			<div  class="bottoneQr">
-			<button class="shadow"  id="bottone-generaQR" >Genera QR</button>
-			</div>
-		</div>
-		</div>
-		
+				<div class="res-step-form col-md-8 col-md-offset-2 res-form-three">
+				<form class="form-horizontal">
+									<div class="areaInfo col col-lg-12" >
+											<div class="col col-lg-12 text-center ">
+												<p class="sceltaTit" > Stampa o Genera la tua etichetta</p>
+											</div>
+									
+									  <div class="form-group">
+									    <div class="botton3 text-center">
+												<button type="button" class="botton btnStampa">Stampa</button>
+												<button class="botton btnQr"  id="bottone-generaQR" >Genera QR Code</button>
+									    </div>
+									  </div>
+									
+								</div>
+
+					</form>			
+				</div>
+	        </div>
+	    </div>
+	</div>
+</div>
 </div>
 
+<script type="text/javascript">
+$(document).ready(function(){
+	var steps = ['.res-step-one','.res-step-two','.res-step-three','.res-step-four'];
+		var i = 1;
+		$(".res-step-form .botton-orange").click(function(){
+			var getClass = $(this).attr('data-class');
+			$(".res-steps").removeClass('active');
+			$(steps[i]).addClass('active');
+			i++;
+			if(getClass != ".res-form-four"){
+				$(getClass).animate({
+					left: '-150%'
+				}, 500, function(){
+					$(getClass).css('left', '150%');
+				});
+				$(getClass).next().animate({
+					left: '0%'
+				}, 500, function(){
+					$(this).css('display','block');
+				});
+			}
+		});
 
+		/* step back */
+		$(".res-step-form .botton-gray").click(function(){
+			var getClass = $(this).attr('data-class');
+			$(".res-steps").removeClass('active');
+			i--;
+			$(steps[i-1]).addClass('active');
+			$(getClass).prev().css('left','-150%')
+			$(getClass).animate({
+				left: '150%'
+			}, 500);
+			$(getClass).prev().animate({
+				left: '0%'
+			}, 500)
+		});
 
+		/* click from top bar steps */
+		$('.res-step-one').click(function(){
+			if(!$(this).hasClass('active')){
+				$(".res-steps").removeClass('active');
+				i = 0;
+				$(steps[i]).addClass('active');
+				i++;
+				$('.res-form-one').css('left','-150%');
+				$('.res-form-two, .res-form-three, .res-form-four').animate({
+					left: '150%'
+				}, 500);
+				$('.res-form-one').animate({
+					left: '0%'
+				}, 500);
+			}
+		});
+
+		$('.res-step-two').click(function(){
+			if(!$(this).hasClass('active')){
+				$(".res-steps").removeClass('active');
+				i = 1;
+				$(steps[i]).addClass('active');
+				i++;
+				$('.res-form-two').css('left','-150%');
+				$('.res-form-one, .res-form-three, .res-form-four').animate({
+					left: '150%'
+				}, 500);
+				$('.res-form-two').animate({
+					left: '0%'
+				}, 500);
+			}
+		});
+
+		$('.res-step-three').click(function(){
+			if(!$(this).hasClass('active')){
+				$(".res-steps").removeClass('active');
+				i = 2;
+				$(steps[i]).addClass('active');
+				i++;
+				$('.res-form-three').css('left','-150%');
+				$('.res-form-one, .res-form-two, .res-form-four').animate({
+					left: '150%'
+				}, 500);
+				$('.res-form-three').animate({
+					left: '0%'
+				}, 500);
+			}
+		});
+
+		$('.res-step-four').click(function(){
+			if(!$(this).hasClass('active')){
+				$(".res-steps").removeClass('active');
+				i = 3;
+				$(steps[i]).addClass('active');
+				i++;
+				$('.res-form-four').css('left','-150%');
+				$('.res-form-one, .res-form-two, .res-form-three').animate({
+					left: '150%'
+				}, 500);
+				$('.res-form-four').animate({
+					left: '0%'
+				}, 500);
+			}
+		});
+	});
+</script>
 
 <script >
 
@@ -234,6 +387,7 @@ $("#bottone-generaQR").click(function(){
 
       
 });
+
 </script>
 
 
