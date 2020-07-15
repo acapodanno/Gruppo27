@@ -34,7 +34,7 @@
 	font-size: 22px;
 	height: 250px;
 }
-
+  
 #qrcode {
 	z-index: 999999999999999999999;
 	margin: auto;
