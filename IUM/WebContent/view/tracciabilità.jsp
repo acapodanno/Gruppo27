@@ -30,10 +30,17 @@
 	}
   
   
-  #informazioni{
-  font-size: 22px;
-  }
-  
+ #informazioni {
+	font-size: 22px;
+	height: 250px;
+}
+
+#qrcode {
+	z-index: 999999999999999999999;
+	margin: auto;
+	width: 25%;
+	margin-bottom: 5px;
+}
   </style>
   
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -174,9 +181,14 @@
 												<button  type="button" class="botton btnQr"  id="generaQR" onclick="generaqr()">Genera QR Code</button>
 									    </div>
 									  </div>
-									<div class="col col-lg-12 text-center" id="qrcode" style="padding-left: 40%;">
+									<div class="col col-lg-12 text-center" id="qrcode">
 											
 									</div>
+									<div class="form-group">
+									    <div class="text-center">
+												<button type="button" class="botton btnBack botton   btn botton-gray" data-class=".res-form-two">Indietro</button>
+									    </div>
+									  </div>
 								</div>
 
 					</form>			
@@ -386,8 +398,8 @@ function generaqr(){
 	
 	new QRCode(document.getElementById("qrcode"), {
 		text: informazioni, 
-		width: 200,
-		height: 200,
+		width: 180,
+		height: 180,
 		colorDark : "black",
 		colorLight : "#ffffff",
 		correctLevel : QRCode.CorrectLevel.H
