@@ -74,7 +74,7 @@
 </div> 
 <%ArrayList<RegistroFitosanitario> listaReg = (ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro");%>
 
-<div class="divS">
+<div class="divS"> <!-- DIV SUPREMO -->
 <div id="employer-post-new-job">
 	<div class="container">
 	    <div class="stepBar">
@@ -99,7 +99,7 @@
 								</div>
 			</div>
 			
-			
+	<!-- 1° PAGINA -->	
 			<div class="res-step-form col-md-8 col-md-offset-2 res-form-one" style="left:0%;">
 									<form class="form-horizontal">
 									  
@@ -130,7 +130,7 @@
 									  </div>
 									</form>
 			</div>
-			
+	<!-- 2° PAGINA -->			
 			<div class="res-step-form col-md-8 col-md-offset-2 res-form-two">
 									<form class="form-horizontal">
 									  <div class="form-group">
@@ -155,7 +155,7 @@
 									</form>
 				</div>
 								
-
+<!-- 3° PAGINA -->	
 				<div class="res-step-form col-md-8 col-md-offset-2 res-form-three">
 				<form class="form-horizontal">
 									<div class="areaInfo col col-lg-12" >
@@ -179,7 +179,7 @@
 	</div>
 </div>
 </div>
-
+<!-- SCRIPT DELLO SCORRIMENTO STEP BAR -->
 <script type="text/javascript">
 $(document).ready(function(){
 	var steps = ['.res-step-one','.res-step-two','.res-step-three','.res-step-four'];
@@ -285,8 +285,11 @@ $(document).ready(function(){
 	});
 </script>
 
-<script >
 
+
+
+<!-- SCRIPT DELLE ALTRE COSE -->
+<script >
 function registroScelto() {
     //Getting Value
     
