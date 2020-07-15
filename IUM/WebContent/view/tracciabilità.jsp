@@ -186,7 +186,7 @@
 									</div>
 									<div class="form-group">
 									    <div class="text-center">
-											    <button type="button" class="botton btnBack botton   btn botton-gray" data-class=".res-form-two">Indietro</button>
+											    <button type="button" class="botton btnBack botton   btn botton-gray" data-class=".res-form-three">Indietro</button>
 												<button type="button" class="botton btnPunto botton   btn botton-gray" data-class=".res-form-two" onclick="location.reload();">Vai al punto 1</button>
 									    </div>
 									  </div>
