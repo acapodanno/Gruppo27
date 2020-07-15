@@ -52,7 +52,8 @@ public class ottieniTrattamento extends HttpServlet {
         ArrayList<Trattamento> lista = reg.getTrattamenti();
 		for(Trattamento t :lista) {
 		count++;
-		out.append("{\"id\":\""+t.getIdTrattamento()+"\"}");
+		out.append("{\"id\":\""+t.getIdTrattamento()+"\","
+				+"\"coltura\":\""+t.getColtura()+"\"}");
 		
 		if(count<=lista.size()-1) {
 			out.append(",");

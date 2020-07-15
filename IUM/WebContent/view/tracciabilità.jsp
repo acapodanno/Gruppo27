@@ -29,6 +29,11 @@
 	src: url("../font/Dosis/AnyConv.com__Dosis-Regular.otf");
 	}
   
+  
+  #informazioni{
+  font-size: 22px;
+  }
+  
   </style>
   
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -93,7 +98,7 @@
 									<div class="res-steps res-step-three" data-class=".res-form-three">
 										<div class="res-step-bar">3</div>
 										<div class=""></div>
-										<div class="res-progress-title">Stampa o Genera Etichetta</div>
+										<div class="res-progress-title">Stampa o Genera</div>
 									</div>
 								
 								</div>
@@ -166,7 +171,7 @@
 									  <div class="form-group">
 									    <div class="botton3 text-center">
 												<button type="button" class="botton btnStampa">Stampa</button>
-												<button class="botton btnQr"  id="bottone-generaQR" >Genera QR Code</button>
+												<button class="botton btnQr"  id="generaQR" >Genera QR Code</button>
 									    </div>
 									  </div>
 									
@@ -313,7 +318,7 @@ function registroScelto() {
 	 		
 	    	 for (var i = 0; i < object.length; i++) {
 					
-	    		 $( "#trattamento" ).append("<option value='"+object[i].id +"'>"+object[i].id +"</option>");
+	    		 $( "#trattamento" ).append("<option value= " +object[i].id +">"+ "(" + object[i].id + ")"+  " Nome Coltura: " + object[i].coltura );
 			}
 	    	
 	      }	    	 
@@ -344,15 +349,13 @@ function trattamentoScelto() {
 	      success : function(data){
 	    	 var object= JSON.parse(data);
 	    	 $("#informazioni").html("");
-	    	 
-	    	$("#informazioni").append("Nome Trattamento: "+ object.nome+".\n"+
-	    							  "Coltura:"+ object.coltura+".\n"+
-	    							  "Quantità utilizzata:"+ object.quantita+".\n"+
-	    							  "Superficie trattata:"+ object.superficie+".\n"+
-	    							  "Data trattamento:"+ object.data+".\n"+
-	    							  "Avversità:"+ object.avversita+".\n");
+	 
 				
-			
+	    		$("#informazioni").append("Sulla coltura " + object.coltura + " è stato effettuato il trattamento" + " '"+ object.nome + "' "+ 
+	    			"per combattere l'avversità: " + object.avversita + ".\n" + "Il trattamento è stato eseguito in data " + object.data + 
+	    			" su una superficie totale di " + object.superficie + " metri quadrati. " + "\n" +
+	    			"La quantità utilizzata per effettuare il trattamento ammonta a " + object.quantita + " litri per superficie impiegata.\n");
+
 	      }	    	 
 	    	 
 	    	 
@@ -365,7 +368,7 @@ function trattamentoScelto() {
 
 
 
-$("#bottone-generaQR").click(function(){
+$("#generaQR").click(function(){
     
 	jQuery.noConflict();
 	
