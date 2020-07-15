@@ -162,7 +162,7 @@
 								
 <!-- 3° PAGINA -->	
 				<div class="res-step-form col-md-8 col-md-offset-2 res-form-three">
-				<form class="form-horizontal">
+				<form class="form-horizontal" onsubmit="false">
 									<div class="areaInfo col col-lg-12" >
 											<div class="col col-lg-12 text-center ">
 												<p class="sceltaTit" > Stampa o Genera la tua etichetta</p>
@@ -171,10 +171,12 @@
 									  <div class="form-group">
 									    <div class="botton3 text-center">
 												<button type="button" class="botton btnStampa">Stampa</button>
-												<button class="botton btnQr"  id="generaQR" >Genera QR Code</button>
+												<button  type="button" class="botton btnQr"  id="generaQR" onclick="generaqr()">Genera QR Code</button>
 									    </div>
 									  </div>
-									
+									<div class="col col-lg-12 text-center" id="qrcode" style="padding-left: 40%;">
+											
+									</div>
 								</div>
 
 					</form>			
@@ -368,8 +370,8 @@ function trattamentoScelto() {
 
 
 
-$("#generaQR").click(function(){
-    
+function generaqr(){
+    console.log("Click")
 	jQuery.noConflict();
 	
 	/*$.get("operazioneTracciabilita", function(data, status){
@@ -392,7 +394,7 @@ $("#generaQR").click(function(){
 	});
 
       
-});
+}
 
 </script>
 
