@@ -307,11 +307,11 @@ font-weight: bold;
 
 
 <div class="titles">
-<div  class="titoloPagina ">
-  <p id="titoloPagina" class="text-center"> ,Registro dei Trattamenti Fitosanitari</p>
+<div  class="titoloPaginaReg ">
+  <p id="titoloPaginaReg" class="text-center"> ,Registro dei Trattamenti Fitosanitari</p>
 </div>
-<div class="sottoTitolo" class="text-center">
-  <p  id="sottoTitolo" class="text-center" class="w3-large"> Visualizza, crea, modifica con facilità il tuo registro dei trattamenti fitosanitari. </p>
+<div class="sottoTitoloReg" class="text-center">
+  <p  id="sottoTitoloReg" class="text-center" class="w3-large"> Visualizza, crea, modifica con facilità il tuo registro dei trattamenti fitosanitari. </p>
 </div>  
 <div  class="iconHelp "> 	
    	<div class="pnd-pulse">								
