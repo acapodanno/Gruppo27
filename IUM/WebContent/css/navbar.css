@@ -2710,17 +2710,21 @@ border-bottom: 1px solid rgba(40, 150, 5, 0.9);
 	position: relative;
 	margin-top: 10px;
 	margin-left: 150px;
-	font-size: 10px;
+	font-size: 12px;
 	font-weight: bold;
 	font-style: italic;
 	color:red;
 	opacity: 0.6;
 	width: 80%;
+	padding:8px;
 	border: 1px solid #ff8080;
+	transition: 0.4s;
 }
 
-#avviso:hover{;
+#avviso:hover{
+	transition: 0.4s;
 	opacity:1; 
+	padding: 10px;
 	border: 1px solid red;
 }
 
