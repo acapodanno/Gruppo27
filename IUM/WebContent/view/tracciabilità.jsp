@@ -82,12 +82,9 @@
           <li> Scelta del prodotto per cui si intende creare l'etichetta virtuale </li>
           <li> L'area informazioni per visualizzare e/o modificare le informazioni riguardanti tutti i prodotti utilizzati sulla coltura in questione, automaticamente autogenerate dal sistema</li>
          </ul>
-         
-          <p class="pnd-pulse-text"> 
-         Per saperne di più sulla tracciabilità e sul QR-Code consultare la pagina <a href=""> Come Funzione, alla sezione Tracciabilità</a>. </p>
-         
+        
          <p class="pnd-pulse-text"> 
-         Per altre informazioni più dettagliate consultare la pagina <a href=""> Come Funziona </a> oppure contattare l'assistenza <a href=""> qui </a>.   </p>
+         Per altre informazioni più dettagliate consultare la pagina <a href="http://localhost/IUM/showFunzionalita?funzionalita=comefunziona"> Come Funziona</a>,alla sezione  <a href="http://localhost/IUM/showFunzionalita?funzionalita=comefunziona#sezTracc">Tracciabilità</a> oppure contattare l'assistenza <a href="http://localhost/IUM/showFunzionalita?funzionalita=assistenza">qui </a>.   </p>
    </div>	
     </div>
 </div>
