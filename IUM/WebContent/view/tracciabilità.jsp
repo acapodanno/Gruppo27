@@ -41,6 +41,14 @@
 	width: 25%;
 	margin-bottom: 5px;
 }
+
+
+#qrcode img {
+	z-index: 999999999999999999999;
+	width: 155px;
+	height: 155px;
+}
+
   </style>
   
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -148,7 +156,7 @@
 									  <div class="form-group">
 										<div class="areaInfo col col-lg-12" >
 											<div class="col col-lg-12 text-center ">
-												<p class="sceltaTit" >Informazioni sul prodotto: </p>
+												<p class="sceltaTit2" >Informazioni sul prodotto: </p>
 											</div>
 											<div class="form-group textarea" >
 									  			<textarea class="form-control z-depth-1  " id="informazioni" rows="7"></textarea>
@@ -158,8 +166,8 @@
 									  </div>
 									 
 									  
-									  <div class="form-group">
-									    <div class="text-center">
+									  <div class="goBack form-group">
+									    <div class="goBack text-center">
 												<button type="button" class="botton btnBack botton   btn botton-gray" data-class=".res-form-two">Indietro</button>
 												<button type="button" class="botton btnGo   col-xs-offset-1 btn botton-orange" data-class=".res-form-two">Avanti</button>
 									    </div>
@@ -172,22 +180,22 @@
 				<form class="form-horizontal" onsubmit="false">
 									<div class="areaInfo col col-lg-12" >
 											<div class="col col-lg-12 text-center ">
-												<p class="sceltaTit" > Stampa o Genera la tua etichetta</p>
+												<p class="sceltaTit2" > Stampa o Genera <br> la tua etichetta</p>
 											</div>
 									
 									  <div class="form-group">
 									    <div class="botton3 text-center">
 												<button type="button" class="botton btnStampa">Stampa</button>
-												<button  type="button" class="botton btnQr"  id="generaQR" onclick="generaqr()">Genera QR Code</button>
+												<button type="button" class="btnPunto botton"  id="generaQR" onclick="generaqr()">Genera qr</button>
 									    </div>
 									  </div>
-									<div class="col col-lg-12 text-center" id="qrcode">
+									<div class="text-center" id="qrcode">
 											
 									</div>
 									<div class="form-group">
-									    <div class="text-center">
-											    <button type="button" class="botton btnBack botton   btn botton-gray" data-class=".res-form-three">Indietro</button>
-												<button type="button" class="botton btnPunto botton   btn botton-gray" data-class=".res-form-two" onclick="location.reload();">Vai al punto 1</button>
+									    <div class="botton3 text-center">
+											    <button type="button" class="botton btnBack btn botton-gray" data-class=".res-form-three">Indietro</button>           
+												<button type="button" class="botton btnPunto btn botton-gray" data-class=".res-form-two" onclick="location.reload();">Vai al punto 1</button>
 									    </div>
 									  </div>
 								</div>

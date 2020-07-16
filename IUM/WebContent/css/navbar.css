@@ -713,28 +713,6 @@ border: 1px solid white;
  	
 }
 
-.bottoneQr{
-	width: 100%;
-	margin: auto;
-}
-
-#bottone-generaQR {
-	height: 50px;
-	width: 30%;
-	background-color: #23a9d8;
-	color: white;
-	text-align: center;
-	border: none;
-	text-align: center;
-	border-radius: 5px;
-	font-size: 24px;
-	margin: auto;
-	float: inline-end;
-}
-
-#bottone-generaQR:hover{
-	background-color: RoyalBlue;
-}
 
 .icon-bar-vertical > a{
 	font-size: 2rem;
@@ -804,7 +782,7 @@ color: white;
 .btnBack{
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 10%;
+	width: 15%;
 	margin: auto;
 	margin-right: 20px;
 }
@@ -820,13 +798,13 @@ color: white;
 .btnGo {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 10%;
+	width: 15%;
 	margin: auto;
 
 }
 
 .botton3 {
-	margin-top: 10px;
+	margin-top: 15px;
 	width: 100%;
 }
 
@@ -846,11 +824,10 @@ color: white;
 .btnGo1 {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 10%;
+	width: 15%;
 	margin: auto;
-	margin-top: 25px;
+	margin-top: 55px;
 }
-
 
 #employer-post-new-job .res-steps-container .res-steps .res-step-bar {
     -webkit-border-radius: 50% !important;
@@ -897,7 +874,7 @@ color: white;
 	border: 1px solid #d2d2d2;
 	box-shadow: 0px 6px 4px -2px silver;
 	position: absolute;
-	height: 450px;
+	height: 500px;
 	width: 100%;
 	margin: auto;
 	left: 150px;
@@ -997,41 +974,52 @@ background-color: RoyalBlue;
 color: white;
 }
 
-.btnBack{
-	/* position: absolute; */
-	/* bottom: 15px; */
-	width: 10%;
-	margin: auto;
-	margin-right: 20px;
-}
-
-.btnPunto{
+.btnGo {
 	/* position: absolute; */
 	/* bottom: 15px; */
 	width: 20%;
 	margin: auto;
-	margin-right: 20px;
-}
-
-.btnGo {
-	/* position: absolute; */
-	/* bottom: 15px; */
-	width: 10%;
-	margin: auto;
-
 }
 
 .botton3 {
 	margin-top: 10px;
-	width: 100%;
+	width: 60%;
+	display: flex;
+	margin: auto;
+}
+
+.btnPunto {
+	/* position: absolute; */
+	/* bottom: 15px; */
+	width: 60%;
+	margin: 5px;
 }
 
 .btnStampa {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 15%;
+	width: 40%;
+	margin: 5px;
+	/* margin-right: 20px; */
+}
+
+.btnBack {
+	/* position: absolute; */
+	/* bottom: 15px; */
+	width: 25%;
 	margin: auto;
-	margin-right: 20px;
+}
+#qrcode img {
+	z-index: 999999999999999999999;
+	width: 145px;
+	height: 145px;
+}
+
+#qrcode {
+	z-index: 999999999999999999999;
+	margin: auto;
+	width: 30%;
+	margin-bottom: 5px;
 }
 
 .btnQr {
@@ -1042,12 +1030,10 @@ color: white;
 .btnGo1 {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 10%;
+	width: 20%;
 	margin: auto;
-	margin-top: 25px;
+	margin-top: 35px;
 }
-
-
 #employer-post-new-job .res-steps-container .res-steps .res-step-bar {
     -webkit-border-radius: 50% !important;
     -moz-border-radius: 50% !important;
@@ -1094,11 +1080,11 @@ color: white;
 	box-shadow: 0px 6px 4px -2px silver;
 	position: absolute;
 	height: 450px;
-	width: 100%;
+	width: 70%;
 	margin: auto;
 	left: 150px;
 	/* top: 2px; */
-	margin-left: 200px;
+	margin-left: 180px;
 }
 
 #employer-post-new-job .res-step-form h3 {
@@ -1127,10 +1113,10 @@ color: white;
 
 .sceltaTit2 {
 	position: relative;
-	font-size: 28px;
-	width: 80%;
+	font-size: 26px;
+	width: 100%;
 	margin: auto;
-	margin-top: 60px;
+	margin-top: 55px;
 }
   
  .divS{
@@ -1152,7 +1138,7 @@ color: white;
 	/* margin-left: -15px; */
 	width: 90%;
 	margin: auto;
-	margin-left: 150px;
+	margin-left: 100px;
 }
 .areaInfo {
 	margin-top: 80px;
@@ -1190,41 +1176,52 @@ background-color: RoyalBlue;
 color: white;
 }
 
-.btnBack{
-	/* position: absolute; */
-	/* bottom: 15px; */
-	width: 10%;
-	margin: auto;
-	margin-right: 20px;
-}
-
-.btnPunto{
+.btnGo {
 	/* position: absolute; */
 	/* bottom: 15px; */
 	width: 20%;
 	margin: auto;
-	margin-right: 20px;
-}
-
-.btnGo {
-	/* position: absolute; */
-	/* bottom: 15px; */
-	width: 10%;
-	margin: auto;
-
 }
 
 .botton3 {
 	margin-top: 10px;
 	width: 100%;
+	display: flex;
+}
+
+.btnPunto {
+	/* position: absolute; */
+	/* bottom: 15px; */
+	width: 60%;
+	margin: 5px;
 }
 
 .btnStampa {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 15%;
+	width: 40%;
+	margin: 5px;
+	/* margin-right: 20px; */
+}
+
+.btnBack {
+	/* position: absolute; */
+	/* bottom: 15px; */
+	width: 25%;
 	margin: auto;
-	margin-right: 20px;
+}
+
+#qrcode img {
+	z-index: 999999999999999999999;
+	width: 125px;
+	height: 125px;
+}
+
+#qrcode {
+	z-index: 999999999999999999999;
+	margin: auto;
+	width: 35%;
+	margin-bottom: 5px;
 }
 
 .btnQr {
@@ -1235,11 +1232,10 @@ color: white;
 .btnGo1 {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 10%;
+	width: 20%;
 	margin: auto;
-	margin-top: 25px;
+	margin-top: 35px;
 }
-
 
 #employer-post-new-job .res-steps-container .res-steps .res-step-bar {
     -webkit-border-radius: 50% !important;
@@ -1291,7 +1287,7 @@ color: white;
 	margin: auto;
 	left: 150px;
 	/* top: 2px; */
-	margin-left: 180px;
+	margin-left: 110px;
 }
 
 #employer-post-new-job .res-step-form h3 {
@@ -1320,10 +1316,10 @@ color: white;
 
 .sceltaTit2 {
 	position: relative;
-	font-size: 28px;
-	width: 80%;
+	font-size: 24px;
+	width: 100%;
 	margin: auto;
-	margin-top: 60px;
+	margin-top: 55px;
 }
   
  .divS{
@@ -1346,8 +1342,10 @@ color: white;
 	/* margin-left: -15px; */
 	width: 90%;
 	margin: auto;
-	margin-left: 120px;
+	margin-left: 80px;
 }
+
+
 .areaInfo {
 	margin-top: 80px;
 }
@@ -1384,41 +1382,58 @@ background-color: RoyalBlue;
 color: white;
 }
 
-.btnBack{
-	/* position: absolute; */
-	/* bottom: 15px; */
-	width: 10%;
-	margin: auto;
-	margin-right: 20px;
+#informazioni {
+	font-size: 22px;
+	height: 220px;
 }
 
-.btnPunto{
-	/* position: absolute; */
-	/* bottom: 15px; */
-	width: 20%;
-	margin: auto;
-	margin-right: 20px;
-}
 
 .btnGo {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 10%;
+	width: 20%;
 	margin: auto;
-
 }
 
 .botton3 {
 	margin-top: 10px;
 	width: 100%;
+	display: flex;
+}
+
+.btnPunto {
+	/* position: absolute; */
+	/* bottom: 15px; */
+	width: 60%;
+	margin: 5px;
 }
 
 .btnStampa {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 15%;
+	width: 40%;
+	margin: 5px;
+	/* margin-right: 20px; */
+}
+
+.btnBack {
+	/* position: absolute; */
+	/* bottom: 15px; */
+	width: 35%;
 	margin: auto;
-	margin-right: 20px;
+}
+
+#qrcode img {
+	z-index: 999999999999999999999;
+	width: 120px;
+	height: 120px;
+}
+
+#qrcode {
+	z-index: 999999999999999999999;
+	margin: auto;
+	width: 40%;
+	margin-bottom: 5px;
 }
 
 .btnQr {
@@ -1429,9 +1444,8 @@ color: white;
 .btnGo1 {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 10%;
+	width: 20%;
 	margin: auto;
-	margin-top: 25px;
 }
 
 
@@ -1485,8 +1499,9 @@ color: white;
 	margin: auto;
 	left: 150px;
 	/* top: 2px; */
-	margin-left: 130px;
+	margin-left: 80px;
 }
+
 #employer-post-new-job .res-step-form h3 {
     margin: 10px 0;
     color: #d2d2d2;
@@ -1514,11 +1529,12 @@ color: white;
 .sceltaTit2 {
 	position: relative;
 	font-size: 22px;
-	width: 80%;
+	width: 100%;
 	margin: auto;
 	margin-top: 60px;
-	padding-top: 30px;
+	padding-top: 5px;
 }
+
  .divS{
  position:relative;
  width: 100%;
@@ -1539,8 +1555,14 @@ color: white;
 	/* margin-left: -15px; */
 	width: 80%;
 	margin: auto;
-	margin-left: 50px;
+	margin-left: 65px;
 }
+
+#informazioni {
+	font-size: 22px;
+	height: 210px;
+}
+
 .areaInfo {
 	margin-top: 80px;
 }
@@ -1577,56 +1599,67 @@ background-color: RoyalBlue;
 color: white;
 }
 
-.btnBack{
+.btnBack {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 10%;
+	width: 35%;
 	margin: auto;
-	margin-right: 20px;
 }
 
-.btnPunto{
+.btnPunto {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 20%;
-	margin: auto;
-	margin-right: 20px;
+	width: 60%;
+	margin: 5px;
 }
 
 .btnGo {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 10%;
+	width: 30%;
 	margin: auto;
-
 }
 
 .botton3 {
 	margin-top: 10px;
 	width: 100%;
+	display: flex;
 }
 
 .btnStampa {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 15%;
-	margin: auto;
-	margin-right: 20px;
+	width: 40%;
+	margin: 5px;
+	/* margin-right: 20px; */
+
 }
 
 .btnQr {
-
-
+	font-size: 18px;
+	padding: 5px;
 }
 
 .btnGo1 {
 	/* position: absolute; */
 	/* bottom: 15px; */
-	width: 10%;
+	width: 30%;
 	margin: auto;
 	margin-top: 25px;
 }
 
+#qrcode img {
+	z-index: 999999999999999999999;
+	width: 100px;
+	height: 100px;
+}
+
+#qrcode {
+	z-index: 999999999999999999999;
+	margin: auto;
+	width: 50%;
+	margin-bottom: 5px;
+}
 
 #employer-post-new-job .res-steps-container .res-steps .res-step-bar {
     -webkit-border-radius: 50% !important;
@@ -1707,8 +1740,8 @@ color: white;
 
 .sceltaTit2 {
 	position: relative;
-	font-size: 16px;
-	width: 80%;
+	font-size: 17px;
+	width: 100%;
 	margin: auto;
 	margin-top: 60px;
 	padding-top: 15px;
