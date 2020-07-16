@@ -127,11 +127,11 @@ only screen and (max-width: 1280px)  {
 
 
 <div class="titles">
-<div  class="titoloPagina ">
-  <p id="titoloPagina" class="text-center">  ,Scadenze</p>
+<div  class="titoloPaginaReg ">
+  <p id="titoloPaginaReg" class="text-center">  ,Scadenze</p>
 </div>
-<div class="sottoTitolo" class="text-center">
-  <p  id="sottoTitolo" class="text-center" class="w3-large"> Visualizza le scadenze dei trattamenti fitosanitari presenti nel tuo registro. </p>
+<div class="sottoTitoloReg" class="text-center">
+  <p  id="sottoTitoloReg" class="text-center" class="w3-large"> Visualizza le scadenze dei trattamenti fitosanitari presenti nel tuo registro. </p>
 </div>  
 <div  class="iconHelp "> 	
    	<div class="pnd-pulse">								

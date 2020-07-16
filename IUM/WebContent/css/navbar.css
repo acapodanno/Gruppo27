@@ -3885,6 +3885,88 @@ th, td {	/*anche registro*/
   }
 }	
 
+/***************************************** SCAD *****************************************/
+.scad{
+	margin-top: 25px;
+	margin-left: 150px;
+	width: 80%;
+}
 
+
+/*large devices*/
+@media all and (max-width: 1199px) and (min-width: 992px) {
+		.scad{
+	margin-top: 25px;
+	margin-left: 100px;
+	width: 80%;
+}
+	
+}
+
+/*medium devices*/
+@media all and (max-width: 991px) and (min-width: 768px) {
+		.scad{
+	margin-top: 25px;
+	margin-left: 60px;
+	width: 80%;
+}
+	
+	
+}
+
+/*small devices*/
+@media all and (max-width: 767px) and (min-width: 601px) {
+		.scad{
+	margin-top: 25px;
+	margin-left: 45px;
+	width: 80%;
+}
+	
+}
+
+/*extra-small devices*/
+@media all and (max-width: 600px) {
+	.scad{
+	margin-top: 25px;
+	margin-left: 50px;
+	width: 80%;
+}
+	  .head-tabella{
+    display: none;
+    
+    }
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+}
 
 
