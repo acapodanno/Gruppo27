@@ -636,12 +636,6 @@ border-bottom: 1px solid;
 .dropdown:hover>.dropdown-menu {
   display: block;
 }
-.carousel-item{
-    height: 600px;
-} 
-.carousel-item img{
-    height: 600px;
-}
 
 
 /*Navbar animazione dropdown*/  /************* NAV BAR LATERALE *******************************************************************/
