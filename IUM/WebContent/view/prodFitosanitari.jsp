@@ -176,11 +176,11 @@ only screen and (max-width: 1280px)  {
 <%@ include file="navbarLaterl.jsp"%>
 <!--  -->
 <div class="titles">
-<div  class="titoloPagina ">
-  <p id="titoloPagina" class="text-center"> ,Prodotti Fitosanitari</p>
+<div  class="titoloPaginaReg ">
+  <p id="titoloPaginaReg" class="text-center"> ,Prodotti Fitosanitari</p>
 </div>
-<div class="sottoTitolo" class="text-center">
-  <p  id="sottoTitolo" class="text-center" class="w3-large">Visualizza l'elenco di tutti i prodotti fitosanitari esistenti e la loro etichetta. </p>
+<div class="sottoTitoloReg" class="text-center">
+  <p  id="sottoTitoloReg" class="text-center" class="w3-large">Visualizza l'elenco di tutti i prodotti fitosanitari esistenti e la loro etichetta. </p>
 </div>  
 <div  class="iconHelp "> 	
    	<div class="pnd-pulse">								

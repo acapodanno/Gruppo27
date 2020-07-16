@@ -2832,6 +2832,89 @@ th, td {	/*anche registro*/
 	font-size: 16px;
 }
 
+/*GRANDEZZE large, medium, small, extra-large e extra-small*/
+
+/* EXTRA-LARGE devices*/
+@media all and (min-width: 1200px) {
+		.barraRicerca {
+	width: 80%;
+	position: relative;
+	border: 1px solid #23a9d8;
+	border-radius: 25px;
+	margin: auto;
+	display: inline-flex;
+	height: 35px;
+	margin-left: 10%;
+	margin-bottom: 15px;
+	margin-top: 20px;
+}
+}
+
+/*large devices*/
+@media all and (max-width: 1199px) and (min-width: 992px) {
+		.barraRicerca {
+	width: 80%;
+	position: relative;
+	border: 1px solid #23a9d8;
+	border-radius: 25px;
+	margin: auto;
+	display: inline-flex;
+	height: 35px;
+	margin-left: 10%;
+	margin-bottom: 15px;
+	margin-top: 20px;
+}
+}
+
+/*medium devices*/
+@media all and (max-width: 991px) and (min-width: 768px) {
+	.barraRicerca {
+	width: 80%;
+	position: relative;
+	border: 1px solid #23a9d8;
+	border-radius: 25px;
+	margin: auto;
+	display: inline-flex;
+	height: 35px;
+	margin-left: 10%;
+	margin-bottom: 15px;
+	margin-top: 20px;
+}
+	
+}
+
+/*small devices*/
+@media all and (max-width: 767px) and (min-width: 601px) {
+	.barraRicerca {
+	width: 80%;
+	position: relative;
+	border: 1px solid #23a9d8;
+	border-radius: 25px;
+	margin: auto;
+	display: inline-flex;
+	height: 35px;
+	margin-left: 10%;
+	margin-bottom: 15px;
+	margin-top: 30px;
+}
+}
+
+/*extra-small devices*/
+@media all and (max-width: 600px) {
+	.barraRicerca {
+	width: 80%;
+	position: relative;
+	border: 1px solid #23a9d8;
+	border-radius: 25px;
+	margin: auto;
+	display: inline-flex;
+	height: 35px;
+	margin-left: 10%;
+	margin-bottom: 15px;
+	margin-top: 20px;
+}
+}
+
 /************************************************* MAGAZZINO ******************************************************************/
 
 	
