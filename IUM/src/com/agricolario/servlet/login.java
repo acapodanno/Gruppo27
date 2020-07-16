@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -60,6 +61,11 @@ public class login extends HttpServlet {
 				HttpSession ssn= request.getSession();
 				ssn.setAttribute("user",user);
 				ssn.setAttribute("loggato",true);
+				 Cookie mail = new Cookie("user",user.getEmail());
+				//Cookie session= new Cookie("ssn",ssn.getId());
+		         Cookie logged = new Cookie("loggato", "true");
+		         response.addCookie(mail);
+		         response.addCookie(logged);
 				System.out.println(user.toString());
 				getServletContext().getRequestDispatcher("/view/HomePage.jsp").forward(request, response);
 			}else {
