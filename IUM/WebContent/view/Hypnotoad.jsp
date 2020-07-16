@@ -18,11 +18,11 @@ background-size: initial;
 #character{
 width: 100px;
 height: 80px;
-background-color: red;
+
 position: relative;
 top:460px;
 left:25px;
-background-image: url("image/bender.png");
+background-image: url("https://i.gifer.com/ZNeL.gif");
 background-position: center; /* Center the image */
 background-repeat: no-repeat; /* Do not repeat the image */
 background-size: cover;
@@ -50,7 +50,7 @@ background-size: cover;
     left: 1000px;
     background-color: transparent;
     animation: block 2s infinite linear;
-    background-image: url("image/rana.png");
+    background-image: url("https://i.gifer.com/29A1.gif");
 background-position: center; /* Center the image */
 background-repeat: no-repeat; /* Do not repeat the image */
 background-size: cover;
@@ -71,7 +71,7 @@ font-weight: bold;
 #message{
 display:none;
 width: 150px;
-height: 100px;
+height: 200px;
 background-color: white;
 left:700px;
 position:fixed;
@@ -101,6 +101,8 @@ bottom:300px;
 <div id="block"></div>
 <div id="message" class="text-center">
 <h1>LOST</h1>
+<img alt="" src="https://i.gifer.com/X10.gif" height="100" width="100">
+<br>
 <button type="button" onclick="restart()">Riprova</button>
 </div>
 <div id="message-start" class="text-center" >
