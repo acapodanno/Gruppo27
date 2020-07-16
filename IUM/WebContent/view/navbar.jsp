@@ -30,7 +30,7 @@ $( document ).ready(function() {
   />
   
 	<meta charset="UTF-8">
-	<title> </title>
+	<title>Agricolàrio - Navbar</title>
 	
 	<style> 
 	

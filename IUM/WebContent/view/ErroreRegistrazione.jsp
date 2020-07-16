@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Agricolàrio - Errore Registrazione</title>
 </head>
 <body>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"

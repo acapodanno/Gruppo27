@@ -14,7 +14,7 @@
 	}  
 </style>
 
-<title>HomePage - Agricolàrio</title>
+<title>Agricolàrio - Home</title>
 </head>
 <body>
 <%@ include file="navbar.jsp"%>

@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" href="css/stylesheet.css">
 <meta charset="ISO-8859-1">
-<title>Assistenza</title>
+<title>Agricolàrio - Assistenza</title>
 
 <style>
 /** Style che serve per il form */

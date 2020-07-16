@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="css/stylesheet.css">
 <meta charset="ISO-8859-1">
 
-<title>Vantaggi</title>
+<title>Agricolàrio - Vantaggi</title>
 </head>
 
 <body>

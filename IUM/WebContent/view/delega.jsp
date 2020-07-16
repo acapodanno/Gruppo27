@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="css/navbar.css">
-<title>Insert title here</title>
+<title>Agricolàrio - Delega</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <style type="text/css">
