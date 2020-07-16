@@ -187,8 +187,6 @@ for(Trattamento reg : lista.get(0).getTrattamenti()){
 
 
 
-
-
 if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
   <table>
 	<!-- Intestazione -->
@@ -197,7 +195,7 @@ if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
       <th> Scadenza del trattamento</th>
       <th> Fitofarmaco</th>
        <th>Scopo</th>
-      <th> Colutura</th>
+      <th> Coltura</th>
       <th> Riferimento</th>
     </tr>
     </thead>
@@ -205,7 +203,7 @@ if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
     <!-- Prodotto 1 -->
     <%  
     
-   
+    ArrayList<Date> lst = new ArrayList<Date>();
     
     for(Trattamento reg : lista.get(0).getTrattamenti()){ 
      int carenza = new ProdottoFitosanitarioDAO().getTempoCarenza(reg.getNomeProdotto());
@@ -215,14 +213,25 @@ if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
 	 c.setTime(dt); 
 	 c.add(Calendar.DATE, carenza);
 	 dt = c.getTime();
-	 int anno = dt.getYear()+1900;
-	 int mese = dt.getMonth()+1;
-	 int giorno =dt.getDate();
-	 String date= anno+"-"+ mese+"-"+giorno;
 	 
+	
+	 lst.add(dt);
+	 java.util.Collections.sort(lst);
 	 Date oggi= new Date(System.currentTimeMillis());
-	if(dt.after(oggi)  ){
-		    
+    }
+    
+	for(Date d : lst) {
+		for(Trattamento reg : lista.get(0).getTrattamenti()){ 
+	    	Date dt = reg.getDatInzio(); 
+	   	 Calendar c = Calendar.getInstance(); 
+	   	 c.setTime(dt); 
+	   	 c.add(Calendar.DATE, new ProdottoFitosanitarioDAO().getTempoCarenza(reg.getNomeProdotto()));
+	   	 dt = c.getTime();
+		if(d.compareTo(dt)==0 ){
+		int anno = d.getYear()+1900;
+		 int mese = d.getMonth()+1;
+		 int giorno =d.getDate();
+		 String date= giorno+"/"+ mese+"/"+anno;
 	 
 	 %>
      <tr>
@@ -232,21 +241,16 @@ if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
       <td><%= reg.getColtura() %></td>
        <td>Vai al Registro</td>
     </tr>
-    <%}} %>
+    <%}}}%>
       </tbody>
       </table>
-  <%	}else{				 %>
   
+  <%} else{ %>
   <div class="col col-lg-12 text-center ">
 	
   <h5 class="text-center" class="w3-large">Non ci sono scadenze </h5>
 </div>
-  <%}}else{ %>
-  <div class="col col-lg-12 text-center ">
-	
-  <h5 class="text-center" class="w3-large">Non ci sono scadenze </h5>
-</div>
-  <%} %>
+  <%}} %>
 </div> 
 </div>  
 
