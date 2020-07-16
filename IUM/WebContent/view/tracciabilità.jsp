@@ -65,11 +65,11 @@
 
 
 <div class="titles">
-<div  class="titoloPagina ">
-  <p id="titoloPagina" class="text-center">  ,Tracciabilità</p>
+<div  class="titoloPaginaReg ">
+  <p id="titoloPaginaReg" class="text-center">  ,Tracciabilità</p>
 </div>
-<div class="sottoTitolo" class="text-center">
-  <p  id="sottoTitolo" class="text-center" class="w3-large">Crea, in modo facile e veloce, l'etichetta virtuale per le tue coltivazioni. </p>
+<div class="sottoTitoloReg" class="text-center">
+  <p  id="sottoTitoloReg" class="text-center" class="w3-large">Crea, in modo facile e veloce, l'etichetta virtuale per le tue coltivazioni. </p>
 </div>  
 <div  class="iconHelp "> 	
    	<div class="pnd-pulse">								
