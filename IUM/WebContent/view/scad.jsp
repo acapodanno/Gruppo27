@@ -148,7 +148,7 @@ only screen and (max-width: 1280px)  {
           <li> Riferimento al registro in cui si trova il trattamento in questione </li>
          </ul>
          <p class="pnd-pulse-text"> 
-         Per altre informazioni più dettagliate consultare la pagina <a href=""> Come Funziona </a> oppure contattare l'assistenza <a href=""> qui </a>.   </p>
+         Per altre informazioni più dettagliate consultare la pagina <a href="http://localhost/IUM/showFunzionalita?funzionalita=comefunziona"> Come Funziona </a> oppure contattare l'assistenza <a href="http://localhost/IUM/showFunzionalita?funzionalita=assistenza"> qui </a>.   </p>
      </div>	
     </div>
 </div>
@@ -217,11 +217,12 @@ if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
 	
 	 lst.add(dt);
 	 java.util.Collections.sort(lst);
-	 Date oggi= new Date(System.currentTimeMillis());
+	 
     }
     
 	for(Date d : lst) {
 		for(Trattamento reg : lista.get(0).getTrattamenti()){ 
+			Date oggi= new Date(System.currentTimeMillis());
 	    	Date dt = reg.getDatInzio(); 
 	   	 Calendar c = Calendar.getInstance(); 
 	   	 c.setTime(dt); 
@@ -232,16 +233,22 @@ if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
 		 int mese = d.getMonth()+1;
 		 int giorno =d.getDate();
 		 String date= giorno+"/"+ mese+"/"+anno;
-	 
+	 		if(d.after(oggi)){
 	 %>
      <tr>
       <td><%=date %></td>
   	  <td><%= reg.getNomeProdotto() %></td>
   	  <td><%= reg.getAvversita() %></td>
       <td><%= reg.getColtura() %></td>
-       <td>Vai al Registro</td>
-    </tr>
-    <%}}}%>
+      
+      <% for(RegistroFitosanitario trovaAnno : lista){
+    	  if (trovaAnno.getDataCreazione().getYear()==reg.getDatInzio().getYear()){
+    		  //non serve
+    %>
+       <td><a href="http://localhost/IUM/showRegistro">Vai al Registro</a></td>
+       <% }}%>    
+       </tr>
+    <%}}}}%>
       </tbody>
       </table>
   
