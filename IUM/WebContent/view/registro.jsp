@@ -424,7 +424,7 @@ for(RegistroFitosanitario reg : listaReg ){
       
     </tr>
   </thead>
-  <tbody >
+  <tbody > 
   <% 
        
     int i =0;
