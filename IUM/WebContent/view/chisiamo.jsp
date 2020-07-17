@@ -12,7 +12,7 @@
   
 <link rel="stylesheet" href="css/stylesheet.css">
 <meta charset="ISO-8859-1">
-<title>Chi siamo</title>
+<title>Agricolàrio - Chi siamo</title>
 
 </head>
 <body>

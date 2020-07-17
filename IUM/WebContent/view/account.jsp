@@ -34,7 +34,7 @@ body{
 </style>
 
 
-<title> Area Utente - Agricolàrio</title>
+<title>Agricolàrio- Area Utente</title>
 </head>
 <body>
 <%@ include file="navbar.jsp"%>
