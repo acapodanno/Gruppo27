@@ -60,6 +60,17 @@ only screen and (max-width: 1280px)  {
     display: none;
     
     }
+    
+    td::before {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 45%;
+	padding-right: 10px;
+	white-space: nowrap;
+	font-weight: bold;
+} 
+
 	/* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr { 
 		display: block; 
