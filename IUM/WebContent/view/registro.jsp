@@ -387,14 +387,17 @@ for(RegistroFitosanitario reg : listaReg ){
 <table class="  table-striped">
 <input type="hidden" id="idregistro" value="<%= reg.getIdRegistroFitosanitario()%>">
 
-<colgroup>
-    <col style="width:16%">
-    <col  style="width:10%">
-    <col  style="width:14%">
+
+  <colgroup>
+    <col style="width:12%">
     <col style="width:10%">
+    <col style="width:11%">
+    <col style="width:9%">
+    <col style="width:9%">
     <col style="width:18%">
-    <col  style="width:10%">
-    <col  style="width:22%"> <%
+    <col style="width:45%">
+       
+<%
    
         if(annoCur== annoRegistro  ){ 
         
@@ -403,13 +406,13 @@ for(RegistroFitosanitario reg : listaReg ){
   </colgroup>
   <thead class="head-tabella">
     <tr class="text-center" style=" height:50px;">
-      <th scope="col" style="font-size:20px; padding: 10px;">Prodotto</th>
-      <th scope="col" style="font-size:20px">Coltura</th>
-      <th scope="col" style="font-size:20px">Data inizio</th>
-      <th scope="col" style="font-size:20px">Superficie</th>
-       <th scope="col" style="font-size:20px">Quantita utilizzata</th>
-      <th scope="col" style="font-size:20px">Avversita</th>
-      <th scope="col" style="font-size:20px">Note</th>
+      <th class="text-center" scope="col" style="font-size:20px; padding: 10px;">Prodotto</th>
+      <th class="text-center" scope="col" style="font-size:20px">Coltura</th>
+      <th class="text-center" scope="col" style="font-size:20px">Data inizio</th>
+      <th class="text-center" scope="col" style="font-size:20px">Superficie</th>
+       <th class="text-center" scope="col" style="font-size:20px">Quantità</th>
+      <th class="text-center" scope="col" style="font-size:20px">Avversità</th>
+      <th class="text-center" scope="col" style="font-size:20px">Note</th>
        <%
    
         if(annoCur== annoRegistro  ){ 
@@ -430,13 +433,13 @@ for(RegistroFitosanitario reg : listaReg ){
        
   %>
     <tr scope="row" class="text-center trattamenti" id="<%=u.getIdTrattamento()%>">
-      <td><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="nomeProdotto<%=u.getIdTrattamento()%>" ></td>
-      <td><input type="text" value="<%=u.getColtura() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="coltura<%=u.getIdTrattamento()%>"></td>
-      <td><input type="date" value="<%= u.getDatInzio() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"  id="data<%=u.getIdTrattamento()%>"></td>
-      <td><input type="text" value="<%= u.getSuperficie() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" oninput="soloNumeri(this)" id="sup<%=u.getIdTrattamento()%>" ></td>
-       <td ><input type="text" value="<%= u.getQuantita()%>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"oninput="soloNumeri(this)"id="quantita<%=u.getIdTrattamento()%>"></td>
-      <td><input type="text" value="<%= u.getAvversita() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="avv<%=u.getIdTrattamento()%>"></td>
-     <td ><input type="text" value="<%=u.getNote() %>" disabled="disabled" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="note<%=u.getIdTrattamento()%>"></td>
+      <td><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="nomeProdotto<%=u.getIdTrattamento()%>" ></td>
+      <td><input type="text" value="<%=u.getColtura() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="coltura<%=u.getIdTrattamento()%>"></td>
+      <td><input type="date" value="<%= u.getDatInzio() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"  id="data<%=u.getIdTrattamento()%>"></td>
+      <td><input type="text" value="<%= u.getSuperficie() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" oninput="soloNumeri(this)" id="sup<%=u.getIdTrattamento()%>" ></td>
+       <td ><input type="text" value="<%= u.getQuantita()%>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"oninput="soloNumeri(this)"id="quantita<%=u.getIdTrattamento()%>"></td>
+      <td><input type="text" value="<%= u.getAvversita() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="avv<%=u.getIdTrattamento()%>"></td>
+     <td ><input type="text" value="<%=u.getNote() %>" disabled="disabled" class="text-center"  class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="note<%=u.getIdTrattamento()%>"></td>
         <%
      
         if(annoCur== annoRegistro  ){ 
