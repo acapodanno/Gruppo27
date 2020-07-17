@@ -174,7 +174,7 @@ animation: fadeInLeft;
   animation: load 5s 4 0.7s;
 }
 </style>
-<title>Agricolàrio- Barra Laterale</title>
+<title>Insert title here</title>
 </head>
 <body>
 

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Agricolàrio - Errore</title>
+<title>Insert title here</title>
 </head>
 <body>
 <%@ include file="navbar.jsp" %>

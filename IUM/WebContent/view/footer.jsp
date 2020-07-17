@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Agricolàrio - Footer</title>
+<title>Insert title here</title>
 
 <style>
 body{

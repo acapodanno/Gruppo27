@@ -41,7 +41,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Agricolàrio - HelpBox</title>
+<title>    </title>
 <style>
 
 

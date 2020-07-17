@@ -18,7 +18,7 @@
 
 <meta charset="ISO-8859-1">
 
-<title>Agricolàrio - Come Funziona</title>
+<title>Come Funziona</title>
 
 <style>
 
