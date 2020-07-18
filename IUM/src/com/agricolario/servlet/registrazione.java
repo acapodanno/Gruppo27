@@ -65,7 +65,7 @@ public class registrazione extends HttpServlet {
 		  Azienda azienda= new Azienda(nomeAzienda, indirizzo, città, cap, ParseDate.parseDateUtil(dataFondazione),user.getId());
 		  insertAzienda=new AziendaDAO().insert(azienda); 
 		  azienda.setId(new AziendaDAO().selectAzienda(user.getId()).getId());
-            
+            user.setAzienda(azienda);
 	 }else if(ruolo.equals("delegato")) {
 		  Azienda azienda = new Azienda();
 		  user = new Utente(nome, cognome, email, password, ruolo, ParseDate.parseDateUtil(dataNascita));
