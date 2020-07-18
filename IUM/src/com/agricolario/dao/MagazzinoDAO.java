@@ -158,7 +158,7 @@ public class MagazzinoDAO {
 			
 			   
 			   
-			   
+			   System.out.println("update magazzino");
 			   
 			   
 			   Connection con= connessione.getConn();
@@ -213,7 +213,7 @@ public class MagazzinoDAO {
 						 i++;
 						
 					}
-			         if(i>0) { return true; }else {	return false;}
+			         if(i>=0) { return true; }else {	return false;}
 					
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
