@@ -2825,7 +2825,7 @@ thead th{    /*anche registro*/
 
 th, td {	/*anche registro*/
 	text-align: left;
-	/*padding: 8px;*/
+	padding: 8px;
 	border-bottom: 1px solid #ddd;
 	font-size: 16px;
 }
@@ -3891,6 +3891,7 @@ th, td {	/*anche registro*/
 }
 
 
+
 /*large devices*/
 @media all and (max-width: 1199px) and (min-width: 992px) {
 		.scad{
@@ -3968,3 +3969,56 @@ th, td {	/*anche registro*/
 }
 
 
+								/*Error page, 404 not found*/
+#sorry{
+	font-size: 50px;
+	color: black;
+}
+
+#sorry2{
+	font-size: 40px;
+	color: black;
+}
+
+
+.intestazione {
+	position: relative;
+	background-color: #f4f4f4;
+	width: 50%;
+	margin: auto;
+	padding: 25px;
+	margin-top: 20px;
+	margin-bottom: 70px;
+	border: 1px solid grey;
+	background: rgba(244,244,244,0.7);
+	box-shadow:0 6px 7px 0 rgba(0,0,0,.24),0 8px 25px 0 rgba(0,0,0,.19);
+	z-index: 1;
+}
+
+.bottone {
+	position: relative;
+	background-color: transparent;
+	width: 25%;
+	margin: auto;
+	padding: 10px;
+	margin-top: 5px;
+	border: none;
+
+}
+
+.torna{
+	background: rgba(244,244,244,0.9);
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid grey;
+	font-size: 36px;
+}
+
+.torna:hover{
+		box-shadow:0 6px 7px 0 rgba(0,0,0,.24),0 8px 25px 0 rgba(0,0,0,.19);
+}
+
+.tutto{
+
+z-index: 0 !important; 
+}
