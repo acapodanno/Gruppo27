@@ -31,7 +31,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `azienda` WRITE;
 /*!40000 ALTER TABLE `azienda` DISABLE KEYS */;
-INSERT INTO `azienda` VALUES (1,'Verdurissima Srl','via Ripuaria 23','Pompei','1996-08-08','80045',2),(2,'F.lli Zircone Agricoltura','via Beato Vincenzo Romano 52','Volla','1980-10-19','80040',5),(3,'Azienda Agricola Pannone','via Lazio 19','Oriolo Romano','1960-12-22','01010',1),(4,'Agricoltura Bio Dr. Verdi','via della Marcigliana 136','Roma ','1978-04-07','00139',7),(11,'Alessandro Capodanno','via del campo','TUFINO','2020-07-01','80030',25);
+INSERT INTO `azienda` VALUES (1,'Verdurissima Srl','via Ripuaria 23','Pompei','1996-08-08','80045',2),(2,'F.lli Zircone Agricoltura','via Beato Vincenzo Romano 52','Volla','1980-10-19','80040',5),(3,'Azienda Agricola Pannone','via Lazio 19','Oriolo Romano','1960-12-22','01010',1),(4,'Agricoltura Bio Dr. Verdi','via della Marcigliana 136','Roma ','1978-04-07','00139',7),(11,'Alessandro Capodanno','via del campo','TUFINO','2020-07-01','80030',25),(10584096,'AgreenColtura','Via Caserta','Napoli','1986-08-19','80030',26),(53771301,'Agri','via ottaviano','ottabiano','1990-12-30','0258',27);
 /*!40000 ALTER TABLE `azienda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -41,7 +41,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `compilazioneregistro` WRITE;
 /*!40000 ALTER TABLE `compilazioneregistro` DISABLE KEYS */;
-INSERT INTO `compilazioneregistro` VALUES (1,1,1),(2,1,2),(3,1,3),(4,1,4),(5,5,5),(6,7,6),(7,2,7),(19,25,86858486);
+INSERT INTO `compilazioneregistro` VALUES (1,1,1),(2,1,2),(3,1,3),(4,1,4),(5,5,5),(6,7,6),(7,2,7),(19,25,86858486),(20,26,112451407),(21,27,83663162);
 /*!40000 ALTER TABLE `compilazioneregistro` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +61,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `magazzino` WRITE;
 /*!40000 ALTER TABLE `magazzino` DISABLE KEYS */;
-INSERT INTO `magazzino` VALUES (1,1,30),(1,3,20),(2,2,23),(2,7,50),(1,8,12),(4,8,12),(4,1,30),(4,7,25),(2,1,50),(1,5,42),(2,4,19),(4,5,40),(3,3,11),(3,3,1);
+INSERT INTO `magazzino` VALUES (1,1,30),(1,3,20),(2,2,23),(2,7,50),(1,8,12),(4,8,12),(4,1,30),(4,7,25),(2,1,50),(1,5,42),(2,4,19),(4,5,40),(3,3,20),(3,2,25),(3,4,27),(3,6,13),(3,7,5),(3,8,36);
 /*!40000 ALTER TABLE `magazzino` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -71,7 +71,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `notifiche` WRITE;
 /*!40000 ALTER TABLE `notifiche` DISABLE KEYS */;
-INSERT INTO `notifiche` VALUES ('2020-07-06',3,2,0,'Il delgato Flavio Perna ha inserito dei trattamenti nel registro! vai nella sezione registro e approva le modifiche!',71,NULL),('2020-07-06',1,4,1,'Sei stai  delgato da: Giuseppe Pannone',74,NULL),('2020-07-06',4,1,1,'Il delgato Simone Rocco ha inserito dei trattamenti nel registro! Vai nella sezione registro e approva le modifiche!',75,NULL),('2020-07-17',0,1,1,'Il seguente trattamento Heliocuivre eseguito in data 2020-07-06 sta per scadere tra -11 giorni!',85,NULL),('2020-07-17',0,1,1,'Il seguente trattamento Heliocuivre eseguito in data 2020-03-15 sta per scadere tra -2 giorni!',89,NULL),('2020-07-17',0,1,1,'Il seguente trattamento Heliocuivre eseguito in data 2020-04-10 sta per scadere tra -7 giorni!',90,NULL),('2020-07-17',0,1,1,'Il seguente trattamento Priaxor eseguito in data 2020-08-15 sta per scadere tra -2 giorni!',91,NULL),('2020-07-17',0,1,1,'Il seguente trattamento Heliocuivre eseguito in data 2020-03-15 sta per scadere tra -2 giorni!',92,NULL),('2020-07-17',0,1,1,'Il seguente trattamento Heliocuivre eseguito in data 2020-04-10 sta per scadere tra -7 giorni!',93,NULL),('2020-07-17',0,1,1,'Il seguente trattamento Priaxor eseguito in data 2020-08-15 sta per scadere tra -2 giorni!',94,NULL);
+INSERT INTO `notifiche` VALUES ('2020-07-06',3,2,0,'Il delgato Flavio Perna ha inserito dei trattamenti nel registro! vai nella sezione registro e approva le modifiche!',71,NULL),('2020-07-06',1,4,1,'Sei stai  delgato da: Giuseppe Pannone',74,NULL),('2020-07-06',4,1,1,'Il delgato Simone Rocco ha inserito dei trattamenti nel registro! Vai nella sezione registro e approva le modifiche!',75,NULL),('2020-07-18',0,1,1,'Il seguente trattamento Heliocuivre eseguito in data 2020-03-15 sta per scadere tra -3 giorni!',142,NULL);
 /*!40000 ALTER TABLE `notifiche` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -91,7 +91,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `registrofitosanitario` WRITE;
 /*!40000 ALTER TABLE `registrofitosanitario` DISABLE KEYS */;
-INSERT INTO `registrofitosanitario` VALUES (2,'2018-01-03'),(3,'2019-01-04'),(4,'2020-01-02'),(6,'2020-01-03'),(7,'2020-01-03'),(26438321,'2020-07-08'),(86858486,'2020-07-08'),(92598136,'2020-07-08');
+INSERT INTO `registrofitosanitario` VALUES (2,'2018-01-03'),(3,'2019-01-04'),(4,'2020-01-02'),(6,'2020-01-03'),(7,'2020-01-03'),(26438321,'2020-07-08'),(83663162,'2020-07-18'),(86858486,'2020-07-08'),(92598136,'2020-07-08'),(112451407,'2020-07-18');
 /*!40000 ALTER TABLE `registrofitosanitario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,7 +101,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `trattamento` WRITE;
 /*!40000 ALTER TABLE `trattamento` DISABLE KEYS */;
-INSERT INTO `trattamento` VALUES (1,2,2,'Olivo','2018-09-10',0.1,'Heliocuivre',0.20,'l','Fumaggine','Lasciato in posa per 2 ore e poi risciacquato',NULL),(2,8,2,'Soia','2018-07-22',0.25,'XenTari WG',0.25,'kg','Ifantria','Terreno umidito prima dell\'applicazione',NULL),(3,3,2,'Orzo','2018-10-15',0.55,'Priaxor',0.82,'l','Oidio','Trattamento iniziato alle ore 6.30 del mattino',NULL),(4,3,2,'Frumento','2018-12-25',0.5,'Priaxor',0.75,'5l','Septoria','Applicato con nebulizzatore',NULL),(5,4,3,'Agrumi','2019-02-05',0.5,'Matacar FL',0.10,'1l','Ragno rosso comune','Il trattamento ha avuto effetto immediato',NULL),(6,1,3,'Pomodoro','2019-04-25',0.5,'Centurion 240 Neo',0.75,'5l','Sanguinella','Aggiunto alla coltura ogni due ore',NULL),(7,2,3,'Olivo','2019-07-10',0.1,'Heliocuivre',0.20,'l','Fumaggine','Lasciato in posa per 2 ore e poi risciacquato',NULL),(8,1,3,'Pomodoro','2019-08-25',0.5,'Centurion 240 Neo',0.75,'5l','Falaride','Aggiunto gradualmente alla piantaggione',NULL),(9,2,4,'Olivo','2020-03-15',0.1,'Heliocuivre',0.20,'l','Batteriosi','Aggiunto ogni 2 ore in dosi crescenti',NULL),(10,2,4,'Olivo','2020-04-10',0.1,'Heliocuivre',0.20,'l','Fumaggine','Lasciato in posa per 2 ore e poi risciacquato',NULL),(11,8,4,'Soia','2020-06-22',0.25,'XenTari WG',0.25,'kg','Ifantria','Terreno umidito prima dell\'applicazione',NULL),(12,3,4,'Orzo','2020-08-15',0.55,'Priaxor',0.82,'l','Oidio','Trattamento iniziato alle ore 6.30 del mattino',NULL),(13,3,4,'Frumento','2020-09-25',0.5,'Priaxor',0.75,'5l','Septoria','Applicato con nebulizzatore',NULL);
+INSERT INTO `trattamento` VALUES (1,2,2,'Olivo','2018-09-10',0.1,'Heliocuivre',0.20,'l','Fumaggine','Lasciato in posa per 2 ore e poi risciacquato',NULL),(2,8,2,'Soia','2018-07-22',0.25,'XenTari WG',0.25,'kg','Ifantria','Terreno umidito prima dell\'applicazione',NULL),(3,3,2,'Orzo','2018-10-15',0.55,'Priaxor',0.82,'l','Oidio','Trattamento iniziato alle ore 6.30 del mattino',NULL),(4,3,2,'Frumento','2018-12-25',0.5,'Priaxor',0.75,'5l','Septoria','Applicato con nebulizzatore',NULL),(5,4,3,'Agrumi','2019-02-05',0.5,'Matacar FL',0.10,'1l','Ragno rosso comune','Il trattamento ha avuto effetto immediato',NULL),(6,1,3,'Pomodoro','2019-04-25',0.5,'Centurion 240 Neo',0.75,'5l','Sanguinella','Aggiunto alla coltura ogni due ore',NULL),(7,2,3,'Olivo','2019-07-10',0.1,'Heliocuivre',0.20,'l','Fumaggine','Lasciato in posa per 2 ore e poi risciacquato',NULL),(8,1,3,'Pomodoro','2019-08-25',0.5,'Centurion 240 Neo',0.75,'5l','Falaride','Aggiunto gradualmente alla piantaggione',NULL),(9,2,4,'Olivo','2020-03-15',0.1,'Heliocuivre',0.20,'l','Batteriosi','Aggiunto ogni 2 ore in dosi crescenti',NULL),(10,2,4,'Olivo','2020-04-10',0.1,'Heliocuivre',0.20,'l','Fumaggine','Lasciato in posa per 2 ore e poi risciacquato',NULL),(11,8,4,'Soia','2020-06-22',0.25,'XenTari WG',0.25,'kg','Ifantria','Terreno umidito prima dell\'applicazione',NULL),(12,3,4,'Orzo','2020-08-15',0.55,'Priaxor',0.82,'l','Oidio','Trattamento iniziato alle ore 6.30 del mattino',NULL),(13,3,4,'Frumento','2020-09-25',0.5,'Priaxor',0.75,'5l','Septoria','Applicato con nebulizzatore',NULL),(1127,1,112451407,'Vite','2020-07-17',10,'Centurion 240 Neo',15.00,'l',' Falaride','Trattamento eseguito a caldo',NULL);
 /*!40000 ALTER TABLE `trattamento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,7 +111,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `utente` WRITE;
 /*!40000 ALTER TABLE `utente` DISABLE KEYS */;
-INSERT INTO `utente` VALUES (1,'titolare','Giuseppe','Pannone','motoGP','1970-11-11','pannonegiu@gmail.com'),(2,'titolare','Claudio','Romano','mntprcd11','1984-09-10','claudioromano@icloud.com'),(3,'delegato','Flavio','Perna','d1m3nt1c4t4','1980-01-23','f.perna@gmail.com'),(4,'delegato','Simone','Rocco','teddy45321','1989-07-12','sim.rocco@gmail.com'),(5,'titolare','Amerigo','De Sica','defre2314','1975-02-22','de.sica8@libero.it'),(6,'delegato','Davide','Verdi','rossaferrari89','1990-01-06','davideeverdi@icloud.com'),(7,'titolare','Antonio','Verdi','211259av','1959-12-21','toniov.erdi@gmail.com'),(25,'titolare','Alessandro','Capodanno','aa','2020-06-30','alessandro.capodanno95@gmail.com');
+INSERT INTO `utente` VALUES (1,'titolare','Giuseppe','Pannone','motoGP','1970-11-11','pannonegiu@gmail.com'),(2,'titolare','Claudio','Romano','mntprcd11','1984-09-10','claudioromano@icloud.com'),(3,'delegato','Flavio','Perna','d1m3nt1c4t4','1980-01-23','f.perna@gmail.com'),(4,'delegato','Simone','Rocco','teddy45321','1989-07-12','sim.rocco@gmail.com'),(5,'titolare','Amerigo','De Sica','defre2314','1975-02-22','de.sica8@libero.it'),(6,'delegato','Davide','Verdi','rossaferrari89','1990-01-06','davideeverdi@icloud.com'),(7,'titolare','Antonio','Verdi','211259av','1959-12-21','toniov.erdi@gmail.com'),(25,'titolare','Alessandro','Capodanno','aa','2020-06-30','alessandro.capodanno95@gmail.com'),(26,'titolare','Alessia','Crispo','aa123','1996-01-30','a.cri@gmail.com'),(27,'titolare','Alessia','Due','aaa123','1996-01-30','a2@gmail.com');
 /*!40000 ALTER TABLE `utente` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -124,4 +124,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-17 17:51:52
+-- Dump completed on 2020-07-18 15:05:58
