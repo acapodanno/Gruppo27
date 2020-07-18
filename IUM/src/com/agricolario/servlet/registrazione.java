@@ -78,7 +78,7 @@ public class registrazione extends HttpServlet {
 	 
 	 	
 		ssn.setAttribute("user",user);
-		ssn.setAttribute("loggato",true);
+		ssn.setAttribute("loggato",false);
 
 		out.append("{\"reg\":\""+insertuser+"\"}");
 		out.flush();

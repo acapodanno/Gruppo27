@@ -31,7 +31,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `azienda` WRITE;
 /*!40000 ALTER TABLE `azienda` DISABLE KEYS */;
-INSERT INTO `azienda` VALUES (1,'Verdurissima Srl','via Ripuaria 23','Pompei','1996-08-08','80045',2),(2,'F.lli Zircone Agricoltura','via Beato Vincenzo Romano 52','Volla','1980-10-19','80040',5),(3,'Azienda Agricola Pannone','via Lazio 19','Oriolo Romano','1960-12-22','01010',1),(4,'Agricoltura Bio Dr. Verdi','via della Marcigliana 136','Roma ','1978-04-07','00139',7),(11,'Alessandro Capodanno','via del campo','TUFINO','2020-07-01','80030',25),(10584096,'AgreenColtura','Via Caserta','Napoli','1986-08-19','80030',26),(53771301,'Agri','via ottaviano','ottabiano','1990-12-30','0258',27);
+INSERT INTO `azienda` VALUES (1,'Verdurissima Srl','via Ripuaria 23','Pompei','1996-08-08','80045',2),(2,'F.lli Zircone Agricoltura','via Beato Vincenzo Romano 52','Volla','1980-10-19','80040',5),(3,'Azienda Agricola Pannone','via Lazio 19','Oriolo Romano','1960-12-22','01010',1),(4,'Agricoltura Bio Dr. Verdi','via della Marcigliana 136','Roma ','1978-04-07','00139',7),(11,'Alessandro Capodanno','via del campo','TUFINO','2020-07-01','80030',25),(10584096,'AgreenColtura','Via Caserta','Napoli','1986-08-19','80030',26),(31668250,'aaaaaaaaaaa','aaaaaa','aaaaaaaaaaaaaaaaaaaaaaaaaaaaa','1111-01-10','1111111',30),(53771301,'Agri','via ottaviano','ottabiano','1990-12-30','0258',27),(73825215,'a','a','a','2020-07-27','a',28);
 /*!40000 ALTER TABLE `azienda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,7 +111,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `utente` WRITE;
 /*!40000 ALTER TABLE `utente` DISABLE KEYS */;
-INSERT INTO `utente` VALUES (1,'titolare','Giuseppe','Pannone','motoGP','1970-11-11','pannonegiu@gmail.com'),(2,'titolare','Claudio','Romano','mntprcd11','1984-09-10','claudioromano@icloud.com'),(3,'delegato','Flavio','Perna','d1m3nt1c4t4','1980-01-23','f.perna@gmail.com'),(4,'delegato','Simone','Rocco','teddy45321','1989-07-12','sim.rocco@gmail.com'),(5,'titolare','Amerigo','De Sica','defre2314','1975-02-22','de.sica8@libero.it'),(6,'delegato','Davide','Verdi','rossaferrari89','1990-01-06','davideeverdi@icloud.com'),(7,'titolare','Antonio','Verdi','211259av','1959-12-21','toniov.erdi@gmail.com'),(25,'titolare','Alessandro','Capodanno','aa','2020-06-30','alessandro.capodanno95@gmail.com'),(26,'titolare','Alessia','Crispo','aa123','1996-01-30','a.cri@gmail.com'),(27,'titolare','Alessia','Due','aaa123','1996-01-30','a2@gmail.com');
+INSERT INTO `utente` VALUES (1,'titolare','Giuseppe','Pannone','motoGP','1970-11-11','pannonegiu@gmail.com'),(2,'titolare','Claudio','Romano','mntprcd11','1984-09-10','claudioromano@icloud.com'),(3,'delegato','Flavio','Perna','d1m3nt1c4t4','1980-01-23','f.perna@gmail.com'),(4,'delegato','Simone','Rocco','teddy45321','1989-07-12','sim.rocco@gmail.com'),(5,'titolare','Amerigo','De Sica','defre2314','1975-02-22','de.sica8@libero.it'),(6,'delegato','Davide','Verdi','rossaferrari89','1990-01-06','davideeverdi@icloud.com'),(7,'titolare','Antonio','Verdi','211259av','1959-12-21','toniov.erdi@gmail.com'),(25,'titolare','Alessandro','Capodanno','aa','2020-06-30','alessandro.capodanno95@gmail.com'),(26,'titolare','Alessia','Crispo','aa123','1996-01-30','a.cri@gmail.com'),(27,'titolare','Alessia','Due','aaa123','1996-01-30','a2@gmail.com'),(30,'titolare','ale','ssia','aaaa','2021-12-11','asia@gmail.com');
 /*!40000 ALTER TABLE `utente` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -124,4 +124,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-18 15:05:58
+-- Dump completed on 2020-07-18 15:24:15
