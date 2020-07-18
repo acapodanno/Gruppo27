@@ -65,7 +65,8 @@ public class modificaTrattamento extends HttpServlet {
 		ProdottoFitosanitario p = new ProdottoFitosanitario();
 		p= new ProdottoFitosanitarioDAO().getProdotto(nomeProdotto);
 		int idProdotto = p.getIdProdottoFitosanitario();
-		boolean modifca = new TrattamentoDAO().updateTrattamento(Integer.parseInt(idregistro), idProdotto, coltura, nomeProdotto,ParseDate.parseDateUtil(dataInizio), Double.parseDouble(superficie), Float.parseFloat(quantita), avversita, note, p.getDose(), Integer.parseInt(idtrattamento));
+		String unita = p.getQuantita().replaceAll("\\P{L}+", "");
+		boolean modifca = new TrattamentoDAO().updateTrattamento(Integer.parseInt(idregistro), idProdotto, coltura, nomeProdotto,ParseDate.parseDateUtil(dataInizio), Double.parseDouble(superficie), Float.parseFloat(quantita), avversita, note, unita, Integer.parseInt(idtrattamento));
 		HttpSession ssn = request.getSession();
 		Utente u= (Utente)ssn.getAttribute("user");
 		if(u.getRuolo().equals("delegato")) {

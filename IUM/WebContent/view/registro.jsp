@@ -444,14 +444,14 @@ for(RegistroFitosanitario reg : listaReg ){
        
   %>
     <tr scope="row" class="text-center trattamenti" id="<%=u.getIdTrattamento()%>">
-      <td><input type="text" value="<%=u.getColtura() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="coltura<%=u.getIdTrattamento()%>"></td>
-     <td><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="nomeProdotto<%=u.getIdTrattamento()%>" ></td>
+      <td><input type="text" value="<%=u.getColtura() %>" disabled="disabled"  class="input-trattamento<%=u.getIdTrattamento()%> input-modifica text-center" id="coltura<%=u.getIdTrattamento()%>"></td>
+     <td><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="input-trattamento<%=u.getIdTrattamento()%> input-modifica text-center" id="nomeProdotto<%=u.getIdTrattamento()%>" ></td>
 
-      <td><input type="date" value="<%= u.getDatInzio() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"  id="data<%=u.getIdTrattamento()%>"></td>
-      <td><input type="text" value="<%= u.getSuperficie() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" oninput="soloNumeri(this)" id="sup<%=u.getIdTrattamento()%>" ></td>
-       <td ><input type="text" value="<%= u.getQuantita()%>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"oninput="soloNumeri(this)"id="quantita<%=u.getIdTrattamento()%>"></td>
-      <td><input type="text" value="<%= u.getAvversita() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="avv<%=u.getIdTrattamento()%>"></td>
-     <td ><input type="text" value="<%=u.getNote() %>" disabled="disabled" class="text-center"  class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="note<%=u.getIdTrattamento()%>"></td>
+      <td><input type="date" value="<%= u.getDatInzio() %>" disabled="disabled"  class="input-trattamento<%=u.getIdTrattamento()%>  text-center input-modifica"  id="data<%=u.getIdTrattamento()%>"></td>
+      <td><input type="text" value="<%= u.getSuperficie() %>" disabled="disabled"  class="input-trattamento<%=u.getIdTrattamento()%> text-center input-modifica" oninput="soloNumeri(this)" id="sup<%=u.getIdTrattamento()%>" ></td>
+       <td ><input type="text" value="<%= u.getQuantita()%>" disabled="disabled"  class="input-trattamento<%=u.getIdTrattamento()%> text-center input-modifica"oninput="soloNumeri(this)"id="quantita<%=u.getIdTrattamento()%>"></td>
+      <td><input type="text" value="<%= u.getAvversita() %>" disabled="disabled"  class="input-trattamento<%=u.getIdTrattamento()%> text-center input-modifica" id="avv<%=u.getIdTrattamento()%>"></td>
+     <td ><input type="text" value="<%=u.getNote() %>" disabled="disabled"   class="input-trattamento<%=u.getIdTrattamento()%> text-center input-modifica" id="note<%=u.getIdTrattamento()%>"></td>
         <%
      
         if(annoCur== annoRegistro  ){ 
@@ -625,7 +625,7 @@ for(RegistroFitosanitario reg : listaReg ){
 	          $("table .ultimo").before('<tr scope="row" class="text-center trattamenti" id="trattamento">'+
 	        		  '<td ><select id="coltura"  onchange="getProdottoFitoSanitario()"><option>---------</option></select></td>'+
     		   //   '<td  > <input type="text" class="input-trattamento"  onchange="deleteNome()" onkeyup="deleteNome()" id="nomeProdotto" value="">'+
-    		   '<td  > <select class="input-trattamento"  id="nomeProdotto" onchange="getNomeTrattamento()""><option>---------</option></select>'+
+    		   '<td  > <select  id="nomeProdotto" onchange="getNomeTrattamento()""><option>---------</option></select>'+
     		      '<div id="livesearch"></div>'+
     		      '</td>'+
     		     
@@ -633,7 +633,7 @@ for(RegistroFitosanitario reg : listaReg ){
     		      ' <td> <input  type="text" id="superficie" oninput="soloNumeri(this)"></td>'+
     		      ' <td> <input  type="text" id="quantita" value="" oninput="soloNumeri(this)"></td>'+
     		    //  '<td ><input type="text" id="avv"></td>'+
-    		       '<td  > <select class="input-trattamento"  id="avv"><option>---------</option></select>'+
+    		       '<td  > <select  id="avv"><option>---------</option></select>'+
     		     '<td ><input type="text" id="note"></td>'+
     		     		'<td></td>'								+
     		     '</tr>'+'<tr  scope="row" class="bottoni" > <td colspan="8" class= "text-center"> <button onclick="showPop(this.id)" class="shadow buttone-modifica" id="aggiungi">Aggiungi</button> <button class="shadow buttone-modifica" id="annulla" onClick="clickAnnullaAggiungi()">Annulla</button></td><tr>');
@@ -692,7 +692,7 @@ for(RegistroFitosanitario reg : listaReg ){
  function getNomeTrattamento(){
 	 var nomeProdotto =  $("#nomeProdotto").val();
 	 console.log(nomeProdotto);
-	  getDose(0)
+	 getDose(0)
 	 $("#superficie").keyup(function () {getDose(this);});
 	 
 	 
@@ -794,6 +794,7 @@ function visualizzaBottoni(el){
               }  
               var s= '.input-trattamento'+str;
        		  s.concat(el.value);
+       		  console.log(s)
        		  $(s).prop("disabled", false); 
        	      $('.input-modifica'+el.value).prop("disabled", false); 
               $("#"+str).after('<tr  scope="row" class="bottoni" > <td colspan="9" class= "text-center"> <button onclick="showPop(this.id)" id="update" class="shadow buttone-modifica ">Conferma</button> <button  class="shadow   buttone-modifica" onclick="clickAnnulla()">Annulla</button>    <button class="shadow buttone-modifica" id="eliminaTrattamento" onClick="showPop(this.id)">Elimina il Trattamento</button></td><tr>')
