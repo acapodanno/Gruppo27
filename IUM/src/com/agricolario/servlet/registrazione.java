@@ -37,6 +37,7 @@ public class registrazione extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String email,password,nome,cognome,dataNascita,ruolo,nomeAzienda,indirizzo,città,cap,dataFondazione;
+			HttpSession ssn= request.getSession();
 		  ruolo= request.getParameter("ruolo");
 		  nome	=	request.getParameter("nome");
 		  cognome	=	request.getParameter("cognome");
@@ -63,8 +64,8 @@ public class registrazione extends HttpServlet {
 		  System.out.println(user.getId());
 		  Azienda azienda= new Azienda(nomeAzienda, indirizzo, città, cap, ParseDate.parseDateUtil(dataFondazione),user.getId());
 		  insertAzienda=new AziendaDAO().insert(azienda); 
-		  
-
+		  azienda.setId(new AziendaDAO().selectAzienda(user.getId()).getId());
+            
 	 }else if(ruolo.equals("delegato")) {
 		  Azienda azienda = new Azienda();
 		  user = new Utente(nome, cognome, email, password, ruolo, ParseDate.parseDateUtil(dataNascita));
@@ -75,7 +76,7 @@ public class registrazione extends HttpServlet {
 		 
 		 System.out.println("Errore");		 }
 	 
-	 	HttpSession ssn= request.getSession();
+	 	
 		ssn.setAttribute("user",user);
 		ssn.setAttribute("loggato",true);
 
