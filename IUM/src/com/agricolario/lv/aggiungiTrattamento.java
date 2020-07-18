@@ -52,7 +52,7 @@ public class aggiungiTrattamento extends HttpServlet {
 		ProdottoFitosanitario p = new ProdottoFitosanitario();
 		p= new ProdottoFitosanitarioDAO().getProdotto(nomeProdotto);
 		int idProdotto = p.getIdProdottoFitosanitario();
-		String unita = p.getDose();
+		String unita = p.getQuantita().replaceAll("\\P{L}+", "");
 		boolean inserimento =new TrattamentoDAO().addTrattamento(Integer.parseInt(idregistro), idProdotto, coltura, nomeProdotto,ParseDate.parseDateUtil(dataInizio), Double.parseDouble(superficie), Float.parseFloat(quantita), avversita, note, unita);
 		HttpSession ssn = request.getSession();
 		Utente u= (Utente)ssn.getAttribute("user");
