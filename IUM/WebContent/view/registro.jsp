@@ -1,3 +1,4 @@
+
 <%@page import="java.util.*"%>
 <%@page import="java.util.Date"%>
 <%@page import="com.agricolario.bean.Trattamento"%>
@@ -332,7 +333,7 @@ font-weight: bold;
 
 <div id="grid-registro" class="mt-5">
 <%ArrayList<RegistroFitosanitario> listaReg = (ArrayList<RegistroFitosanitario>)request.getAttribute("listaRegistro");
-
+boolean tastoElimina = false;
 Utente user = (Utente) session.getAttribute("user");
 boolean primo= true;
 int idRegistro=0;
@@ -355,6 +356,16 @@ for(RegistroFitosanitario reg : listaReg ){
 	System.out.println();
 	anno=calendar.get(Calendar.YEAR);
 	}
+	int annoCorrente=  0;
+    annoCorrente= Calendar.getInstance().get(Calendar.YEAR);
+	if(annoCorrente- anno==3){
+		
+		tastoElimina= true;
+		
+	}
+	
+	
+	
 	if(primo){
 	primo=false;
 	idRegistro= reg.getIdRegistroFitosanitario();
@@ -490,7 +501,7 @@ for(RegistroFitosanitario reg : listaReg ){
          <%if(user.getRuolo().equals("titolare")){ %>  <button class=" shadow  buttone-registro" <%if(creazione ){%>  disabled="disabled" style="background-color: gray;"  <%}%>onclick="showPop(this.id)" id="crea-registro" >Crea  </button><%} %>
       <%if(user.getRuolo().equals("titolare")){ %>       <button class="shadow  buttone-registro" onclick="redirectDelega(<%=idRegistro %>,<%=user.getId()%>)">Delega</button><%} %>
         <button class="shadow buttone-registro" id="modifica"  onclick="clickModifica(this)" <%if(listaReg.isEmpty()){ %> disabled="disabled" style="background-color: gray;"<%}  %>>Modifica</button>
-        <button class="shadow buttone-registro" <%if(user.getRuolo().equals("delegato")){ %>  disabled="disabled" style="background-color: gray;"  <%}%> onclick="showPop(this.id)" id="elimina-registro" >Elimina</button>
+        <button class="shadow buttone-registro" <%if(user.getRuolo().equals("delegato")|| !tastoElimina ){ %>  disabled="disabled" style="background-color: gray;"  <%}%> onclick="showPop(this.id)" id="elimina-registro" >Elimina</button>
      <%if(user.getRuolo().equals("titolare")){ %>   <button class="shadow buttone-registro"   onclick="showPop(this.id)" id="approva">Approva Modifiche</button><%}%>
         
 </div>
