@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import com.agricolario.bean.ProdottoFitosanitario;
 import com.agricolario.bean.Utente;
+import com.agricolario.dao.MagazzinoDAO;
 import com.agricolario.dao.NotificaDAO;
 import com.agricolario.dao.ProdottoFitosanitarioDAO;
 import com.agricolario.dao.RegistroFitosanitarioDAO;
@@ -53,9 +54,20 @@ public class aggiungiTrattamento extends HttpServlet {
 		p= new ProdottoFitosanitarioDAO().getProdotto(nomeProdotto);
 		int idProdotto = p.getIdProdottoFitosanitario();
 		String unita = p.getQuantita().replaceAll("\\P{L}+", "");
-		boolean inserimento =new TrattamentoDAO().addTrattamento(Integer.parseInt(idregistro), idProdotto, coltura, nomeProdotto,ParseDate.parseDateUtil(dataInizio), Double.parseDouble(superficie), Float.parseFloat(quantita), avversita, note, unita);
 		HttpSession ssn = request.getSession();
 		Utente u= (Utente)ssn.getAttribute("user");
+		MagazzinoDAO magazzinoDao= new MagazzinoDAO();
+		
+		
+		if(magazzinoDao.isPresent(p.getIdProdottoFitosanitario(), u.getAzienda().getId())) {
+			
+			
+			magazzinoDao.updateProdottoMagazzino(p.getIdProdottoFitosanitario(), u.getAzienda().getId(), Float.parseFloat(quantita), false);
+			
+		}
+		
+		
+		boolean inserimento =new TrattamentoDAO().addTrattamento(Integer.parseInt(idregistro), idProdotto, coltura, nomeProdotto,ParseDate.parseDateUtil(dataInizio), Double.parseDouble(superficie), Float.parseFloat(quantita), avversita, note, unita);
 		
 		
 		if(u.getRuolo().equals("delegato")) {

@@ -152,12 +152,17 @@ public class MagazzinoDAO {
 			
 		}
 		
-		public boolean updateProdottoMagazzino(int idprodotto,int idazienda,double quantita) {
+		public boolean updateProdottoMagazzino(int idprodotto,int idazienda,double quantita,boolean operazione) {
 			String sql ="update magazzino set quantitaDisp = ? where idazienda = ? AND idprodottofitosanitario = ?;";
 			   double dispQ= getQuantita(idprodotto, idazienda);
-			
-			   
-			   
+			  double tot= 0;
+			   if(operazione) {
+				   tot=quantita+dispQ;
+			  }else {
+				   tot=dispQ-quantita;
+
+				  
+			  }
 			   System.out.println("update magazzino");
 			   
 			   
@@ -166,7 +171,7 @@ public class MagazzinoDAO {
 			 try {
 					
 					PreparedStatement ps = con.prepareStatement(sql);
-					ps.setDouble(1, quantita+dispQ);
+					ps.setDouble(1, tot);
 					ps.setInt(2, idazienda);
 					ps.setInt(3, idprodotto);
 					

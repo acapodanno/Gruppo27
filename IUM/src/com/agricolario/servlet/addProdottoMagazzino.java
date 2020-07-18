@@ -49,7 +49,7 @@ public class addProdottoMagazzino extends HttpServlet {
 		boolean inserimento=false;
 		if(presente) {
 			System.out.println(presente);
-			 inserimento = new MagazzinoDAO().updateProdottoMagazzino(p.getIdProdottoFitosanitario(), u.getAzienda().getId(),Double.parseDouble(quantita));
+			 inserimento = new MagazzinoDAO().updateProdottoMagazzino(p.getIdProdottoFitosanitario(), u.getAzienda().getId(),Double.parseDouble(quantita),true);
 					
 		}else {
 		
