@@ -633,7 +633,7 @@ for(RegistroFitosanitario reg : listaReg ){
     		      ' <td> <input  type="text" id="superficie" oninput="soloNumeri(this)"></td>'+
     		      ' <td> <input  type="text" id="quantita" value="" oninput="soloNumeri(this)"></td>'+
     		    //  '<td ><input type="text" id="avv"></td>'+
-    		       '<td  > <select class="input-trattamento"  id="avv" onchange="getNomeTrattamento()""><option>---------</option></select>'+
+    		       '<td  > <select class="input-trattamento"  id="avv"><option>---------</option></select>'+
     		     '<td ><input type="text" id="note"></td>'+
     		     		'<td></td>'								+
     		     '</tr>'+'<tr  scope="row" class="bottoni" > <td colspan="8" class= "text-center"> <button onclick="showPop(this.id)" class="shadow buttone-modifica" id="aggiungi">Aggiungi</button> <button class="shadow buttone-modifica" id="annulla" onClick="clickAnnullaAggiungi()">Annulla</button></td><tr>');
@@ -692,7 +692,7 @@ for(RegistroFitosanitario reg : listaReg ){
  function getNomeTrattamento(){
 	 var nomeProdotto =  $("#nomeProdotto").val();
 	 console.log(nomeProdotto);
-
+	  getDose(0)
 	 $("#superficie").keyup(function () {getDose(this);});
 	 
 	 
@@ -747,6 +747,15 @@ function getDose(el){
 	
 	var superficie  =  el.value;
 	var nome = $("#nomeProdotto").val();
+	if(el===0){
+		
+		superficie  = 0;
+		$("#superficie").val(0.0)
+
+	}else{
+		superficie  =  el.value;
+
+	}
 	var coltura = $("#coltura").val();
 	console.log(coltura)
     $.ajax({
