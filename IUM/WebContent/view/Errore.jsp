@@ -15,7 +15,7 @@
 
 <div class="alert alert-warning" role="alert" style="text-align: center; padding: 2%; margin: 5%">
 	<h1 class="alert-heading">Errore!</h1>
-	<p style="margin-bottom: 0.5em;" class="mb-0">Qualcosa è andato storto durante il login.Verifica che email e password siano corrette.
+	<p style="margin-bottom: 0.5em;" class="mb-0">Qualcosa è andato storto durante il login. Verifica che email e password siano corrette.
 	
 	<h4>Clicca su <a href="showHome">Home</a> per tornare alla Home page!</h4>
 	</div>

@@ -256,7 +256,7 @@ if(!lista.get(0).getTrattamenti().isEmpty() && ok){                     %>
     	  if (trovaAnno.getDataCreazione().getYear()==reg.getDatInzio().getYear()){
     		  //non serve
     %>
-       <td><a href="http://localhost/IUM/showRegistro">Vai al Registro</a></td>
+       <td><a href="showRegistro">Vai al Registro</a></td>
        <% }}%>    
        </tr>
     <%}}}}%>

@@ -322,7 +322,7 @@ font-weight: bold;
         <p class="pnd-pulse-text"> 
          I pulsanti a destra della tabella ti permettono di effettuare operazioni di Creazione, Modifica, Eliminazione e Delega del registro. Le taghette a sinistra della tabella, qualora ce ne fossero, indicano i registri degli anni precedenti e per visualizzarli basta cliccarci sopra.Per aggiungere un trattamento è necessario cliccare sul pulsante "Aggiungi trattamento" presente al centro della riga vuota nella tabella.  </p>
          <p class="pnd-pulse-text"> 
-         Per altre informazioni più dettagliate consultare la pagina <a href="http://localhost/IUM/showFunzionalita?funzionalita=comefunziona"> Come Funziona </a> oppure contattare l'assistenza <a href="http://localhost/IUM/showFunzionalita?funzionalita=assistenza">qui</a>.   </p>
+         Per altre informazioni più dettagliate consultare la pagina <a href="showFunzionalita?funzionalita=comefunziona"> Come Funziona </a> oppure contattare l'assistenza <a href="showFunzionalita?funzionalita=assistenza">qui</a>.   </p>
     </div>	
     </div>
 </div>

@@ -173,13 +173,12 @@ background-color: red;
 }
 
 
-#titolo-pop-up{
-font-size: 28px;
-font-weight: bold; 
- margin: auto;
- width: 30%;
+#titolo-pop-up {
+	font-size: 28px;
+	font-weight: bold;
+	margin: auto;
+	width: 65%;
 }
-
 #pop-text {
 	font-size: 18px;
 	/* margin: auto; */
@@ -198,12 +197,32 @@ font-weight: bold;
 <%@ include file="navbarLaterl.jsp"%>
 <!--  -->
 
-<div class="w3-container">
-  <p id="titoloPagina" class="text-center"> ,Magazzino </p>
-  <p id="sottoTitolo" class="text-center" class="w3-large">Elenco dei prodotti da te posseduti, classificati per nome, descrizione e quantità rimasta. </p>
+
+
+<div class="titles">
+<div  class="titoloPaginaReg ">
+  <p id="titoloPaginaReg" class="text-center"> ,Magazzino</p>
+</div>
+<div class="sottoTitoloReg" class="text-center">
+  <p  id="sottoTitoloReg" class="text-center" class="w3-large">Elenco dei prodotti da te posseduti, classificati per nome, descrizione e quantità rimasta. </p>
+</div>  
+<div  class="iconHelp "> 	
+   	<div class="pnd-pulse">								
+    <span class="pnd-pulse-dot">?</span>
+    <span class="pnd-pulse-ring"></span>
+    <div class=" description">
+         <p class="pnd-pulse-text"> 
+         In questa pagina puoi visualizzare le tue giacenze in magazzino, Per ogni prodotto fitosanitario presente è indicata la quantità rimasta ed un collegamento alla rispettiva etichetta cartacea. <br>
+         Puoi consultare la <a href="image/pericoli.pdf"> Lista dei pericoli </a> delle sostanze chimiche.
+         <br>
+         </p>
+         
+         <p class="pnd-pulse-text"> 
+         Per altre informazioni più dettagliate consultare la pagina <a href="http://localhost/IUM/showFunzionalita?funzionalita=comefunziona"> Come Funziona </a> oppure contattare l'assistenza <a href="http://localhost/IUM/showFunzionalita?funzionalita=assistenza">qui </a>.   </p>
+    </div>	
+    </div>
+</div>
 </div> 
-
-
 
 <!--  Barra di Ricerca-->
 

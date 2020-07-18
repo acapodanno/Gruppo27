@@ -188,9 +188,7 @@ only screen and (max-width: 1280px)  {
     <span class="pnd-pulse-ring"></span>
     <div class=" description">
          <p class="pnd-pulse-text"> 
-         La tabella è formata da tre colonne: una per le informazioni generali del prodotto, 
-         una per le specifiche di esso nei minimi dettagli e una con collegamento 
-         all'etichetta cartacea completa del prodotto fitosanitario. <br>
+         In questa pagina sono presenti le informazioni generali di ogni prodotto fitosanitario esistente, comprese le specifiche di ognuno di essi e un collegamento alle rispettive etichette cartacee complete dei prodotti fitosanitari. <br>
          Puoi consultare la <a href="image/pericoli.pdf"> Lista dei pericoli </a> delle sostanze chimiche.
          <br>
          </p>

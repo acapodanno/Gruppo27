@@ -38,7 +38,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>REGISTRAZIONE</title>
+<title>Agricolàrio - Registrazione</title>
 </head>
 
 <style>
@@ -58,6 +58,11 @@ body{
     text-align: center;
 }
 
+.titRegistrazione {
+	font-size: 35px;
+	color: white;
+	width: 100%;
+}
 
 .containerReg{
 background: rgba(0,100,50,0.4);
@@ -247,7 +252,7 @@ input[type=date]:focus, .select:focus{
 <div class=" mt-5">
   <div class="shadow registration" id="utente"  style="display: block; ">
     <div class="containerReg">
-    	<h1 id="titoloPagina" class="text-center"><b> Registrazione</b></h1><br>
+    	<h1 class="titRegistrazione text-center"><b> Registrati con la tua email</b></h1><br>
     	
 		<div class="row justify-content-center "id="form-registrazione" >
 		<div id="form-registrazione">
@@ -322,7 +327,7 @@ input[type=date]:focus, .select:focus{
   <div class="shadow registration" id="azienda" >
   
 	<div class="containerReg">
-    	<h1 id="titoloPagina" class="text-center"><b> Registra la tua azienda</b></h1><br>
+    	<h1 id="titRegistrazione" class="text-center"><b> Registra la tua azienda</b></h1><br>
     	
 			<div class="row justify-content-center "  id="form-registrazione" >
 		 		<div  id="form-registrazione">		

@@ -77,10 +77,11 @@
     <span class="pnd-pulse-ring"></span>
     <div class=" description">
        <p class="pnd-pulse-text"> 
-         Sono presenti due sezioni.  </p>
+         La sezione presenta 3 step eseguiti in modo progressivo. </p>
          <ul class="pnd-pulse-text">
-          <li> Scelta del prodotto per cui si intende creare l'etichetta virtuale </li>
-          <li> L'area informazioni per visualizzare e/o modificare le informazioni riguardanti tutti i prodotti utilizzati sulla coltura in questione, automaticamente autogenerate dal sistema</li>
+          <li> Nel primo step bisogna scegliere l'anno di coltivazione e la coltura per cui si intende creare l'etichetta virtuale</li>
+          <li> Nel secondo step è possibile visualizzare visualizzare e/o modificare le informazioni riguardanti tutti i prodotti utilizzati sulla coltura</li>
+          <li> Nel terzo step è possibile generare e/o stamapare il Qr Code rappresentativo dell'etichetta virtuale</li>
          </ul>
         
          <p class="pnd-pulse-text"> 
