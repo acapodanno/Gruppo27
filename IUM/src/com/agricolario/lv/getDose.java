@@ -41,6 +41,14 @@ public class getDose extends HttpServlet {
 		System.out.println(superficie);
 
 		String str=	new ProdottoFitosanitarioDAO().getDose(nome, coltura);
+		String str2= new ProdottoFitosanitarioDAO().getAvversita(nome);
+		String [] avversita = str2.split(";");
+		for (int i = 0; i < avversita.length; i++) {
+			System.out.println(avversita[i]);
+					
+		}
+		
+		
 	    System.out.println(str);
 	    Validator v =new Validator(); 
 	    double  dose= v.extractSuperficie(str);
@@ -51,7 +59,16 @@ public class getDose extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
       //  out.append("");
         
-		out.append("{\"dose\":\""+(dose * superficie)+"\"}");
+		out.append("{\"dose\":\""+(dose * superficie)+"\",\"avversita\":[");   
+		for (int i = 0; i < avversita.length; i++) {
+		out.append("\""+avversita[i]+"\"");
+		if(i<avversita.length-1) {
+			out.append(",");
+			
+		}
+		}
+		
+		out.append("]}");
 		
 		//out.append("]");
 

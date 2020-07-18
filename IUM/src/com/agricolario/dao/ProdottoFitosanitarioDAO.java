@@ -197,7 +197,39 @@ public ArrayList<String> getColtura() {
 			}	
 	}
 
+public String getAvversita(String nome) {
+	
+	String sql= "select avversita from prodottofitosanitario where nome=?";
 
+	 Connection con= connessione.getConn();
+	 	ResultSet result;
+		try {
+			
+			PreparedStatement ps = con.prepareStatement(sql);
+		    ps.setString(1,nome);
+            result	=   ps.executeQuery();
+		    
+           String lista="";
+            while(result.next()) {	
+            	   
+            	 lista = result.getString("avversita");
+              
+		   }
+		
+			System.out.println(lista.toString());
+			
+	    	 return lista;	
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}finally {
+			if(connessione!=null) {
+				
+				connessione.closeConn();
+			}
+		}	
+}
 
 	public ArrayList<ProdottoFitosanitario> getAllProdottiFitosanitario() {
 		// TODO Auto-generated method stub

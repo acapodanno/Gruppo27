@@ -417,8 +417,8 @@ for(RegistroFitosanitario reg : listaReg ){
   </colgroup>
   <thead class="head-tabella">
     <tr class="text-center" style=" height:50px;">
-      <th class="text-center" scope="col" style="font-size:20px; padding: 10px;">Prodotto</th>
       <th class="text-center" scope="col" style="font-size:20px">Coltura</th>
+      <th class="text-center" scope="col" style="font-size:20px; padding: 10px;">Prodotto</th>
       <th class="text-center" scope="col" style="font-size:20px">Data inizio</th>
       <th class="text-center" scope="col" style="font-size:20px">Superficie</th>
        <th class="text-center" scope="col" style="font-size:20px">Quantità</th>
@@ -444,8 +444,9 @@ for(RegistroFitosanitario reg : listaReg ){
        
   %>
     <tr scope="row" class="text-center trattamenti" id="<%=u.getIdTrattamento()%>">
-     <td><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="nomeProdotto<%=u.getIdTrattamento()%>" ></td>
       <td><input type="text" value="<%=u.getColtura() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="coltura<%=u.getIdTrattamento()%>"></td>
+     <td><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="nomeProdotto<%=u.getIdTrattamento()%>" ></td>
+
       <td><input type="date" value="<%= u.getDatInzio() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"  id="data<%=u.getIdTrattamento()%>"></td>
       <td><input type="text" value="<%= u.getSuperficie() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" oninput="soloNumeri(this)" id="sup<%=u.getIdTrattamento()%>" ></td>
        <td ><input type="text" value="<%= u.getQuantita()%>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"oninput="soloNumeri(this)"id="quantita<%=u.getIdTrattamento()%>"></td>
@@ -631,7 +632,8 @@ for(RegistroFitosanitario reg : listaReg ){
     		      '<td ><input  type="date" id="data" value="2020-06-26" min="2020-01-01" max="2020-12-31">'+
     		      ' <td> <input  type="text" id="superficie" oninput="soloNumeri(this)"></td>'+
     		      ' <td> <input  type="text" id="quantita" value="" oninput="soloNumeri(this)"></td>'+
-    		      '<td ><input type="text" id="avv"></td>'+
+    		    //  '<td ><input type="text" id="avv"></td>'+
+    		       '<td  > <select class="input-trattamento"  id="avv" onchange="getNomeTrattamento()""><option>---------</option></select>'+
     		     '<td ><input type="text" id="note"></td>'+
     		     		'<td></td>'								+
     		     '</tr>'+'<tr  scope="row" class="bottoni" > <td colspan="8" class= "text-center"> <button onclick="showPop(this.id)" class="shadow buttone-modifica" id="aggiungi">Aggiungi</button> <button class="shadow buttone-modifica" id="annulla" onClick="clickAnnullaAggiungi()">Annulla</button></td><tr>');
@@ -755,7 +757,11 @@ function getDose(el){
 	    	 var object= JSON.parse(data);
 	    	 console.log(object.dose);
 	    	$("#quantita").val(object.dose); 
-	    	 
+	    	console.log(object.avversita); 
+	    	 $( "#avv" ).html("<option >---------------</option>");
+	    	 for (var i = 0; i < object.avversita.length; i++) {
+				 $( "#avv" ).append("<option value='"+object.avversita[i] +"'>"+object.avversita[i] +"</option>");
+			}
 	    	
 	      }
 	});
