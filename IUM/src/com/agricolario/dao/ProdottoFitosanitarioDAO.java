@@ -163,7 +163,39 @@ public class ProdottoFitosanitarioDAO {
 				}
 			}	
 	}
+public ArrayList<String> getColtura() {
+		
+		String sql= "select coltura from applicazioneprodotto";
 
+		 Connection con= connessione.getConn();
+		 	ResultSet result;
+			try {
+				
+				PreparedStatement ps = con.prepareStatement(sql);
+			
+                result	=   ps.executeQuery();
+			    
+                ArrayList<String> lista= new ArrayList<String>();
+                while(result.next()) {	
+	            	   
+                	String  coltura = result.getString("coltura");
+                    lista.add(coltura);	
+			   }
+			
+				System.out.println(lista.toString());
+				
+		    	 return lista;	
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return null;
+			}finally {
+				if(connessione!=null) {
+					
+					connessione.closeConn();
+				}
+			}	
+	}
 
 
 
@@ -241,6 +273,40 @@ public class ProdottoFitosanitarioDAO {
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				System.out.println(e.getErrorCode()+"\n"+e.getMessage());
+				return null;
+			}finally {
+				if(connessione!=null) {
+					
+					connessione.closeConn();
+				}
+			}		}
+
+
+
+
+	public ArrayList<String> getNomePerColtura(String str) {
+		// TODO Auto-generated method stub
+		String sql= "select * from applicazioneprodotto join prodottofitosanitario on prodottofitosanitario.idprodottofitosanitario = applicazioneprodotto.idprodottofitosanitario where coltura =?;";
+
+		 Connection con= connessione.getConn();
+		 	ResultSet result;
+			try {
+				
+				PreparedStatement ps = con.prepareStatement(sql);
+				ps.setString(1, str);
+               result	=   ps.executeQuery();
+			    ArrayList<String> lista= new ArrayList<String>();
+			    while(result.next()) {	
+	            	   
+			    	   lista.add(result.getString("nome"));
+	            
+               }
+			
+				
+		    	 return lista ;	
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 				return null;
 			}finally {
 				if(connessione!=null) {

@@ -35,9 +35,9 @@ public class addTrattamentoLv extends HttpServlet {
 		
 		
 		
-		String str= request.getParameter("nome");
+		String str= request.getParameter("coltura");
 		System.out.println(str);
-		ArrayList<String> lista = new ProdottoFitosanitarioDAO().getNomeLiveSerch(str);
+		ArrayList<String> lista = new ProdottoFitosanitarioDAO().getNomePerColtura(str);
 		System.out.println(lista.toString());
 		
 		PrintWriter out = response.getWriter();
@@ -48,7 +48,7 @@ public class addTrattamentoLv extends HttpServlet {
         
 		for(String s :lista) {
 		count++;
-		out.append("{\"name\":\" "+s+"\"}");
+		out.append("{\"name\":\""+s+"\"}");
 		
 		if(count<=lista.size()-1) {
 			out.append(",");

@@ -444,7 +444,7 @@ for(RegistroFitosanitario reg : listaReg ){
        
   %>
     <tr scope="row" class="text-center trattamenti" id="<%=u.getIdTrattamento()%>">
-      <td><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="nomeProdotto<%=u.getIdTrattamento()%>" ></td>
+     <td><input type="text" value="<%= u.getNomeProdotto() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="nomeProdotto<%=u.getIdTrattamento()%>" ></td>
       <td><input type="text" value="<%=u.getColtura() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" id="coltura<%=u.getIdTrattamento()%>"></td>
       <td><input type="date" value="<%= u.getDatInzio() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica"  id="data<%=u.getIdTrattamento()%>"></td>
       <td><input type="text" value="<%= u.getSuperficie() %>" disabled="disabled" class="text-center" class="input-modifica<%=u.getIdTrattamento()%> input-modifica" oninput="soloNumeri(this)" id="sup<%=u.getIdTrattamento()%>" ></td>
@@ -615,16 +615,19 @@ for(RegistroFitosanitario reg : listaReg ){
 
       var set= false;
       $("#bottone-aggiungi").click(function(){
+    	  cercaColtura("");
     	  $("#bottone-aggiungi").prop('disabled',true);
     	      var bottoneModifica= document.getElementById('modifica');
     	      if(annullaModifica===true){
 	          clickModifica(bottoneModifica);
     	      }
 	          $("table .ultimo").before('<tr scope="row" class="text-center trattamenti" id="trattamento">'+
-    		      '<td  > <input type="text" class="input-trattamento"  onchange="deleteNome()" onkeyup="deleteNome()" id="nomeProdotto" value="">'+
+	        		  '<td ><select id="coltura"  onchange="getProdottoFitoSanitario()"><option>---------</option></select></td>'+
+    		   //   '<td  > <input type="text" class="input-trattamento"  onchange="deleteNome()" onkeyup="deleteNome()" id="nomeProdotto" value="">'+
+    		   '<td  > <select class="input-trattamento"  id="nomeProdotto" onchange="getNomeTrattamento()""><option>---------</option></select>'+
     		      '<div id="livesearch"></div>'+
     		      '</td>'+
-    		      '<td ><select id="coltura" ><option>---------</option></select></td>'+
+    		     
     		      '<td ><input  type="date" id="data" value="2020-06-26" min="2020-01-01" max="2020-12-31">'+
     		      ' <td> <input  type="text" id="superficie" oninput="soloNumeri(this)"></td>'+
     		      ' <td> <input  type="text" id="quantita" value="" oninput="soloNumeri(this)"></td>'+
@@ -640,7 +643,7 @@ for(RegistroFitosanitario reg : listaReg ){
         	 jQuery.noConflict();
   
      $("#livesearch").show();
-
+/*
      $.ajax({
 	      type:"POST",
 	      data:{"nome":this.value},
@@ -652,15 +655,48 @@ for(RegistroFitosanitario reg : listaReg ){
 				 $( "#livesearch" ).append("<p onClick='cercaColtura(this)' id='"+object[i].name +"'>"+object[i].name +"</p>");
 			}
 	    	}});
-}else{
+*/
+			 }else{
 	
     $("#livesearch").hide();}
         	 
-			 $("#superficie").keyup(function () {getDose(this);});
+			 
     	 
          });});
          
-         
+ function getProdottoFitoSanitario(){
+	 var coltura =  $("#coltura").val();
+	 console.log(coltura);
+	 $("#nomeProdotto").html("");
+	  
+     $.ajax({
+	      type:"POST",
+	      data:{"coltura":coltura},
+	      url:"addTrattamentoLv",
+	      success : function(data){
+	    	 var object= JSON.parse(data);
+	    	 console.log(object);
+	    	 $( "#nomeProdotto" ).append("<option >-------</option>");
+	    	 for (var i = 0; i < object.length; i++) {
+				 $( "#nomeProdotto" ).append("<option value='"+object[i].name +"'>"+object[i].name +"</option>");
+			}
+	    	}});
+	 
+	 
+	 
+	 
+	 
+ }
+ function getNomeTrattamento(){
+	 var nomeProdotto =  $("#nomeProdotto").val();
+	 console.log(nomeProdotto);
+
+	 $("#superficie").keyup(function () {getDose(this);});
+	 
+	 
+	 
+	 
+ } 
          
          
          
@@ -669,13 +705,13 @@ for(RegistroFitosanitario reg : listaReg ){
          
   function cercaColtura( el){
 	
-	  var value=el.innerText;
-	  $("#nomeProdotto").val(value);
-	  $("#coltura").html("");
+	 // var value=el.innerText;
+	//  $("#nomeProdotto").val(value);
+	 $("#coltura").html("");
 	  
 	     $.ajax({
 		      type:"POST",
-		      data:{"nome":value},
+		     // data:{"nome":value},
 		      url:"getColtura",
 		      success : function(data){
 		    	 var object= JSON.parse(data);

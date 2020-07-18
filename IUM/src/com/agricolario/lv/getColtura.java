@@ -33,9 +33,11 @@ public class getColtura extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		String str= request.getParameter("nome");
-		System.out.println(str);
-		ArrayList<String> lista = new ProdottoFitosanitarioDAO().getColtura(str);
+	//	String str= request.getParameter("nome");
+	//	System.out.println(str);
+//		ArrayList<String> lista = new ProdottoFitosanitarioDAO().getColtura(str);
+		ArrayList<String> lista = new ProdottoFitosanitarioDAO().getColtura();
+		
 		System.out.println(lista.toString());
 		
 		PrintWriter out = response.getWriter();
