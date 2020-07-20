@@ -246,7 +246,7 @@ background-color: red;
 <div  id="theFormDiv" class="text-center" >
 
   <div class="aggProd">
-  <label id="label-first">Nome:</label><input id="nomeProdotto" style="color:black; border-bottom:solid 1px black;" name="nomeProdotto" type="text" onkeyup="parolaccia(this)"> <div id="livesearch"></div>
+  <label id="label-first">Nome:</label><input list="prodotti" id="nomeProdotto" style="color:black; border-bottom:solid 1px black;" name="nomeProdotto" type="text" "> <div id="livesearch"></div>
   <label id="label-first">Quantità:</label> <input id="quantita"  oninput="soloNumeri(this)"  style="color:black; border-bottom:solid 1px black;" name="last" type="text">
   <input type="button" id="addBottone" onclick="addProdotto()" value="aggiungi">  </input>
 	</div> 
@@ -259,7 +259,8 @@ background-color: red;
 </div>
 </div>
 
-<%ArrayList<ProdottoMagazzino> lista = (ArrayList<ProdottoMagazzino>) request.getAttribute("lista");  %>
+<%ArrayList<ProdottoMagazzino> lista = (ArrayList<ProdottoMagazzino>) request.getAttribute("lista");
+ArrayList<ProdottoFitosanitario> listaPf = (ArrayList<ProdottoFitosanitario>) request.getAttribute("pf"); %>
  <%if(lista == null || lista.isEmpty()){ %>
  <h3  class="text-center">Non ci sono prodotti nel magazzino</h3>
  <%}else{ %> 
@@ -313,13 +314,26 @@ background-color: red;
  
  
  <datalist id="lista">
-   <%for(ProdottoMagazzino   pm : lista)
+   <%for(ProdottoMagazzino  pm : lista)
     {
 	   %>
    <option value="<%=pm.getProdotto().getNome()%>"> <a href=""><%= pm.getProdotto().getNome() %></a></option>
     <%
     }
   %>
+ 
+ 
+ 
+ </datalist>
+  <datalist id="prodotti">
+   <%for(ProdottoFitosanitario pf : listaPf)
+    {
+	   %>
+   <option value="<%=pf.getNome()%>"><%= pf.getNome() %></option>
+    <%
+    }
+  %>
+ 
  
  
  

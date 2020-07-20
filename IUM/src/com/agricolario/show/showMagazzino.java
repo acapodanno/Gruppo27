@@ -47,6 +47,8 @@ public class showMagazzino extends HttpServlet {
 			ArrayList<ProdottoMagazzino> lista = new ArrayList<ProdottoMagazzino>();
 			lista =  dao.getProdottiMagazzino(u.getAzienda().getId());
 		    request.setAttribute("lista", lista);
+		    ArrayList<ProdottoFitosanitario> pf = new ProdottoFitosanitarioDAO().getAllProdottiFitosanitario();
+			request.setAttribute("pf", pf);
 		getServletContext().getRequestDispatcher("/view/mag.jsp").forward(request, response);	
 		}else {
 			getServletContext().getRequestDispatcher("/view/HomePage.jsp").forward(request, response);		
