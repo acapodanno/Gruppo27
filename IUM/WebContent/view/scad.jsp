@@ -159,7 +159,7 @@ only screen and (max-width: 1280px)  {
           <li> Riferimento al registro in cui si trova il trattamento in questione </li>
          </ul>
          <p class="pnd-pulse-text"> 
-         Per altre informazioni più dettagliate consultare la pagina <a href="http://localhost/IUM/showFunzionalita?funzionalita=comefunziona"> Come Funziona </a> oppure contattare l'assistenza <a href="http://localhost/IUM/showFunzionalita?funzionalita=assistenza"> qui </a>.   </p>
+         Per altre informazioni più dettagliate consultare la pagina <a href="showFunzionalita?funzionalita=comefunziona"> Come Funziona </a> oppure contattare l'assistenza <a href="http://localhost/IUM/showFunzionalita?funzionalita=assistenza"> qui </a>.   </p>
      </div>	
     </div>
 </div>

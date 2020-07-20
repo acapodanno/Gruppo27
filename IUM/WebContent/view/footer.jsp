@@ -19,14 +19,14 @@ body{
     <h5 class="border-bottom">CHI SIAMO</h5>
     <p>Siamo Alessandro,
 	Alessia e Sara
-	e sviluppiamo cose.
-	Almeno crediamo
+	e sviluppiamo cose.<br>
+	Almeno crediamo.
     </p>
    </div><div class=" col col-md-2 offset-md-1"  >
     <h5 class="border-bottom">INFORMAZIONI </h5>
     <ul>
-    <li>Come funziona</li>
-    <li>Vantaggi</li>
+    <li><a href="showFunzionalita?funzionalita=comefunziona" style="color:white">Come funziona</a></li>
+    <li><a href="showFunzionalita?funzionalita=vantaggi" style="color:white">Vantaggi</a></li>
     </ul>
     
     
@@ -35,7 +35,7 @@ body{
     <h5 class="border-bottom">ASSISTENZA</h5>
      <ul>
     <li>Chiamaci</li>
-    <li>Scrivici</li>
+    <li><a href="showFunzionalita?funzionalita=assistenza" style="color:white">Scrivici</a></li>
     </ul>
    </div>
    

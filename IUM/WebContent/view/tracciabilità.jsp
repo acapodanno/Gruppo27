@@ -85,7 +85,7 @@
          </ul>
         
          <p class="pnd-pulse-text"> 
-         Per altre informazioni più dettagliate consultare la pagina <a href="http://localhost/IUM/showFunzionalita?funzionalita=comefunziona"> Come Funziona</a>,alla sezione  <a href="http://localhost/IUM/showFunzionalita?funzionalita=comefunziona#sezTracc">Tracciabilità</a> oppure contattare l'assistenza <a href="http://localhost/IUM/showFunzionalita?funzionalita=assistenza">qui </a>.   </p>
+         Per altre informazioni più dettagliate consultare la pagina <a href="showFunzionalita?funzionalita=comefunziona"> Come Funziona</a>,alla sezione  <a href="http://localhost/IUM/showFunzionalita?funzionalita=comefunziona#sezTracc">Tracciabilità</a> oppure contattare l'assistenza <a href="http://localhost/IUM/showFunzionalita?funzionalita=assistenza">qui </a>.   </p>
    </div>	
     </div>
 </div>
