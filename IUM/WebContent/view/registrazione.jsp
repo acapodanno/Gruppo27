@@ -288,7 +288,7 @@ input[type=date]:focus, .select:focus{
    					<div class="row justify-content-center">
 					    <div class="col-4">
 					   	 <label  class="etichette">Data di nascita</label>
-    						<input type="date" placeholder="dd mm yyyy" name="dataNascita" id="dn"    data-date-format="DD MMMM YYYY"  required="required">
+    						<input type="date" placeholder="dd mm yyyy" name="dataNascita" id="dn"    data-date-format="DD MM YYYY"  required="required">
     					</div>
     					
     				<div class="col-4 form-group">
@@ -327,7 +327,7 @@ input[type=date]:focus, .select:focus{
   <div class="shadow registration" id="azienda" >
   
 	<div class="containerReg">
-    	<h1 id="titRegistrazione" class="text-center"><b> Registra la tua azienda</b></h1><br>
+    	<h1 id="titRegistrazione" class="text-center titRegistrazione"><b> Registra la tua azienda</b></h1><br>
     	
 			<div class="row justify-content-center "  id="form-registrazione" >
 		 		<div  id="form-registrazione">		
@@ -372,7 +372,7 @@ input[type=date]:focus, .select:focus{
   					</div>
    					<div class="row justify-content-center">
 					    <div class="col-8 form-group">
-					    	<label  class="etichette">Data Fondazione:</label>
+					    	<label  class="etichette">Data Fondazione</label>
     						<input type="date" placeholder="Data Fondazione" name="dataFondazione" id="df" required="required">
     					</div>
     				
@@ -473,15 +473,15 @@ function registrazioneDelegato(){
 	    	 
 	    	 console.log(object);
 	    	
-			if(object.reg=="true"){
-				
-				alert("registrazione avvenuta con successo");
-				
-			}else{
-				
-				alert("Errore");
+	    	 if(object.reg=="true"){
+					location.href = "showPagine?valore=true";
 					
-			}
+				}else{
+					
+					location.href = "showPagine?valore=false";
+					
+						
+				}
 	    	 
 	    	 
 	    	 

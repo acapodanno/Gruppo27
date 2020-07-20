@@ -27,7 +27,7 @@ public class showRegistrazione extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		getServletContext().getRequestDispatcher("/view/regAlessia.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/view/registrazione.jsp").forward(request, response);
 	}
 
 	/**
