@@ -450,7 +450,7 @@ $(window).resize(function(){
     </div>
 
     <div class="contenitore">
-    	<h1 class="titAccedi"><b> Accedi</b></h1><br>
+    	<h1 class="titAccedi text-center"><b> Accedi</b></h1><br>
       <label class="etichetteAccedi"><b>Inserisci qui la tua e-mail</b></label>
       <input  style="color: white;" type="text" placeholder="Email" name="email" required>
 

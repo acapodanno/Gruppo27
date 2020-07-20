@@ -77,11 +77,11 @@ body{
 					<p id="righe2"><strong>Nome:</strong> <a id="caselle"><%= user.getAzienda().getNomeAzienda() %></a></p><br>
 					<p id="righe2"><strong>Città:</strong> <a id="caselle"><%= user.getAzienda().getCittà() %></a></p><br>
 					<p id="righe2"><strong>Indirizzo:</strong> <a id="caselle"><%=user.getAzienda().getIndirizzo() %></a></p><br>
-					<p id="righe2"><strong>Cap:</strong> <a id="caselle"><%= user.getAzienda().getCap() %></a></p><br>
+					<p id="righe2"><strong>CAP:</strong> <a id="caselle"><%= user.getAzienda().getCap() %></a></p><br>
 					<p id="righe2"><strong>Data Fondazione:</strong> <a id="caselle"> <%= user.getAzienda().getDataFondazione() %></a></p><br>
 	<%}else{ %>
 	
-			<span id="caselle"><strong >Non sei stato ancora delegato!Ciao Fra</span><br>
+			<span id="caselle"><strong>Non sei stato ancora delegato! Ciao Fra</span><br>
 	<% }} %>
 					
 	</div>
