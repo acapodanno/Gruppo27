@@ -150,7 +150,10 @@ Generando un semplice codice QR potrai visualizzare tutte le informazioni suoi t
 <div class="uff">
 
    
-<div class="text-center" id="rigaVantaggi"> <img src="https://img.icons8.com/bubbles/90/000000/services.png"/><h5 id="titoloParagrafo" id="listaCategiorie"> COME FUNZIONA</h5></div>
+<div class="text-center" id="rigaVantaggi"> 
+<a href="showFunzionalita?funzionalita=comefunziona" style="text-decoration: none;">
+<img src="https://img.icons8.com/bubbles/90/000000/services.png"/> 
+<h5 id="titoloParagrafo" id="listaCategiorie"> COME FUNZIONA</h5></a></div>
 
    <div  class="gruppodescr" >
     <p ><h1 style="color:black; font-size: 22px;" >Ogni sezione del sito svolge un'azione differente e ognuna molto importante per chi gestisce un'azienda agricola. 
@@ -173,7 +176,10 @@ rendendo semplici tutte quelle azioni che prima sembravano impossibili effettuat
 <div class="row justify-content-center mt-5" >
 <div class="uff" >
 
-<div class="text-center" id="rigaVantaggi"><img src="https://img.icons8.com/bubbles/90/000000/checked.png"/><h5 id="titoloParagrafo" id="listaCategiorie"> VANTAGGI</h5></div>
+<div class="text-center" id="rigaVantaggi">
+<a href="showFunzionalita?funzionalita=vantaggi" style="text-decoration: none;">
+<img src="https://img.icons8.com/bubbles/90/000000/checked.png"/>
+<h5 id="titoloParagrafo" id="listaCategiorie"> VANTAGGI</h5></a></div>
 
     
    <div  class="gruppodescr" >
@@ -203,7 +209,10 @@ più efficiente di un qualsiasi strumento di registrazione alternativo. Scopri i 
 <div class="row justify-content-center mt-5" >
 <div class="uff" class="text-center">
   
-  <div class="text-center" id="rigaVantaggi">  <img src="https://img.icons8.com/bubbles/90/000000/group.png"/><h5 id="titoloParagrafo" id="listaCategiorie"> CHI SIAMO</h5></div>
+  <div class="text-center" id="rigaVantaggi"> 
+  <a href="showFunzionalita?funzionalita=chisiamo" style="text-decoration: none;">
+   <img src="https://img.icons8.com/bubbles/90/000000/group.png"/>
+   <h5 id="titoloParagrafo" id="listaCategiorie"> CHI SIAMO</h5></a></div>
   
 
  	
