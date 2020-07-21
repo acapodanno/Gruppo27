@@ -158,6 +158,7 @@
 											</div>
 											<div class="form-group textarea" >
 									  			<textarea class="form-control z-depth-1  " id="informazioni" rows="7"></textarea>
+									  		<h7 style="color: red; font-weight: bold">NOTA BENE: </h7>	<h7 style="font-weight: bold">In questo campo, le informazioni autogenerate si possono modificare e/o aggiungere dettagli a proprio piacimento. </h7>
 											</div>
 											
 										</div>								    

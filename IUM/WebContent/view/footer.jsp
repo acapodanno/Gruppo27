@@ -16,7 +16,7 @@ body{
 <div class="footer mt-5"  style="width: 100%; background-color: #4CAF50">
 <div class="row" style="margin-top:50; ">
  	<div class=" col col-md-2 offset-md-2"  >
-    <h5 class="border-bottom">CHI SIAMO</h5>
+    <h5 class="border-bottom"><a  href="showFunzionalita?funzionalita=chisiamo"  style="color:white" >CHI SIAMO</a></h5>
     <p>Siamo Alessandro,
 	Alessia e Sara
 	e sviluppiamo cose.<br>
@@ -32,7 +32,7 @@ body{
     
    </div>
 	<div class=" col col-md-2 offset-md-1"  >
-    <h5 class="border-bottom">ASSISTENZA</h5>
+    <h5 class="border-bottom"><a href="showFunzionalita?funzionalita=comefunziona" style="color:white">ASSISTENZA</a></h5>
      <ul>
     <li>Chiamaci</li>
     <li><a href="showFunzionalita?funzionalita=assistenza" style="color:white">Scrivici</a></li>
