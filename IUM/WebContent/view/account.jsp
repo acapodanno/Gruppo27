@@ -81,7 +81,7 @@ body{
 					<p id="righe2"><strong>Data Fondazione:</strong> <a id="caselle"> <%= user.getAzienda().getDataFondazione() %></a></p><br>
 	<%}else{ %>
 	
-			<span id="caselle"><strong>Non sei stato ancora delegato! Ciao Fra</span><br>
+			<span id="caselle"><strong>Non sei stato ancora delegato!</span><br>
 	<% }} %>
 					
 	</div>
